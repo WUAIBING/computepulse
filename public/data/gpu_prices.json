@@ -1,0 +1,44 @@
+[
+  {
+    "provider": "AWS",
+    "region": "Global",
+    "gpu": "H100",
+    "price": 2.85
+  },
+  {
+    "provider": "Azure",
+    "region": "Global",
+    "gpu": "H100",
+    "price": 3.06
+  },
+  {
+    "provider": "Google Cloud",
+    "region": "Global",
+    "gpu": "H100",
+    "price": 2.85
+  },
+  {
+    "provider": "CoreWeave",
+    "region": "Global",
+    "gpu": "H100",
+    "price": 2.13
+  },
+  {
+    "provider": "Aliyun",
+    "region": "China-Hangzhou",
+    "gpu": "A100",
+    "price": 1.64
+  },
+  {
+    "provider": "Tencent Cloud",
+    "region": "China-Beijing",
+    "gpu": "A100",
+    "price": 1.53
+  },
+  {
+    "provider": "Huawei Cloud",
+    "region": "China-Beijing",
+    "gpu": "Ascend 910B",
+    "price": 1.75
+  }
+]

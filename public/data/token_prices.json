@@ -1,0 +1,134 @@
+[
+  {
+    "provider": "OpenAI",
+    "model": "GPT-4o-64k-output-alpha",
+    "input_price": 6.0,
+    "output_price": 18.0
+  },
+  {
+    "provider": "OpenAI",
+    "model": "GPT-4.1 Nano",
+    "input_price": 0.1,
+    "output_price": 0.4
+  },
+  {
+    "provider": "OpenAI",
+    "model": "GPT-4o mini",
+    "input_price": 0.15,
+    "output_price": 0.6
+  },
+  {
+    "provider": "Anthropic",
+    "model": "Claude 3.5",
+    "input_price": null,
+    "output_price": null
+  },
+  {
+    "provider": "Google",
+    "model": "Gemini 1.5",
+    "input_price": null,
+    "output_price": null
+  },
+  {
+    "provider": "Meta",
+    "model": "Llama 3",
+    "input_price": null,
+    "output_price": null
+  },
+  {
+    "provider": "阿里云",
+    "model": "通义千问",
+    "input_price": null,
+    "output_price": null
+  },
+  {
+    "provider": "百度",
+    "model": "文心一言",
+    "input_price": null,
+    "output_price": null
+  },
+  {
+    "provider": "智谱",
+    "model": "GLM-4",
+    "input_price": null,
+    "output_price": null
+  },
+  {
+    "provider": "月之暗面",
+    "model": "Kimi",
+    "input_price": null,
+    "output_price": null
+  },
+  {
+    "provider": "字节跳动",
+    "model": "豆包",
+    "input_price": null,
+    "output_price": null
+  },
+  {
+    "provider": "MiniMax",
+    "model": "未指定具体模型",
+    "input_price": null,
+    "output_price": null
+  },
+  {
+    "provider": "OpenAI",
+    "model": "GPT-4o",
+    "input_price": 5.0,
+    "output_price": 15.0
+  },
+  {
+    "provider": "Anthropic",
+    "model": "Claude3.5 Sonnet",
+    "input_price": 3.0,
+    "output_price": 15.0
+  },
+  {
+    "provider": "Google",
+    "model": "Gemini1.5 Pro",
+    "input_price": 0.75,
+    "output_price": 3.0
+  },
+  {
+    "provider": "Meta",
+    "model": "Llama3-70B",
+    "input_price": 0.5,
+    "output_price": 1.5
+  },
+  {
+    "provider": "Aliyun",
+    "model": "Qwen-Max",
+    "input_price": 0.55,
+    "output_price": 1.66
+  },
+  {
+    "provider": "Baidu",
+    "model": "Ernie4.0",
+    "input_price": 0.69,
+    "output_price": 2.08
+  },
+  {
+    "provider": "Zhipu",
+    "model": "GLM-4",
+    "input_price": 0.42,
+    "output_price": 1.25
+  },
+  {
+    "provider": "MoonShot",
+    "model": "Kimi-Max",
+    "input_price": 0.28,
+    "output_price": 0.83
+  },
+  {
+    "provider": "ByteDance",
+    "model": "Doubao-Pro",
+    "input_price": 0.25,
+    "output_price": 0.75
+  },
+  {
+    "provider": "MiniMax",
+    "model": "Abacus2.0",
+    "input_price": 0.35,
+    "output_price": 1.04
+  }
+]
