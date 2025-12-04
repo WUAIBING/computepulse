@@ -118,18 +118,28 @@ function App() {
             console.log(`[ComputePulse] Token prices data count: ${realTokens?.length || 0}`);
 
             if (realTokens && realTokens.length > 0) {
-                const mappedTokens: TokenProvider[] = realTokens.map((item: any, index: number) => ({
-                    id: `token-${index}`,
-                    name: item.model,
-                    provider: item.provider,
-                    inputCost: item.input_price,
-                    outputCost: item.output_price,
-                    latency: Math.floor(Math.random() * 50) + 20, // Latency is hard to scrape, keeping mock
-                    contextWindow: '128k', // Hard to scrape reliably without complex parsing
-                    mmluScore: 85 + Math.random() * 5 // Mocking benchmark for now
-                }));
-                setTokenData(mappedTokens);
-                console.log('[ComputePulse] Token data set successfully');
+                // Filter out entries with null prices and map to TokenProvider format
+                const mappedTokens: TokenProvider[] = realTokens
+                    .filter((item: any) => item.input_price !== null && item.output_price !== null)
+                    .map((item: any, index: number) => ({
+                        id: `token-${index}`,
+                        model: item.model,
+                        provider: item.provider,
+                        inputCost: item.input_price,
+                        outputCost: item.output_price,
+                        benchmark: 85 + Math.random() * 10, // Default benchmark score (85-95), TODO: fetch real MMLU scores
+                        latency: Math.floor(Math.random() * 50) + 20,
+                        isOpenSource: false,
+                        lastUpdated: new Date().toISOString()
+                    }));
+                
+                if (mappedTokens.length > 0) {
+                    setTokenData(mappedTokens);
+                    console.log(`[ComputePulse] Token data set successfully: ${mappedTokens.length} models`);
+                } else {
+                    console.warn('[ComputePulse] All token prices were null, using mock data');
+                    setTokenData(generateMockTokenData());
+                }
             } else {
                 console.warn('[ComputePulse] Token prices data empty or invalid');
                 setTokenData(generateMockTokenData());
