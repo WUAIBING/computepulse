@@ -82,12 +82,11 @@ function App() {
             const mappedData: ComputeProvider[] = realPrices.map((item: any, index: number) => ({
               id: `real-${index}`,
               name: item.provider,
-              tier: 'Standard',
+              region: item.region || 'US-East',
               pricePerHour: item.price,
-              region: item.region || 'Global',
-              reliability: 99.9,
-              type: item.gpu.includes('H100') ? 'H100' : (item.gpu.includes('A100') ? 'A100' : 'Other'),
-              specs: { vram: '80GB' }
+              availability: 95, // Default availability
+              gpuType: item.gpu.includes('H100') ? 'NVIDIA H100' : (item.gpu.includes('A100') ? 'NVIDIA A100' : 'NVIDIA V100'),
+              lastUpdated: new Date().toISOString()
             }));
             const validatedData = mappedData.filter(d => !isNaN(d.pricePerHour) && d.pricePerHour > 0);
             console.log(`[ComputePulse] Valid GPU data items: ${validatedData.length}`);
