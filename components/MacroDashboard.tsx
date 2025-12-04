@@ -79,7 +79,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
            <div className="flex items-center gap-2">
              <h2 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider`}>{t.gcciTitle}</h2>
              <div 
-                className="relative"
+                className="relative overflow-visible"
                 onMouseEnter={() => setShowCostInfo(true)}
                 onMouseLeave={() => setShowCostInfo(false)}
               >
@@ -137,7 +137,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
            <div className="flex items-center gap-2">
              <h2 className="text-gray-400 text-xs font-bold uppercase tracking-wider">{t.tokenPriceIndex}</h2>
              <div 
-                className="relative"
+                className="relative overflow-visible"
                 onMouseEnter={() => setShowTokenInfo(true)}
                 onMouseLeave={() => setShowTokenInfo(false)}
               >
@@ -189,7 +189,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
            <div className="flex items-center gap-2">
              <h2 className="text-gray-400 text-xs font-bold uppercase tracking-wider">{t.gaglTitle}</h2>
              <div 
-                className="relative"
+                className="relative overflow-visible"
                 onMouseEnter={() => setShowPowerInfo(true)}
                 onMouseLeave={() => setShowPowerInfo(false)}
               >
