@@ -303,73 +303,75 @@ function App() {
     <Layout language={language} theme={theme} onThemeToggle={handleThemeToggle}>
       <div className="space-y-6">
         {/* Header Section */}
-        <div className={`flex flex-col md:flex-row justify-between items-center gap-4 pb-2 border-b ${themeClasses.border}`}>
-          <div>
-            <div className="flex flex-wrap gap-4 text-sm items-center">
+        <div className={`pb-4 border-b ${themeClasses.border}`}>
+          {/* View Mode Buttons - Full Width on Mobile */}
+          <div className="flex flex-col sm:flex-row gap-3 mb-3">
+            <div className="flex gap-2 justify-center sm:justify-start">
               <button 
                 onClick={() => setViewMode('COMPUTE')}
-                className={`px-3 py-1 rounded transition-all ${viewMode === 'COMPUTE' ? 'bg-neon-blue text-white font-bold' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:text-white' : 'hover:text-gray-900'}`}`}
+                className={`flex-1 sm:flex-none px-4 py-2 rounded-lg transition-all text-sm font-medium ${viewMode === 'COMPUTE' ? 'bg-neon-blue text-white shadow-lg shadow-neon-blue/30' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'}`}`}
               >
                 {t.viewGpu}
               </button>
               <button 
                  onClick={() => setViewMode('TOKENS')}
-                 className={`px-3 py-1 rounded transition-all ${viewMode === 'TOKENS' ? 'bg-neon-purple text-white font-bold' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:text-white' : 'hover:text-gray-900'}`}`}
+                 className={`flex-1 sm:flex-none px-4 py-2 rounded-lg transition-all text-sm font-medium ${viewMode === 'TOKENS' ? 'bg-neon-purple text-white shadow-lg shadow-neon-purple/30' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'}`}`}
               >
                 {t.viewToken}
               </button>
               <button 
                  onClick={() => setViewMode('GRID_LOAD')}
-                 className={`px-3 py-1 rounded transition-all ${viewMode === 'GRID_LOAD' ? 'bg-orange-500 text-white font-bold' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:text-white' : 'hover:text-gray-900'}`}`}
+                 className={`flex-1 sm:flex-none px-4 py-2 rounded-lg transition-all text-sm font-medium ${viewMode === 'GRID_LOAD' ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'}`}`}
               >
                 {t.viewGridLoad}
               </button>
-
-              {/* Currency & Language Switcher */}
-              <div className="flex flex-wrap items-center gap-2">
-                <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded border ${themeClasses.border}`}>
-                  <span className={`${themeClasses.textMuted} px-2 text-xs`}>{t.unit}</span>
-                  <select 
-                    value={currencyCode} 
-                    onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
-                    className={`bg-transparent ${themeClasses.text} text-xs font-mono font-bold py-1 pr-2 focus:outline-none cursor-pointer`}
-                  >
-                    {CURRENCIES.map((c) => (
-                      <option key={c.code} value={c.code} className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>{c.code} ({c.symbol})</option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Language Toggle */}
-                <div className={`flex ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded border ${themeClasses.border} p-0.5`}>
-                  <button 
-                    onClick={() => { setLanguage('CN'); setCurrencyCode('CNY'); }}
-                    className={`px-2 py-0.5 text-xs font-bold rounded ${language === 'CN' ? `${themeClasses.activeBg} ${themeClasses.text}` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
-                  >
-                    中文
-                  </button>
-                  <button 
-                    onClick={() => { setLanguage('EN'); setCurrencyCode('USD'); }}
-                    className={`px-2 py-0.5 text-xs font-bold rounded ${language === 'EN' ? `${themeClasses.activeBg} ${themeClasses.text}` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
-                  >
-                    EN
-                  </button>
-                </div>
-
-                {/* Verify Data Button - Mobile Optimized */}
-                <button
-                  onClick={() => setShowCalcModal(true)}
-                  className={`px-3 py-1.5 min-h-[32px] ${theme === 'dark' ? 'bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border-gray-800 hover:border-gray-700' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 border-gray-300 hover:border-gray-400'} text-xs font-medium rounded border transition-all duration-200 flex items-center gap-1.5 active:scale-95 touch-manipulation`}
-                  title={t.verifyData}
-                  aria-label={t.verifyData}
-                >
-                  <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                  <span className="whitespace-nowrap">{t.verifyData}</span>
-                </button>
-              </div>
             </div>
+          </div>
+
+          {/* Settings Row - Organized on Mobile */}
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-stretch sm:items-center">
+            {/* Currency Selector */}
+            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} px-3 py-2`}>
+              <span className={`${themeClasses.textMuted} text-xs mr-2`}>{t.unit}</span>
+              <select 
+                value={currencyCode} 
+                onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
+                className={`bg-transparent ${themeClasses.text} text-xs font-mono font-bold focus:outline-none cursor-pointer flex-1`}
+              >
+                {CURRENCIES.map((c) => (
+                  <option key={c.code} value={c.code} className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>{c.code} ({c.symbol})</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Language Toggle */}
+            <div className={`flex ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} p-1`}>
+              <button 
+                onClick={() => { setLanguage('CN'); setCurrencyCode('CNY'); }}
+                className={`flex-1 px-4 py-1.5 text-xs font-bold rounded-md transition-all ${language === 'CN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
+              >
+                中文
+              </button>
+              <button 
+                onClick={() => { setLanguage('EN'); setCurrencyCode('USD'); }}
+                className={`flex-1 px-4 py-1.5 text-xs font-bold rounded-md transition-all ${language === 'EN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
+              >
+                EN
+              </button>
+            </div>
+
+            {/* Verify Data Button */}
+            <button
+              onClick={() => setShowCalcModal(true)}
+              className={`px-4 py-2 ${theme === 'dark' ? 'bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border-gray-800 hover:border-gray-700' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 border-gray-300 hover:border-gray-400'} text-xs font-medium rounded-lg border transition-all duration-200 flex items-center justify-center gap-2 active:scale-95 touch-manipulation`}
+              title={t.verifyData}
+              aria-label={t.verifyData}
+            >
+              <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              <span className="whitespace-nowrap">{t.verifyData}</span>
+            </button>
           </div>
         </div>
 

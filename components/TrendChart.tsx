@@ -45,7 +45,7 @@ export const TrendChart: React.FC<TrendChartProps> = ({
   }));
 
   return (
-    <div className={`w-full ${themeClasses.panelBg} rounded-xl border ${themeClasses.border} p-6 h-[300px]`}>
+    <div className={`w-full ${themeClasses.panelBg} rounded-xl border ${themeClasses.border} p-6 h-[300px] overflow-visible`}>
       <div className="flex justify-between items-start mb-4">
         <h3 className={`text-lg font-bold ${themeClasses.text} flex items-center gap-2`}>
           <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: lineColor }}></span>
@@ -57,7 +57,7 @@ export const TrendChart: React.FC<TrendChartProps> = ({
       </div>
 
       <ResponsiveContainer width="100%" height="85%">
-        <AreaChart data={chartData} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
+        <AreaChart data={chartData} margin={{ top: 10, right: 5, left: 0, bottom: 5 }}>
           <defs>
             <linearGradient id={`gradient-${title}`} x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor={lineColor} stopOpacity={0.3}/>
