@@ -11,10 +11,11 @@ interface CalculationModalProps {
   tokenData: TokenProvider[];
   currency: CurrencyConfig;
   language: Language;
+  activeTab: 'GPU' | 'TOKEN';
+  onTabChange: (tab: 'GPU' | 'TOKEN') => void;
 }
 
-export const CalculationModal: React.FC<CalculationModalProps> = ({ isOpen, onClose, computeData, tokenData, currency, language }) => {
-  const [activeTab, setActiveTab] = React.useState<'GPU' | 'TOKEN'>('GPU');
+export const CalculationModal: React.FC<CalculationModalProps> = ({ isOpen, onClose, computeData, tokenData, currency, language, activeTab, onTabChange }) => {
   const t = TRANSLATIONS[language];
 
   if (!isOpen) return null;
@@ -38,13 +39,13 @@ export const CalculationModal: React.FC<CalculationModalProps> = ({ isOpen, onCl
         {/* Tabs */}
         <div className="flex border-b border-gray-800">
           <button 
-            onClick={() => setActiveTab('GPU')}
+            onClick={() => onTabChange('GPU')}
             className={`px-6 py-3 text-sm font-bold transition-colors ${activeTab === 'GPU' ? 'text-neon-blue border-b-2 border-neon-blue bg-white/5' : 'text-gray-400 hover:text-white'}`}
           >
             {t.gpuPricing}
           </button>
           <button 
-            onClick={() => setActiveTab('TOKEN')}
+            onClick={() => onTabChange('TOKEN')}
             className={`px-6 py-3 text-sm font-bold transition-colors ${activeTab === 'TOKEN' ? 'text-neon-purple border-b-2 border-neon-purple bg-white/5' : 'text-gray-400 hover:text-white'}`}
           >
             {t.tokenSvi}
@@ -56,7 +57,7 @@ export const CalculationModal: React.FC<CalculationModalProps> = ({ isOpen, onCl
           {activeTab === 'GPU' ? (
             <div className="space-y-6">
               <div className="bg-blue-900/20 border border-blue-800 rounded-lg p-4 text-sm text-blue-200 mb-4">
-                <strong>Formula:</strong> <code>Final Price = (Base Tier Price × Region Multiplier) + Spot Variance + (Surge Premium if applicable)</code>
+                <strong>{t.formula}</strong> <code>{t.formulaDesc}</code>
               </div>
               <table className="w-full text-left text-xs text-gray-300">
                 <thead className="text-gray-500 uppercase font-bold bg-gray-900/50 sticky top-0">

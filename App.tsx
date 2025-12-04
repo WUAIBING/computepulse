@@ -38,6 +38,7 @@ function App() {
   const [avgSpotPriceUSD, setAvgSpotPriceUSD] = useState<number>(0);
 
   const [showCalcModal, setShowCalcModal] = useState(false);
+  const [calcModalTab, setCalcModalTab] = useState<'GPU' | 'TOKEN'>('GPU');
 
   // Auto-detect Language (Default to CN)
   useEffect(() => {
@@ -300,7 +301,7 @@ function App() {
               </button>
 
               {/* Currency & Language Switcher */}
-              <div className="ml-2 flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <div className="flex items-center bg-gray-900 rounded border border-gray-800">
                   <span className="text-gray-500 px-2 text-xs">{t.unit}</span>
                   <select 
@@ -330,15 +331,17 @@ function App() {
                   </button>
                 </div>
 
+                {/* Verify Data Button - Mobile Optimized */}
                 <button
                   onClick={() => setShowCalcModal(true)}
-                  className="ml-2 px-3 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-xs rounded border border-gray-700 transition-colors flex items-center gap-1"
-                  title="View Calculation Details"
+                  className="px-3 py-1.5 min-h-[32px] bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white text-xs font-medium rounded border border-gray-800 hover:border-gray-700 transition-all duration-200 flex items-center gap-1.5 active:scale-95 touch-manipulation"
+                  title={t.verifyData}
+                  aria-label={t.verifyData}
                 >
-                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
-                  {t.verifyData || "Verify Data"}
+                  <span className="whitespace-nowrap">{t.verifyData}</span>
                 </button>
               </div>
             </div>
@@ -430,6 +433,8 @@ function App() {
         tokenData={tokenData}
         currency={currency}
         language={language}
+        activeTab={calcModalTab}
+        onTabChange={setCalcModalTab}
       />
     </Layout>
   );
