@@ -1,7 +1,7 @@
 {
-  "annual_twh": 340,
-  "estimated_gw": 38.8,
+  "annual_twh": 85.4,
+  "estimated_gw": 9.75,
   "kwh_price": 0.12,
-  "source": "IEA 2024 Data",
+  "source": "BloombergNEF 2024 Report",
   "active_gpu_est": 4000000
 }

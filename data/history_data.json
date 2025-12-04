@@ -1,0 +1,701 @@
+[
+  {
+    "date": "2025-12-04",
+    "timestamp": "2025-12-04T23:45:08.657822",
+    "gpu_prices": [
+      {
+        "provider": "AWS",
+        "region": "Global",
+        "gpu": "H100",
+        "price": 2.13
+      },
+      {
+        "provider": "Azure",
+        "region": "Global",
+        "gpu": "H100",
+        "price": 3.06
+      },
+      {
+        "provider": "Google Cloud",
+        "region": "Global",
+        "gpu": "H100",
+        "price": 2.85
+      },
+      {
+        "provider": "CoreWeave",
+        "region": "Global",
+        "gpu": "H100",
+        "price": 2.13
+      },
+      {
+        "provider": "Aliyun",
+        "region": "China-Hangzhou",
+        "gpu": "A100",
+        "price": 1.64
+      },
+      {
+        "provider": "Tencent Cloud",
+        "region": "China-Beijing",
+        "gpu": "A100",
+        "price": 1.64
+      },
+      {
+        "provider": "Huawei Cloud",
+        "region": "China-Beijing",
+        "gpu": "Ascend 910B",
+        "price": 13.89
+      },
+      {
+        "provider": "Huawei Cloud",
+        "region": "China-Shenzhen",
+        "gpu": "Ascend 910B",
+        "price": 1.53
+      },
+      {
+        "provider": "阿里云",
+        "region": "China-Hangzhou",
+        "gpu": "A100",
+        "price": 4.55
+      },
+      {
+        "provider": "阿里云",
+        "region": "China-Hangzhou",
+        "gpu": "H100",
+        "price": 27.78
+      },
+      {
+        "provider": "腾讯云",
+        "region": "Global",
+        "gpu": "Ascend 910B",
+        "price": 6.94
+      },
+      {
+        "provider": "Lambda Labs",
+        "region": "US-West",
+        "gpu": "H100",
+        "price": 2.13
+      },
+      {
+        "provider": "Lambda Labs",
+        "region": "US-West",
+        "gpu": "A100",
+        "price": 1.25
+      },
+      {
+        "provider": "RunPod",
+        "region": "Global",
+        "gpu": "H100",
+        "price": 2.3
+      },
+      {
+        "provider": "RunPod",
+        "region": "Global",
+        "gpu": "A100",
+        "price": 1.4
+      },
+      {
+        "provider": "CoreWeave",
+        "region": "US-East",
+        "gpu": "H100",
+        "price": 1.99
+      },
+      {
+        "provider": "CoreWeave",
+        "region": "US-East",
+        "gpu": "A100",
+        "price": 1.6
+      },
+      {
+        "provider": "AWS",
+        "region": "US-East",
+        "gpu": "A100",
+        "price": 2.93
+      },
+      {
+        "provider": "Google Cloud",
+        "region": "US-Central",
+        "gpu": "A100",
+        "price": 2.93
+      },
+      {
+        "provider": "Aliyun",
+        "region": "China-Hangzhou",
+        "gpu": "Ascend 910B",
+        "price": 1.67
+      },
+      {
+        "provider": "Tencent Cloud",
+        "region": "China-Guangzhou",
+        "gpu": "MLU370",
+        "price": 1.39
+      },
+      {
+        "provider": "Baidu Smart Cloud",
+        "region": "China-Beijing",
+        "gpu": "Ascend 910B",
+        "price": 1.53
+      },
+      {
+        "provider": "Volcengine",
+        "region": "China-Shanghai",
+        "gpu": "DCU",
+        "price": 1.25
+      },
+      {
+        "provider": "AWS",
+        "region": "US-East",
+        "gpu": "H100",
+        "price": 4.0
+      },
+      {
+        "provider": "Tencent Cloud",
+        "region": "China-Guangzhou",
+        "gpu": "Ascend 910B",
+        "price": 1.78
+      },
+      {
+        "provider": "Baidu Smart Cloud",
+        "region": "China-Beijing",
+        "gpu": "MLU370",
+        "price": 1.39
+      },
+      {
+        "provider": "RunPod",
+        "region": "US-East",
+        "gpu": "H200",
+        "price": 3.0
+      },
+      {
+        "provider": "Vast.ai",
+        "region": "Europe",
+        "gpu": "A100",
+        "price": 2.2
+      },
+      {
+        "provider": "CoreWeave",
+        "region": "US-Central",
+        "gpu": "L40S",
+        "price": 1.8
+      },
+      {
+        "provider": "AWS",
+        "region": "Global",
+        "gpu": "Blackwell GB200",
+        "price": 4.5
+      },
+      {
+        "provider": "Google Cloud",
+        "region": "Asia-Pacific",
+        "gpu": "H100",
+        "price": 2.7
+      },
+      {
+        "provider": "Azure",
+        "region": "Europe",
+        "gpu": "H200",
+        "price": 4.0
+      },
+      {
+        "provider": "阿里云",
+        "region": "China",
+        "gpu": "Ascend 910B",
+        "price": 1.8
+      },
+      {
+        "provider": "腾讯云",
+        "region": "China",
+        "gpu": "MLU370",
+        "price": 1.5
+      },
+      {
+        "provider": "百度智能云",
+        "region": "China",
+        "gpu": "DCU",
+        "price": 1.6
+      },
+      {
+        "provider": "Lambda",
+        "region": "US-West",
+        "gpu": "H100",
+        "price": 2.5
+      },
+      {
+        "provider": "Vast.ai",
+        "region": "Global",
+        "gpu": "A100",
+        "price": 2.2
+      },
+      {
+        "provider": "AWS",
+        "region": "us-west-2",
+        "gpu": "H100",
+        "price": 2.6
+      },
+      {
+        "provider": "Google Cloud",
+        "region": "us-central1",
+        "gpu": "H200",
+        "price": 3.2
+      },
+      {
+        "provider": "Azure",
+        "region": "East US",
+        "gpu": "A100",
+        "price": 2.3
+      },
+      {
+        "provider": "Aliyun",
+        "region": "China",
+        "gpu": "Ascend 910B",
+        "price": 1.85
+      },
+      {
+        "provider": "Tencent Cloud",
+        "region": "China",
+        "gpu": "MLU370",
+        "price": 1.1
+      },
+      {
+        "provider": "Baidu Intelligent Cloud",
+        "region": "China",
+        "gpu": "DCU",
+        "price": 1.7
+      },
+      {
+        "provider": "Volcano Engine",
+        "region": "China",
+        "gpu": "H100",
+        "price": 3.65
+      },
+      {
+        "provider": "Huawei Cloud",
+        "region": "China",
+        "gpu": "Blackwell GB200",
+        "price": 3.5
+      },
+      {
+        "provider": "Google Cloud",
+        "region": "US-Central",
+        "gpu": "H100",
+        "price": 3.67
+      },
+      {
+        "provider": "Azure",
+        "region": "US-East",
+        "gpu": "H100",
+        "price": 3.93
+      },
+      {
+        "provider": "RunPod",
+        "region": "EU-West",
+        "gpu": "H100",
+        "price": 1.97
+      },
+      {
+        "provider": "Azure",
+        "region": "US-East",
+        "gpu": "A100",
+        "price": 3.07
+      },
+      {
+        "provider": "RunPod",
+        "region": "EU-West",
+        "gpu": "A100",
+        "price": 1.17
+      },
+      {
+        "provider": "Vast.ai",
+        "region": "US-West",
+        "gpu": "A100",
+        "price": 0.85
+      },
+      {
+        "provider": "AWS",
+        "region": "US-East",
+        "gpu": "L40S",
+        "price": 1.5
+      },
+      {
+        "provider": "Google Cloud",
+        "region": "US-Central",
+        "gpu": "L40S",
+        "price": 1.45
+      },
+      {
+        "provider": "Azure",
+        "region": "US-East",
+        "gpu": "L40S",
+        "price": 1.55
+      },
+      {
+        "provider": "Aliyun",
+        "region": "China",
+        "gpu": "H100",
+        "price": 3.8
+      },
+      {
+        "provider": "Tencent Cloud",
+        "region": "China",
+        "gpu": "H100",
+        "price": 3.75
+      },
+      {
+        "provider": "Baidu AI Cloud",
+        "region": "China",
+        "gpu": "H100",
+        "price": 3.7
+      },
+      {
+        "provider": "Aliyun",
+        "region": "China",
+        "gpu": "A100",
+        "price": 2.8
+      },
+      {
+        "provider": "Tencent Cloud",
+        "region": "China",
+        "gpu": "A100",
+        "price": 2.75
+      },
+      {
+        "provider": "Baidu AI Cloud",
+        "region": "China",
+        "gpu": "A100",
+        "price": 2.7
+      },
+      {
+        "provider": "Volcano Engine",
+        "region": "China",
+        "gpu": "A100",
+        "price": 2.65
+      },
+      {
+        "provider": "Huawei Cloud",
+        "region": "China",
+        "gpu": "Ascend 910B",
+        "price": 1.8
+      },
+      {
+        "provider": "Tencent Cloud",
+        "region": "China",
+        "gpu": "Ascend 910B",
+        "price": 1.75
+      },
+      {
+        "provider": "Baidu AI Cloud",
+        "region": "China",
+        "gpu": "Ascend 910B",
+        "price": 1.7
+      },
+      {
+        "provider": "Volcano Engine",
+        "region": "China",
+        "gpu": "Ascend 910B",
+        "price": 1.65
+      },
+      {
+        "provider": "SenseTime",
+        "region": "China",
+        "gpu": "Ascend 910B",
+        "price": 1.6
+      },
+      {
+        "provider": "Aliyun",
+        "region": "China",
+        "gpu": "MLU370",
+        "price": 1.2
+      },
+      {
+        "provider": "Huawei Cloud",
+        "region": "China",
+        "gpu": "MLU370",
+        "price": 1.15
+      },
+      {
+        "provider": "Baidu AI Cloud",
+        "region": "China",
+        "gpu": "MLU370",
+        "price": 1.05
+      },
+      {
+        "provider": "Volcano Engine",
+        "region": "China",
+        "gpu": "MLU370",
+        "price": 1.0
+      },
+      {
+        "provider": "SenseTime",
+        "region": "China",
+        "gpu": "MLU370",
+        "price": 0.95
+      },
+      {
+        "provider": "Aliyun",
+        "region": "China",
+        "gpu": "DCU",
+        "price": 1.4
+      },
+      {
+        "provider": "Huawei Cloud",
+        "region": "China",
+        "gpu": "DCU",
+        "price": 1.35
+      },
+      {
+        "provider": "Tencent Cloud",
+        "region": "China",
+        "gpu": "DCU",
+        "price": 1.3
+      },
+      {
+        "provider": "Baidu AI Cloud",
+        "region": "China",
+        "gpu": "DCU",
+        "price": 1.25
+      },
+      {
+        "provider": "Volcano Engine",
+        "region": "China",
+        "gpu": "DCU",
+        "price": 1.2
+      },
+      {
+        "provider": "SenseTime",
+        "region": "China",
+        "gpu": "DCU",
+        "price": 1.15
+      }
+    ],
+    "token_prices": [
+      {
+        "provider": "OpenAI",
+        "model": "GPT-4o-64k-output-alpha",
+        "input_price": 6.0,
+        "output_price": 18.0
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-4.1 Nano",
+        "input_price": 0.1,
+        "output_price": 0.4
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-4o mini",
+        "input_price": 0.15,
+        "output_price": 0.6
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-4o",
+        "input_price": 2.5,
+        "output_price": 10.0
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude3.5 Sonnet",
+        "input_price": 3.0,
+        "output_price": 15.0
+      },
+      {
+        "provider": "Google",
+        "model": "Gemini1.5 Pro",
+        "input_price": 0.75,
+        "output_price": 3.0
+      },
+      {
+        "provider": "Meta",
+        "model": "Llama3-70B",
+        "input_price": 0.5,
+        "output_price": 1.5
+      },
+      {
+        "provider": "Aliyun",
+        "model": "Qwen-Max",
+        "input_price": 0.55,
+        "output_price": 1.66
+      },
+      {
+        "provider": "Baidu",
+        "model": "Ernie4.0",
+        "input_price": 0.69,
+        "output_price": 2.08
+      },
+      {
+        "provider": "Zhipu",
+        "model": "GLM-4",
+        "input_price": 5.56,
+        "output_price": 22.22
+      },
+      {
+        "provider": "MoonShot",
+        "model": "Kimi-Max",
+        "input_price": 0.28,
+        "output_price": 0.83
+      },
+      {
+        "provider": "ByteDance",
+        "model": "Doubao-Pro",
+        "input_price": 0.84,
+        "output_price": 3.33
+      },
+      {
+        "provider": "MiniMax",
+        "model": "Abacus2.0",
+        "input_price": 0.35,
+        "output_price": 1.04
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-4.1",
+        "input_price": 2.0,
+        "output_price": 8.0
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-4o-mini",
+        "input_price": 0.15,
+        "output_price": 0.6
+      },
+      {
+        "provider": "OpenAI",
+        "model": "o1",
+        "input_price": 2.0,
+        "output_price": 6.0
+      },
+      {
+        "provider": "Aliyun",
+        "model": "Qwen/通义千问",
+        "input_price": 0.073,
+        "output_price": 0.22
+      },
+      {
+        "provider": "OpenAI",
+        "model": "o1-preview",
+        "input_price": 15.0,
+        "output_price": 60.0
+      },
+      {
+        "provider": "OpenAI",
+        "model": "o1-mini",
+        "input_price": 1.1,
+        "output_price": 4.4
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude 3.5 Sonnet",
+        "input_price": 3.0,
+        "output_price": 15.0
+      },
+      {
+        "provider": "Google",
+        "model": "Gemini 2.0 Flash",
+        "input_price": 0.075,
+        "output_price": 0.3
+      },
+      {
+        "provider": "Google",
+        "model": "Gemini 2.0 Flash-8B",
+        "input_price": 0.0375,
+        "output_price": 0.15
+      },
+      {
+        "provider": "Google",
+        "model": "Gemini 1.5 Pro",
+        "input_price": 1.25,
+        "output_price": 5.0
+      },
+      {
+        "provider": "Google",
+        "model": "Gemini 1.5 Flash",
+        "input_price": 0.075,
+        "output_price": 0.3
+      },
+      {
+        "provider": "Meta",
+        "model": "Llama 3 70B",
+        "input_price": 0.36,
+        "output_price": 0.48
+      },
+      {
+        "provider": "Meta",
+        "model": "Llama 3 405B",
+        "input_price": 2.65,
+        "output_price": 3.55
+      },
+      {
+        "provider": "Aliyun",
+        "model": "Qwen-Plus",
+        "input_price": 0.22,
+        "output_price": 0.44
+      },
+      {
+        "provider": "Baidu",
+        "model": "Ernie-4.0 Turbo",
+        "input_price": 1.39,
+        "output_price": 5.56
+      },
+      {
+        "provider": "Baidu",
+        "model": "Ernie-4.0",
+        "input_price": 5.56,
+        "output_price": 22.22
+      },
+      {
+        "provider": "Baidu",
+        "model": "Ernie-3.5",
+        "input_price": 0.56,
+        "output_price": 2.22
+      },
+      {
+        "provider": "Zhipu",
+        "model": "GLM-4-Flash",
+        "input_price": 0.07,
+        "output_price": 0.28
+      },
+      {
+        "provider": "Zhipu",
+        "model": "GLM-4-Plus",
+        "input_price": 2.78,
+        "output_price": 11.11
+      },
+      {
+        "provider": "Moonshot",
+        "model": "Kimi",
+        "input_price": 0.56,
+        "output_price": 2.22
+      },
+      {
+        "provider": "ByteDance",
+        "model": "Doubao-Lite",
+        "input_price": 0.11,
+        "output_price": 0.44
+      },
+      {
+        "provider": "MiniMax",
+        "model": "MiniMax-01",
+        "input_price": 0.56,
+        "output_price": 2.22
+      },
+      {
+        "provider": "DeepSeek",
+        "model": "DeepSeek-V3",
+        "input_price": 0.14,
+        "output_price": 0.28
+      },
+      {
+        "provider": "DeepSeek",
+        "model": "DeepSeek-R1",
+        "input_price": 0.28,
+        "output_price": 1.11
+      }
+    ],
+    "grid_load": {
+      "annual_twh": 85.4,
+      "estimated_gw": 9.75,
+      "kwh_price": 0.12,
+      "source": "BloombergNEF 2024 Report",
+      "active_gpu_est": 4000000
+    }
+  }
+]
