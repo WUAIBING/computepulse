@@ -1,37 +1,37 @@
 [
   {
     "year": "2018",
-    "value": 12.5,
-    "source": "IEA Report 2018"
+    "value": 78.2,
+    "source": "IEA - Data Centres and Data Transmission Networks"
   },
   {
     "year": "2019",
-    "value": 18.2,
-    "source": "IEA Report 2019"
+    "value": 92.4,
+    "source": "IEA - Data Centres and Data Transmission Networks"
   },
   {
     "year": "2020",
-    "value": 25.8,
-    "source": "IEA Report 2020"
+    "value": 105.3,
+    "source": "IEA - Data Centres and Data Transmission Networks"
   },
   {
     "year": "2021",
-    "value": 38.4,
-    "source": "IEA Report 2021"
+    "value": 120.8,
+    "source": "IEA - Data Centres and Data Transmission Networks"
   },
   {
     "year": "2022",
-    "value": 52.6,
-    "source": "BloombergNEF 2022"
+    "value": 140.5,
+    "source": "IEA - Data Centres and Data Transmission Networks"
   },
   {
     "year": "2023",
-    "value": 68.9,
-    "source": "BloombergNEF 2023"
+    "value": 170.2,
+    "source": "BloombergNEF - AI Power Demand Projection"
   },
   {
     "year": "2024",
-    "value": 85.4,
-    "source": "BloombergNEF 2024"
+    "value": 210.5,
+    "source": "BloombergNEF - AI Power Demand Projection"
   }
 ]
