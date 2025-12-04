@@ -7,8 +7,9 @@ import { MacroDashboard } from './components/MacroDashboard';
 import { CalculationModal } from './components/CalculationModal';
 import { GridLoadChart } from './components/GridLoadChart';
 import { generateMockData, generateMockTokenData, CURRENCIES, MACRO_CONSTANTS } from './constants';
-import { ComputeProvider, TokenProvider, HistoricalDataPoint, CurrencyCode, Language } from './types';
+import { ComputeProvider, TokenProvider, HistoricalDataPoint, CurrencyCode, Language, Theme } from './types';
 import { TRANSLATIONS } from './translations';
+import { getThemeClasses } from './theme';
 
 type ViewMode = 'COMPUTE' | 'TOKENS' | 'GRID_LOAD';
 
@@ -17,12 +18,14 @@ function App() {
   const [data, setData] = useState<ComputeProvider[]>([]);
   const [tokenData, setTokenData] = useState<TokenProvider[]>([]);
   
-  // Currency & Language State
+  // Currency, Language & Theme State
   const [currencyCode, setCurrencyCode] = useState<CurrencyCode>('USD');
-    const [language, setLanguage] = useState<Language>('CN');
+  const [language, setLanguage] = useState<Language>('CN');
+  const [theme, setTheme] = useState<Theme>('dark');
     
-    const currency = CURRENCIES.find(c => c.code === currencyCode) || CURRENCIES[0];
+  const currency = CURRENCIES.find(c => c.code === currencyCode) || CURRENCIES[0];
   const t = TRANSLATIONS[language];
+  const themeClasses = getThemeClasses(theme);
 
   // History State
   const [computeHistory, setComputeHistory] = useState<HistoricalDataPoint[]>([]);
@@ -40,7 +43,7 @@ function App() {
   const [showCalcModal, setShowCalcModal] = useState(false);
   const [calcModalTab, setCalcModalTab] = useState<'GPU' | 'TOKEN'>('GPU');
 
-  // Auto-detect Language (Default to CN)
+  // Auto-detect Language & Load Theme (Default to CN)
   useEffect(() => {
     const browserLang = navigator.language || navigator.languages[0];
     if (browserLang.toLowerCase().includes('zh')) {
@@ -50,7 +53,20 @@ function App() {
       setLanguage('EN');
       setCurrencyCode('USD');
     }
+
+    // Load theme from localStorage
+    const savedTheme = localStorage.getItem('computepulse-theme') as Theme;
+    if (savedTheme === 'light' || savedTheme === 'dark') {
+      setTheme(savedTheme);
+    }
   }, []);
+
+  // Theme toggle handler
+  const handleThemeToggle = () => {
+    const newTheme: Theme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('computepulse-theme', newTheme);
+  };
 
   // Initialize Data
   useEffect(() => {
@@ -284,57 +300,57 @@ function App() {
   ];
 
   return (
-    <Layout language={language}>
+    <Layout language={language} theme={theme} onThemeToggle={handleThemeToggle}>
       <div className="space-y-6">
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pb-2 border-b border-gray-800">
+        <div className={`flex flex-col md:flex-row justify-between items-center gap-4 pb-2 border-b ${themeClasses.border}`}>
           <div>
             <div className="flex flex-wrap gap-4 text-sm items-center">
               <button 
                 onClick={() => setViewMode('COMPUTE')}
-                className={`px-3 py-1 rounded transition-all ${viewMode === 'COMPUTE' ? 'bg-neon-blue text-black font-bold' : 'text-gray-400 hover:text-white'}`}
+                className={`px-3 py-1 rounded transition-all ${viewMode === 'COMPUTE' ? 'bg-neon-blue text-white font-bold' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:text-white' : 'hover:text-gray-900'}`}`}
               >
                 {t.viewGpu}
               </button>
               <button 
                  onClick={() => setViewMode('TOKENS')}
-                 className={`px-3 py-1 rounded transition-all ${viewMode === 'TOKENS' ? 'bg-neon-purple text-white font-bold' : 'text-gray-400 hover:text-white'}`}
+                 className={`px-3 py-1 rounded transition-all ${viewMode === 'TOKENS' ? 'bg-neon-purple text-white font-bold' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:text-white' : 'hover:text-gray-900'}`}`}
               >
                 {t.viewToken}
               </button>
               <button 
                  onClick={() => setViewMode('GRID_LOAD')}
-                 className={`px-3 py-1 rounded transition-all ${viewMode === 'GRID_LOAD' ? 'bg-orange-500 text-white font-bold' : 'text-gray-400 hover:text-white'}`}
+                 className={`px-3 py-1 rounded transition-all ${viewMode === 'GRID_LOAD' ? 'bg-orange-500 text-white font-bold' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:text-white' : 'hover:text-gray-900'}`}`}
               >
                 {t.viewGridLoad}
               </button>
 
               {/* Currency & Language Switcher */}
               <div className="flex flex-wrap items-center gap-2">
-                <div className="flex items-center bg-gray-900 rounded border border-gray-800">
-                  <span className="text-gray-500 px-2 text-xs">{t.unit}</span>
+                <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded border ${themeClasses.border}`}>
+                  <span className={`${themeClasses.textMuted} px-2 text-xs`}>{t.unit}</span>
                   <select 
                     value={currencyCode} 
                     onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
-                    className="bg-transparent text-white text-xs font-mono font-bold py-1 pr-2 focus:outline-none cursor-pointer"
+                    className={`bg-transparent ${themeClasses.text} text-xs font-mono font-bold py-1 pr-2 focus:outline-none cursor-pointer`}
                   >
                     {CURRENCIES.map((c) => (
-                      <option key={c.code} value={c.code} className="bg-gray-900">{c.code} ({c.symbol})</option>
+                      <option key={c.code} value={c.code} className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>{c.code} ({c.symbol})</option>
                     ))}
                   </select>
                 </div>
 
                 {/* Language Toggle */}
-                <div className="flex bg-gray-900 rounded border border-gray-800 p-0.5">
+                <div className={`flex ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded border ${themeClasses.border} p-0.5`}>
                   <button 
                     onClick={() => { setLanguage('CN'); setCurrencyCode('CNY'); }}
-                    className={`px-2 py-0.5 text-xs font-bold rounded ${language === 'CN' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'}`}
+                    className={`px-2 py-0.5 text-xs font-bold rounded ${language === 'CN' ? `${themeClasses.activeBg} ${themeClasses.text}` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
                   >
                     中文
                   </button>
                   <button 
                     onClick={() => { setLanguage('EN'); setCurrencyCode('USD'); }}
-                    className={`px-2 py-0.5 text-xs font-bold rounded ${language === 'EN' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'}`}
+                    className={`px-2 py-0.5 text-xs font-bold rounded ${language === 'EN' ? `${themeClasses.activeBg} ${themeClasses.text}` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
                   >
                     EN
                   </button>
@@ -343,7 +359,7 @@ function App() {
                 {/* Verify Data Button - Mobile Optimized */}
                 <button
                   onClick={() => setShowCalcModal(true)}
-                  className="px-3 py-1.5 min-h-[32px] bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white text-xs font-medium rounded border border-gray-800 hover:border-gray-700 transition-all duration-200 flex items-center gap-1.5 active:scale-95 touch-manipulation"
+                  className={`px-3 py-1.5 min-h-[32px] ${theme === 'dark' ? 'bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border-gray-800 hover:border-gray-700' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 border-gray-300 hover:border-gray-400'} text-xs font-medium rounded border transition-all duration-200 flex items-center gap-1.5 active:scale-95 touch-manipulation`}
                   title={t.verifyData}
                   aria-label={t.verifyData}
                 >
@@ -366,6 +382,7 @@ function App() {
           annualTWh={annualTWh}
           currency={currency}
           language={language}
+          theme={theme}
         />
 
         {/* Main Grid */}
@@ -385,6 +402,7 @@ function App() {
                     yUnit={` / ${language === 'CN' ? '小时' : 'hr'}`}
                     currency={currency}
                     language={language}
+                    theme={theme}
                  />
               </>
             )}
@@ -400,27 +418,28 @@ function App() {
                     yUnit=" / 1M"
                     currency={currency}
                     language={language}
+                    theme={theme}
                  />
               </>
             )}
 
             {viewMode === 'GRID_LOAD' && (
               <div className="space-y-6">
-                <GridLoadChart data={gridLoadHistory} language={language} />
+                <GridLoadChart data={gridLoadHistory} language={language} theme={theme} />
                 
                 {/* Reusing MacroDashboard components or custom stats for Grid Load */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                   <div className="bg-panel-bg p-6 rounded-xl border border-gray-800">
-                      <h3 className="text-gray-400 text-sm mb-2">{t.estActiveGpus}</h3>
-                      <div className="text-3xl font-bold text-white">{activeGpus.toLocaleString()}</div>
+                   <div className={`${themeClasses.panelBg} p-6 rounded-xl border ${themeClasses.border}`}>
+                      <h3 className={`${themeClasses.textMuted} text-sm mb-2`}>{t.estActiveGpus}</h3>
+                      <div className={`text-3xl font-bold ${themeClasses.text}`}>{activeGpus.toLocaleString()}</div>
                       <div className="text-neon-blue text-xs mt-1">Global Data Centers</div>
                    </div>
-                   <div className="bg-panel-bg p-6 rounded-xl border border-gray-800">
-                      <h3 className="text-gray-400 text-sm mb-2">{t.globalEnergyRate}</h3>
-                      <div className="text-3xl font-bold text-white">
+                   <div className={`${themeClasses.panelBg} p-6 rounded-xl border ${themeClasses.border}`}>
+                      <h3 className={`${themeClasses.textMuted} text-sm mb-2`}>{t.globalEnergyRate}</h3>
+                      <div className={`text-3xl font-bold ${themeClasses.text}`}>
                         {currency.symbol}{(kwhPrice * currency.rate).toFixed(3)} / kWh
                       </div>
-                      <div className="text-gray-500 text-xs mt-1">Weighted Industrial Average</div>
+                      <div className={`${themeClasses.textMuted} text-xs mt-1`}>Weighted Industrial Average</div>
                    </div>
                 </div>
               </div>
@@ -430,7 +449,7 @@ function App() {
 
           {/* Sidebar Column */}
           <div className="lg:col-span-4 flex flex-col gap-6">
-            <MarketVitals cvix={cvix} currency={currency} language={language} kwhPrice={kwhPrice} />
+            <MarketVitals cvix={cvix} currency={currency} language={language} kwhPrice={kwhPrice} theme={theme} />
           </div>
 
         </div>

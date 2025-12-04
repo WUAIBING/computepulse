@@ -9,22 +9,26 @@ import {
   Tooltip, 
   ResponsiveContainer
 } from 'recharts';
-import { HistoricalDataPoint, Language } from '../types';
+import { HistoricalDataPoint, Language, Theme } from '../types';
 import { TRANSLATIONS } from '../translations';
+import { THEME_COLORS, getThemeClasses } from '../theme';
 
 interface GridLoadChartProps {
   data: HistoricalDataPoint[];
   language: Language;
+  theme: Theme;
 }
 
-export const GridLoadChart: React.FC<GridLoadChartProps> = ({ data, language }) => {
+export const GridLoadChart: React.FC<GridLoadChartProps> = ({ data, language, theme }) => {
   const [showInfo, setShowInfo] = useState(false);
   const t = TRANSLATIONS[language];
+  const themeClasses = getThemeClasses(theme);
+  const colors = THEME_COLORS[theme];
 
   return (
-    <div className="w-full bg-panel-bg rounded-xl border border-gray-800 p-6 h-[400px] relative overflow-visible">
+    <div className={`w-full ${themeClasses.panelBg} rounded-xl border ${themeClasses.border} p-6 h-[400px] relative overflow-visible`}>
       <div className="flex justify-between items-start mb-6 z-20 relative">
-        <h3 className="text-lg font-bold text-white flex items-center gap-2">
+        <h3 className={`text-lg font-bold ${themeClasses.text} flex items-center gap-2`}>
           {t.gridLoadTrend}
           
           {/* Tooltip Icon */}
@@ -33,22 +37,22 @@ export const GridLoadChart: React.FC<GridLoadChartProps> = ({ data, language }) 
             onMouseEnter={() => setShowInfo(true)}
             onMouseLeave={() => setShowInfo(false)}
           >
-            <svg className="w-4 h-4 text-gray-400 cursor-help hover:text-neon-blue transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className={`w-4 h-4 ${themeClasses.textMuted} cursor-help hover:text-neon-blue transition-colors`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             
             {/* Tooltip Popup */}
-            <div className={`absolute left-0 top-6 w-64 bg-black/95 border border-gray-700 p-3 rounded-lg shadow-2xl text-xs text-gray-300 transition-opacity duration-200 z-50 pointer-events-none ${showInfo ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-6 w-64 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700 text-gray-300' : 'bg-white border-gray-300 text-gray-700 shadow-xl'} border p-3 rounded-lg shadow-2xl text-xs transition-opacity duration-200 z-50 pointer-events-none ${showInfo ? 'opacity-100' : 'opacity-0'}`}>
               <div className="font-bold text-neon-blue mb-1">{t.totalPower}</div>
               <div className="mb-2">{t.gridLoadDesc}</div>
-              <div className="font-mono bg-gray-900 p-1 rounded border border-gray-800 text-center mb-2">
+              <div className={`font-mono ${theme === 'dark' ? 'bg-gray-900 border-gray-800' : 'bg-gray-100 border-gray-300'} p-1 rounded border text-center mb-2`}>
                 GW = (GPUs * TDP * PUE) / 10^9
               </div>
             </div>
           </div>
         </h3>
 
-        <span className="text-xs text-gray-500 bg-gray-900 px-2 py-1 rounded border border-gray-800 animate-pulse">
+        <span className={`text-xs ${themeClasses.textMuted} ${theme === 'dark' ? 'bg-gray-900 border-gray-800' : 'bg-gray-100 border-gray-300'} px-2 py-1 rounded border animate-pulse`}>
           ● {t.realTime}
         </span>
       </div>
@@ -61,17 +65,17 @@ export const GridLoadChart: React.FC<GridLoadChartProps> = ({ data, language }) 
               <stop offset="95%" stopColor="#f59e0b" stopOpacity={0}/>
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="#2d2d3a" vertical={false} />
+          <CartesianGrid strokeDasharray="3 3" stroke={colors.chartGrid} vertical={false} />
           <XAxis 
             dataKey="time" 
-            stroke="#6b7280" 
+            stroke={colors.textMuted} 
             tick={{fontSize: 10}}
             tickLine={false}
             axisLine={false}
           />
           <YAxis 
             domain={['auto', 'auto']}
-            stroke="#6b7280"
+            stroke={colors.textMuted}
             tick={{fontSize: 10}}
             tickLine={false}
             axisLine={false}
@@ -79,7 +83,7 @@ export const GridLoadChart: React.FC<GridLoadChartProps> = ({ data, language }) 
             width={60}
           />
           <Tooltip 
-            contentStyle={{ backgroundColor: '#0a0a0f', borderColor: '#374151', color: '#fff' }}
+            contentStyle={{ backgroundColor: colors.chartTooltipBg, borderColor: colors.chartTooltipBorder, color: colors.text }}
             itemStyle={{ color: '#f59e0b' }}
             cursor={{ stroke: '#f59e0b', strokeWidth: 1, strokeDasharray: '5 5' }}
             formatter={(value: number) => [`${value.toFixed(4)} ${language === 'CN' ? '吉瓦' : 'GW'}`, t.totalPower]}

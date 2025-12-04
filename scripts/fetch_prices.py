@@ -30,7 +30,7 @@ if not dashscope.api_key:
     # But user wants both.
     # sys.exit(1) 
 
-DOUBAO_ENDPOINT_ID = "doubao-seed-1-6-251015"
+DOUBAO_ENDPOINT_ID = "doubao-seed-1-6-251015"  # Confirmed from API example
 
 def get_doubao_endpoint():
     global DOUBAO_ENDPOINT_ID
