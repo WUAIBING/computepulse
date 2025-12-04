@@ -1,0 +1,96 @@
+{
+  "summary": {
+    "total_records": 40,
+    "valid_records": 28,
+    "suspicious_records": 9,
+    "duplicate_records": 3
+  },
+  "anomalies": [
+    {
+      "provider": "OpenAI",
+      "model": "o1",
+      "input_price": 20.0,
+      "output_price": 20.0,
+      "issue": "输入输出价格比例异常（1:1），不符合行业通常2-4倍的输出溢价规律",
+      "severity": "high",
+      "recommendation": "核实模型定价策略，确认是否为数据录入错误或特殊定价模型"
+    },
+    {
+      "provider": "Meta",
+      "model": "Llama3-70B",
+      "input_price": 0.5,
+      "output_price": 0.79,
+      "issue": "输入输出价格比例偏低（1.58:1），低于行业平均水平",
+      "severity": "medium",
+      "recommendation": "参考Meta官方最新定价（如Llama3.3为0.1/0.4美元/百万token），确认是否为旧版本数据或录入错误"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "GPT-4o",
+      "input_price": 5.0,
+      "output_price": 15.0,
+      "issue": "价格过时，2024年8月OpenAI已将GPT-4o价格降至2.5/10美元/百万token",
+      "severity": "high",
+      "recommendation": "更新为最新市场定价数据",
+      "source": "搜索引擎-火山引擎开发者社区（2024年12月31日）"
+    },
+    {
+      "provider": "Google",
+      "model": "Gemini1.5 Pro",
+      "input_price": 0.75,
+      "output_price": 3.0,
+      "issue": "重复记录且价格不一致（另一条为3.5/10.5），可能为版本混淆或录入错误",
+      "severity": "medium",
+      "recommendation": "区分模型版本（如上下文窗口差异）并统一记录"
+    },
+    {
+      "provider": "Moonshot",
+      "model": "Kimi",
+      "input_price": 0.83,
+      "output_price": 2.5,
+      "issue": "供应商名称拼写错误（应为MoonShot）",
+      "severity": "low",
+      "recommendation": "修正供应商名称大小写一致性"
+    },
+    {
+      "provider": "OpenAI",
+      "model": "GPT-4o mini",
+      "input_price": 0.15,
+      "output_price": 0.6,
+      "issue": "与GPT-4o-mini重复记录（连字符差异）",
+      "severity": "low",
+      "recommendation": "统一模型名称格式（如使用GPT-4o-mini）"
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude3.5 Sonnet",
+      "input_price": 3.0,
+      "output_price": 15.0,
+      "issue": "与Claude 3.5 Sonnet重复记录（空格差异）",
+      "severity": "low",
+      "recommendation": "统一模型名称格式（如使用Claude 3.5 Sonnet）"
+    },
+    {
+      "provider": "Aliyun",
+      "model": "Qwen/通义千问",
+      "input_price": 0.0735,
+      "output_price": 0.23,
+      "issue": "价格单位疑似不一致（其他模型为百万token美元，此条可能为千token人民币）",
+      "severity": "medium",
+      "recommendation": "统一价格单位并换算为百万token美元",
+      "source": "阿里云帮助中心（2025年10月15日）Qwen2.5系列定价参考"
+    },
+    {
+      "provider": "Meta",
+      "model": "Llama 3 70B",
+      "input_price": 0.59,
+      "output_price": 0.79,
+      "issue": "定价可能过时，Meta Llama3.3（2024年12月）已降至0.1/0.4美元/百万token",
+      "severity": "medium",
+      "recommendation": "更新为最新版本定价数据",
+      "source": "搜索引擎-腾讯网（2024年12月07日）"
+    }
+  ],
+  "market_insights": "2024-2025年AI模型定价呈现三大趋势：1. 高性能模型溢价显著（如OpenAI o1-pro输出价格达600美元/百万token）；2. 轻量模型价格持续下降（如Meta Llama3.3降至0.1/0.4美元/百万token）；3. 输入输出比例逐步稳定在3-4倍区间。数据中部分2024年中期定价（如GPT-4o 5/15美元）已明显过时，需及时更新。",
+  "overall_quality": "fair"
+}

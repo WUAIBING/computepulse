@@ -600,25 +600,26 @@ def fetch_annual_energy_history():
     搜索要求：
     1. 获取2018年至2024年每年的全球AI数据中心总能耗（单位：TWh太瓦时）
     2. 2018年是AI大规模应用的起点，从这一年开始统计
-    3. 搜索权威来源：IEA（国际能源署）、BloombergNEF、学术研究报告等
-    4. 如果某年数据缺失，可以基于趋势合理估算
+    3. 搜索权威来源：IEA（国际能源署）、BloombergNEF、学术研究报告、NVIDIA财报等
+    4. 如果某年数据缺失，可以基于趋势和相关报告合理估算
+    5. 重点关注：
+       - 2023年ChatGPT发布后的能耗增长
+       - 大型语言模型训练和推理的能耗
+       - 数据中心GPU集群的能耗统计
     
-    请返回一个 JSON 数组，包含每年的数据：
+    请返回一个 JSON 数组格式：
     [
-      {"year": "2018", "value": 15.2, "source": "IEA Report"},
-      {"year": "2019", "value": 22.5, "source": "BloombergNEF"},
-      {"year": "2020", "value": 35.8, "source": "Academic Study"},
-      {"year": "2021", "value": 52.3, "source": "IEA Report"},
-      {"year": "2022", "value": 68.7, "source": "BloombergNEF"},
-      {"year": "2023", "value": 85.4, "source": "IEA Report"},
-      {"year": "2024", "value": 120.0, "source": "Forecast"}
+      {"year": "2018", "value": <实际数值>, "source": "<数据来源>"},
+      {"year": "2019", "value": <实际数值>, "source": "<数据来源>"},
+      ...
     ]
     
     要求：
     - 只返回 JSON 数组，不要包含 Markdown 标记或解释文字
     - value 单位为 TWh（太瓦时）
     - 必须包含2018-2024年的完整数据
-    - 数据应该呈现增长趋势，符合AI行业发展规律
+    - 每个数据点必须标注真实来源
+    - 数据应该基于真实搜索结果，不要编造
     """
     
     try:
