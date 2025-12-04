@@ -592,6 +592,94 @@ def fetch_grid_load():
     except Exception as e:
         print(f"[{datetime.now()}] Grid Load Fetch Error: {e}")
 
+def fetch_annual_energy_history():
+    """Fetch historical annual AI energy consumption data from 2018-2024."""
+    prompt = """
+    请使用联网搜索功能，查找全球AI数据中心的历史年度能耗数据。
+    
+    搜索要求：
+    1. 获取2018年至2024年每年的全球AI数据中心总能耗（单位：TWh太瓦时）
+    2. 2018年是AI大规模应用的起点，从这一年开始统计
+    3. 搜索权威来源：IEA（国际能源署）、BloombergNEF、学术研究报告等
+    4. 如果某年数据缺失，可以基于趋势合理估算
+    
+    请返回一个 JSON 数组，包含每年的数据：
+    [
+      {"year": "2018", "value": 15.2, "source": "IEA Report"},
+      {"year": "2019", "value": 22.5, "source": "BloombergNEF"},
+      {"year": "2020", "value": 35.8, "source": "Academic Study"},
+      {"year": "2021", "value": 52.3, "source": "IEA Report"},
+      {"year": "2022", "value": 68.7, "source": "BloombergNEF"},
+      {"year": "2023", "value": 85.4, "source": "IEA Report"},
+      {"year": "2024", "value": 120.0, "source": "Forecast"}
+    ]
+    
+    要求：
+    - 只返回 JSON 数组，不要包含 Markdown 标记或解释文字
+    - value 单位为 TWh（太瓦时）
+    - 必须包含2018-2024年的完整数据
+    - 数据应该呈现增长趋势，符合AI行业发展规律
+    """
+    
+    try:
+        print(f"[{datetime.now()}] Fetching Annual Energy History data...")
+        
+        # Fetch from multiple sources
+        qwen_content = call_qwen_with_search(prompt)
+        deepseek_content = call_deepseek_with_reasoning(prompt)
+        doubao_content = call_doubao_with_search(prompt) if ENABLE_DOUBAO else None
+        
+        # Parse responses
+        qwen_data = clean_and_parse_json(qwen_content)
+        deepseek_data = clean_and_parse_json(deepseek_content)
+        doubao_data = clean_and_parse_json(doubao_content) if doubao_content else None
+        
+        # Validate data (should be a list with year and value)
+        def validate_annual_data(data):
+            if not isinstance(data, list) or len(data) == 0:
+                return False
+            for item in data:
+                if not isinstance(item, dict):
+                    return False
+                if 'year' not in item or 'value' not in item:
+                    return False
+                if not isinstance(item['value'], (int, float)) or item['value'] <= 0:
+                    return False
+            return True
+        
+        if qwen_data and not validate_annual_data(qwen_data):
+            qwen_data = None
+        if deepseek_data and not validate_annual_data(deepseek_data):
+            deepseek_data = None
+        if doubao_data and not validate_annual_data(doubao_data):
+            doubao_data = None
+        
+        # Load existing data
+        annual_file = os.path.join(DATA_DIR, 'annual_energy.json')
+        existing_data = []
+        if os.path.exists(annual_file):
+            try:
+                with open(annual_file, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+            except Exception as e:
+                print(f"[{datetime.now()}] Error loading existing annual data: {e}")
+        
+        # Merge with improved logic (prefer DeepSeek > Qwen > Doubao > Existing)
+        final_data = deepseek_data or qwen_data or doubao_data or existing_data
+        
+        if final_data and len(final_data) > 0:
+            # Sort by year
+            final_data = sorted(final_data, key=lambda x: x['year'])
+            
+            with open(annual_file, 'w', encoding='utf-8') as f:
+                json.dump(final_data, f, indent=2, ensure_ascii=False)
+            print(f"[{datetime.now()}] Annual Energy History updated: {len(final_data)} years")
+        else:
+            print(f"[{datetime.now()}] No valid annual energy data fetched, keeping existing data")
+
+    except Exception as e:
+        print(f"[{datetime.now()}] Annual Energy Fetch Error: {e}")
+
 def save_daily_history(gpu_data, token_data, grid_data):
     """Save daily snapshot to history file."""
     today_str = datetime.now().strftime('%Y-%m-%d')
@@ -735,6 +823,7 @@ def run_all_fetches():
     fetch_gpu_prices()
     fetch_token_prices()
     fetch_grid_load()
+    fetch_annual_energy_history()
     
     # Load data for history and validation
     gpu_data = []

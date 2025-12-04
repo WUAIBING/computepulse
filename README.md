@@ -299,6 +299,6 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 ---
 
-**Built with ❤️ by the ComputePulse Team**
+**Built with ❤️ by SilentCopilot**
 
-*Making AI compute costs transparent for everyone*
+

@@ -6,6 +6,7 @@ import { MarketVitals } from './components/MarketVitals';
 import { MacroDashboard } from './components/MacroDashboard';
 import { CalculationModal } from './components/CalculationModal';
 import { GridLoadChart } from './components/GridLoadChart';
+import { AnnualBarChart } from './components/AnnualBarChart';
 import { generateMockData, generateMockTokenData, CURRENCIES, MACRO_CONSTANTS } from './constants';
 import { ComputeProvider, TokenProvider, HistoricalDataPoint, CurrencyCode, Language, Theme } from './types';
 import { TRANSLATIONS } from './translations';
@@ -31,6 +32,7 @@ function App() {
   const [computeHistory, setComputeHistory] = useState<HistoricalDataPoint[]>([]);
   const [tokenHistory, setTokenHistory] = useState<HistoricalDataPoint[]>([]);
   const [gridLoadHistory, setGridLoadHistory] = useState<HistoricalDataPoint[]>([]);
+  const [annualEnergyData, setAnnualEnergyData] = useState<Array<{year: string; value: number; source?: string}>>([]);
 
   // Derived Metrics
   const [cvix, setCvix] = useState<number>(0);
@@ -191,6 +193,25 @@ function App() {
            }
         } else {
           console.error(`[ComputePulse] Failed to load grid load: ${gridResponse.status} ${gridResponse.statusText}`);
+        }
+
+        // 4. Fetch Annual Energy Data
+        console.log(`[ComputePulse] Fetching annual energy data from: ${cleanBaseUrl}data/annual_energy.json`);
+        const annualResponse = await fetch(`${cleanBaseUrl}data/annual_energy.json`);
+
+        if (annualResponse.ok) {
+           console.log(`[ComputePulse] Annual energy data loaded successfully, status: ${annualResponse.status}`);
+           const annualData = await annualResponse.json();
+           console.log("[ComputePulse] Annual energy data:", annualData);
+
+           if (annualData && Array.isArray(annualData) && annualData.length > 0) {
+             setAnnualEnergyData(annualData);
+             console.log(`[ComputePulse] Annual energy data set: ${annualData.length} years`);
+           } else {
+             console.warn('[ComputePulse] Annual energy data is empty or invalid');
+           }
+        } else {
+          console.error(`[ComputePulse] Failed to load annual energy data: ${annualResponse.status} ${annualResponse.statusText}`);
         }
 
       } catch (e) {
@@ -428,6 +449,16 @@ function App() {
             {viewMode === 'GRID_LOAD' && (
               <div className="space-y-6">
                 <GridLoadChart data={gridLoadHistory} language={language} theme={theme} />
+                
+                {/* Annual Energy Consumption Bar Chart */}
+                <AnnualBarChart 
+                  data={annualEnergyData} 
+                  title={language === 'CN' ? '全球AI能耗趋势' : 'Global AI Energy Consumption Trend'}
+                  barColor="#f59e0b"
+                  yUnit=" TWh"
+                  language={language} 
+                  theme={theme} 
+                />
                 
                 {/* Reusing MacroDashboard components or custom stats for Grid Load */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
