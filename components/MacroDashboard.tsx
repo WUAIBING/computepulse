@@ -154,7 +154,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
              <span className="text-neon-purple text-3xl font-mono font-bold tracking-tight">
                {currency.symbol}{displayTokenPrice}
              </span>
-             <span className="text-gray-500 text-xs font-bold uppercase">/ 1M tokens</span>
+             <span className="text-gray-500 text-xs font-bold uppercase">/ {language === 'CN' ? '百万 Tokens' : '1M tokens'}</span>
            </div>
         </div>
         
@@ -214,7 +214,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
              <span className="text-orange-500 text-3xl font-mono font-bold tracking-tight">
                {calculatedGW.toFixed(3)}
              </span>
-             <span className="text-gray-500 text-xs font-bold uppercase">GW</span>
+             <span className="text-gray-500 text-xs font-bold uppercase">{language === 'CN' ? '吉瓦' : 'GW'}</span>
            </div>
         </div>
         

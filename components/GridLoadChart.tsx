@@ -75,14 +75,14 @@ export const GridLoadChart: React.FC<GridLoadChartProps> = ({ data, language }) 
             tick={{fontSize: 10}}
             tickLine={false}
             axisLine={false}
-            tickFormatter={(val) => `${val.toFixed(2)} GW`}
+            tickFormatter={(val) => `${val.toFixed(2)} ${language === 'CN' ? '吉瓦' : 'GW'}`}
             width={60}
           />
           <Tooltip 
             contentStyle={{ backgroundColor: '#0a0a0f', borderColor: '#374151', color: '#fff' }}
             itemStyle={{ color: '#f59e0b' }}
             cursor={{ stroke: '#f59e0b', strokeWidth: 1, strokeDasharray: '5 5' }}
-            formatter={(value: number) => [`${value.toFixed(4)} GW`, t.totalPower]}
+            formatter={(value: number) => [`${value.toFixed(4)} ${language === 'CN' ? '吉瓦' : 'GW'}`, t.totalPower]}
           />
           <Area 
             type="monotone" 
