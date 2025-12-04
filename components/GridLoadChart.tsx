@@ -42,7 +42,7 @@ export const GridLoadChart: React.FC<GridLoadChartProps> = ({ data, language, th
             </svg>
             
             {/* Tooltip Popup */}
-            <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-6 w-64 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700 text-gray-300' : 'bg-white border-gray-300 text-gray-700 shadow-xl'} border p-3 rounded-lg shadow-2xl text-xs transition-opacity duration-200 z-50 pointer-events-none ${showInfo ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-64 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700 text-gray-300' : 'bg-white border-gray-300 text-gray-700 shadow-xl'} border p-3 rounded-lg shadow-2xl text-xs transition-opacity duration-200 z-50 pointer-events-none ${showInfo ? 'opacity-100' : 'opacity-0'}`}>
               <div className="font-bold text-neon-blue mb-1">{t.totalPower}</div>
               <div className="mb-2">{t.gridLoadDesc}</div>
               <div className={`font-mono ${theme === 'dark' ? 'bg-gray-900 border-gray-800' : 'bg-gray-100 border-gray-300'} p-1 rounded border text-center mb-2`}>

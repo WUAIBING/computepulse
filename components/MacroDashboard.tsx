@@ -87,7 +87,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {showCostInfo && (
-                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-6 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
+                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
                       <div className="text-neon-blue font-bold text-sm mb-2">{t.gcciMethodology}</div>
                       <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
                         {t.gcciDesc}
@@ -145,7 +145,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {showTokenInfo && (
-                  <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-6 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
+                  <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
                     <div className="text-neon-purple font-bold text-sm mb-2">{t.tokenMethodology}</div>
                     <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
                       {t.tokenDesc}
@@ -197,7 +197,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {showPowerInfo && (
-                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-6 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
+                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
                       <div className="text-amber-500 font-bold text-sm mb-2">{t.energyModel}</div>
                       <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
                         {t.energyDesc}
