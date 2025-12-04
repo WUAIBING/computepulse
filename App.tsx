@@ -5,7 +5,6 @@ import { TrendChart } from './components/TrendChart';
 import { MarketVitals } from './components/MarketVitals';
 import { MacroDashboard } from './components/MacroDashboard';
 import { CalculationModal } from './components/CalculationModal';
-import { GridLoadChart } from './components/GridLoadChart';
 import { AnnualBarChart } from './components/AnnualBarChart';
 import { generateMockData, generateMockTokenData, CURRENCIES, MACRO_CONSTANTS } from './constants';
 import { ComputeProvider, TokenProvider, HistoricalDataPoint, CurrencyCode, Language, Theme } from './types';
@@ -448,8 +447,6 @@ function App() {
 
             {viewMode === 'GRID_LOAD' && (
               <div className="space-y-6">
-                <GridLoadChart data={gridLoadHistory} language={language} theme={theme} />
-                
                 {/* Annual Energy Consumption Bar Chart */}
                 <AnnualBarChart 
                   data={annualEnergyData} 
