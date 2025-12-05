@@ -654,19 +654,17 @@ def save_daily_history(gpu_data, token_data, grid_data):
     except Exception as e:
         print(f"[{datetime.now()}] Error saving history: {e}")
 
-def validate_and_fix_with_doubao(gpu_data: List[Dict], token_data: List[Dict]) -> tuple:
+def validate_and_fix_with_kimi(gpu_data: List[Dict], token_data: List[Dict]) -> tuple:
     """
-    Use Doubao to validate and fix data quality issues.
-    Doubao acts as both a data quality checker and fixer.
+    Use Kimi (conceptually) to validate and fix data quality issues.
+    Currently uses statistical methods from data_validator module.
     
     Returns:
         tuple: (fixed_gpu_data, fixed_token_data, reports)
     """
-    if not volc_api_key:
-        print(f"[{datetime.now()}] Doubao validation skipped: API key not configured")
-        return gpu_data, token_data, {}
+    # Local validation logic, no API call needed for now
     
-    print(f"[{datetime.now()}] Starting Doubao data validation and fixing...")
+    print(f"[{datetime.now()}] Starting Kimi data validation and fixing...")
     
     try:
         # Import validation module
@@ -741,11 +739,11 @@ def validate_and_fix_with_doubao(gpu_data: List[Dict], token_data: List[Dict]) -
                     emoji = '🔴' if severity == 'high' else '🟡' if severity == 'medium' else '🟢'
                     print(f"  {emoji} {anomaly.get('provider')} {anomaly.get('model')}: {anomaly.get('issue')}")
         
-        print(f"[{datetime.now()}] Doubao validation and fixing completed")
+        print(f"[{datetime.now()}] Kimi validation and fixing completed")
         return fixed_gpu_data, fixed_token_data, reports
         
     except Exception as e:
-        print(f"[{datetime.now()}] Doubao validation error: {e}")
+        print(f"[{datetime.now()}] Kimi validation error: {e}")
         return gpu_data, token_data, {}
 
 def run_all_fetches():
@@ -775,9 +773,9 @@ def run_all_fetches():
     except Exception as e:
         print(f"[{datetime.now()}] Error reading fetched files for history: {e}")
     
-    # Run Doubao validation and auto-fix
+    # Run Kimi validation and auto-fix
     if gpu_data or token_data:
-        fixed_gpu_data, fixed_token_data, reports = validate_and_fix_with_doubao(gpu_data, token_data)
+        fixed_gpu_data, fixed_token_data, reports = validate_and_fix_with_kimi(gpu_data, token_data)
         
         # Update data if fixes were applied
         if fixed_gpu_data != gpu_data:
