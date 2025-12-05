@@ -37,7 +37,7 @@ jobs:
         env:
           # Secrets must be configured in GitHub Repository Settings
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
-          ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+          VOLC_API_KEY: ${{ secrets.ARK_API_KEY }} # Map ARK_API_KEY secret to VOLC_API_KEY env var
         run: |
           echo "Starting AI Market Analysis..."
           # 1. Run the optimized price fetcher (this should also generate logs)

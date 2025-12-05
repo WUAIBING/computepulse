@@ -48,7 +48,7 @@ if dashscope.api_key:
         print(f"[{datetime.now()}] Warning: Failed to initialize DeepSeek client: {e}")
 
 DOUBAO_ENDPOINT_ID = "doubao-seed-1-6-251015"  # Confirmed from API example
-ENABLE_DOUBAO = False  # Disabled by default due to slow response time
+ENABLE_DOUBAO = True  # Enabled for production environment
 
 # Data validation thresholds
 GPU_PRICE_MIN = 0.1  # Minimum reasonable GPU price per hour (USD)
