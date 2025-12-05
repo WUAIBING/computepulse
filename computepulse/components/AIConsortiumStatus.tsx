@@ -130,11 +130,15 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
   const formatLogTime = (isoTimestamp: string) => {
      try {
        const date = new Date(isoTimestamp);
+       // Check if screen is small (mobile)
+       const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+       
        return date.toLocaleString(language === 'CN' ? 'zh-CN' : 'en-US', {
           month: 'short',
           day: 'numeric',
           hour: '2-digit',
           minute: '2-digit',
+          second: isMobile ? undefined : '2-digit', // Hide seconds on mobile to save space
           hour12: false
        });
      } catch (e) {
@@ -249,7 +253,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
         <div className="grid grid-cols-1 lg:grid-cols-2">
           
           {/* --- LEFT: HOLOGRAPHIC STAGE (The Agents) --- */}
-          <div className="p-6 relative min-h-[300px] flex flex-col items-center justify-center border-b lg:border-b-0 lg:border-r border-gray-800 bg-gradient-to-b from-transparent to-black/40">
+          <div className="p-6 relative min-h-[300px] flex flex-col items-center justify-center border-b lg:border-b-0 lg:border-r border-gray-800 bg-gradient-to-b from-transparent to-black/40 overflow-hidden">
             
             {/* Center Core */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-neon-blue/5 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
@@ -263,8 +267,11 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                 // Start from top (-90 degrees or -PI/2)
                 const angle = index * angleStep - Math.PI / 2;
                 
-                // Radius for the layout
-                const radius = 45; // % from center
+                // Radius for the layout - Responsive adjustment
+                // Use CSS variable or simple calc if possible, but JS calculation is cleaner for angles
+                // Mobile: smaller radius to fit screen
+                const isMobile = typeof window !== 'undefined' && window.innerWidth < 400;
+                const radius = isMobile ? 35 : 45; // % from center
                 
                 // Convert polar to cartesian percentages (50% is center)
                 const left = 50 + radius * Math.cos(angle);
@@ -284,7 +291,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                   >
                     {/* Avatar Circle */}
                     <div 
-                      className={`w-16 h-16 rounded-full bg-gray-900/80 border-2 p-2 transition-all duration-300 flex items-center justify-center backdrop-blur-md relative group`}
+                      className={`w-12 h-12 md:w-16 md:h-16 rounded-full bg-gray-900/80 border-2 p-2 transition-all duration-300 flex items-center justify-center backdrop-blur-md relative group`}
                       style={{
                         borderColor: isActive ? model.color : '#374151', // gray-700
                         boxShadow: isActive ? `0 0 15px ${model.color}` : 'none'
@@ -294,15 +301,15 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                          {model.avatar}
                        </div>
                        {/* Role Badge */}
-                       <div className={`absolute -top-2 px-2 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-wider bg-black border border-gray-700 text-white opacity-100 transition-opacity whitespace-nowrap`}>
+                       <div className={`absolute -top-3 md:-top-2 px-1.5 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-wider bg-black border border-gray-700 text-white opacity-100 transition-opacity whitespace-nowrap shadow-sm`}>
                          {model.role}
                        </div>
                     </div>
                     
                     {/* Name & Confidence */}
-                    <div className="mt-2 text-center">
-                      <div className={`text-xs font-bold ${isActive ? 'text-white' : 'text-gray-500'}`}>{model.name}</div>
-                      <div className={`text-[10px] font-mono ${isActive ? 'text-neon-green' : 'text-gray-600'}`}>{model.confidence}%</div>
+                    <div className="mt-1 md:mt-2 text-center">
+                      <div className={`text-[10px] md:text-xs font-bold ${isActive ? 'text-white' : 'text-gray-500'}`}>{model.name}</div>
+                      <div className={`text-[8px] md:text-[10px] font-mono ${isActive ? 'text-neon-green' : 'text-gray-600'}`}>{model.confidence}%</div>
                     </div>
 
                     {/* Connection Lines (Pseudo) */}
