@@ -37,28 +37,26 @@ interface AIConsortiumStatusProps {
 
 // --- Logo Components (SVG) ---
 const QwenLogo = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" fill="#615CED" fillOpacity="0.2" />
-    <path d="M50 20C33.4315 20 20 33.4315 20 50C20 66.5685 33.4315 80 50 80C66.5685 80 80 66.5685 80 50C80 33.4315 66.5685 20 50 20ZM50 70C38.9543 70 30 61.0457 30 50C30 38.9543 38.9543 30 50 30C61.0457 30 70 38.9543 70 50C70 61.0457 61.0457 70 50 70Z" fill="#615CED"/>
-    <circle cx="50" cy="50" r="12" fill="white"/>
+  <svg viewBox="0 0 1024 1024" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M512 1024C229.2 1024 0 794.8 0 512S229.2 0 512 0s512 229.2 512 512-229.2 512-512 512z" fill="#615CED" fillOpacity="0.1"/>
+    <path d="M512 192c-176.7 0-320 143.3-320 320s143.3 320 320 320 320-143.3 320-320-143.3-320-320-320zm0 560c-132.5 0-240-107.5-240-240s107.5-240 240-240 240 107.5 240 240-107.5 240-240 240z" fill="#615CED"/>
+    <path d="M512 352c-88.4 0-160 71.6-160 160h80c0-44.2 35.8-80 80-80s80 35.8 80 80-35.8 80-80 80v80c88.4 0 160-71.6 160-160s-71.6-160-160-160z" fill="#615CED"/>
+    <circle cx="512" cy="720" r="40" fill="#615CED"/>
   </svg>
 );
 
 const DeepSeekLogo = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="20" y="20" width="60" height="60" rx="10" fill="#00A9FF" fillOpacity="0.2" />
-    <path d="M35 35L65 35L65 65L35 65L35 35Z" stroke="#00A9FF" strokeWidth="6"/>
-    <path d="M50 20V35M80 50H65M50 80V65M20 50H35" stroke="#00A9FF" strokeWidth="4" strokeLinecap="round"/>
-    <circle cx="50" cy="50" r="8" fill="#00A9FF"/>
+  <svg viewBox="0 0 1024 1024" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+     <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" fill="#4D6BFE" fillOpacity="0.1"/>
+     <path d="M736 360h-80c-8.8 0-16 7.2-16 16v264c0 8.8 7.2 16 16 16h80c8.8 0 16-7.2 16-16V376c0-8.8-7.2-16-16-16zm-288 0h-80c-8.8 0-16 7.2-16 16v264c0 8.8 7.2 16 16 16h80c8.8 0 16-7.2 16-16V376c0-8.8-7.2-16-16-16zm-144 0h-80c-8.8 0-16 7.2-16 16v264c0 8.8 7.2 16 16 16h80c8.8 0 16-7.2 16-16V376c0-8.8-7.2-16-16-16zm432 0h-80c-8.8 0-16 7.2-16 16v264c0 8.8 7.2 16 16 16h80c8.8 0 16-7.2 16-16V376c0-8.8-7.2-16-16-16z" fill="#4D6BFE"/>
+     <path d="M304 260h416v40H304z" fill="#4D6BFE"/>
   </svg>
 );
 
 const KimiLogo = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" fill="#E64A19" fillOpacity="0.2" />
-    <path d="M35 30L50 50L35 70M65 30L50 50L65 70" stroke="#E64A19" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
-    <circle cx="50" cy="50" r="8" fill="#E64A19"/>
-    <path d="M50 20V30M50 70V80" stroke="#E64A19" strokeWidth="4" strokeLinecap="round"/>
+  <svg viewBox="0 0 1024 1024" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="512" cy="512" r="448" fill="#E64A19" fillOpacity="0.1"/>
+    <path d="M685.6 364.8c-12.8-19.2-35.2-32-60.8-32h-224c-25.6 0-48 12.8-60.8 32L224 512l115.2 147.2c12.8 19.2 35.2 32 60.8 32h224c25.6 0 48-12.8 60.8-32L800 512 685.6 364.8zM512 640c-70.4 0-128-57.6-128-128s57.6-128 128-128 128 57.6 128 128-57.6 128-128 128z" fill="#E64A19"/>
   </svg>
 );
 
@@ -279,7 +277,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                          {model.avatar}
                        </div>
                        {/* Role Badge */}
-                       <div className={`absolute -top-2 px-2 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-wider bg-black border border-gray-700 text-white opacity-0 group-hover:opacity-100 transition-opacity`}>
+                       <div className={`absolute -top-2 px-2 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-wider bg-black border border-gray-700 text-white opacity-100 transition-opacity`}>
                          {model.role}
                        </div>
                     </div>
@@ -301,9 +299,6 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
               })}
             </div>
             
-            <div className="absolute bottom-4 text-[10px] text-gray-600 font-mono uppercase tracking-widest">
-              Neural Consensus Protocol Active
-            </div>
           </div>
 
           {/* --- RIGHT: LIVE THOUGHT STREAM (The Logs) --- */}
