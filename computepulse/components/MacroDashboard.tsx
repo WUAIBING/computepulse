@@ -103,7 +103,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
              <span className="text-neon-blue text-2xl md:text-3xl font-mono font-bold tracking-tight">
                {currency.symbol}{displayGcci}
              </span>
-             <span className="text-gray-500 text-[10px] md:text-xs font-bold uppercase">/ gpu-{language === 'CN' ? '小时' : 'hr'}</span>
+             <span className={`text-[10px] md:text-xs font-bold uppercase ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>/ gpu-{language === 'CN' ? '小时' : 'hr'}</span>
            </div>
         </div>
         
@@ -114,18 +114,18 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
           <div style={{ width: `${pctMargin}%` }} className="bg-emerald-500/80 hover:bg-emerald-500 transition-colors" title="Spot Margin"></div>
         </div>
         
-        <div className="grid grid-cols-3 gap-1 text-[10px] text-gray-500 font-mono">
+        <div className="grid grid-cols-3 gap-1 text-[10px] font-mono">
            <div className="flex flex-col">
-              <span className="text-gray-400 flex items-center gap-1 whitespace-nowrap"><div className="w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0"></div> {t.hwCapex}</span>
-              <span className="pl-2.5 truncate">{currency.symbol}{displayHardware}/{language === 'CN' ? '小时' : 'hr'}</span>
+              <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'} flex items-center gap-1 whitespace-nowrap`}><div className="w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0"></div> {t.hwCapex}</span>
+              <span className={`pl-2.5 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-800'}`}>{currency.symbol}{displayHardware}/{language === 'CN' ? '小时' : 'hr'}</span>
            </div>
            <div className="flex flex-col">
-              <span className="text-gray-400 flex items-center gap-1 whitespace-nowrap"><div className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></div> {t.energyOpex}</span>
-              <span className="pl-2.5 truncate">{currency.symbol}{displayEnergy}/{language === 'CN' ? '小时' : 'hr'}</span>
+              <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'} flex items-center gap-1 whitespace-nowrap`}><div className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></div> {t.energyOpex}</span>
+              <span className={`pl-2.5 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-800'}`}>{currency.symbol}{displayEnergy}/{language === 'CN' ? '小时' : 'hr'}</span>
            </div>
            <div className="flex flex-col">
-              <span className="text-gray-400 flex items-center gap-1 whitespace-nowrap"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div> {t.mktPremium}</span>
-              <span className="pl-2.5 truncate">Variable</span>
+              <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'} flex items-center gap-1 whitespace-nowrap`}><div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div> {t.mktPremium}</span>
+              <span className={`pl-2.5 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-800'}`}>Variable</span>
            </div>
         </div>
       </div>
@@ -134,7 +134,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
       <div className={`${themeClasses.panelBg} rounded-xl border ${themeClasses.border} p-5 relative overflow-hidden hover:border-neon-purple/30 transition-colors`}>
         <div className="flex justify-between items-start mb-3">
            <div className="flex items-center gap-2">
-             <h2 className="text-gray-400 text-xs font-bold uppercase tracking-wider">{t.tokenPriceIndex}</h2>
+             <h2 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider`}>{t.tokenPriceIndex}</h2>
              <div 
                 className="relative overflow-visible group"
               >
@@ -154,7 +154,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
              <span className="text-neon-purple text-2xl md:text-3xl font-mono font-bold tracking-tight">
                {currency.symbol}{displayTokenPrice}
              </span>
-             <span className="text-gray-500 text-[10px] md:text-xs font-bold uppercase">/ {language === 'CN' ? '百万 Tokens' : '1M tokens'}</span>
+             <span className={`text-[10px] md:text-xs font-bold uppercase ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>/ {language === 'CN' ? '百万 Tokens' : '1M tokens'}</span>
            </div>
         </div>
         
@@ -164,14 +164,14 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
           <div style={{ width: `${pctOutput}%` }} className="bg-pink-500/80 hover:bg-pink-500 transition-colors" title="Output Cost"></div>
         </div>
         
-        <div className="grid grid-cols-2 gap-2 text-[10px] text-gray-500 font-mono">
+        <div className="grid grid-cols-2 gap-2 text-[10px] font-mono">
            <div className="flex flex-col">
-              <span className="text-gray-400 flex items-center gap-1 whitespace-nowrap"><div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div> {t.avgInput}</span>
-              <span className="pl-2.5 truncate">{currency.symbol}{(inputCost * currency.rate).toFixed(2)}</span>
+              <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'} flex items-center gap-1 whitespace-nowrap`}><div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div> {t.avgInput}</span>
+              <span className={`pl-2.5 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-800'}`}>{currency.symbol}{(inputCost * currency.rate).toFixed(2)}</span>
            </div>
            <div className="flex flex-col text-right">
-              <span className="text-gray-400 flex items-center justify-end gap-1 whitespace-nowrap">{t.avgOutput} <div className="w-1.5 h-1.5 rounded-full bg-pink-500 shrink-0"></div></span>
-              <span className="pr-2.5 truncate">{currency.symbol}{(outputCost * currency.rate).toFixed(2)}</span>
+              <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'} flex items-center justify-end gap-1 whitespace-nowrap`}>{t.avgOutput} <div className="w-1.5 h-1.5 rounded-full bg-pink-500 shrink-0"></div></span>
+              <span className={`pr-2.5 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-800'}`}>{currency.symbol}{(outputCost * currency.rate).toFixed(2)}</span>
            </div>
         </div>
 
@@ -183,7 +183,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
       <div className={`${themeClasses.panelBg} rounded-xl border ${themeClasses.border} p-5 relative overflow-hidden group hover:border-amber-500/30 transition-colors`}>
         <div className="flex justify-between items-start mb-3">
            <div className="flex items-center gap-2">
-             <h2 className="text-gray-400 text-xs font-bold uppercase tracking-wider">{t.gaglTitle}</h2>
+             <h2 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider`}>{t.gaglTitle}</h2>
              <div 
                 className="relative overflow-visible group"
               >
@@ -200,60 +200,42 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
                          Load = GPUs × TDP × PUE
                       </div>
                       <div className="space-y-1 text-xs">
-                        <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.estActiveGpus}:</span> <span>{(activeGpus / 1000000).toFixed(1)}M Units</span></div>
-                        <div className="flex justify-between"><span className={themeClasses.textMuted}>Avg TDP:</span> <span>{MACRO_CONSTANTS.AVG_TDP_WATTS}W</span></div>
-                        <div className="flex justify-between"><span className={themeClasses.textMuted}>Global PUE:</span> <span>{MACRO_CONSTANTS.GLOBAL_PUE}</span></div>
+                        <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.activeGPUs}:</span> <span>{activeGpus.toLocaleString()}</span></div>
+                        <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.avgTDP}:</span> <span>{MACRO_CONSTANTS.AVG_TDP_WATTS}W</span></div>
                       </div>
                    </div>
              </div>
            </div>
            <div className="flex items-baseline gap-1">
-             <span className="text-orange-500 text-2xl md:text-3xl font-mono font-bold tracking-tight">
-               {calculatedGW.toFixed(3)}
+             <span className="text-amber-500 text-2xl md:text-3xl font-mono font-bold tracking-tight">
+               {annualizedTWh.toFixed(3)}
              </span>
-             <span className="text-gray-500 text-[10px] md:text-xs font-bold uppercase">{language === 'CN' ? '吉瓦' : 'GW'}</span>
+             <span className={`text-[10px] md:text-xs font-bold uppercase ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+               {annualTWh ? 'TWh' : 'GW'}
+             </span>
            </div>
         </div>
         
-        {/* Removed chart as requested */}
-        {/* <div className="h-24 w-full mb-4">
-          <TokenTrendChart 
-             data={tokenHistory.map(p => ({ ...p, price: calculatedGW + (Math.random() * 0.02 - 0.01) }))} // Mock small fluctuation around base
-             lineColor="#f97316" 
-             fillColor="#f97316" 
-             height="100%" 
-             showXAxis={false}
-             showYAxis={false}
-          />
-        </div> */}
+        {/* Composition Bar */}
+        <div className="flex w-full h-2 rounded-full overflow-hidden mb-3 bg-gray-700/30">
+          <div className="w-full h-full bg-amber-500/80 hover:bg-amber-500 transition-colors relative overflow-hidden">
+             <div className="absolute inset-0 w-full h-full bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent)] animate-[shimmer_2s_infinite]"></div>
+          </div>
+        </div>
         
-        {/* Mock Line Bar for GAGL to match others */}
-        <div className="flex w-full h-2 rounded-full overflow-hidden mb-3 bg-gray-800/30">
-          <div className="h-full w-full bg-gradient-to-r from-amber-500/20 via-amber-500/60 to-amber-500/20 animate-pulse" title="Real-time Load Intensity"></div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4 text-[10px] text-gray-500 font-mono mt-auto">
-           <div>
-             <span className="block text-gray-400">{t.annualizedForecast}</span>
-             <div className="flex items-baseline gap-2">
-                <span className="text-white font-bold text-xs">{annualizedTWh.toFixed(1)} {language === 'CN' ? '太瓦时' : 'TWh'}</span>
-                <span className="text-neon-green font-bold text-xs">
-                  {language === 'CN' 
-                    ? `${currency.symbol}${((annualizedTWh * 1_000_000_000 * effectiveKwhPrice) / 1_000_000_000 * 10 * currency.rate).toFixed(1)}亿`
-                    : `${currency.symbol}${((annualizedTWh * 1_000_000_000 * effectiveKwhPrice) / 1_000_000_000 * currency.rate).toFixed(1)}B`
-                  }
-                </span>
-             </div>
+        <div className="grid grid-cols-2 gap-2 text-[10px] font-mono">
+           <div className="flex flex-col">
+              <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'} flex items-center gap-1 whitespace-nowrap`}>{t.dataSource}</span>
+              <span className={`pl-0 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-800'}`}>{t.publicListPrice}</span>
            </div>
-           <div className="text-right">
-             <span className="block text-gray-400">{t.capacityEquiv}</span>
-             <span className="text-amber-500 font-bold">~{Math.round(calculatedGW)} {t.nuclearReactors}</span>
+           <div className="flex flex-col text-right">
+              <span className={`${theme === 'dark' ? 'text-emerald-400' : 'text-emerald-600 font-bold'} flex items-center justify-end gap-1 whitespace-nowrap`}><div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></div> {t.systemOperational}</span>
+              <span className={`pr-0 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-800'}`}>~{(calculatedGW * 15).toFixed(1)} Nuclear Reactors</span>
            </div>
         </div>
 
-        {/* Background Animation for Energy */}
-        <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
-
+        {/* Background Animation */}
+        <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
       </div>
 
     </div>

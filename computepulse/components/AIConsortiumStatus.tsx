@@ -108,7 +108,14 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
               // Format timestamps for display
               const formattedLogs = data.logs.map((log: any) => ({
                  ...log,
-                 timestamp: new Date(log.timestamp).toLocaleTimeString()
+                 timestamp: new Date(log.timestamp).toLocaleString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false
+                 })
               }));
               setLogs(formattedLogs);
            }
@@ -117,7 +124,20 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
         console.warn('Failed to fetch system logs:', e);
         // Fallback: Empty logs or static message indicating system offline
         setLogs([
-          { id: '0', timestamp: new Date().toLocaleTimeString(), agent: 'System', message: 'Waiting for data stream...', type: 'info' }
+          { 
+             id: '0', 
+             timestamp: new Date().toLocaleString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+             }), 
+             agent: 'System', 
+             message: 'Waiting for data stream...', 
+             type: 'info' 
+          }
         ]);
       }
     };
@@ -254,7 +274,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
              >
                {logs.map((log) => (
                  <div key={log.id} className="animate-fadeIn flex gap-3 group">
-                    <div className="text-gray-600 shrink-0 select-none w-14 text-right">{log.timestamp.split(' ')[0]}</div>
+                    <div className={`${theme === 'dark' ? 'text-gray-500' : 'text-gray-500 font-medium'} shrink-0 select-none w-24 text-right`}>{log.timestamp.split(' ')[0]}</div>
                     <div className="flex-1 break-words">
                        <span className={`font-bold mr-2 ${getAgentColor(log.agent)}`}>
                          [{log.agent}]
@@ -262,7 +282,8 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                        <span className={`
                          ${log.type === 'warning' ? 'text-yellow-500' : 
                            log.type === 'success' ? 'text-emerald-400' : 
-                           log.type === 'action' ? 'text-blue-300' : 'text-gray-400'}
+                           log.type === 'action' ? 'text-blue-300' : 
+                           theme === 'dark' ? 'text-gray-300' : 'text-gray-800 font-medium'}
                        `}>
                          {log.message}
                        </span>
