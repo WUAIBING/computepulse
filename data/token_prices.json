@@ -1,4 +1,242 @@
-{
-  "status": "processed",
-  "task_type": "price_extraction"
-}
+[
+  {
+    "provider": "OpenAI",
+    "model": "GPT-4o-64k-output-alpha",
+    "input_price": 6.0,
+    "output_price": 18.0
+  },
+  {
+    "provider": "OpenAI",
+    "model": "GPT-4.1 Nano",
+    "input_price": 0.1,
+    "output_price": 0.4
+  },
+  {
+    "provider": "OpenAI",
+    "model": "GPT-4o mini",
+    "input_price": 0.15,
+    "output_price": 0.6
+  },
+  {
+    "provider": "OpenAI",
+    "model": "GPT-4o",
+    "input_price": 5.0,
+    "output_price": 15.0
+  },
+  {
+    "provider": "Anthropic",
+    "model": "Claude3.5 Sonnet",
+    "input_price": 3.0,
+    "output_price": 15.0
+  },
+  {
+    "provider": "Google",
+    "model": "Gemini1.5 Pro",
+    "input_price": 0.75,
+    "output_price": 3.0
+  },
+  {
+    "provider": "Meta",
+    "model": "Llama3-70B",
+    "input_price": 0.5,
+    "output_price": 1.5
+  },
+  {
+    "provider": "Aliyun",
+    "model": "Qwen-Max",
+    "input_price": 0.55,
+    "output_price": 1.66
+  },
+  {
+    "provider": "Baidu",
+    "model": "Ernie4.0",
+    "input_price": 0.69,
+    "output_price": 2.08
+  },
+  {
+    "provider": "Zhipu",
+    "model": "GLM-4",
+    "input_price": 1.4,
+    "output_price": 4.2
+  },
+  {
+    "provider": "MoonShot",
+    "model": "Kimi-Max",
+    "input_price": 0.28,
+    "output_price": 0.83
+  },
+  {
+    "provider": "ByteDance",
+    "model": "Doubao-Pro",
+    "input_price": 0.56,
+    "output_price": 1.67
+  },
+  {
+    "provider": "MiniMax",
+    "model": "Abacus2.0",
+    "input_price": 0.35,
+    "output_price": 1.04
+  },
+  {
+    "provider": "OpenAI",
+    "model": "GPT-4.1",
+    "input_price": 2.0,
+    "output_price": 8.0
+  },
+  {
+    "provider": "OpenAI",
+    "model": "GPT-4o-mini",
+    "input_price": 0.15,
+    "output_price": 0.6
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o1",
+    "input_price": 20.0,
+    "output_price": 20.0
+  },
+  {
+    "provider": "Aliyun",
+    "model": "Qwen/通义千问",
+    "input_price": 0.0735,
+    "output_price": 0.23
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o1-preview",
+    "input_price": 15.0,
+    "output_price": 60.0
+  },
+  {
+    "provider": "OpenAI",
+    "model": "o1-mini",
+    "input_price": 3.0,
+    "output_price": 12.0
+  },
+  {
+    "provider": "Anthropic",
+    "model": "Claude 3.5 Sonnet",
+    "input_price": 3.0,
+    "output_price": 15.0
+  },
+  {
+    "provider": "Google",
+    "model": "Gemini 2.0 Flash",
+    "input_price": 0.075,
+    "output_price": 0.3
+  },
+  {
+    "provider": "Google",
+    "model": "Gemini 2.0 Flash-8B",
+    "input_price": 0.0375,
+    "output_price": 0.15
+  },
+  {
+    "provider": "Google",
+    "model": "Gemini 1.5 Pro",
+    "input_price": 3.5,
+    "output_price": 10.5
+  },
+  {
+    "provider": "Google",
+    "model": "Gemini 1.5 Flash",
+    "input_price": 0.075,
+    "output_price": 0.3
+  },
+  {
+    "provider": "Meta",
+    "model": "Llama 3 70B",
+    "input_price": 0.59,
+    "output_price": 0.79
+  },
+  {
+    "provider": "Meta",
+    "model": "Llama 3 405B",
+    "input_price": 3.75,
+    "output_price": 11.25
+  },
+  {
+    "provider": "Aliyun",
+    "model": "Qwen-Plus",
+    "input_price": 0.22,
+    "output_price": 0.44
+  },
+  {
+    "provider": "Baidu",
+    "model": "Ernie-4.0 Turbo",
+    "input_price": 1.39,
+    "output_price": 5.56
+  },
+  {
+    "provider": "Baidu",
+    "model": "Ernie-4.0",
+    "input_price": 1.67,
+    "output_price": 5.0
+  },
+  {
+    "provider": "Baidu",
+    "model": "Ernie-3.5",
+    "input_price": 0.56,
+    "output_price": 1.67
+  },
+  {
+    "provider": "Zhipu",
+    "model": "GLM-4-Flash",
+    "input_price": 0.14,
+    "output_price": 0.28
+  },
+  {
+    "provider": "Zhipu",
+    "model": "GLM-4-Plus",
+    "input_price": 0.7,
+    "output_price": 2.1
+  },
+  {
+    "provider": "Moonshot",
+    "model": "Kimi",
+    "input_price": 0.83,
+    "output_price": 2.5
+  },
+  {
+    "provider": "ByteDance",
+    "model": "Doubao-Lite",
+    "input_price": 0.28,
+    "output_price": 0.56
+  },
+  {
+    "provider": "MiniMax",
+    "model": "MiniMax-01",
+    "input_price": 0.56,
+    "output_price": 2.22
+  },
+  {
+    "provider": "DeepSeek",
+    "model": "DeepSeek-V3",
+    "input_price": 0.14,
+    "output_price": 0.28
+  },
+  {
+    "provider": "DeepSeek",
+    "model": "DeepSeek-R1",
+    "input_price": 0.28,
+    "output_price": 1.11
+  },
+  {
+    "provider": "Google",
+    "model": "Gemini 2.0 Flash Thinking",
+    "input_price": 0.3,
+    "output_price": 1.2
+  },
+  {
+    "provider": "Baidu",
+    "model": "Ernie-Lite",
+    "input_price": 0.28,
+    "output_price": 0.56
+  },
+  {
+    "provider": "MiniMax",
+    "model": "abab6",
+    "input_price": 0.56,
+    "output_price": 1.67
+  }
+]
