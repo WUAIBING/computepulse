@@ -1,9 +1,10 @@
 
 import React, { useState } from 'react';
-import { CurrencyConfig, Language, HistoricalDataPoint } from '../types';
+import { CurrencyConfig, Language, HistoricalDataPoint, Theme } from '../types';
 import { MACRO_CONSTANTS } from '../constants';
 import { TRANSLATIONS } from '../translations';
 import { TokenTrendChart } from './TokenTrendChart';
+import { getThemeClasses } from '../theme';
 
 interface MacroDashboardProps {
   avgSpotPrice: number; // Base USD
@@ -13,6 +14,7 @@ interface MacroDashboardProps {
   annualTWh?: number; // Add this prop
   currency: CurrencyConfig;
   language: Language;
+  theme: Theme;
 }
 
 export const MacroDashboard: React.FC<MacroDashboardProps> = ({ 
@@ -22,12 +24,14 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
   kwhPrice,
   annualTWh,
   currency,
-  language
+  language,
+  theme
 }) => {
   const [showCostInfo, setShowCostInfo] = useState(false);
   const [showTokenInfo, setShowTokenInfo] = useState(false);
   const [showPowerInfo, setShowPowerInfo] = useState(false);
   const t = TRANSLATIONS[language];
+  const themeClasses = getThemeClasses(theme);
 
   const effectiveKwhPrice = kwhPrice !== undefined ? kwhPrice : MACRO_CONSTANTS.GLOBAL_KWH_PRICE;
 
@@ -70,12 +74,12 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
       
       {/* LEFT: GCCI (Financial Index) */}
-      <div className="bg-panel-bg rounded-xl border border-gray-800 p-5 relative overflow-hidden group hover:border-neon-blue/30 transition-colors">
+      <div className={`${themeClasses.panelBg} rounded-xl border ${themeClasses.border} p-5 relative overflow-hidden group hover:border-neon-blue/30 transition-colors`}>
         <div className="flex justify-between items-start mb-3">
            <div className="flex items-center gap-2">
-             <h2 className="text-gray-400 text-xs font-bold uppercase tracking-wider">{t.gcciTitle}</h2>
+             <h2 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider`}>{t.gcciTitle}</h2>
              <div 
-                className="relative"
+                className="relative overflow-visible"
                 onMouseEnter={() => setShowCostInfo(true)}
                 onMouseLeave={() => setShowCostInfo(false)}
               >
@@ -83,14 +87,14 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {showCostInfo && (
-                   <div className="absolute left-0 top-6 w-72 bg-black/95 border border-gray-700 p-4 rounded-lg shadow-2xl z-50 pointer-events-none">
+                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
                       <div className="text-neon-blue font-bold text-sm mb-2">{t.gcciMethodology}</div>
-                      <p className="text-xs text-gray-400 mb-3 leading-relaxed">
+                      <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
                         {t.gcciDesc}
                       </p>
                       <div className="space-y-1 text-xs">
-                        <div className="flex justify-between"><span className="text-gray-500">{t.globalEnergyRate}:</span> <span>${effectiveKwhPrice.toFixed(3)}/kWh</span></div>
-                        <div className="flex justify-between"><span className="text-gray-500">{t.hardwareAmort}:</span> <span>${MACRO_CONSTANTS.HARDWARE_AMORTIZATION_HR}/{language === 'CN' ? '小时' : 'hr'}</span></div>
+                        <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.globalEnergyRate}:</span> <span>${effectiveKwhPrice.toFixed(3)}/kWh</span></div>
+                        <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.hardwareAmort}:</span> <span>${MACRO_CONSTANTS.HARDWARE_AMORTIZATION_HR}/{language === 'CN' ? '小时' : 'hr'}</span></div>
                       </div>
                    </div>
                 )}
@@ -128,12 +132,12 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
       </div>
 
       {/* MIDDLE: Token Price Index (GTPI) */}
-      <div className="bg-panel-bg rounded-xl border border-gray-800 p-5 relative overflow-hidden hover:border-neon-purple/30 transition-colors">
+      <div className={`${themeClasses.panelBg} rounded-xl border ${themeClasses.border} p-5 relative overflow-hidden hover:border-neon-purple/30 transition-colors`}>
         <div className="flex justify-between items-start mb-3">
            <div className="flex items-center gap-2">
              <h2 className="text-gray-400 text-xs font-bold uppercase tracking-wider">{t.tokenPriceIndex}</h2>
              <div 
-                className="relative"
+                className="relative overflow-visible"
                 onMouseEnter={() => setShowTokenInfo(true)}
                 onMouseLeave={() => setShowTokenInfo(false)}
               >
@@ -141,9 +145,9 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {showTokenInfo && (
-                  <div className="absolute left-0 top-6 w-72 bg-black/95 border border-gray-700 p-4 rounded-lg shadow-2xl z-50 pointer-events-none">
+                  <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
                     <div className="text-neon-purple font-bold text-sm mb-2">{t.tokenMethodology}</div>
-                    <p className="text-xs text-gray-400 mb-3 leading-relaxed">
+                    <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
                       {t.tokenDesc}
                     </p>
                   </div>
@@ -154,7 +158,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
              <span className="text-neon-purple text-3xl font-mono font-bold tracking-tight">
                {currency.symbol}{displayTokenPrice}
              </span>
-             <span className="text-gray-500 text-xs font-bold uppercase">/ 1M tokens</span>
+             <span className="text-gray-500 text-xs font-bold uppercase">/ {language === 'CN' ? '百万 Tokens' : '1M tokens'}</span>
            </div>
         </div>
         
@@ -180,12 +184,12 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
       </div>
 
       {/* RIGHT: GAGL (Physical Index) */}
-      <div className="bg-panel-bg rounded-xl border border-gray-800 p-5 relative overflow-hidden group hover:border-amber-500/30 transition-colors">
+      <div className={`${themeClasses.panelBg} rounded-xl border ${themeClasses.border} p-5 relative overflow-hidden group hover:border-amber-500/30 transition-colors`}>
         <div className="flex justify-between items-start mb-3">
            <div className="flex items-center gap-2">
              <h2 className="text-gray-400 text-xs font-bold uppercase tracking-wider">{t.gaglTitle}</h2>
              <div 
-                className="relative"
+                className="relative overflow-visible"
                 onMouseEnter={() => setShowPowerInfo(true)}
                 onMouseLeave={() => setShowPowerInfo(false)}
               >
@@ -193,18 +197,18 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {showPowerInfo && (
-                   <div className="absolute right-0 md:left-0 top-6 w-72 bg-black/95 border border-gray-700 p-4 rounded-lg shadow-2xl z-50 pointer-events-none">
+                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
                       <div className="text-amber-500 font-bold text-sm mb-2">{t.energyModel}</div>
-                      <p className="text-xs text-gray-400 mb-3 leading-relaxed">
+                      <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
                         {t.energyDesc}
                       </p>
-                      <div className="font-mono bg-gray-900 p-2 rounded border border-gray-800 text-xs mb-2">
+                      <div className={`font-mono ${theme === 'dark' ? 'bg-gray-900 border-gray-800' : 'bg-gray-100 border-gray-300'} p-2 rounded border text-xs mb-2`}>
                          Load = GPUs × TDP × PUE
                       </div>
                       <div className="space-y-1 text-xs">
-                        <div className="flex justify-between"><span className="text-gray-500">{t.estActiveGpus}:</span> <span>{(activeGpus / 1000000).toFixed(1)}M Units</span></div>
-                        <div className="flex justify-between"><span className="text-gray-500">Avg TDP:</span> <span>{MACRO_CONSTANTS.AVG_TDP_WATTS}W</span></div>
-                        <div className="flex justify-between"><span className="text-gray-500">Global PUE:</span> <span>{MACRO_CONSTANTS.GLOBAL_PUE}</span></div>
+                        <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.estActiveGpus}:</span> <span>{(activeGpus / 1000000).toFixed(1)}M Units</span></div>
+                        <div className="flex justify-between"><span className={themeClasses.textMuted}>Avg TDP:</span> <span>{MACRO_CONSTANTS.AVG_TDP_WATTS}W</span></div>
+                        <div className="flex justify-between"><span className={themeClasses.textMuted}>Global PUE:</span> <span>{MACRO_CONSTANTS.GLOBAL_PUE}</span></div>
                       </div>
                    </div>
                 )}
@@ -214,7 +218,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
              <span className="text-orange-500 text-3xl font-mono font-bold tracking-tight">
                {calculatedGW.toFixed(3)}
              </span>
-             <span className="text-gray-500 text-xs font-bold uppercase">GW</span>
+             <span className="text-gray-500 text-xs font-bold uppercase">{language === 'CN' ? '吉瓦' : 'GW'}</span>
            </div>
         </div>
         

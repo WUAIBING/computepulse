@@ -1,71 +1,80 @@
-import requests
+#!/usr/bin/env python3
+"""Quick test for Doubao API with detailed error logging"""
+
 import os
-import json
+import requests
+from dotenv import load_dotenv
 
-volc_api_key = os.getenv('VOLC_API_KEY') or os.getenv('VITE_VOLC_API_KEY')
-if not volc_api_key:
-    try:
-        with open('.env.local', 'r') as f:
-            for line in f:
-                if 'VOLC_API_KEY' in line:
-                    volc_api_key = line.split('=')[1].strip()
-    except:
-        pass
+# Load environment variables
+load_dotenv('.env.local')
 
-ENDPOINT_ID = "doubao-seed-1-6-251015"
+VOLC_API_KEY = os.getenv('VOLC_API_KEY')
+DOUBAO_ENDPOINT_ID = "doubao-seed-1-6-251015"
 
-print(f"Retrying Doubao Search (Plugin Enabled Check)...")
-# User's URL
-url = "https://ark.cn-beijing.volces.com/api/v3/responses" 
+print("=" * 60)
+print("Doubao API Search Test with Detailed Error Logging")
+print("=" * 60)
+print(f"\nAPI Key: {VOLC_API_KEY[:10]}...{VOLC_API_KEY[-4:]}")
+print(f"Endpoint: {DOUBAO_ENDPOINT_ID}")
 
 headers = {
-    "Authorization": f"Bearer {volc_api_key}",
+    "Authorization": f"Bearer {VOLC_API_KEY}",
     "Content-Type": "application/json"
 }
 
-# User's Payload Structure
+# Test 1: responses API with web search
+print("\n[Test 1] responses API with web_search...")
+url = "https://ark.cn-beijing.volces.com/api/v3/responses"
 payload = {
-    "model": ENDPOINT_ID,
+    "model": DOUBAO_ENDPOINT_ID,
     "stream": False,
-    "tools": [
-        {"type": "web_search"}
-    ],
-    "input": [ 
+    "tools": [{"type": "web_search"}],
+    "input": [
         {
             "role": "user",
-            "content": [
-                {
-                    "type": "input_text",
-                    "text": "What is the NVIDIA (NVDA) stock price right now? Please include the time."
-                }
-            ]
+            "content": [{"type": "input_text", "text": "请搜索当前NVIDIA H100 GPU的市场价格"}]
         }
     ]
 }
 
-print(f"Requesting {url}...")
 try:
-    response = requests.post(url, headers=headers, json=payload, timeout=60)
-    print(f"Status: {response.status_code}")
+    response = requests.post(url, headers=headers, json=payload, timeout=30)
+    print(f"Status Code: {response.status_code}")
+    print(f"Response Headers: {dict(response.headers)}")
+    print(f"Response Body: {response.text[:500]}")
     
     if response.status_code == 200:
+        print("✓ Success!")
         res_json = response.json()
-        # Print full response for analysis
-        # print(json.dumps(res_json, indent=2, ensure_ascii=False))
-        
-        # Extract content
-        if 'output' in res_json:
-            for item in res_json['output']:
-                if item.get('type') == 'message' and item.get('content'):
-                    print("\n[Response Content]:")
-                    print(item['content'][0]['text'])
-                elif item.get('type') == 'reasoning':
-                    print("\n[Reasoning Summary]:")
-                    if 'summary' in item:
-                        for s in item['summary']:
-                            print(s.get('text', ''))
+        print(f"Response structure: {list(res_json.keys())}")
     else:
-        print(f"Error Response: {response.text}")
-
+        print(f"✗ Error: {response.status_code}")
+        
 except Exception as e:
-    print(f"Error: {e}")
+    print(f"✗ Exception: {e}")
+
+# Test 2: chat/completions API
+print("\n[Test 2] chat/completions API...")
+url2 = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+payload2 = {
+    "model": DOUBAO_ENDPOINT_ID,
+    "reasoning_effort": "low",
+    "messages": [
+        {"role": "user", "content": "请搜索当前NVIDIA H100 GPU的市场价格"}
+    ]
+}
+
+try:
+    response2 = requests.post(url2, headers=headers, json=payload2, timeout=30)
+    print(f"Status Code: {response2.status_code}")
+    print(f"Response Body: {response2.text[:500]}")
+    
+    if response2.status_code == 200:
+        print("✓ Success!")
+    else:
+        print(f"✗ Error: {response2.status_code}")
+        
+except Exception as e:
+    print(f"✗ Exception: {e}")
+
+print("\n" + "=" * 60)
