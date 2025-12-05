@@ -105,19 +105,8 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
            
            // Set Initial Logs
            if (data.logs && Array.isArray(data.logs)) {
-              // Format timestamps for display
-              const formattedLogs = data.logs.map((log: any) => ({
-                 ...log,
-                 timestamp: new Date(log.timestamp).toLocaleString('en-US', {
-                    month: 'short',
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    second: '2-digit',
-                    hour12: false
-                 })
-              }));
-              setLogs(formattedLogs);
+              // Keep timestamp as raw string or ISO, formatting happens in render
+              setLogs(data.logs);
            }
         }
       } catch (e) {
@@ -126,14 +115,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
         setLogs([
           { 
              id: '0', 
-             timestamp: new Date().toLocaleString('en-US', {
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false
-             }), 
+             timestamp: new Date().toISOString(), 
              agent: 'System', 
              message: 'Waiting for data stream...', 
              type: 'info' 
@@ -144,6 +126,22 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
     
     fetchLogs();
   }, []);
+
+  // Helper to format time based on language
+  const formatLogTime = (isoTimestamp: string) => {
+     try {
+       const date = new Date(isoTimestamp);
+       return date.toLocaleString(language === 'CN' ? 'zh-CN' : 'en-US', {
+          month: 'short',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false
+       });
+     } catch (e) {
+       return isoTimestamp;
+     }
+  };
 
   // 2. Live Logs (Strictly Real Data Only)
   // Removed setInterval simulation logic
@@ -274,7 +272,9 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
              >
                {logs.map((log) => (
                  <div key={log.id} className="animate-fadeIn flex gap-3 group">
-                    <div className={`${theme === 'dark' ? 'text-gray-500' : 'text-gray-500 font-medium'} shrink-0 select-none w-24 text-right`}>{log.timestamp.split(' ')[0]}</div>
+                    <div className={`${theme === 'dark' ? 'text-gray-500' : 'text-gray-500 font-medium'} shrink-0 select-none w-auto whitespace-nowrap`}>
+                      {formatLogTime(log.timestamp)}
+                    </div>
                     <div className="flex-1 break-words">
                        <span className={`font-bold mr-2 ${getAgentColor(log.agent)}`}>
                          [{log.agent}]
