@@ -212,8 +212,8 @@
   {
     "model": "DeepSeek-V3",
     "provider": "DeepSeek",
-    "input_price": 0.0,
-    "output_price": 0.0
+    "input_price": 0.27,
+    "output_price": 1.1
   },
   {
     "provider": "DeepSeek",
@@ -278,6 +278,12 @@
   {
     "model": "Claude 3.5",
     "provider": "Anthropic",
+    "input_price": 0.0,
+    "output_price": 0.0
+  },
+  {
+    "model": "DeepSeek-V3",
+    "provider": "Unknown",
     "input_price": 0.0,
     "output_price": 0.0
   }
