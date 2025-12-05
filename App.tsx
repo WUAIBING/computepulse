@@ -6,6 +6,7 @@ import { MarketVitals } from './components/MarketVitals';
 import { MacroDashboard } from './components/MacroDashboard';
 import { CalculationModal } from './components/CalculationModal';
 import { AnnualBarChart } from './components/AnnualBarChart';
+import { AIConsortiumStatus } from './components/AIConsortiumStatus';
 import { generateMockData, generateMockTokenData, CURRENCIES, MACRO_CONSTANTS } from './constants';
 import { ComputeProvider, TokenProvider, HistoricalDataPoint, CurrencyCode, Language, Theme } from './types';
 import { TRANSLATIONS } from './translations';
@@ -406,6 +407,9 @@ function App() {
           language={language}
           theme={theme}
         />
+
+        {/* AI Consortium Status */}
+        <AIConsortiumStatus language={language} theme={theme} />
 
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
