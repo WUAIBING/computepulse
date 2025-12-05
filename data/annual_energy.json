@@ -1,37 +1,37 @@
 [
   {
     "year": "2018",
-    "value": 78.2,
-    "source": "IEA - Data Centres and Data Transmission Networks"
+    "value": 35,
+    "source": "IEA, BloombergNEF"
   },
   {
     "year": "2019",
-    "value": 92.4,
-    "source": "IEA - Data Centres and Data Transmission Networks"
+    "value": 45,
+    "source": "IEA, BloombergNEF"
   },
   {
     "year": "2020",
-    "value": 105.3,
-    "source": "IEA - Data Centres and Data Transmission Networks"
+    "value": 60,
+    "source": "IEA, BloombergNEF"
   },
   {
     "year": "2021",
-    "value": 120.8,
-    "source": "IEA - Data Centres and Data Transmission Networks"
+    "value": 80,
+    "source": "IEA, BloombergNEF"
   },
   {
     "year": "2022",
-    "value": 140.5,
-    "source": "IEA - Data Centres and Data Transmission Networks"
+    "value": 105,
+    "source": "IEA, BloombergNEF"
   },
   {
     "year": "2023",
-    "value": 170.2,
-    "source": "BloombergNEF - AI Power Demand Projection"
+    "value": 130,
+    "source": "IEA, BloombergNEF, NVIDIA财报"
   },
   {
     "year": "2024",
-    "value": 210.5,
-    "source": "BloombergNEF - AI Power Demand Projection"
+    "value": 180,
+    "source": "IEA预测, BloombergNEF估算"
   }
 ]
