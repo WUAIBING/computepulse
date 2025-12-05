@@ -1,0 +1,162 @@
+import os
+import time
+from datetime import datetime
+from typing import Optional
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
+try:
+    import dashscope
+except ImportError:
+    dashscope = None
+
+from .base_agent import BaseAgent
+
+class DashScopeAgent(BaseAgent):
+    """Agent implementation for Alibaba DashScope (Qwen)."""
+    
+    def __init__(self, name: str, role: str, model_name: str = "qwen-max"):
+        super().__init__(name, role)
+        self.model_name = model_name
+        self.api_key = os.getenv('DASHSCOPE_API_KEY')
+        if not self.api_key:
+            # Try loading from .env.local logic here if needed, or assume environment is set
+            pass
+            
+    def generate(self, prompt: str, system_prompt: Optional[str] = None) -> Optional[str]:
+        if not dashscope or not self.api_key:
+            return None
+        
+        try:
+            messages = []
+            if system_prompt:
+                messages.append({'role': 'system', 'content': system_prompt})
+            messages.append({'role': 'user', 'content': prompt})
+            
+            response = dashscope.Generation.call(
+                model=self.model_name,
+                messages=messages,
+                result_format='message',
+                api_key=self.api_key
+            )
+            
+            if response.status_code == 200:
+                return response.output.choices[0].message.content
+            else:
+                print(f"[{datetime.now()}] {self.name} Error: {response.code} - {response.message}")
+                return None
+        except Exception as e:
+            print(f"[{datetime.now()}] {self.name} Exception: {e}")
+            return None
+
+    def search(self, query: str) -> Optional[str]:
+        if not dashscope or not self.api_key:
+            return None
+            
+        try:
+            messages = [{'role': 'user', 'content': query}]
+            # Qwen uses 'enable_search' flag in DashScope SDK
+            response = dashscope.Generation.call(
+                model=self.model_name,
+                messages=messages,
+                result_format='message',
+                enable_search=True, 
+                api_key=self.api_key
+            )
+            
+            if response.status_code == 200:
+                return response.output.choices[0].message.content
+            else:
+                print(f"[{datetime.now()}] {self.name} Search Error: {response.code} - {response.message}")
+                return None
+        except Exception as e:
+            print(f"[{datetime.now()}] {self.name} Search Exception: {e}")
+            return None
+
+class DeepSeekAgent(BaseAgent):
+    """Agent implementation for DeepSeek (via OpenAI compatible API)."""
+    
+    def __init__(self, name: str, role: str, model_name: str = "deepseek-r1"):
+        super().__init__(name, role)
+        self.model_name = model_name
+        # DeepSeek might use DASHSCOPE_API_KEY if hosted on Aliyun, or its own DEEPSEEK_API_KEY
+        self.api_key = os.getenv('DASHSCOPE_API_KEY') 
+        self.base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+        self.client = None
+        if self.api_key and OpenAI:
+            self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+
+    def generate(self, prompt: str, system_prompt: Optional[str] = None) -> Optional[str]:
+        if not self.client:
+            return None
+            
+        try:
+            messages = []
+            if system_prompt:
+                messages.append({'role': 'system', 'content': system_prompt})
+            messages.append({'role': 'user', 'content': prompt})
+            
+            completion = self.client.chat.completions.create(
+                model=self.model_name,
+                messages=messages,
+                stream=False
+            )
+            return completion.choices[0].message.content
+        except Exception as e:
+            print(f"[{datetime.now()}] {self.name} Exception: {e}")
+            return None
+
+    def search(self, query: str) -> Optional[str]:
+        # DeepSeek via DashScope currently doesn't support search flag in standard OpenAI client easily
+        # For now, we fallback to standard generation or need specific tool implementation
+        return self.generate(query, system_prompt="You are a helpful assistant.")
+
+class KimiAgent(BaseAgent):
+    """Agent implementation for Moonshot Kimi (via OpenAI compatible API)."""
+    
+    def __init__(self, name: str, role: str, model_name: str = "Moonshot-Kimi-K2-Instruct"):
+        super().__init__(name, role)
+        self.model_name = model_name
+        # Kimi uses DASHSCOPE_API_KEY in our current setup
+        self.api_key = os.getenv('DASHSCOPE_API_KEY')
+        self.base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+        self.client = None
+        if self.api_key and OpenAI:
+            self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+
+    def generate(self, prompt: str, system_prompt: Optional[str] = None) -> Optional[str]:
+        # Kimi basic generation
+        if not self.client: return None
+        try:
+            messages = []
+            if system_prompt: messages.append({'role': 'system', 'content': system_prompt})
+            messages.append({'role': 'user', 'content': prompt})
+            
+            completion = self.client.chat.completions.create(
+                model=self.model_name, messages=messages, stream=False
+            )
+            return completion.choices[0].message.content
+        except Exception as e:
+            print(f"[{datetime.now()}] {self.name} Gen Error: {e}")
+            return None
+
+    def search(self, query: str) -> Optional[str]:
+        # Kimi with Search enabled via extra_body
+        if not self.client: return None
+        try:
+            messages = [
+                {"role": "system", "content": "You are Kimi, capable of real-time internet search."},
+                {"role": "user", "content": query}
+            ]
+            
+            completion = self.client.chat.completions.create(
+                model=self.model_name,
+                messages=messages,
+                extra_body={"enable_search": True}, # The key parameter for Kimi/DashScope
+                stream=False
+            )
+            return completion.choices[0].message.content
+        except Exception as e:
+            print(f"[{datetime.now()}] {self.name} Search Error: {e}")
+            return None
