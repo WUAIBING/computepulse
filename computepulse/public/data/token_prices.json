@@ -56,8 +56,8 @@
   {
     "provider": "Zhipu",
     "model": "GLM-4",
-    "input_price": 1.4,
-    "output_price": 4.2
+    "input_price": 0.7,
+    "output_price": 0.7
   },
   {
     "provider": "MoonShot",
@@ -68,8 +68,8 @@
   {
     "provider": "ByteDance",
     "model": "Doubao-Pro",
-    "input_price": 0.56,
-    "output_price": 1.67
+    "input_price": 0.12,
+    "output_price": 0.12
   },
   {
     "provider": "MiniMax",
@@ -93,13 +93,13 @@
     "provider": "OpenAI",
     "model": "o1",
     "input_price": 20.0,
-    "output_price": 20.0
+    "output_price": 60.0
   },
   {
     "provider": "Aliyun",
     "model": "Qwen/通义千问",
-    "input_price": 0.0735,
-    "output_price": 0.23
+    "input_price": 0.073,
+    "output_price": 0.22
   },
   {
     "provider": "OpenAI",
@@ -110,8 +110,8 @@
   {
     "provider": "OpenAI",
     "model": "o1-mini",
-    "input_price": 3.0,
-    "output_price": 12.0
+    "input_price": 1.1,
+    "output_price": 4.4
   },
   {
     "provider": "Anthropic",
@@ -152,62 +152,62 @@
   {
     "provider": "Meta",
     "model": "Llama 3 405B",
-    "input_price": 3.75,
-    "output_price": 11.25
+    "input_price": 2.75,
+    "output_price": 8.25
   },
   {
     "provider": "Aliyun",
     "model": "Qwen-Plus",
-    "input_price": 0.22,
-    "output_price": 0.44
-  },
-  {
-    "provider": "Baidu",
-    "model": "Ernie-4.0 Turbo",
-    "input_price": 1.39,
-    "output_price": 5.56
-  },
-  {
-    "provider": "Baidu",
-    "model": "Ernie-4.0",
-    "input_price": 1.67,
-    "output_price": 5.0
-  },
-  {
-    "provider": "Baidu",
-    "model": "Ernie-3.5",
-    "input_price": 0.56,
-    "output_price": 1.67
-  },
-  {
-    "provider": "Zhipu",
-    "model": "GLM-4-Flash",
     "input_price": 0.14,
     "output_price": 0.28
   },
   {
+    "provider": "Baidu",
+    "model": "Ernie-4.0 Turbo",
+    "input_price": 0.08,
+    "output_price": 0.24
+  },
+  {
+    "provider": "Baidu",
+    "model": "Ernie-4.0",
+    "input_price": 0.12,
+    "output_price": 0.12
+  },
+  {
+    "provider": "Baidu",
+    "model": "Ernie-3.5",
+    "input_price": 0.008,
+    "output_price": 0.008
+  },
+  {
+    "provider": "Zhipu",
+    "model": "GLM-4-Flash",
+    "input_price": 0.01,
+    "output_price": 0.01
+  },
+  {
     "provider": "Zhipu",
     "model": "GLM-4-Plus",
-    "input_price": 0.7,
-    "output_price": 2.1
+    "input_price": 0.21,
+    "output_price": 0.21
   },
   {
     "provider": "Moonshot",
     "model": "Kimi",
-    "input_price": 0.83,
-    "output_price": 2.5
+    "input_price": 0.12,
+    "output_price": 0.12
   },
   {
     "provider": "ByteDance",
     "model": "Doubao-Lite",
-    "input_price": 0.28,
-    "output_price": 0.56
+    "input_price": 0.008,
+    "output_price": 0.008
   },
   {
     "provider": "MiniMax",
     "model": "MiniMax-01",
-    "input_price": 0.56,
-    "output_price": 2.22
+    "input_price": 0.01,
+    "output_price": 0.01
   },
   {
     "provider": "DeepSeek",
@@ -219,24 +219,54 @@
     "provider": "DeepSeek",
     "model": "DeepSeek-R1",
     "input_price": 0.28,
-    "output_price": 1.11
+    "output_price": 1.12
   },
   {
     "provider": "Google",
     "model": "Gemini 2.0 Flash Thinking",
-    "input_price": 0.3,
-    "output_price": 1.2
+    "input_price": 0.45,
+    "output_price": 1.8
   },
   {
     "provider": "Baidu",
     "model": "Ernie-Lite",
-    "input_price": 0.28,
-    "output_price": 0.56
+    "input_price": 0.002,
+    "output_price": 0.002
   },
   {
     "provider": "MiniMax",
     "model": "abab6",
     "input_price": 0.56,
     "output_price": 1.67
+  },
+  {
+    "provider": "Aliyun",
+    "model": "Qwen-Turbo",
+    "input_price": 0.003,
+    "output_price": 0.006
+  },
+  {
+    "provider": "Zhipu",
+    "model": "GLM-4-Air",
+    "input_price": 0.07,
+    "output_price": 0.07
+  },
+  {
+    "provider": "Zhipu",
+    "model": "GLM-4-AirX",
+    "input_price": 0.035,
+    "output_price": 0.035
+  },
+  {
+    "provider": "Zhipu",
+    "model": "GLM-4-Long",
+    "input_price": 0.07,
+    "output_price": 0.07
+  },
+  {
+    "provider": "MiniMax",
+    "model": "MiniMax-ABAB-6",
+    "input_price": 0.1,
+    "output_price": 0.1
   }
 ]

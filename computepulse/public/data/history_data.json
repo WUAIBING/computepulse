@@ -700,7 +700,7 @@
   },
   {
     "date": "2025-12-05",
-    "timestamp": "2025-12-05T02:43:53.952928",
+    "timestamp": "2025-12-05T12:47:44.090773",
     "gpu_prices": [
       {
         "provider": "AWS",
@@ -730,9 +730,7 @@
         "provider": "Aliyun",
         "region": "China-Hangzhou",
         "gpu": "A100",
-        "price": 1.64,
-        "_needs_review": true,
-        "_issue": "同供应商同地域同型号存在更低价格（1.64元），价格差异过大"
+        "price": 1.64
       },
       {
         "provider": "Tencent Cloud",
@@ -798,7 +796,7 @@
         "provider": "CoreWeave",
         "region": "US-East",
         "gpu": "H100",
-        "price": 2.25
+        "price": 1.99
       },
       {
         "provider": "CoreWeave",
@@ -810,13 +808,13 @@
         "provider": "AWS",
         "region": "US-East",
         "gpu": "A100",
-        "price": 3.67
+        "price": 12.24
       },
       {
         "provider": "Google Cloud",
         "region": "US-Central",
         "gpu": "A100",
-        "price": 3.52
+        "price": 20.48
       },
       {
         "provider": "Aliyun",
@@ -846,7 +844,7 @@
         "provider": "AWS",
         "region": "US-East",
         "gpu": "H100",
-        "price": 4.95
+        "price": 32.77
       },
       {
         "provider": "Tencent Cloud",
@@ -870,9 +868,7 @@
         "provider": "Vast.ai",
         "region": "Europe",
         "gpu": "A100",
-        "price": 2.2,
-        "_needs_review": true,
-        "_issue": "价格显著低于市场平均水平（其他A100云服务每小时价格约1.4-3.6元）"
+        "price": 2.2
       },
       {
         "provider": "CoreWeave",
@@ -920,15 +916,13 @@
         "provider": "Lambda",
         "region": "US-West",
         "gpu": "H100",
-        "price": 2.5
+        "price": 2.13
       },
       {
         "provider": "Vast.ai",
         "region": "Global",
         "gpu": "A100",
-        "price": 2.2,
-        "_needs_review": true,
-        "_issue": "价格显著低于市场平均水平（其他A100云服务每小时价格约1.4-3.6元）"
+        "price": 2.2
       },
       {
         "provider": "AWS",
@@ -952,7 +946,7 @@
         "provider": "Aliyun",
         "region": "China",
         "gpu": "Ascend 910B",
-        "price": 2.5
+        "price": 1.85
       },
       {
         "provider": "Tencent Cloud",
@@ -982,13 +976,13 @@
         "provider": "Google Cloud",
         "region": "US-Central",
         "gpu": "H100",
-        "price": 4.75
+        "price": 44.19
       },
       {
         "provider": "Azure",
         "region": "US-East",
         "gpu": "H100",
-        "price": 4.89
+        "price": 39.93
       },
       {
         "provider": "RunPod",
@@ -1000,21 +994,19 @@
         "provider": "Azure",
         "region": "US-East",
         "gpu": "A100",
-        "price": 3.61
+        "price": 17.12
       },
       {
         "provider": "RunPod",
         "region": "EU-West",
         "gpu": "A100",
-        "price": 1.17
+        "price": 1.97
       },
       {
         "provider": "Vast.ai",
         "region": "US-West",
         "gpu": "A100",
-        "price": 0.85,
-        "_needs_review": true,
-        "_issue": "价格显著低于市场平均水平（其他A100云服务每小时价格约1.4-3.6元）"
+        "price": 0.85
       },
       {
         "provider": "AWS",
@@ -1056,15 +1048,13 @@
         "provider": "Aliyun",
         "region": "China",
         "gpu": "A100",
-        "price": 2.8,
-        "_needs_review": true,
-        "_issue": "同供应商同地域同型号存在更低价格（1.64元），价格差异过大"
+        "price": 7.36
       },
       {
         "provider": "Tencent Cloud",
         "region": "China",
         "gpu": "A100",
-        "price": 2.75
+        "price": 7.64
       },
       {
         "provider": "Baidu AI Cloud",
@@ -1076,13 +1066,13 @@
         "provider": "Volcano Engine",
         "region": "China",
         "gpu": "A100",
-        "price": 3.0
+        "price": 7.08
       },
       {
         "provider": "Huawei Cloud",
         "region": "China",
         "gpu": "Ascend 910B",
-        "price": 1.8
+        "price": 1.67
       },
       {
         "provider": "Tencent Cloud",
@@ -1172,13 +1162,13 @@
         "provider": "SenseTime",
         "region": "China",
         "gpu": "DCU",
-        "price": 1.15
+        "price": 1.9
       },
       {
         "provider": "RunPod",
         "region": "US-East",
         "gpu": "A100",
-        "price": 1.75
+        "price": 2.0
       },
       {
         "provider": "Vast.ai",
@@ -1214,7 +1204,7 @@
         "provider": "SenseTime",
         "region": "China",
         "gpu": "A100",
-        "price": 3.0
+        "price": 6.81
       },
       {
         "provider": "RunPod",
@@ -1232,9 +1222,7 @@
         "provider": "Vast.ai",
         "region": "US",
         "gpu": "A100",
-        "price": 1.68,
-        "_needs_review": true,
-        "_issue": "价格显著低于市场平均水平（其他A100云服务每小时价格约1.4-3.6元）"
+        "price": 1.68
       },
       {
         "provider": "阿里云",
@@ -1301,6 +1289,60 @@
         "region": "China",
         "gpu": "A100",
         "price": 3.8
+      },
+      {
+        "provider": "Vast.ai",
+        "region": "Europe",
+        "gpu": "L40S",
+        "price": 1.5
+      },
+      {
+        "provider": "CoreWeave",
+        "region": "US-Central",
+        "gpu": "H200",
+        "price": 2.5
+      },
+      {
+        "provider": "AWS",
+        "region": "Global",
+        "gpu": "A100",
+        "price": 2.2
+      },
+      {
+        "provider": "Google Cloud",
+        "region": "Asia-Pacific",
+        "gpu": "A100",
+        "price": 2.15
+      },
+      {
+        "provider": "Azure",
+        "region": "North America",
+        "gpu": "A100",
+        "price": 2.1
+      },
+      {
+        "provider": "Tencent",
+        "region": "China",
+        "gpu": "MLU370",
+        "price": 1.75
+      },
+      {
+        "provider": "Baidu",
+        "region": "China",
+        "gpu": "Blackwell GB200",
+        "price": 2.6
+      },
+      {
+        "provider": "Vast.ai",
+        "region": "US-Central",
+        "gpu": "H100",
+        "price": 1.82
+      },
+      {
+        "provider": "Baidu Cloud",
+        "region": "China",
+        "gpu": "A100",
+        "price": 6.94
       }
     ],
     "token_prices": [
@@ -1344,9 +1386,7 @@
         "provider": "Meta",
         "model": "Llama3-70B",
         "input_price": 0.5,
-        "output_price": 1.5,
-        "_needs_review": true,
-        "_issue": "输入输出价格比例偏低（1.58:1），低于行业平均水平"
+        "output_price": 1.5
       },
       {
         "provider": "Aliyun",
@@ -1363,8 +1403,8 @@
       {
         "provider": "Zhipu",
         "model": "GLM-4",
-        "input_price": 1.4,
-        "output_price": 4.2
+        "input_price": 0.7,
+        "output_price": 0.7
       },
       {
         "provider": "MoonShot",
@@ -1375,8 +1415,8 @@
       {
         "provider": "ByteDance",
         "model": "Doubao-Pro",
-        "input_price": 0.56,
-        "output_price": 1.67
+        "input_price": 0.12,
+        "output_price": 0.12
       },
       {
         "provider": "MiniMax",
@@ -1400,13 +1440,13 @@
         "provider": "OpenAI",
         "model": "o1",
         "input_price": 20.0,
-        "output_price": 20.0
+        "output_price": 60.0
       },
       {
         "provider": "Aliyun",
         "model": "Qwen/通义千问",
-        "input_price": 0.0735,
-        "output_price": 0.23
+        "input_price": 0.073,
+        "output_price": 0.22
       },
       {
         "provider": "OpenAI",
@@ -1417,8 +1457,8 @@
       {
         "provider": "OpenAI",
         "model": "o1-mini",
-        "input_price": 3.0,
-        "output_price": 12.0
+        "input_price": 1.1,
+        "output_price": 4.4
       },
       {
         "provider": "Anthropic",
@@ -1459,62 +1499,62 @@
       {
         "provider": "Meta",
         "model": "Llama 3 405B",
-        "input_price": 3.75,
-        "output_price": 11.25
+        "input_price": 2.75,
+        "output_price": 8.25
       },
       {
         "provider": "Aliyun",
         "model": "Qwen-Plus",
-        "input_price": 0.22,
-        "output_price": 0.44
-      },
-      {
-        "provider": "Baidu",
-        "model": "Ernie-4.0 Turbo",
-        "input_price": 1.39,
-        "output_price": 5.56
-      },
-      {
-        "provider": "Baidu",
-        "model": "Ernie-4.0",
-        "input_price": 1.67,
-        "output_price": 5.0
-      },
-      {
-        "provider": "Baidu",
-        "model": "Ernie-3.5",
-        "input_price": 0.56,
-        "output_price": 1.67
-      },
-      {
-        "provider": "Zhipu",
-        "model": "GLM-4-Flash",
         "input_price": 0.14,
         "output_price": 0.28
       },
       {
+        "provider": "Baidu",
+        "model": "Ernie-4.0 Turbo",
+        "input_price": 0.08,
+        "output_price": 0.24
+      },
+      {
+        "provider": "Baidu",
+        "model": "Ernie-4.0",
+        "input_price": 0.12,
+        "output_price": 0.12
+      },
+      {
+        "provider": "Baidu",
+        "model": "Ernie-3.5",
+        "input_price": 0.008,
+        "output_price": 0.008
+      },
+      {
+        "provider": "Zhipu",
+        "model": "GLM-4-Flash",
+        "input_price": 0.01,
+        "output_price": 0.01
+      },
+      {
         "provider": "Zhipu",
         "model": "GLM-4-Plus",
-        "input_price": 0.7,
-        "output_price": 2.1
+        "input_price": 0.21,
+        "output_price": 0.21
       },
       {
         "provider": "Moonshot",
         "model": "Kimi",
-        "input_price": 0.83,
-        "output_price": 2.5
+        "input_price": 0.12,
+        "output_price": 0.12
       },
       {
         "provider": "ByteDance",
         "model": "Doubao-Lite",
-        "input_price": 0.28,
-        "output_price": 0.56
+        "input_price": 0.008,
+        "output_price": 0.008
       },
       {
         "provider": "MiniMax",
         "model": "MiniMax-01",
-        "input_price": 0.56,
-        "output_price": 2.22
+        "input_price": 0.01,
+        "output_price": 0.01
       },
       {
         "provider": "DeepSeek",
@@ -1526,32 +1566,62 @@
         "provider": "DeepSeek",
         "model": "DeepSeek-R1",
         "input_price": 0.28,
-        "output_price": 1.11
+        "output_price": 1.12
       },
       {
         "provider": "Google",
         "model": "Gemini 2.0 Flash Thinking",
-        "input_price": 0.3,
-        "output_price": 1.2
+        "input_price": 0.45,
+        "output_price": 1.8
       },
       {
         "provider": "Baidu",
         "model": "Ernie-Lite",
-        "input_price": 0.28,
-        "output_price": 0.56
+        "input_price": 0.002,
+        "output_price": 0.002
       },
       {
         "provider": "MiniMax",
         "model": "abab6",
         "input_price": 0.56,
         "output_price": 1.67
+      },
+      {
+        "provider": "Aliyun",
+        "model": "Qwen-Turbo",
+        "input_price": 0.003,
+        "output_price": 0.006
+      },
+      {
+        "provider": "Zhipu",
+        "model": "GLM-4-Air",
+        "input_price": 0.07,
+        "output_price": 0.07
+      },
+      {
+        "provider": "Zhipu",
+        "model": "GLM-4-AirX",
+        "input_price": 0.035,
+        "output_price": 0.035
+      },
+      {
+        "provider": "Zhipu",
+        "model": "GLM-4-Long",
+        "input_price": 0.07,
+        "output_price": 0.07
+      },
+      {
+        "provider": "MiniMax",
+        "model": "MiniMax-ABAB-6",
+        "input_price": 0.1,
+        "output_price": 0.1
       }
     ],
     "grid_load": {
-      "annual_twh": 150,
-      "estimated_gw": 17.12,
+      "annual_twh": 85.4,
+      "estimated_gw": 9.75,
       "kwh_price": 0.12,
-      "source": "BloombergNEF, IEA, Uptime Institute, industry analysis",
+      "source": "IEA Electricity 2024 Report & Goldman Sachs Global Investment Research",
       "active_gpu_est": 4000000
     }
   }
