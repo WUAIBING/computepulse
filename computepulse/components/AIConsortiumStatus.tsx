@@ -80,9 +80,9 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
   
   const themeClasses = getThemeClasses(theme);
 
-  // 1. Initialize Models
+  // 1. Initialize Models & Load Logs
   useEffect(() => {
-    // Mock Data Initialization
+    // Default Data (Fallback)
     setConsortiumData({
       status: 'active',
       models: [
@@ -95,10 +95,42 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
       version: 'v1.2.4'
     });
 
-    // Initial Logs
-    setLogs([
-      { id: '0', timestamp: new Date().toLocaleTimeString(), agent: 'System', message: 'AI Consortium Neural Link Established.', type: 'info' }
-    ]);
+    // Fetch Real System Logs
+    const fetchLogs = async () => {
+      try {
+        const baseUrl = import.meta.env.BASE_URL;
+        const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+        const response = await fetch(`${cleanBaseUrl}data/system_logs.json`);
+        if (response.ok) {
+           const data = await response.json();
+           // Update System Stats from Real Log Data
+           setConsortiumData(prev => prev ? ({
+             ...prev,
+             lastUpdate: data.last_updated,
+             version: data.system_version,
+             totalTasksProcessed: data.total_tasks
+           }) : null);
+           
+           // Set Initial Logs
+           if (data.logs && Array.isArray(data.logs)) {
+              // Format timestamps for display
+              const formattedLogs = data.logs.map((log: any) => ({
+                 ...log,
+                 timestamp: new Date(log.timestamp).toLocaleTimeString()
+              }));
+              setLogs(formattedLogs);
+           }
+        }
+      } catch (e) {
+        console.warn('Failed to fetch system logs, using simulation mode');
+        // Initial Logs for Simulation
+        setLogs([
+          { id: '0', timestamp: new Date().toLocaleTimeString(), agent: 'System', message: 'AI Consortium Neural Link Established.', type: 'info' }
+        ]);
+      }
+    };
+    
+    fetchLogs();
   }, []);
 
   // 2. Simulation Loop (The "Life" of the System)
