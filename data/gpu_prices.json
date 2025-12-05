@@ -1,69 +1,63 @@
 [
   {
     "provider": "AWS",
-    "region": "Global",
     "gpu": "H100",
-    "price": 2.13
+    "price": 12.29,
+    "region": "us-east-1"
   },
   {
     "provider": "Azure",
-    "region": "Global",
+    "region": "US-East",
     "gpu": "H100",
-    "price": 3.06
+    "price": 39.93
   },
   {
     "provider": "Google Cloud",
-    "region": "Global",
+    "region": "US-Central",
     "gpu": "H100",
-    "price": 2.85
+    "price": 44.19
   },
   {
     "provider": "CoreWeave",
-    "region": "Global",
+    "region": "US-East",
     "gpu": "H100",
-    "price": 2.13
+    "price": 1.99
   },
   {
     "provider": "Aliyun",
-    "region": "China-Hangzhou",
+    "region": "China",
     "gpu": "A100",
-    "price": 1.64
+    "price": 7.36
   },
   {
     "provider": "Tencent Cloud",
-    "region": "China-Beijing",
+    "region": "China",
     "gpu": "A100",
-    "price": 1.64
+    "price": 7.64
   },
   {
     "provider": "Huawei Cloud",
-    "region": "China-Beijing",
+    "region": "China",
     "gpu": "Ascend 910B",
-    "price": 13.89
+    "price": 1.67
   },
   {
-    "provider": "Huawei Cloud",
-    "region": "China-Shenzhen",
-    "gpu": "Ascend 910B",
-    "price": 1.53
-  },
-  {
-    "provider": "阿里云",
-    "region": "China-Hangzhou",
+    "provider": "\u963f\u91cc\u4e91",
+    "region": "China",
     "gpu": "A100",
-    "price": 4.55
+    "price": 3.89
   },
   {
-    "provider": "阿里云",
-    "region": "China-Hangzhou",
+    "provider": "\u963f\u91cc\u4e91",
+    "region": "China",
     "gpu": "H100",
-    "price": 27.78
+    "price": 5.21
   },
   {
-    "provider": "腾讯云",
-    "region": "Global",
+    "provider": "\u817e\u8baf\u4e91",
+    "region": "China",
     "gpu": "Ascend 910B",
-    "price": 6.94
+    "price": 1.78
   },
   {
     "provider": "Lambda Labs",
@@ -79,21 +73,15 @@
   },
   {
     "provider": "RunPod",
-    "region": "Global",
     "gpu": "H100",
-    "price": 2.3
+    "price": 1.99,
+    "region": "US"
   },
   {
     "provider": "RunPod",
-    "region": "Global",
     "gpu": "A100",
-    "price": 1.4
-  },
-  {
-    "provider": "CoreWeave",
-    "region": "US-East",
-    "gpu": "H100",
-    "price": 1.99
+    "price": 1.1,
+    "region": "US"
   },
   {
     "provider": "CoreWeave",
@@ -103,27 +91,27 @@
   },
   {
     "provider": "AWS",
-    "region": "US-East",
     "gpu": "A100",
-    "price": 12.24
+    "price": 4.1,
+    "region": "us-east-1"
   },
   {
     "provider": "Google Cloud",
-    "region": "US-Central",
+    "region": "Asia-Pacific",
     "gpu": "A100",
-    "price": 20.48
+    "price": 2.15
   },
   {
     "provider": "Aliyun",
-    "region": "China-Hangzhou",
+    "region": "China",
     "gpu": "Ascend 910B",
-    "price": 1.67
+    "price": 1.85
   },
   {
     "provider": "Tencent Cloud",
-    "region": "China-Guangzhou",
+    "region": "China",
     "gpu": "MLU370",
-    "price": 1.39
+    "price": 2.0
   },
   {
     "provider": "Baidu Smart Cloud",
@@ -138,16 +126,10 @@
     "price": 1.25
   },
   {
-    "provider": "AWS",
-    "region": "US-East",
-    "gpu": "H100",
-    "price": 32.77
-  },
-  {
     "provider": "Tencent Cloud",
-    "region": "China-Guangzhou",
+    "region": "China",
     "gpu": "Ascend 910B",
-    "price": 1.78
+    "price": 1.75
   },
   {
     "provider": "Baidu Smart Cloud",
@@ -163,9 +145,9 @@
   },
   {
     "provider": "Vast.ai",
-    "region": "Europe",
     "gpu": "A100",
-    "price": 2.2
+    "price": 0.75,
+    "region": "US"
   },
   {
     "provider": "CoreWeave",
@@ -180,52 +162,34 @@
     "price": 4.5
   },
   {
-    "provider": "Google Cloud",
-    "region": "Asia-Pacific",
-    "gpu": "H100",
-    "price": 2.7
-  },
-  {
     "provider": "Azure",
     "region": "Europe",
     "gpu": "H200",
     "price": 4.0
   },
   {
-    "provider": "阿里云",
+    "provider": "\u963f\u91cc\u4e91",
     "region": "China",
     "gpu": "Ascend 910B",
     "price": 1.85
   },
   {
-    "provider": "腾讯云",
+    "provider": "\u817e\u8baf\u4e91",
     "region": "China",
     "gpu": "MLU370",
     "price": 1.5
   },
   {
-    "provider": "百度智能云",
+    "provider": "\u767e\u5ea6\u667a\u80fd\u4e91",
     "region": "China",
     "gpu": "DCU",
     "price": 1.6
   },
   {
     "provider": "Lambda",
-    "region": "US-West",
     "gpu": "H100",
-    "price": 2.13
-  },
-  {
-    "provider": "Vast.ai",
-    "region": "Global",
-    "gpu": "A100",
-    "price": 2.2
-  },
-  {
-    "provider": "AWS",
-    "region": "us-west-2",
-    "gpu": "H100",
-    "price": 2.6
+    "price": 1.99,
+    "region": "us-east-1"
   },
   {
     "provider": "Google Cloud",
@@ -235,21 +199,9 @@
   },
   {
     "provider": "Azure",
-    "region": "East US",
+    "region": "North America",
     "gpu": "A100",
-    "price": 3.0
-  },
-  {
-    "provider": "Aliyun",
-    "region": "China",
-    "gpu": "Ascend 910B",
-    "price": 1.85
-  },
-  {
-    "provider": "Tencent Cloud",
-    "region": "China",
-    "gpu": "MLU370",
-    "price": 2.0
+    "price": 2.1
   },
   {
     "provider": "Baidu Intelligent Cloud",
@@ -268,42 +220,6 @@
     "region": "China",
     "gpu": "Blackwell GB200",
     "price": 3.5
-  },
-  {
-    "provider": "Google Cloud",
-    "region": "US-Central",
-    "gpu": "H100",
-    "price": 44.19
-  },
-  {
-    "provider": "Azure",
-    "region": "US-East",
-    "gpu": "H100",
-    "price": 39.93
-  },
-  {
-    "provider": "RunPod",
-    "region": "EU-West",
-    "gpu": "H100",
-    "price": 1.97
-  },
-  {
-    "provider": "Azure",
-    "region": "US-East",
-    "gpu": "A100",
-    "price": 17.12
-  },
-  {
-    "provider": "RunPod",
-    "region": "EU-West",
-    "gpu": "A100",
-    "price": 1.97
-  },
-  {
-    "provider": "Vast.ai",
-    "region": "US-West",
-    "gpu": "A100",
-    "price": 0.85
   },
   {
     "provider": "AWS",
@@ -342,18 +258,6 @@
     "price": 3.7
   },
   {
-    "provider": "Aliyun",
-    "region": "China",
-    "gpu": "A100",
-    "price": 7.36
-  },
-  {
-    "provider": "Tencent Cloud",
-    "region": "China",
-    "gpu": "A100",
-    "price": 7.64
-  },
-  {
     "provider": "Baidu AI Cloud",
     "region": "China",
     "gpu": "A100",
@@ -364,18 +268,6 @@
     "region": "China",
     "gpu": "A100",
     "price": 7.08
-  },
-  {
-    "provider": "Huawei Cloud",
-    "region": "China",
-    "gpu": "Ascend 910B",
-    "price": 1.67
-  },
-  {
-    "provider": "Tencent Cloud",
-    "region": "China",
-    "gpu": "Ascend 910B",
-    "price": 1.75
   },
   {
     "provider": "Baidu AI Cloud",
@@ -462,34 +354,16 @@
     "price": 1.9
   },
   {
-    "provider": "RunPod",
-    "region": "US-East",
-    "gpu": "A100",
-    "price": 2.0
-  },
-  {
     "provider": "Vast.ai",
-    "region": "Global",
+    "region": "Europe",
     "gpu": "L40S",
-    "price": 1.8
+    "price": 1.5
   },
   {
     "provider": "CoreWeave",
-    "region": "US",
+    "region": "US-Central",
     "gpu": "H200",
-    "price": 4.5
-  },
-  {
-    "provider": "AWS",
-    "region": "us-east-1",
-    "gpu": "A100",
-    "price": 3.0
-  },
-  {
-    "provider": "Google Cloud",
-    "region": "us-central1",
-    "gpu": "A100",
-    "price": 3.0
+    "price": 2.5
   },
   {
     "provider": "Baidu Intelligent Cloud",
@@ -504,118 +378,58 @@
     "price": 6.81
   },
   {
-    "provider": "RunPod",
-    "region": "US-East",
-    "gpu": "H100",
-    "price": 2.05
-  },
-  {
     "provider": "Vast.ai",
-    "region": "US",
     "gpu": "H100",
-    "price": 1.98
+    "price": 1.5,
+    "region": "US"
   },
   {
-    "provider": "Vast.ai",
-    "region": "US",
-    "gpu": "A100",
-    "price": 1.68
-  },
-  {
-    "provider": "阿里云",
-    "region": "China",
-    "gpu": "H100",
-    "price": 5.21
-  },
-  {
-    "provider": "阿里云",
-    "region": "China",
-    "gpu": "A100",
-    "price": 3.89
-  },
-  {
-    "provider": "腾讯云",
+    "provider": "\u817e\u8baf\u4e91",
     "region": "China",
     "gpu": "H100",
     "price": 5.15
   },
   {
-    "provider": "腾讯云",
+    "provider": "\u817e\u8baf\u4e91",
     "region": "China",
     "gpu": "A100",
     "price": 3.82
   },
   {
-    "provider": "腾讯云",
-    "region": "China",
-    "gpu": "Ascend 910B",
-    "price": 1.78
-  },
-  {
-    "provider": "百度智能云",
+    "provider": "\u767e\u5ea6\u667a\u80fd\u4e91",
     "region": "China",
     "gpu": "A100",
     "price": 3.75
   },
   {
-    "provider": "百度智能云",
+    "provider": "\u767e\u5ea6\u667a\u80fd\u4e91",
     "region": "China",
     "gpu": "Ascend 910B",
     "price": 1.72
   },
   {
-    "provider": "华为云",
+    "provider": "\u534e\u4e3a\u4e91",
     "region": "China",
     "gpu": "Ascend 910B",
     "price": 1.65
   },
   {
-    "provider": "火山引擎",
+    "provider": "\u706b\u5c71\u5f15\u64ce",
     "region": "China",
     "gpu": "A100",
     "price": 3.68
   },
   {
-    "provider": "火山引擎",
+    "provider": "\u706b\u5c71\u5f15\u64ce",
     "region": "China",
     "gpu": "Ascend 910B",
     "price": 1.7
   },
   {
-    "provider": "商汤",
+    "provider": "\u5546\u6c64",
     "region": "China",
     "gpu": "A100",
     "price": 3.8
-  },
-  {
-    "provider": "Vast.ai",
-    "region": "Europe",
-    "gpu": "L40S",
-    "price": 1.5
-  },
-  {
-    "provider": "CoreWeave",
-    "region": "US-Central",
-    "gpu": "H200",
-    "price": 2.5
-  },
-  {
-    "provider": "AWS",
-    "region": "Global",
-    "gpu": "A100",
-    "price": 2.2
-  },
-  {
-    "provider": "Google Cloud",
-    "region": "Asia-Pacific",
-    "gpu": "A100",
-    "price": 2.15
-  },
-  {
-    "provider": "Azure",
-    "region": "North America",
-    "gpu": "A100",
-    "price": 2.1
   },
   {
     "provider": "Tencent",
@@ -630,15 +444,33 @@
     "price": 2.6
   },
   {
-    "provider": "Vast.ai",
-    "region": "US-Central",
-    "gpu": "H100",
-    "price": 1.82
-  },
-  {
     "provider": "Baidu Cloud",
     "region": "China",
     "gpu": "A100",
     "price": 6.94
+  },
+  {
+    "provider": "Lambda",
+    "gpu": "A100",
+    "price": 1.1,
+    "region": "us-east-1"
+  },
+  {
+    "provider": "RunPod",
+    "gpu": "RTX 4090",
+    "price": 0.6,
+    "region": "US"
+  },
+  {
+    "provider": "Vast.ai",
+    "gpu": "RTX 4090",
+    "price": 0.4,
+    "region": "US"
+  },
+  {
+    "provider": "Lambda",
+    "gpu": "RTX 4090",
+    "price": 0.5,
+    "region": "us-east-1"
   }
 ]
