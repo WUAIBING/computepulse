@@ -53,13 +53,12 @@ const DeepSeekLogo = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const DoubaoLogo = ({ className }: { className?: string }) => (
+const KimiLogo = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M50 10C30 10 15 30 15 50C15 70 30 90 50 90C70 90 85 70 85 50C85 30 70 10 50 10Z" fill="#00C853" fillOpacity="0.2"/>
-    <path d="M35 40C35 40 40 35 50 35C60 35 65 40 65 40" stroke="#00C853" strokeWidth="6" strokeLinecap="round"/>
-    <circle cx="40" cy="55" r="5" fill="#00C853"/>
-    <circle cx="60" cy="55" r="5" fill="#00C853"/>
-    <path d="M45 70Q50 75 55 70" stroke="#00C853" strokeWidth="4" strokeLinecap="round"/>
+    <circle cx="50" cy="50" r="45" fill="#E64A19" fillOpacity="0.2" />
+    <path d="M35 30L50 50L35 70M65 30L50 50L65 70" stroke="#E64A19" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="50" cy="50" r="8" fill="#E64A19"/>
+    <path d="M50 20V30M50 70V80" stroke="#E64A19" strokeWidth="4" strokeLinecap="round"/>
   </svg>
 );
 
@@ -81,7 +80,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
       models: [
         { name: 'Qwen', confidence: 98.5, tasksProcessed: 1240, avgResponseTime: 145, role: 'Architect', color: '#615CED', avatar: <QwenLogo className="w-full h-full" /> },
         { name: 'DeepSeek', confidence: 96.2, tasksProcessed: 3450, avgResponseTime: 320, role: 'Hunter', color: '#00A9FF', avatar: <DeepSeekLogo className="w-full h-full" /> },
-        { name: 'Doubao', confidence: 94.8, tasksProcessed: 890, avgResponseTime: 85, role: 'Translator', color: '#00C853', avatar: <DoubaoLogo className="w-full h-full" /> },
+        { name: 'Kimi', confidence: 95.5, tasksProcessed: 890, avgResponseTime: 180, role: 'Researcher', color: '#E64A19', avatar: <KimiLogo className="w-full h-full" /> },
       ],
       lastUpdate: new Date().toISOString(),
       totalTasksProcessed: 5580,
@@ -143,7 +142,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
     switch(agent) {
       case 'Qwen': return 'text-[#615CED]';
       case 'DeepSeek': return 'text-[#00A9FF]';
-      case 'Doubao': return 'text-[#00C853]';
+      case 'Kimi': return 'text-[#E64A19]';
       default: return 'text-gray-400';
     }
   };

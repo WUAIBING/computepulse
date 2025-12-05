@@ -22,33 +22,31 @@ from typing import List, Dict, Optional, Any
 
 # Set API Keys
 dashscope.api_key = os.getenv('DASHSCOPE_API_KEY')
-volc_api_key = os.getenv('VOLC_API_KEY') or os.getenv('VITE_VOLC_API_KEY')
 
 # Try to load from .env.local if not in env
-if not dashscope.api_key or not volc_api_key:
+if not dashscope.api_key:
     try:
         with open('.env.local', 'r') as f:
             for line in f:
                 if 'DASHSCOPE_API_KEY' in line:
                     dashscope.api_key = line.split('=')[1].strip()
-                if 'VOLC_API_KEY' in line:
-                    volc_api_key = line.split('=')[1].strip()
     except:
         pass
 
-# Initialize DeepSeek client (via Alibaba Cloud DashScope)
-deepseek_client = None
+# Initialize OpenAI-compatible client (via Alibaba Cloud DashScope or Moonshot Gateway)
+kimi_client = None
 if dashscope.api_key:
     try:
-        deepseek_client = OpenAI(
+        kimi_client = OpenAI(
             api_key=dashscope.api_key,
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1", # Adjust if needed
         )
     except Exception as e:
-        print(f"[{datetime.now()}] Warning: Failed to initialize DeepSeek client: {e}")
+        print(f"[{datetime.now()}] Warning: Failed to initialize Kimi client: {e}")
 
-DOUBAO_ENDPOINT_ID = "doubao-seed-1-6-251015"  # Confirmed from API example
-ENABLE_DOUBAO = True  # Enabled for production environment
+deepseek_client = kimi_client # Share client if base_url is same
+
+ENABLE_KIMI = True  # Enabled for production environment
 
 # Data validation thresholds
 GPU_PRICE_MIN = 0.1  # Minimum reasonable GPU price per hour (USD)
@@ -58,99 +56,32 @@ TOKEN_PRICE_MAX = 100.0  # Maximum reasonable token price per 1M (USD)
 KWH_PRICE_MIN = 0.01  # Minimum reasonable electricity price (USD/kWh)
 KWH_PRICE_MAX = 1.0  # Maximum reasonable electricity price (USD/kWh)
 
-def get_doubao_endpoint():
-    """Get Doubao endpoint ID with caching."""
-    global DOUBAO_ENDPOINT_ID
-    if DOUBAO_ENDPOINT_ID:
-        return DOUBAO_ENDPOINT_ID
-        
-    if not volc_api_key:
-        return None
-        
-    try:
-        url = "https://ark.cn-beijing.volces.com/api/v3/inference_endpoints?page_num=1&page_size=20"
-        headers = {"Authorization": f"Bearer {volc_api_key}"}
-        response = requests.get(url, headers=headers, timeout=10)
-        
-        if response.status_code == 200:
-            data = response.json()
-            if 'items' in data:
-                for item in data['items']:
-                    if item.get('status') == 'Running':
-                        model_ref = item.get('model_reference', {}).get('model_id', '').lower()
-                        if 'doubao' in model_ref:
-                            DOUBAO_ENDPOINT_ID = item['id']
-                            print(f"[{datetime.now()}] Found Doubao Endpoint: {DOUBAO_ENDPOINT_ID}")
-                            return DOUBAO_ENDPOINT_ID
-                            
-                # Fallback to first running endpoint
-                for item in data['items']:
-                    if item.get('status') == 'Running':
-                        DOUBAO_ENDPOINT_ID = item['id']
-                        print(f"[{datetime.now()}] Using fallback Endpoint: {DOUBAO_ENDPOINT_ID}")
-                        return DOUBAO_ENDPOINT_ID
-                        
-        print(f"[{datetime.now()}] Warning: No active Doubao endpoint found.")
-    except Exception as e:
-        print(f"[{datetime.now()}] Error fetching Doubao endpoint: {e}")
-    return None
-
-def call_doubao_with_search(prompt: str, max_retries: int = 2, reasoning_effort: str = "low") -> Optional[str]:
+def call_kimi_with_search(prompt: str, max_retries: int = 2) -> Optional[str]:
     """
-    Call Doubao API with web search enabled using responses API.
+    Call Moonshot Kimi API with search enabled (via system prompt or tools).
     Includes retry logic for better reliability.
-    
-    Args:
-        prompt: The prompt to send to the API
-        max_retries: Maximum number of retry attempts
-        reasoning_effort: Not used for responses API (only chat/completions supports it)
     """
-    endpoint_id = DOUBAO_ENDPOINT_ID or get_doubao_endpoint()
-    if not endpoint_id:
+    if not kimi_client:
         return None
-    
-    headers = {
-        "Authorization": f"Bearer {volc_api_key}",
-        "Content-Type": "application/json"
-    }
     
     for attempt in range(max_retries):
         try:
-            # Use responses API with web_search tool for real-time data
-            url = "https://ark.cn-beijing.volces.com/api/v3/responses"
-            payload = {
-                "model": endpoint_id,
-                "stream": False,
-                "tools": [{"type": "web_search"}],  # Enable web search
-                "input": [
-                    {
-                        "role": "user",
-                        "content": [{"type": "input_text", "text": prompt}]
-                    }
-                ]
-            }
+            # Moonshot usually enables search by default or via specific model
+            completion = kimi_client.chat.completions.create(
+                model="Moonshot-Kimi-K2-Instruct", # Updated model name
+                messages=[
+                    {"role": "system", "content": "You are Kimi, an AI assistant with real-time internet access. Please search the web to answer the user's question accurately."},
+                    {"role": "user", "content": prompt}
+                ],
+                extra_body={"enable_search": True}, # Enable search
+                stream=False,
+            )
             
-            response = requests.post(url, headers=headers, json=payload, timeout=120)
-            if response.status_code == 200:
-                res_json = response.json()
-                # Extract message content from output
-                if 'output' in res_json:
-                    for item in res_json['output']:
-                        if item.get('type') == 'message' and 'content' in item:
-                            for content_item in item['content']:
-                                # Handle both 'text' and 'output_text' types
-                                if content_item.get('type') in ['text', 'output_text']:
-                                    text = content_item.get('text') or content_item.get('output_text')
-                                    if text:
-                                        return text
-            
-            if response.status_code != 200:
-                print(f"[{datetime.now()}] Doubao API Error (attempt {attempt+1}): {response.status_code}")
-                if attempt < max_retries - 1:
-                    time.sleep(2 ** attempt)  # Exponential backoff
-                    
+            if completion.choices:
+                return completion.choices[0].message.content
+                
         except Exception as e:
-            print(f"[{datetime.now()}] Doubao Call Failed (attempt {attempt+1}): {e}")
+            print(f"[{datetime.now()}] Kimi Call Failed (attempt {attempt+1}): {e}")
             if attempt < max_retries - 1:
                 time.sleep(2 ** attempt)
     
@@ -314,23 +245,23 @@ def validate_grid_data(data: Dict) -> bool:
 def merge_data_improved(
     qwen_data: Optional[Any],
     deepseek_data: Optional[Any],
-    doubao_data: Optional[Any],
+    kimi_data: Optional[Any],
     existing_data: Optional[Any],
     key_func: Optional[callable] = None
 ) -> Any:
     """
     Improved merge logic that properly handles existing data.
     
-    Priority: DeepSeek > Qwen > Doubao > Existing data
-    (DeepSeek has reasoning mode, Qwen is fast and reliable, Doubao is slow)
+    Priority: DeepSeek > Qwen > Kimi > Existing data
+    (DeepSeek has reasoning mode, Qwen is fast and reliable, Kimi has long context)
     """
     # Handle dict type (for grid load)
-    if isinstance(deepseek_data, dict) or isinstance(qwen_data, dict) or isinstance(doubao_data, dict) or isinstance(existing_data, dict):
+    if isinstance(deepseek_data, dict) or isinstance(qwen_data, dict) or isinstance(kimi_data, dict) or isinstance(existing_data, dict):
         merged = {}
         if isinstance(existing_data, dict):
             merged.update(existing_data)
-        if isinstance(doubao_data, dict):
-            merged.update(doubao_data)
+        if isinstance(kimi_data, dict):
+            merged.update(kimi_data)
         if isinstance(qwen_data, dict):
             merged.update(qwen_data)
         if isinstance(deepseek_data, dict):
@@ -348,26 +279,25 @@ def merge_data_improved(
         for item in existing_data:
             key = key_func(item)
             merged_dict[key] = item
-    
-    # Add/update with Doubao data (lowest priority of new data)
-    if isinstance(doubao_data, list):
-        for item in doubao_data:
+            
+    # Update with Kimi data
+    if isinstance(kimi_data, list):
+        for item in kimi_data:
             key = key_func(item)
-            if key not in merged_dict:
-                merged_dict[key] = item
-    
-    # Add/update with Qwen data
+            merged_dict[key] = item
+            
+    # Update with Qwen data
     if isinstance(qwen_data, list):
         for item in qwen_data:
             key = key_func(item)
             merged_dict[key] = item
-    
-    # Add/update with DeepSeek data (highest priority)
+            
+    # Update with DeepSeek data (highest priority)
     if isinstance(deepseek_data, list):
         for item in deepseek_data:
             key = key_func(item)
             merged_dict[key] = item
-    
+            
     return list(merged_dict.values()) if merged_dict else (existing_data or [])
 
 # Define paths
@@ -417,20 +347,20 @@ def fetch_gpu_prices():
         # Fetch from multiple sources with retry
         qwen_content = call_qwen_with_search(prompt)
         deepseek_content = call_deepseek_with_reasoning(prompt)
-        doubao_content = call_doubao_with_search(prompt) if ENABLE_DOUBAO else None
+        kimi_content = call_kimi_with_search(prompt) if ENABLE_KIMI else None
         
         # Parse responses
         qwen_data = clean_and_parse_json(qwen_content)
         deepseek_data = clean_and_parse_json(deepseek_content)
-        doubao_data = clean_and_parse_json(doubao_content) if doubao_content else None
+        kimi_data = clean_and_parse_json(kimi_content) if kimi_content else None
         
         # Validate data
         if isinstance(qwen_data, list):
             qwen_data = [item for item in qwen_data if validate_gpu_price(item)]
         if isinstance(deepseek_data, list):
             deepseek_data = [item for item in deepseek_data if validate_gpu_price(item)]
-        if isinstance(doubao_data, list):
-            doubao_data = [item for item in doubao_data if validate_gpu_price(item)]
+        if isinstance(kimi_data, list):
+            kimi_data = [item for item in kimi_data if validate_gpu_price(item)]
         
         # Load existing data
         existing_data = []
@@ -443,15 +373,15 @@ def fetch_gpu_prices():
         
         # Merge with improved logic
         key_func = lambda x: f"{x.get('provider', '')}_{x.get('region', '')}_{x.get('gpu', '')}"
-        final_data = merge_data_improved(qwen_data, deepseek_data, doubao_data, existing_data, key_func)
+        final_data = merge_data_improved(qwen_data, deepseek_data, kimi_data, existing_data, key_func)
         
         if final_data and len(final_data) > 0:
             with open(GPU_FILE, 'w', encoding='utf-8') as f:
                 json.dump(final_data, f, indent=2, ensure_ascii=False)
             qwen_count = len(qwen_data) if qwen_data else 0
             deepseek_count = len(deepseek_data) if deepseek_data else 0
-            doubao_count = len(doubao_data) if doubao_data else 0
-            print(f"[{datetime.now()}] GPU Prices updated: {len(final_data)} records (Qwen: {qwen_count}, DeepSeek: {deepseek_count}, Doubao: {doubao_count})")
+            kimi_count = len(kimi_data) if kimi_data else 0
+            print(f"[{datetime.now()}] GPU Prices updated: {len(final_data)} records (Qwen: {qwen_count}, DeepSeek: {deepseek_count}, Kimi: {kimi_count})")
         else:
             print(f"[{datetime.now()}] No valid GPU price data fetched, keeping existing data")
 
@@ -471,8 +401,8 @@ def fetch_token_prices():
     
     返回 JSON 数组格式（人民币按 7.2 汇率换算为美元）：
     [
-      {"provider": "OpenAI", "model": "GPT-4o", "input_price": 5.0, "output_price": 15.0},
-      {"provider": "Aliyun", "model": "Qwen-Max", "input_price": 0.55, "output_price": 1.66}
+        {"provider": "OpenAI", "model": "GPT-4o", "input_price": 5.0, "output_price": 15.0},
+        {"provider": "Aliyun", "model": "Qwen-Max", "input_price": 0.55, "output_price": 1.66}
     ]
     
     要求：
@@ -487,20 +417,20 @@ def fetch_token_prices():
         # Fetch from multiple sources
         qwen_content = call_qwen_with_search(prompt)
         deepseek_content = call_deepseek_with_reasoning(prompt)
-        doubao_content = call_doubao_with_search(prompt) if ENABLE_DOUBAO else None
+        kimi_content = call_kimi_with_search(prompt) if ENABLE_KIMI else None
         
         # Parse responses
         qwen_data = clean_and_parse_json(qwen_content)
         deepseek_data = clean_and_parse_json(deepseek_content)
-        doubao_data = clean_and_parse_json(doubao_content) if doubao_content else None
+        kimi_data = clean_and_parse_json(kimi_content) if kimi_content else None
         
         # Validate data
         if isinstance(qwen_data, list):
             qwen_data = [item for item in qwen_data if validate_token_price(item)]
         if isinstance(deepseek_data, list):
             deepseek_data = [item for item in deepseek_data if validate_token_price(item)]
-        if isinstance(doubao_data, list):
-            doubao_data = [item for item in doubao_data if validate_token_price(item)]
+        if isinstance(kimi_data, list):
+            kimi_data = [item for item in kimi_data if validate_token_price(item)]
         
         # Load existing data
         existing_data = []
@@ -513,15 +443,15 @@ def fetch_token_prices():
         
         # Merge with improved logic
         key_func = lambda x: f"{x.get('provider', '')}_{x.get('model', '')}"
-        final_data = merge_data_improved(qwen_data, deepseek_data, doubao_data, existing_data, key_func)
+        final_data = merge_data_improved(qwen_data, deepseek_data, kimi_data, existing_data, key_func)
         
         if final_data and len(final_data) > 0:
             with open(TOKEN_FILE, 'w', encoding='utf-8') as f:
                 json.dump(final_data, f, indent=2, ensure_ascii=False)
             qwen_count = len(qwen_data) if qwen_data else 0
             deepseek_count = len(deepseek_data) if deepseek_data else 0
-            doubao_count = len(doubao_data) if doubao_data else 0
-            print(f"[{datetime.now()}] Token Prices updated: {len(final_data)} records (Qwen: {qwen_count}, DeepSeek: {deepseek_count}, Doubao: {doubao_count})")
+            kimi_count = len(kimi_data) if kimi_data else 0
+            print(f"[{datetime.now()}] Token Prices updated: {len(final_data)} records (Qwen: {qwen_count}, DeepSeek: {deepseek_count}, Kimi: {kimi_count})")
         else:
             print(f"[{datetime.now()}] No valid token price data fetched, keeping existing data")
             
@@ -555,20 +485,20 @@ def fetch_grid_load():
         # Fetch from multiple sources
         qwen_content = call_qwen_with_search(prompt)
         deepseek_content = call_deepseek_with_reasoning(prompt)
-        doubao_content = call_doubao_with_search(prompt) if ENABLE_DOUBAO else None
+        kimi_content = call_kimi_with_search(prompt) if ENABLE_KIMI else None
         
         # Parse responses
         qwen_data = clean_and_parse_json(qwen_content)
         deepseek_data = clean_and_parse_json(deepseek_content)
-        doubao_data = clean_and_parse_json(doubao_content) if doubao_content else None
+        kimi_data = clean_and_parse_json(kimi_content) if kimi_content else None
         
         # Validate data
         if qwen_data and not validate_grid_data(qwen_data):
             qwen_data = None
         if deepseek_data and not validate_grid_data(deepseek_data):
             deepseek_data = None
-        if doubao_data and not validate_grid_data(doubao_data):
-            doubao_data = None
+        if kimi_data and not validate_grid_data(kimi_data):
+            kimi_data = None
         
         # Load existing data
         existing_data = {}
@@ -580,7 +510,7 @@ def fetch_grid_load():
                 print(f"[{datetime.now()}] Error loading existing grid data: {e}")
         
         # Merge with improved logic
-        final_data = merge_data_improved(qwen_data, deepseek_data, doubao_data, existing_data)
+        final_data = merge_data_improved(qwen_data, deepseek_data, kimi_data, existing_data)
         
         if final_data:
             with open(GRID_FILE, 'w', encoding='utf-8') as f:
@@ -628,12 +558,12 @@ def fetch_annual_energy_history():
         # Fetch from multiple sources
         qwen_content = call_qwen_with_search(prompt)
         deepseek_content = call_deepseek_with_reasoning(prompt)
-        doubao_content = call_doubao_with_search(prompt) if ENABLE_DOUBAO else None
+        kimi_content = call_kimi_with_search(prompt) if ENABLE_KIMI else None
         
         # Parse responses
         qwen_data = clean_and_parse_json(qwen_content)
         deepseek_data = clean_and_parse_json(deepseek_content)
-        doubao_data = clean_and_parse_json(doubao_content) if doubao_content else None
+        kimi_data = clean_and_parse_json(kimi_content) if kimi_content else None
         
         # Validate data (should be a list with year and value)
         def validate_annual_data(data):
@@ -652,8 +582,8 @@ def fetch_annual_energy_history():
             qwen_data = None
         if deepseek_data and not validate_annual_data(deepseek_data):
             deepseek_data = None
-        if doubao_data and not validate_annual_data(doubao_data):
-            doubao_data = None
+        if kimi_data and not validate_annual_data(kimi_data):
+            kimi_data = None
         
         # Load existing data
         annual_file = os.path.join(DATA_DIR, 'annual_energy.json')
@@ -665,8 +595,8 @@ def fetch_annual_energy_history():
             except Exception as e:
                 print(f"[{datetime.now()}] Error loading existing annual data: {e}")
         
-        # Merge with improved logic (prefer DeepSeek > Qwen > Doubao > Existing)
-        final_data = deepseek_data or qwen_data or doubao_data or existing_data
+        # Merge with improved logic (prefer DeepSeek > Qwen > Kimi > Existing)
+        final_data = deepseek_data or qwen_data or kimi_data or existing_data
         
         if final_data and len(final_data) > 0:
             # Sort by year
