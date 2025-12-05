@@ -147,19 +147,19 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
         <div className="flex items-center gap-3">
           <div className="relative">
             {/* Pulsing Status Indicator */}
-            <div className={`w-3 h-3 rounded-full ${getStatusColor(consortiumData.status)} animate-pulse`}></div>
-            <div className={`absolute inset-0 w-3 h-3 rounded-full ${getStatusColor(consortiumData.status)} opacity-30 animate-ping`}></div>
+            <div className={`w-2 h-2 rounded-full ${getStatusColor(consortiumData.status)} animate-pulse`}></div>
+            <div className={`absolute inset-0 w-2 h-2 rounded-full ${getStatusColor(consortiumData.status)} opacity-30 animate-ping`}></div>
           </div>
           
           <div>
-            <h3 className={`${themeClasses.text} text-sm font-bold flex items-center gap-2`}>
+            <h3 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider flex items-center gap-2`}>
               {language === 'CN' ? 'AI 联合体状态' : 'AI Consortium Status'}
               
               {/* Info Icon */}
               <div 
                 className="relative group"
               >
-                <svg className="w-4 h-4 text-gray-500 cursor-help hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-3.5 h-3.5 text-gray-500 cursor-help hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 
@@ -176,11 +176,11 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                 </div>
               </div>
             </h3>
-            <div className={`${themeClasses.textMuted} text-xs flex items-center gap-2`}>
-              <span className={getStatusColor(consortiumData.status)}>
+            <div className={`${themeClasses.textMuted} text-[10px] flex items-center gap-2 mt-0.5`}>
+              <span className={`${getStatusColor(consortiumData.status)} font-bold`}>
                 {consortiumData.status.toUpperCase()}
               </span>
-              <span>•</span>
+              <span className="text-gray-600">•</span>
               <span>{timeSinceUpdate()}</span>
             </div>
           </div>
@@ -189,11 +189,11 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
         {/* Expand/Collapse Button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className={`${themeClasses.textMuted} hover:text-white transition-colors`}
+          className={`${themeClasses.textMuted} hover:text-white transition-colors p-1 rounded hover:bg-gray-800/50`}
           aria-label={isExpanded ? 'Collapse' : 'Expand'}
         >
           <svg 
-            className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} 
+            className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
@@ -207,17 +207,19 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
       <div className="space-y-3 mb-4">
         {consortiumData.models.map((model, index) => (
           <div key={index} className="group">
-            <div className="flex justify-between items-center mb-1">
-              <span className={`text-xs font-medium ${themeClasses.text}`}>{model.name}</span>
-              <span className={`text-xs font-mono font-bold ${getConfidenceTextColor(model.confidence)}`}>
+            <div className="flex justify-between items-center mb-1.5">
+              <span className={`text-[10px] uppercase tracking-wider font-bold ${themeClasses.textMuted} group-hover:text-white transition-colors`}>{model.name}</span>
+              <span className={`text-[10px] font-mono font-bold ${getConfidenceTextColor(model.confidence)}`}>
                 {model.confidence.toFixed(1)}%
               </span>
             </div>
-            <div className={`w-full h-2 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-200'} rounded-full overflow-hidden`}>
+            <div className={`w-full h-1.5 ${theme === 'dark' ? 'bg-gray-800/50' : 'bg-gray-200'} rounded-full overflow-hidden`}>
               <div 
-                className={`h-full ${getConfidenceColor(model.confidence)} transition-all duration-500 ease-out group-hover:opacity-80`}
+                className={`h-full ${getConfidenceColor(model.confidence)} transition-all duration-1000 ease-out group-hover:brightness-110 relative`}
                 style={{ width: `${model.confidence}%` }}
-              ></div>
+              >
+                <div className="absolute inset-0 bg-white/20 w-full h-full animate-[shimmer_2s_infinite] skew-x-12"></div>
+              </div>
             </div>
           </div>
         ))}
@@ -227,79 +229,65 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
       {isExpanded && (
         <div className="space-y-4 pt-4 border-t border-gray-800 animate-fadeIn">
           
-          {/* Model Details */}
-          <div className="grid grid-cols-1 gap-3">
+          {/* Model Details Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {consortiumData.models.map((model, index) => (
               <div 
                 key={index} 
-                className={`${theme === 'dark' ? 'bg-gray-900/50' : 'bg-gray-100'} rounded-lg p-3 border ${themeClasses.border}`}
+                className={`${theme === 'dark' ? 'bg-gray-900/30' : 'bg-gray-50'} rounded-lg p-3 border ${themeClasses.border} hover:border-gray-600 transition-colors`}
               >
-                <div className="flex justify-between items-start mb-2">
-                  <span className={`text-sm font-bold ${themeClasses.text}`}>{model.name}</span>
-                  <span className={`text-xs font-mono ${getConfidenceTextColor(model.confidence)}`}>
+                <div className="flex justify-between items-center mb-2">
+                  <span className={`text-xs font-bold ${themeClasses.text}`}>{model.name}</span>
+                  <div className={`px-1.5 py-0.5 rounded text-[10px] font-mono font-bold ${
+                    model.confidence >= 80 ? 'bg-neon-green/10 text-neon-green' :
+                    model.confidence >= 60 ? 'bg-neon-blue/10 text-neon-blue' :
+                    'bg-yellow-500/10 text-yellow-500'
+                  }`}>
                     {model.confidence.toFixed(1)}%
-                  </span>
+                  </div>
                 </div>
-                <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="grid grid-cols-2 gap-2 text-[10px]">
                   <div>
                     <span className={themeClasses.textMuted}>
-                      {language === 'CN' ? '已处理' : 'Processed'}:
+                      {language === 'CN' ? '任务' : 'Tasks'}:
                     </span>
-                    <span className={`ml-1 ${themeClasses.text}`}>{model.tasksProcessed}</span>
+                    <span className={`ml-1 ${themeClasses.text} font-mono`}>{model.tasksProcessed}</span>
                   </div>
                   <div className="text-right">
                     <span className={themeClasses.textMuted}>
-                      {language === 'CN' ? '响应' : 'Response'}:
+                      {language === 'CN' ? '延迟' : 'Latency'}:
                     </span>
-                    <span className={`ml-1 ${themeClasses.text}`}>{model.avgResponseTime}ms</span>
+                    <span className={`ml-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'} font-mono`}>{model.avgResponseTime}ms</span>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* System Stats */}
-          <div className={`${theme === 'dark' ? 'bg-gray-900/50' : 'bg-gray-100'} rounded-lg p-3 border ${themeClasses.border}`}>
-            <div className="text-xs font-bold text-neon-blue mb-2">
-              {language === 'CN' ? '系统统计' : 'System Statistics'}
-            </div>
-            <div className="grid grid-cols-2 gap-2 text-xs">
-              <div>
-                <span className={themeClasses.textMuted}>
-                  {language === 'CN' ? '总任务数' : 'Total Tasks'}:
-                </span>
-                <span className={`ml-1 ${themeClasses.text} font-mono`}>
-                  {consortiumData.totalTasksProcessed.toLocaleString()}
-                </span>
-              </div>
-              <div className="text-right">
-                <span className={themeClasses.textMuted}>
-                  {language === 'CN' ? '活跃模型' : 'Active Models'}:
-                </span>
-                <span className={`ml-1 ${themeClasses.text} font-mono`}>
-                  {consortiumData.models.length}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Data Freshness */}
-          <div className={`${theme === 'dark' ? 'bg-gray-900/50' : 'bg-gray-100'} rounded-lg p-3 border ${themeClasses.border}`}>
-            <div className="text-xs font-bold text-neon-green mb-2">
-              {language === 'CN' ? '数据新鲜度' : 'Data Freshness'}
-            </div>
-            <div className="grid grid-cols-2 gap-2 text-xs">
-              {Object.entries(consortiumData.dataFreshness).map(([key, value]) => (
-                <div key={key} className="flex justify-between">
-                  <span className={themeClasses.textMuted}>
-                    {key === 'gpuPrices' ? 'GPU' : 
-                     key === 'tokenPrices' ? 'Token' : 
-                     key === 'gridLoad' ? 'Grid' : 'Real-time'}:
-                  </span>
-                  <span className="text-neon-green font-mono">{value}</span>
-                </div>
-              ))}
-            </div>
+          {/* System Stats & Freshness - Compact Grid */}
+          <div className="grid grid-cols-2 gap-3">
+             <div className={`${theme === 'dark' ? 'bg-gray-900/30' : 'bg-gray-50'} rounded-lg p-3 border ${themeClasses.border}`}>
+               <div className="text-[10px] font-bold text-neon-blue mb-2 uppercase tracking-wider">
+                 {language === 'CN' ? '系统吞吐' : 'System Throughput'}
+               </div>
+               <div className="flex justify-between items-end">
+                  <span className={themeClasses.textMuted}>{language === 'CN' ? '总任务' : 'Total'}:</span>
+                  <span className={`text-lg font-mono font-bold ${themeClasses.text}`}>{consortiumData.totalTasksProcessed.toLocaleString()}</span>
+               </div>
+             </div>
+             
+             <div className={`${theme === 'dark' ? 'bg-gray-900/30' : 'bg-gray-50'} rounded-lg p-3 border ${themeClasses.border}`}>
+               <div className="text-[10px] font-bold text-neon-green mb-2 uppercase tracking-wider">
+                 {language === 'CN' ? '数据同步' : 'Data Sync'}
+               </div>
+               <div className="flex items-center gap-2">
+                  <div className="flex h-2 w-2 relative">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-green opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-neon-green"></span>
+                  </div>
+                  <span className={`text-xs ${themeClasses.text} font-mono`}>Real-time</span>
+               </div>
+             </div>
           </div>
         </div>
       )}

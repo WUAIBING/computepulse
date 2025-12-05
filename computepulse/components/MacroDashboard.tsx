@@ -100,10 +100,10 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
              </div>
            </div>
            <div className="flex items-baseline gap-1">
-             <span className="text-neon-blue text-3xl font-mono font-bold tracking-tight">
+             <span className="text-neon-blue text-2xl md:text-3xl font-mono font-bold tracking-tight">
                {currency.symbol}{displayGcci}
              </span>
-             <span className="text-gray-500 text-xs font-bold uppercase">/ gpu-{language === 'CN' ? '小时' : 'hr'}</span>
+             <span className="text-gray-500 text-[10px] md:text-xs font-bold uppercase">/ gpu-{language === 'CN' ? '小时' : 'hr'}</span>
            </div>
         </div>
         
@@ -114,18 +114,18 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
           <div style={{ width: `${pctMargin}%` }} className="bg-emerald-500/80 hover:bg-emerald-500 transition-colors" title="Spot Margin"></div>
         </div>
         
-        <div className="grid grid-cols-3 gap-2 text-[10px] text-gray-500 font-mono">
+        <div className="grid grid-cols-3 gap-1 text-[10px] text-gray-500 font-mono">
            <div className="flex flex-col">
-              <span className="text-gray-400 flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div> {t.hwCapex}</span>
-              <span className="pl-2.5">{currency.symbol}{displayHardware}/{language === 'CN' ? '小时' : 'hr'}</span>
+              <span className="text-gray-400 flex items-center gap-1 whitespace-nowrap"><div className="w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0"></div> {t.hwCapex}</span>
+              <span className="pl-2.5 truncate">{currency.symbol}{displayHardware}/{language === 'CN' ? '小时' : 'hr'}</span>
            </div>
            <div className="flex flex-col">
-              <span className="text-gray-400 flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div> {t.energyOpex}</span>
-              <span className="pl-2.5">{currency.symbol}{displayEnergy}/{language === 'CN' ? '小时' : 'hr'}</span>
+              <span className="text-gray-400 flex items-center gap-1 whitespace-nowrap"><div className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></div> {t.energyOpex}</span>
+              <span className="pl-2.5 truncate">{currency.symbol}{displayEnergy}/{language === 'CN' ? '小时' : 'hr'}</span>
            </div>
            <div className="flex flex-col">
-              <span className="text-gray-400 flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div> {t.mktPremium}</span>
-              <span className="pl-2.5">Variable</span>
+              <span className="text-gray-400 flex items-center gap-1 whitespace-nowrap"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div> {t.mktPremium}</span>
+              <span className="pl-2.5 truncate">Variable</span>
            </div>
         </div>
       </div>
@@ -151,10 +151,10 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
              </div>
            </div>
            <div className="flex items-baseline gap-1">
-             <span className="text-neon-purple text-3xl font-mono font-bold tracking-tight">
+             <span className="text-neon-purple text-2xl md:text-3xl font-mono font-bold tracking-tight">
                {currency.symbol}{displayTokenPrice}
              </span>
-             <span className="text-gray-500 text-xs font-bold uppercase">/ {language === 'CN' ? '百万 Tokens' : '1M tokens'}</span>
+             <span className="text-gray-500 text-[10px] md:text-xs font-bold uppercase">/ {language === 'CN' ? '百万 Tokens' : '1M tokens'}</span>
            </div>
         </div>
         
@@ -166,12 +166,12 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
         
         <div className="grid grid-cols-2 gap-2 text-[10px] text-gray-500 font-mono">
            <div className="flex flex-col">
-              <span className="text-gray-400 flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> {t.avgInput}</span>
-              <span className="pl-2.5">{currency.symbol}{(inputCost * currency.rate).toFixed(2)}</span>
+              <span className="text-gray-400 flex items-center gap-1 whitespace-nowrap"><div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div> {t.avgInput}</span>
+              <span className="pl-2.5 truncate">{currency.symbol}{(inputCost * currency.rate).toFixed(2)}</span>
            </div>
            <div className="flex flex-col text-right">
-              <span className="text-gray-400 flex items-center justify-end gap-1">{t.avgOutput} <div className="w-1.5 h-1.5 rounded-full bg-pink-500"></div></span>
-              <span className="pr-2.5">{currency.symbol}{(outputCost * currency.rate).toFixed(2)}</span>
+              <span className="text-gray-400 flex items-center justify-end gap-1 whitespace-nowrap">{t.avgOutput} <div className="w-1.5 h-1.5 rounded-full bg-pink-500 shrink-0"></div></span>
+              <span className="pr-2.5 truncate">{currency.symbol}{(outputCost * currency.rate).toFixed(2)}</span>
            </div>
         </div>
 
@@ -208,10 +208,10 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
              </div>
            </div>
            <div className="flex items-baseline gap-1">
-             <span className="text-orange-500 text-3xl font-mono font-bold tracking-tight">
+             <span className="text-orange-500 text-2xl md:text-3xl font-mono font-bold tracking-tight">
                {calculatedGW.toFixed(3)}
              </span>
-             <span className="text-gray-500 text-xs font-bold uppercase">{language === 'CN' ? '吉瓦' : 'GW'}</span>
+             <span className="text-gray-500 text-[10px] md:text-xs font-bold uppercase">{language === 'CN' ? '吉瓦' : 'GW'}</span>
            </div>
         </div>
         
@@ -227,15 +227,12 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
           />
         </div> */}
         
-        {/* Spacer to match height with other cards */}
-        <div className="h-24 w-full mb-4 flex items-center justify-center">
-            <div className="text-center">
-               <div className="text-4xl font-bold text-amber-500/20 animate-pulse">{calculatedGW.toFixed(1)} GW</div>
-               <div className="text-xs text-amber-500/40 mt-1">{language === 'CN' ? '实时负荷' : 'Real-time Load'}</div>
-            </div>
+        {/* Mock Line Bar for GAGL to match others */}
+        <div className="flex w-full h-2 rounded-full overflow-hidden mb-3 bg-gray-800/30">
+          <div className="h-full w-full bg-gradient-to-r from-amber-500/20 via-amber-500/60 to-amber-500/20 animate-pulse" title="Real-time Load Intensity"></div>
         </div>
-        
-        <div className="grid grid-cols-2 gap-4 text-[10px] text-gray-500 font-mono">
+
+        <div className="grid grid-cols-2 gap-4 text-[10px] text-gray-500 font-mono mt-auto">
            <div>
              <span className="block text-gray-400">{t.annualizedForecast}</span>
              <div className="flex items-baseline gap-2">
