@@ -206,21 +206,53 @@ def generate_market_insight():
         with open(TOKEN_FILE, 'r', encoding='utf-8') as f: token_data = json.load(f)
         with open(GRID_FILE, 'r', encoding='utf-8') as f: grid_data = json.load(f)
         
+        # Load history data for comparison
+        history_data = []
+        if os.path.exists(HISTORY_FILE):
+            with open(HISTORY_FILE, 'r', encoding='utf-8') as f: history_data = json.load(f)
+            
+        # Get previous day's data if available
+        prev_gpu_summary = "No history"
+        if history_data:
+            last_entry = history_data[-1]
+            prev_gpu_summary = f"Last run: {last_entry.get('date', 'Unknown')}"
+
+        # Save current run to history (Simple append for now)
+        today_entry = {
+            "date": datetime.now().strftime("%Y-%m-%d"),
+            "gpu_count": len(gpu_data) if gpu_data else 0,
+            "token_count": len(token_data) if token_data else 0,
+            "grid_twh": grid_data.get('annual_twh', 0)
+        }
+        
+        history_data.append(today_entry)
+        # Keep last 30 days
+        if len(history_data) > 30: history_data = history_data[-30:]
+        
+        with open(HISTORY_FILE, 'w', encoding='utf-8') as f:
+            json.dump(history_data, f, indent=2)
+
         # Prepare a summary context
         gpu_summary = f"{len(gpu_data)} GPU records. Avg price example: {gpu_data[0].get('price', 'N/A')}" if gpu_data else "No GPU data"
-        token_summary = f"{len(token_data)} Token records. Avg input price example: {token_data[0].get('input_price', 'N/A')}" if token_data else "No Token data"
         
         prompt = f"""
         You are 'The Analyst' (GLM-4), a cynical but sharp AI market observer in a cyberpunk future.
-        Based on today's data scan:
+        
+        Current Data:
         - GPU Market: {gpu_summary}
         - AI Grid Load: {grid_data.get('annual_twh', 'N/A')} TWh/year
         
-        Generate a single, witty, insightful sentence (max 20 words) about the current state of the global compute market.
-        Style: Professional but with a slight futuristic edge.
+        Historical Context:
+        - {prev_gpu_summary}
+        
+        Task:
+        Generate a single, witty, insightful sentence (max 25 words) comparing today's market state with the past.
+        If data is flat, complain about the stagnation. If it moves, analyze the 'Pulse'.
+        Style: Professional but with a slight futuristic/noir edge.
         """
         
         append_log("GLM", "Synthesizing cross-market data streams...", "action")
+        # Use standard generation, GLM has search capability if needed but here we provide context
         insight = analyst.generate(prompt)
         
         if insight:
