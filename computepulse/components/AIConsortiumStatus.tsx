@@ -38,25 +38,61 @@ interface AIConsortiumStatusProps {
 // --- Logo Components (SVG) ---
 const QwenLogo = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 1024 1024" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M512 1024C229.2 1024 0 794.8 0 512S229.2 0 512 0s512 229.2 512 512-229.2 512-512 512z" fill="#615CED" fillOpacity="0.1"/>
-    <path d="M512 192c-176.7 0-320 143.3-320 320s143.3 320 320 320 320-143.3 320-320-143.3-320-320-320zm0 560c-132.5 0-240-107.5-240-240s107.5-240 240-240 240 107.5 240 240-107.5 240-240 240z" fill="#615CED"/>
-    <path d="M512 352c-88.4 0-160 71.6-160 160h80c0-44.2 35.8-80 80-80s80 35.8 80 80-35.8 80-80 80v80c88.4 0 160-71.6 160-160s-71.6-160-160-160z" fill="#615CED"/>
-    <circle cx="512" cy="720" r="40" fill="#615CED"/>
+    {/* Base Background Hexagon */}
+    <path d="M512 0L955.5 256V768L512 1024L68.5 768V256L512 0Z" fill="#584BEB"/>
+    
+    {/* Inner White Structure - Abstract "Q" or Star shape based on the image */}
+    <path d="M512 240L740 370V650L512 780L284 650V370L512 240Z" fill="white" fillOpacity="0.2"/>
+    <path d="M512 300L680 400V620L512 720L344 620V400L512 300Z" fill="white"/>
+    
+    {/* Central Void/Core */}
+    <path d="M512 420L590 465V555L512 600L434 555V465L512 420Z" fill="#584BEB"/>
   </svg>
 );
 
 const DeepSeekLogo = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 1024 1024" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" fill="#4D6BFE" fillOpacity="0.1"/>
-     <path d="M736 360h-80c-8.8 0-16 7.2-16 16v264c0 8.8 7.2 16 16 16h80c8.8 0 16-7.2 16-16V376c0-8.8-7.2-16-16-16zm-288 0h-80c-8.8 0-16 7.2-16 16v264c0 8.8 7.2 16 16 16h80c8.8 0 16-7.2 16-16V376c0-8.8-7.2-16-16-16zm-144 0h-80c-8.8 0-16 7.2-16 16v264c0 8.8 7.2 16 16 16h80c8.8 0 16-7.2 16-16V376c0-8.8-7.2-16-16-16zm432 0h-80c-8.8 0-16 7.2-16 16v264c0 8.8 7.2 16 16 16h80c8.8 0 16-7.2 16-16V376c0-8.8-7.2-16-16-16z" fill="#4D6BFE"/>
-     <path d="M304 260h416v40H304z" fill="#4D6BFE"/>
+     {/* Simplified Whale Shape based on DeepSeek Logo */}
+     <path d="M832 256c-20-30-60-40-100-20s-80 60-100 100c-20 40-40 80-60 120-20 40-60 60-100 60s-80-40-100-80c-20-40-20-100 20-140 20-20 60-20 100 0" stroke="#4D6BFE" strokeWidth="60" strokeLinecap="round" fill="none" opacity="0"/>
+     
+     {/* Body */}
+     <path d="M512 128C300 128 128 300 128 512c0 212 172 384 384 384 212 0 384-172 384-384" fill="#4D6BFE" fillOpacity="0.9"/>
+     
+     {/* Tail */}
+     <path d="M896 256c0 0-50 150-200 150S512 256 512 256" fill="#4D6BFE"/>
+     
+     {/* Eye */}
+     <circle cx="650" cy="450" r="30" fill="white"/>
+     
+     {/* Belly / White Patch */}
+     <path d="M300 550c0 0 100-100 250-50s200 200 200 200H300V550z" fill="white"/>
+     
+     {/* Redrawing a better approximation of the whale logo using path */}
+     <path d="M256 450 C256 250, 450 150, 650 150 C750 150, 850 200, 880 250 C900 280, 850 320, 800 300 C750 280, 700 250, 750 200" fill="none" stroke="none"/> 
+     
+     {/* Actual Whale Path Approximation */}
+     <path d="M192 512c0-176.7 143.3-320 320-320 80 0 150 30 210 80-40-20-80-20-110 10-40 40-20 100 40 140 40 25 100 25 140 0 50 60 80 140 80 220 0 120-60 220-160 280-40-20-80-60-100-100-20-40 0-100 40-140 20-20 60-30 90-20-30-50-80-90-140-110-60-20-120-10-170 30-60 50-90 120-80 190" fill="#4D6BFE"/>
+     
+     {/* Corrected Stylized Whale based on image provided */}
+     <circle cx="512" cy="512" r="480" fill="none"/> {/* Bounds */}
+     <path d="M250 400 C250 200, 500 100, 750 200 C850 240, 900 150, 850 100 M 750 200 C800 300, 950 300, 900 200" fill="none" stroke="none"/>
+
+     {/* Final Vector Shape Construction */}
+     <path d="M200 500 C200 300, 400 150, 650 180 C750 190, 820 150, 850 120 C840 180, 800 250, 700 280 C800 280, 900 250, 950 200 C920 300, 850 400, 750 450 C800 480, 850 550, 820 600 C700 750, 400 800, 300 700 C350 650, 500 600, 600 650 C550 550, 350 500, 200 500 Z" fill="#4D6BFE"/>
+     <circle cx="620" cy="420" r="40" fill="white"/> 
   </svg>
 );
 
 const KimiLogo = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 1024 1024" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="512" cy="512" r="448" fill="#E64A19" fillOpacity="0.1"/>
-    <path d="M685.6 364.8c-12.8-19.2-35.2-32-60.8-32h-224c-25.6 0-48 12.8-60.8 32L224 512l115.2 147.2c12.8 19.2 35.2 32 60.8 32h224c25.6 0 48-12.8 60.8-32L800 512 685.6 364.8zM512 640c-70.4 0-128-57.6-128-128s57.6-128 128-128 128 57.6 128 128-57.6 128-128 128z" fill="#E64A19"/>
+    {/* Base Circle - Dark Background */}
+    <rect width="1024" height="1024" rx="256" fill="#121212"/>
+    
+    {/* K Shape */}
+    <path d="M320 256V768H416V560L608 768H736L512 512L720 256H592L416 464V256H320Z" fill="white"/>
+    
+    {/* Blue Dot */}
+    <circle cx="768" cy="256" r="64" fill="#2C68FF"/>
   </svg>
 );
 
