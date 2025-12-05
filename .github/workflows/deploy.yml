@@ -33,6 +33,13 @@ jobs:
         run: |
           npm ci --prefer-offline
 
+      - name: Fetch Latest Data
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          VOLC_API_KEY: ${{ secrets.VOLC_API_KEY }}
+        run: |
+          python scripts/fetch_prices_with_orchestrator.py
+
       - name: Build project
         run: |
           npm run build
