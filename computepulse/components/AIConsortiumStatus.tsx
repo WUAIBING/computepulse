@@ -63,14 +63,7 @@ const DoubaoLogo = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// --- Script Data for Simulation ---
-const SCRIPT_TEMPLATES = [
-  { agent: 'System', type: 'info', msgs: ['New task received: Analyze H100 price trend', 'Grid load anomaly detected in North America', 'Incoming data stream: 500ms latency'] },
-  { agent: 'Qwen', type: 'action', msgs: ['Dispatching crawler to verify localized pricing...', 'Analyzing cross-region variance...', 'Initiating consensus protocol v3.2'] },
-  { agent: 'DeepSeek', type: 'success', msgs: ['Found 3 new data sources. Confidence +2%', 'Verified outlier: Valid market fluctuation.', 'Deep search complete. 142 records updated.'] },
-  { agent: 'Doubao', type: 'info', msgs: ['Translating market report from CN to EN...', 'Summarizing key insights for dashboard...', 'Generating user-friendly alert message.'] },
-  { agent: 'System', type: 'warning', msgs: ['API Rate limit approaching on Node 4.', 'Re-routing traffic through secondary gateway.', 'Optimizing cache for faster retrieval.'] }
-] as const;
+// Removed SCRIPT_TEMPLATES (Zero Simulation Policy)
 
 export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language, theme }) => {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -122,10 +115,10 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
            }
         }
       } catch (e) {
-        console.warn('Failed to fetch system logs, using simulation mode');
-        // Initial Logs for Simulation
+        console.warn('Failed to fetch system logs:', e);
+        // Fallback: Empty logs or static message indicating system offline
         setLogs([
-          { id: '0', timestamp: new Date().toLocaleTimeString(), agent: 'System', message: 'AI Consortium Neural Link Established.', type: 'info' }
+          { id: '0', timestamp: new Date().toLocaleTimeString(), agent: 'System', message: 'Waiting for data stream...', type: 'info' }
         ]);
       }
     };
@@ -133,39 +126,9 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
     fetchLogs();
   }, []);
 
-  // 2. Simulation Loop (The "Life" of the System)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const randomTemplate = SCRIPT_TEMPLATES[Math.floor(Math.random() * SCRIPT_TEMPLATES.length)];
-      const randomMsg = randomTemplate.msgs[Math.floor(Math.random() * randomTemplate.msgs.length)];
-      
-      const newLog: LogEntry = {
-        id: Date.now().toString(),
-        timestamp: new Date().toLocaleTimeString(),
-        agent: randomTemplate.agent,
-        message: randomMsg,
-        type: randomTemplate.type as any
-      };
-
-      setLogs(prev => {
-        const newLogs = [...prev, newLog];
-        if (newLogs.length > 6) newLogs.shift(); // Keep last 6 logs
-        return newLogs;
-      });
-
-      // Randomly update version or tasks to show "Growth"
-      if (Math.random() > 0.7) {
-        setConsortiumData(prev => prev ? ({
-          ...prev,
-          totalTasksProcessed: prev.totalTasksProcessed + Math.floor(Math.random() * 10),
-          models: prev.models.map(m => m.name === randomTemplate.agent ? { ...m, tasksProcessed: m.tasksProcessed + 1 } : m)
-        }) : null);
-      }
-
-    }, 3500); // New event every 3.5s
-
-    return () => clearInterval(interval);
-  }, []);
+  // 2. Live Logs (Strictly Real Data Only)
+  // Removed setInterval simulation logic
+  // Only updates when parent component re-renders or if we implement a polling mechanism for the JSON file
 
   // Auto-scroll logs
   useEffect(() => {
@@ -307,15 +270,17 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                     </div>
                  </div>
                ))}
-               {/* Typing Indicator */}
-               <div className="flex gap-3 opacity-50">
-                 <div className="w-14"></div>
-                 <div className="flex gap-1 items-center h-4">
-                   <div className="w-1 h-1 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                   <div className="w-1 h-1 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                   <div className="w-1 h-1 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+               {/* Typing Indicator - Only show if logs are empty (waiting for data) */}
+               {logs.length === 0 && (
+                 <div className="flex gap-3 opacity-50">
+                   <div className="w-14"></div>
+                   <div className="flex gap-1 items-center h-4">
+                     <div className="w-1 h-1 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                     <div className="w-1 h-1 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                     <div className="w-1 h-1 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                   </div>
                  </div>
-               </div>
+               )}
              </div>
 
              {/* Stats Footer */}
