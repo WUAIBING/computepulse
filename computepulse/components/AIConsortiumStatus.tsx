@@ -9,7 +9,7 @@ interface AIModel {
   confidence: number;
   tasksProcessed: number;
   avgResponseTime: number;
-  role: 'Architect' | 'Hunter' | 'Translator'; // Roles for the narrative
+  role: 'Architect' | 'Hunter' | 'Researcher' | 'Analyst'; // Roles for the narrative
   color: string; // Theme color for the model
   avatar: React.ReactNode; // SVG Avatar
 }
@@ -54,6 +54,12 @@ const KimiLogo = ({ className }: { className?: string }) => (
   </div>
 );
 
+const GLMLogo = ({ className }: { className?: string }) => (
+  <div className={`${className} flex items-center justify-center bg-[#3B82F6]/10 rounded-full border border-[#3B82F6]/20`}>
+    <span className="text-[#3B82F6] font-bold text-[10px] md:text-xs">GLM</span>
+  </div>
+);
+
 // Removed SCRIPT_TEMPLATES (Zero Simulation Policy)
 
 export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language, theme }) => {
@@ -73,10 +79,11 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
         { name: 'Qwen', confidence: 98.5, tasksProcessed: 1240, avgResponseTime: 145, role: 'Architect', color: '#615CED', avatar: <QwenLogo className="w-full h-full" /> },
         { name: 'DeepSeek', confidence: 96.2, tasksProcessed: 3450, avgResponseTime: 320, role: 'Hunter', color: '#00A9FF', avatar: <DeepSeekLogo className="w-full h-full" /> },
         { name: 'Kimi', confidence: 95.5, tasksProcessed: 890, avgResponseTime: 180, role: 'Researcher', color: '#E64A19', avatar: <KimiLogo className="w-full h-full" /> },
+        { name: 'GLM', confidence: 97.8, tasksProcessed: 450, avgResponseTime: 210, role: 'Analyst', color: '#3B82F6', avatar: <GLMLogo className="w-full h-full" /> },
       ],
       lastUpdate: new Date().toISOString(),
       totalTasksProcessed: 5580,
-      version: 'v1.2.4'
+      version: 'v1.2.5'
     });
 
     // Fetch Real System Logs
@@ -204,6 +211,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
       case 'Qwen': return 'text-[#615CED]';
       case 'DeepSeek': return 'text-[#00A9FF]';
       case 'Kimi': return 'text-[#E64A19]';
+      case 'GLM': return 'text-[#3B82F6]';
       default: return 'text-gray-400';
     }
   };
@@ -246,19 +254,34 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
             {/* Center Core */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-neon-blue/5 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
             
-            {/* Agents Triangle Layout */}
+            {/* Agents Triangle Layout - Refactored to support dynamic number of agents */}
             <div className="relative w-full max-w-xs h-64">
-              {consortiumData.models.map((model, index) => {
-                // Positioning: Triangle
-                const positions = [
-                  'top-0 left-1/2 -translate-x-1/2', // Top (Qwen)
-                  'bottom-0 left-0',                 // Bottom Left (DeepSeek)
-                  'bottom-0 right-0'                 // Bottom Right (Doubao)
-                ];
+              {consortiumData.models.map((model, index, arr) => {
+                // Calculate positions dynamically in a circle/polygon
+                const total = arr.length;
+                const angleStep = (2 * Math.PI) / total;
+                // Start from top (-90 degrees or -PI/2)
+                const angle = index * angleStep - Math.PI / 2;
+                
+                // Radius for the layout
+                const radius = 45; // % from center
+                
+                // Convert polar to cartesian percentages (50% is center)
+                const left = 50 + radius * Math.cos(angle);
+                const top = 50 + radius * Math.sin(angle);
+                
                 const isActive = logs.length > 0 && logs[logs.length - 1].agent === model.name;
 
                 return (
-                  <div key={model.name} className={`absolute ${positions[index]} flex flex-col items-center transition-all duration-500 ${isActive ? 'scale-110 z-10' : 'scale-100 opacity-70'}`}>
+                  <div 
+                    key={model.name} 
+                    className={`absolute flex flex-col items-center transition-all duration-500 ${isActive ? 'scale-110 z-10' : 'scale-100 opacity-70'}`}
+                    style={{
+                      left: `${left}%`,
+                      top: `${top}%`,
+                      transform: `translate(-50%, -50%) scale(${isActive ? 1.1 : 1})`
+                    }}
+                  >
                     {/* Avatar Circle */}
                     <div 
                       className={`w-16 h-16 rounded-full bg-gray-900/80 border-2 p-2 transition-all duration-300 flex items-center justify-center backdrop-blur-md relative group`}
@@ -271,7 +294,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                          {model.avatar}
                        </div>
                        {/* Role Badge */}
-                       <div className={`absolute -top-2 px-2 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-wider bg-black border border-gray-700 text-white opacity-100 transition-opacity`}>
+                       <div className={`absolute -top-2 px-2 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-wider bg-black border border-gray-700 text-white opacity-100 transition-opacity whitespace-nowrap`}>
                          {model.role}
                        </div>
                     </div>
