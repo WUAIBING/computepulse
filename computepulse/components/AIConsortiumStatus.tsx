@@ -143,6 +143,57 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
      }
   };
 
+  // Helper to translate log messages (Simple regex/mapping)
+  const translateLogMessage = (message: string, lang: Language) => {
+    if (lang !== 'CN') return message;
+
+    // 1. Exact Match Dictionary
+    const exactMap: Record<string, string> = {
+      "Initiating global GPU price scan...": "正在启动全球 GPU 价格扫描...",
+      "Verifying price consistency...": "正在验证价格一致性...",
+      "Checking market news for hidden price hikes...": "正在检查市场新闻以发现隐性涨价...",
+      "Querying API pricing endpoints...": "正在查询 API 定价端点...",
+      "Cross-referencing with developer docs...": "正在与开发者文档交叉比对...",
+      "Token Pricing updated.": "Token 定价已更新。",
+      "Analyzing global energy reports...": "正在分析全球能源报告...",
+      "Grid Load metrics synchronized.": "电网负载指标已同步。",
+      "Running integrity scan on dataset...": "正在对数据集进行完整性扫描...",
+      "Integrity scan complete. No critical anomalies.": "完整性扫描完成。未发现严重异常。",
+      "Waiting for data stream...": "等待数据流...",
+      "Sequence complete. Entering low-power monitoring mode.": "序列完成。进入低功耗监控模式。",
+      "Updating dashboard cache with latest snapshots.": "正在更新仪表板缓存。",
+      "Scanning key market indicators for North America region...": "正在扫描北美地区的关键市场指标...",
+      "Detected minor fluctuation in AWS Spot prices (+0.4%). Within tolerance.": "检测到 AWS Spot 价格微小波动 (+0.4%)。在容差范围内。",
+      "Cross-referencing with secondary data sources... Validated.": "正在与二级数据源交叉比对... 已验证。",
+      "Scheduled hourly monitor sequence initiated.": "预定的小时监控序列已启动。",
+      "Grid Data Saved": "电网数据已保存",
+      "Grid Data Validation Failed": "电网数据验证失败"
+    };
+
+    if (exactMap[message]) return exactMap[message];
+
+    // 2. Pattern Matching
+    // "GPU Database updated with {n} records."
+    const gpuUpdateMatch = message.match(/GPU Database updated with (\d+) records/);
+    if (gpuUpdateMatch) {
+       return `GPU 数据库已更新，包含 ${gpuUpdateMatch[1]} 条记录。`;
+    }
+    
+    // "GPU Data Saved: {n} records"
+    const gpuSavedMatch = message.match(/GPU Data Saved: (\d+) records/);
+    if (gpuSavedMatch) {
+       return `GPU 数据已保存：${gpuSavedMatch[1]} 条记录`;
+    }
+
+    // "Token Data Saved: {n} records"
+    const tokenSavedMatch = message.match(/Token Data Saved: (\d+) records/);
+    if (tokenSavedMatch) {
+       return `Token 数据已保存：${tokenSavedMatch[1]} 条记录`;
+    }
+
+    return message;
+  };
+
   // 2. Live Logs (Strictly Real Data Only)
   // Removed setInterval simulation logic
   // Only updates when parent component re-renders or if we implement a polling mechanism for the JSON file
@@ -285,7 +336,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                            log.type === 'action' ? 'text-blue-300' : 
                            theme === 'dark' ? 'text-gray-300' : 'text-gray-800 font-medium'}
                        `}>
-                         {log.message}
+                         {translateLogMessage(log.message, language)}
                        </span>
                     </div>
                  </div>
