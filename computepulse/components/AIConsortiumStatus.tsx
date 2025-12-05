@@ -35,65 +35,23 @@ interface AIConsortiumStatusProps {
   theme: Theme;
 }
 
-// --- Logo Components (SVG) ---
+// --- Text Avatar Components ---
 const QwenLogo = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 1024 1024" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Base Background Hexagon */}
-    <path d="M512 0L955.5 256V768L512 1024L68.5 768V256L512 0Z" fill="#584BEB"/>
-    
-    {/* Inner White Structure - Abstract "Q" or Star shape based on the image */}
-    <path d="M512 240L740 370V650L512 780L284 650V370L512 240Z" fill="white" fillOpacity="0.2"/>
-    <path d="M512 300L680 400V620L512 720L344 620V400L512 300Z" fill="white"/>
-    
-    {/* Central Void/Core */}
-    <path d="M512 420L590 465V555L512 600L434 555V465L512 420Z" fill="#584BEB"/>
-  </svg>
+  <div className={`${className} flex items-center justify-center bg-[#615CED]/10 rounded-full border border-[#615CED]/20`}>
+    <span className="text-[#615CED] font-bold text-[10px] md:text-xs">Qwen</span>
+  </div>
 );
 
 const DeepSeekLogo = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 1024 1024" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-     {/* Simplified Whale Shape based on DeepSeek Logo */}
-     <path d="M832 256c-20-30-60-40-100-20s-80 60-100 100c-20 40-40 80-60 120-20 40-60 60-100 60s-80-40-100-80c-20-40-20-100 20-140 20-20 60-20 100 0" stroke="#4D6BFE" strokeWidth="60" strokeLinecap="round" fill="none" opacity="0"/>
-     
-     {/* Body */}
-     <path d="M512 128C300 128 128 300 128 512c0 212 172 384 384 384 212 0 384-172 384-384" fill="#4D6BFE" fillOpacity="0.9"/>
-     
-     {/* Tail */}
-     <path d="M896 256c0 0-50 150-200 150S512 256 512 256" fill="#4D6BFE"/>
-     
-     {/* Eye */}
-     <circle cx="650" cy="450" r="30" fill="white"/>
-     
-     {/* Belly / White Patch */}
-     <path d="M300 550c0 0 100-100 250-50s200 200 200 200H300V550z" fill="white"/>
-     
-     {/* Redrawing a better approximation of the whale logo using path */}
-     <path d="M256 450 C256 250, 450 150, 650 150 C750 150, 850 200, 880 250 C900 280, 850 320, 800 300 C750 280, 700 250, 750 200" fill="none" stroke="none"/> 
-     
-     {/* Actual Whale Path Approximation */}
-     <path d="M192 512c0-176.7 143.3-320 320-320 80 0 150 30 210 80-40-20-80-20-110 10-40 40-20 100 40 140 40 25 100 25 140 0 50 60 80 140 80 220 0 120-60 220-160 280-40-20-80-60-100-100-20-40 0-100 40-140 20-20 60-30 90-20-30-50-80-90-140-110-60-20-120-10-170 30-60 50-90 120-80 190" fill="#4D6BFE"/>
-     
-     {/* Corrected Stylized Whale based on image provided */}
-     <circle cx="512" cy="512" r="480" fill="none"/> {/* Bounds */}
-     <path d="M250 400 C250 200, 500 100, 750 200 C850 240, 900 150, 850 100 M 750 200 C800 300, 950 300, 900 200" fill="none" stroke="none"/>
-
-     {/* Final Vector Shape Construction */}
-     <path d="M200 500 C200 300, 400 150, 650 180 C750 190, 820 150, 850 120 C840 180, 800 250, 700 280 C800 280, 900 250, 950 200 C920 300, 850 400, 750 450 C800 480, 850 550, 820 600 C700 750, 400 800, 300 700 C350 650, 500 600, 600 650 C550 550, 350 500, 200 500 Z" fill="#4D6BFE"/>
-     <circle cx="620" cy="420" r="40" fill="white"/> 
-  </svg>
+  <div className={`${className} flex items-center justify-center bg-[#00A9FF]/10 rounded-full border border-[#00A9FF]/20`}>
+    <span className="text-[#00A9FF] font-bold text-[10px] md:text-xs">DeepSeek</span>
+  </div>
 );
 
 const KimiLogo = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 1024 1024" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Base Circle - Dark Background */}
-    <rect width="1024" height="1024" rx="256" fill="#121212"/>
-    
-    {/* K Shape */}
-    <path d="M320 256V768H416V560L608 768H736L512 512L720 256H592L416 464V256H320Z" fill="white"/>
-    
-    {/* Blue Dot */}
-    <circle cx="768" cy="256" r="64" fill="#2C68FF"/>
-  </svg>
+  <div className={`${className} flex items-center justify-center bg-[#E64A19]/10 rounded-full border border-[#E64A19]/20`}>
+    <span className="text-[#E64A19] font-bold text-[10px] md:text-xs">Kimi</span>
+  </div>
 );
 
 // Removed SCRIPT_TEMPLATES (Zero Simulation Policy)
