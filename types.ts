@@ -53,9 +53,24 @@ export interface HistoricalDataPoint {
 
 export type CurrencyCode = 'USD' | 'CNY' | 'EUR' | 'GBP' | 'JPY';
 export type Language = 'EN' | 'CN';
+export type Theme = 'dark' | 'light';
 
 export interface CurrencyConfig {
   code: CurrencyCode;
   symbol: string;
   rate: number; // Exchange rate relative to USD
+}
+
+export interface ThemeColors {
+  bg: string;
+  panelBg: string;
+  border: string;
+  text: string;
+  textSecondary: string;
+  textMuted: string;
+  accent: string;
+  accentHover: string;
+  chartGrid: string;
+  chartTooltipBg: string;
+  chartTooltipBorder: string;
 }

@@ -44,7 +44,7 @@ export const MarketVitals: React.FC<MarketVitalsProps> = ({ cvix, currency, lang
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               {/* Tooltip Popup */}
-              <div className={`absolute left-0 top-6 w-64 bg-black/95 border border-gray-700 p-3 rounded-lg shadow-2xl text-xs text-gray-300 transition-opacity duration-200 z-50 pointer-events-none ${showCvixInfo ? 'opacity-100' : 'opacity-0'}`}>
+              <div className={`absolute left-0 top-6 w-64 bg-black/95 border border-gray-700 p-3 rounded-lg shadow-2xl text-xs text-gray-200 transition-opacity duration-200 z-50 pointer-events-none ${showCvixInfo ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="font-bold text-neon-blue mb-1">{t.cvixIndex}</div>
                 <div className="mb-2">{t.cvixDesc}</div>
                 <div className="font-mono bg-gray-900 p-1 rounded border border-gray-800 text-center mb-2">

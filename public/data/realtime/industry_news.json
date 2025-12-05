@@ -1,0 +1,22 @@
+[
+  {
+    "fetch_timestamp": "2025-12-05T13:07:09.298813",
+    "news": {
+      "status": "processed",
+      "task_type": "price_extraction"
+    },
+    "models_used": [
+      "qwen"
+    ]
+  },
+  {
+    "fetch_timestamp": "2025-12-05T14:00:00.387202",
+    "news": {
+      "status": "processed",
+      "task_type": "price_extraction"
+    },
+    "models_used": [
+      "qwen"
+    ]
+  }
+]

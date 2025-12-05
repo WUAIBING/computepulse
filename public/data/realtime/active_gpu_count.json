@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-12-05T14:00:00.352818",
+  "data": {
+    "status": "processed",
+    "task_type": "price_extraction"
+  },
+  "models_used": [
+    "qwen"
+  ],
+  "confidence_scores": {
+    "qwen": 0.5
+  }
+}

@@ -5,10 +5,12 @@ import { TrendChart } from './components/TrendChart';
 import { MarketVitals } from './components/MarketVitals';
 import { MacroDashboard } from './components/MacroDashboard';
 import { CalculationModal } from './components/CalculationModal';
-import { GridLoadChart } from './components/GridLoadChart';
+import { AnnualBarChart } from './components/AnnualBarChart';
+import { AIConsortiumStatus } from './components/AIConsortiumStatus';
 import { generateMockData, generateMockTokenData, CURRENCIES, MACRO_CONSTANTS } from './constants';
-import { ComputeProvider, TokenProvider, HistoricalDataPoint, CurrencyCode, Language } from './types';
+import { ComputeProvider, TokenProvider, HistoricalDataPoint, CurrencyCode, Language, Theme } from './types';
 import { TRANSLATIONS } from './translations';
+import { getThemeClasses } from './theme';
 
 type ViewMode = 'COMPUTE' | 'TOKENS' | 'GRID_LOAD';
 
@@ -17,17 +19,20 @@ function App() {
   const [data, setData] = useState<ComputeProvider[]>([]);
   const [tokenData, setTokenData] = useState<TokenProvider[]>([]);
   
-  // Currency & Language State
+  // Currency, Language & Theme State
   const [currencyCode, setCurrencyCode] = useState<CurrencyCode>('USD');
-    const [language, setLanguage] = useState<Language>('CN');
+  const [language, setLanguage] = useState<Language>('CN');
+  const [theme, setTheme] = useState<Theme>('dark');
     
-    const currency = CURRENCIES.find(c => c.code === currencyCode) || CURRENCIES[0];
+  const currency = CURRENCIES.find(c => c.code === currencyCode) || CURRENCIES[0];
   const t = TRANSLATIONS[language];
+  const themeClasses = getThemeClasses(theme);
 
   // History State
   const [computeHistory, setComputeHistory] = useState<HistoricalDataPoint[]>([]);
   const [tokenHistory, setTokenHistory] = useState<HistoricalDataPoint[]>([]);
   const [gridLoadHistory, setGridLoadHistory] = useState<HistoricalDataPoint[]>([]);
+  const [annualEnergyData, setAnnualEnergyData] = useState<Array<{year: string; value: number; source?: string}>>([]);
 
   // Derived Metrics
   const [cvix, setCvix] = useState<number>(0);
@@ -38,8 +43,9 @@ function App() {
   const [avgSpotPriceUSD, setAvgSpotPriceUSD] = useState<number>(0);
 
   const [showCalcModal, setShowCalcModal] = useState(false);
+  const [calcModalTab, setCalcModalTab] = useState<'GPU' | 'TOKEN'>('GPU');
 
-  // Auto-detect Language (Default to CN)
+  // Auto-detect Language & Load Theme (Default to CN)
   useEffect(() => {
     const browserLang = navigator.language || navigator.languages[0];
     if (browserLang.toLowerCase().includes('zh')) {
@@ -49,7 +55,20 @@ function App() {
       setLanguage('EN');
       setCurrencyCode('USD');
     }
+
+    // Load theme from localStorage
+    const savedTheme = localStorage.getItem('computepulse-theme') as Theme;
+    if (savedTheme === 'light' || savedTheme === 'dark') {
+      setTheme(savedTheme);
+    }
   }, []);
+
+  // Theme toggle handler
+  const handleThemeToggle = () => {
+    const newTheme: Theme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('computepulse-theme', newTheme);
+  };
 
   // Initialize Data
   useEffect(() => {
@@ -81,12 +100,11 @@ function App() {
             const mappedData: ComputeProvider[] = realPrices.map((item: any, index: number) => ({
               id: `real-${index}`,
               name: item.provider,
-              tier: 'Standard',
+              region: item.region || 'US-East',
               pricePerHour: item.price,
-              region: item.region || 'Global',
-              reliability: 99.9,
-              type: item.gpu.includes('H100') ? 'H100' : (item.gpu.includes('A100') ? 'A100' : 'Other'),
-              specs: { vram: '80GB' }
+              availability: 95, // Default availability
+              gpuType: item.gpu.includes('H100') ? 'NVIDIA H100' : (item.gpu.includes('A100') ? 'NVIDIA A100' : 'NVIDIA V100'),
+              lastUpdated: new Date().toISOString()
             }));
             const validatedData = mappedData.filter(d => !isNaN(d.pricePerHour) && d.pricePerHour > 0);
             console.log(`[ComputePulse] Valid GPU data items: ${validatedData.length}`);
@@ -117,18 +135,28 @@ function App() {
             console.log(`[ComputePulse] Token prices data count: ${realTokens?.length || 0}`);
 
             if (realTokens && realTokens.length > 0) {
-                const mappedTokens: TokenProvider[] = realTokens.map((item: any, index: number) => ({
-                    id: `token-${index}`,
-                    name: item.model,
-                    provider: item.provider,
-                    inputCost: item.input_price,
-                    outputCost: item.output_price,
-                    latency: Math.floor(Math.random() * 50) + 20, // Latency is hard to scrape, keeping mock
-                    contextWindow: '128k', // Hard to scrape reliably without complex parsing
-                    mmluScore: 85 + Math.random() * 5 // Mocking benchmark for now
-                }));
-                setTokenData(mappedTokens);
-                console.log('[ComputePulse] Token data set successfully');
+                // Filter out entries with null prices and map to TokenProvider format
+                const mappedTokens: TokenProvider[] = realTokens
+                    .filter((item: any) => item.input_price !== null && item.output_price !== null)
+                    .map((item: any, index: number) => ({
+                        id: `token-${index}`,
+                        model: item.model,
+                        provider: item.provider,
+                        inputCost: item.input_price,
+                        outputCost: item.output_price,
+                        benchmark: 85 + Math.random() * 10, // Default benchmark score (85-95), TODO: fetch real MMLU scores
+                        latency: Math.floor(Math.random() * 50) + 20,
+                        isOpenSource: false,
+                        lastUpdated: new Date().toISOString()
+                    }));
+                
+                if (mappedTokens.length > 0) {
+                    setTokenData(mappedTokens);
+                    console.log(`[ComputePulse] Token data set successfully: ${mappedTokens.length} models`);
+                } else {
+                    console.warn('[ComputePulse] All token prices were null, using mock data');
+                    setTokenData(generateMockTokenData());
+                }
             } else {
                 console.warn('[ComputePulse] Token prices data empty or invalid');
                 setTokenData(generateMockTokenData());
@@ -165,6 +193,25 @@ function App() {
            }
         } else {
           console.error(`[ComputePulse] Failed to load grid load: ${gridResponse.status} ${gridResponse.statusText}`);
+        }
+
+        // 4. Fetch Annual Energy Data
+        console.log(`[ComputePulse] Fetching annual energy data from: ${cleanBaseUrl}data/annual_energy.json`);
+        const annualResponse = await fetch(`${cleanBaseUrl}data/annual_energy.json`);
+
+        if (annualResponse.ok) {
+           console.log(`[ComputePulse] Annual energy data loaded successfully, status: ${annualResponse.status}`);
+           const annualData = await annualResponse.json();
+           console.log("[ComputePulse] Annual energy data:", annualData);
+
+           if (annualData && Array.isArray(annualData) && annualData.length > 0) {
+             setAnnualEnergyData(annualData);
+             console.log(`[ComputePulse] Annual energy data set: ${annualData.length} years`);
+           } else {
+             console.warn('[ComputePulse] Annual energy data is empty or invalid');
+           }
+        } else {
+          console.error(`[ComputePulse] Failed to load annual energy data: ${annualResponse.status} ${annualResponse.statusText}`);
         }
 
       } catch (e) {
@@ -274,74 +321,78 @@ function App() {
   ];
 
   return (
-    <Layout language={language}>
+    <Layout language={language} theme={theme} onThemeToggle={handleThemeToggle}>
       <div className="space-y-6">
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pb-2 border-b border-gray-800">
-          <div>
-            <div className="flex flex-wrap gap-4 text-sm items-center">
+        <div className={`pb-4 border-b ${themeClasses.border}`}>
+          {/* View Mode Buttons - Full Width on Mobile */}
+          <div className="flex flex-col sm:flex-row gap-3 mb-3">
+            <div className="flex gap-2 justify-center sm:justify-start">
               <button 
                 onClick={() => setViewMode('COMPUTE')}
-                className={`px-3 py-1 rounded transition-all ${viewMode === 'COMPUTE' ? 'bg-neon-blue text-black font-bold' : 'text-gray-400 hover:text-white'}`}
+                className={`flex-1 sm:flex-none px-4 py-2 rounded-lg transition-all text-sm font-medium ${viewMode === 'COMPUTE' ? 'bg-neon-blue text-white shadow-lg shadow-neon-blue/30' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'}`}`}
               >
                 {t.viewGpu}
               </button>
               <button 
                  onClick={() => setViewMode('TOKENS')}
-                 className={`px-3 py-1 rounded transition-all ${viewMode === 'TOKENS' ? 'bg-neon-purple text-white font-bold' : 'text-gray-400 hover:text-white'}`}
+                 className={`flex-1 sm:flex-none px-4 py-2 rounded-lg transition-all text-sm font-medium ${viewMode === 'TOKENS' ? 'bg-neon-purple text-white shadow-lg shadow-neon-purple/30' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'}`}`}
               >
                 {t.viewToken}
               </button>
               <button 
                  onClick={() => setViewMode('GRID_LOAD')}
-                 className={`px-3 py-1 rounded transition-all ${viewMode === 'GRID_LOAD' ? 'bg-orange-500 text-white font-bold' : 'text-gray-400 hover:text-white'}`}
+                 className={`flex-1 sm:flex-none px-4 py-2 rounded-lg transition-all text-sm font-medium ${viewMode === 'GRID_LOAD' ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30' : `${themeClasses.textMuted} ${theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'}`}`}
               >
                 {t.viewGridLoad}
               </button>
-
-              {/* Currency & Language Switcher */}
-              <div className="ml-2 flex items-center gap-2">
-                <div className="flex items-center bg-gray-900 rounded border border-gray-800">
-                  <span className="text-gray-500 px-2 text-xs">{t.unit}</span>
-                  <select 
-                    value={currencyCode} 
-                    onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
-                    className="bg-transparent text-white text-xs font-mono font-bold py-1 pr-2 focus:outline-none cursor-pointer"
-                  >
-                    {CURRENCIES.map((c) => (
-                      <option key={c.code} value={c.code} className="bg-gray-900">{c.code} ({c.symbol})</option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Language Toggle */}
-                <div className="flex bg-gray-900 rounded border border-gray-800 p-0.5">
-                  <button 
-                    onClick={() => { setLanguage('CN'); setCurrencyCode('CNY'); }}
-                    className={`px-2 py-0.5 text-xs font-bold rounded ${language === 'CN' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'}`}
-                  >
-                    中文
-                  </button>
-                  <button 
-                    onClick={() => { setLanguage('EN'); setCurrencyCode('USD'); }}
-                    className={`px-2 py-0.5 text-xs font-bold rounded ${language === 'EN' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'}`}
-                  >
-                    EN
-                  </button>
-                </div>
-
-                <button
-                  onClick={() => setShowCalcModal(true)}
-                  className="ml-2 px-3 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-xs rounded border border-gray-700 transition-colors flex items-center gap-1"
-                  title="View Calculation Details"
-                >
-                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                  {t.verifyData || "Verify Data"}
-                </button>
-              </div>
             </div>
+          </div>
+
+          {/* Settings Row - Organized on Mobile */}
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-stretch sm:items-center">
+            {/* Currency Selector */}
+            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} px-3 py-2`}>
+              <span className={`${themeClasses.textMuted} text-xs mr-2`}>{t.unit}</span>
+              <select 
+                value={currencyCode} 
+                onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
+                className={`bg-transparent ${themeClasses.text} text-xs font-mono font-bold focus:outline-none cursor-pointer flex-1`}
+              >
+                {CURRENCIES.map((c) => (
+                  <option key={c.code} value={c.code} className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>{c.code} ({c.symbol})</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Language Toggle */}
+            <div className={`flex ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} p-1`}>
+              <button 
+                onClick={() => { setLanguage('CN'); setCurrencyCode('CNY'); }}
+                className={`flex-1 px-4 py-1.5 text-xs font-bold rounded-md transition-all ${language === 'CN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
+              >
+                中文
+              </button>
+              <button 
+                onClick={() => { setLanguage('EN'); setCurrencyCode('USD'); }}
+                className={`flex-1 px-4 py-1.5 text-xs font-bold rounded-md transition-all ${language === 'EN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
+              >
+                EN
+              </button>
+            </div>
+
+            {/* Verify Data Button */}
+            <button
+              onClick={() => setShowCalcModal(true)}
+              className={`px-4 py-2 ${theme === 'dark' ? 'bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border-gray-800 hover:border-gray-700' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 border-gray-300 hover:border-gray-400'} text-xs font-medium rounded-lg border transition-all duration-200 flex items-center justify-center gap-2 active:scale-95 touch-manipulation`}
+              title={t.verifyData}
+              aria-label={t.verifyData}
+            >
+              <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              <span className="whitespace-nowrap">{t.verifyData}</span>
+            </button>
           </div>
         </div>
 
@@ -354,7 +405,11 @@ function App() {
           annualTWh={annualTWh}
           currency={currency}
           language={language}
+          theme={theme}
         />
+
+        {/* AI Consortium Status */}
+        <AIConsortiumStatus language={language} theme={theme} />
 
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -373,6 +428,7 @@ function App() {
                     yUnit={` / ${language === 'CN' ? '小时' : 'hr'}`}
                     currency={currency}
                     language={language}
+                    theme={theme}
                  />
               </>
             )}
@@ -388,27 +444,36 @@ function App() {
                     yUnit=" / 1M"
                     currency={currency}
                     language={language}
+                    theme={theme}
                  />
               </>
             )}
 
             {viewMode === 'GRID_LOAD' && (
               <div className="space-y-6">
-                <GridLoadChart data={gridLoadHistory} language={language} />
+                {/* Annual Energy Consumption Bar Chart */}
+                <AnnualBarChart 
+                  data={annualEnergyData} 
+                  title={language === 'CN' ? '全球AI能耗趋势' : 'Global AI Energy Consumption Trend'}
+                  barColor="#f59e0b"
+                  yUnit=" TWh"
+                  language={language} 
+                  theme={theme} 
+                />
                 
                 {/* Reusing MacroDashboard components or custom stats for Grid Load */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                   <div className="bg-panel-bg p-6 rounded-xl border border-gray-800">
-                      <h3 className="text-gray-400 text-sm mb-2">{t.estActiveGpus}</h3>
-                      <div className="text-3xl font-bold text-white">{activeGpus.toLocaleString()}</div>
+                   <div className={`${themeClasses.panelBg} p-6 rounded-xl border ${themeClasses.border}`}>
+                      <h3 className={`${themeClasses.textMuted} text-sm mb-2`}>{t.estActiveGpus}</h3>
+                      <div className={`text-3xl font-bold ${themeClasses.text}`}>{activeGpus.toLocaleString()}</div>
                       <div className="text-neon-blue text-xs mt-1">Global Data Centers</div>
                    </div>
-                   <div className="bg-panel-bg p-6 rounded-xl border border-gray-800">
-                      <h3 className="text-gray-400 text-sm mb-2">{t.globalEnergyRate}</h3>
-                      <div className="text-3xl font-bold text-white">
+                   <div className={`${themeClasses.panelBg} p-6 rounded-xl border ${themeClasses.border}`}>
+                      <h3 className={`${themeClasses.textMuted} text-sm mb-2`}>{t.globalEnergyRate}</h3>
+                      <div className={`text-3xl font-bold ${themeClasses.text}`}>
                         {currency.symbol}{(kwhPrice * currency.rate).toFixed(3)} / kWh
                       </div>
-                      <div className="text-gray-500 text-xs mt-1">Weighted Industrial Average</div>
+                      <div className={`${themeClasses.textMuted} text-xs mt-1`}>Weighted Industrial Average</div>
                    </div>
                 </div>
               </div>
@@ -418,7 +483,7 @@ function App() {
 
           {/* Sidebar Column */}
           <div className="lg:col-span-4 flex flex-col gap-6">
-            <MarketVitals cvix={cvix} currency={currency} language={language} kwhPrice={kwhPrice} />
+            <MarketVitals cvix={cvix} currency={currency} language={language} kwhPrice={kwhPrice} theme={theme} />
           </div>
 
         </div>
@@ -430,6 +495,8 @@ function App() {
         tokenData={tokenData}
         currency={currency}
         language={language}
+        activeTab={calcModalTab}
+        onTabChange={setCalcModalTab}
       />
     </Layout>
   );
