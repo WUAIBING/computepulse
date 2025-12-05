@@ -280,11 +280,12 @@ def merge_data_improved(
             key = key_func(item)
             merged_dict[key] = item
             
-    # Update with Kimi data
+    # Add/update with Kimi data (lowest priority of new data)
     if isinstance(kimi_data, list):
         for item in kimi_data:
             key = key_func(item)
-            merged_dict[key] = item
+            if key not in merged_dict:
+                merged_dict[key] = item
             
     # Update with Qwen data
     if isinstance(qwen_data, list):
