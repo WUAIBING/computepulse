@@ -170,7 +170,8 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
       "Cross-referencing with secondary data sources... Validated.": "正在与二级数据源交叉比对... 已验证。",
       "Scheduled hourly monitor sequence initiated.": "预定的小时监控序列已启动。",
       "Grid Data Saved": "电网数据已保存",
-      "Grid Data Validation Failed": "电网数据验证失败"
+      "Grid Data Validation Failed": "电网数据验证失败",
+      "Synthesizing cross-market data streams...": "正在综合跨市场数据流..."
     };
 
     if (exactMap[message]) return exactMap[message];
@@ -192,6 +193,16 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
     const tokenSavedMatch = message.match(/Token Data Saved: (\d+) records/);
     if (tokenSavedMatch) {
        return `Token 数据已保存：${tokenSavedMatch[1]} 条记录`;
+    }
+
+    // "Daily Insight: {message}"
+    const insightMatch = message.match(/Daily Insight: (.+)/);
+    if (insightMatch) {
+        // We can't easily translate the dynamic insight content without an API,
+        // but we can translate the prefix.
+        // Ideally, the backend should provide translated insight or front-end should call translation API.
+        // For now, we keep the insight content as is (English) but translate the label.
+        return `每日洞察：${insightMatch[1]}`;
     }
 
     return message;

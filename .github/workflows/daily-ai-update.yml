@@ -56,6 +56,9 @@ jobs:
             echo "New data detected. Committing changes..."
             git add public/data/
             git commit -m "Data Update: AI Analysis completed [$(date -u +'%Y-%m-%d %H:%M UTC')]"
+            
+            # Pull rebase to avoid conflicts with other updates (e.g. manual pushes or gh-pages)
+            git pull --rebase
             git push
           else
             echo "No data changes detected."
