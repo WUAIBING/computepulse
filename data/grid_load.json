@@ -1,7 +1,4 @@
 {
-  "annual_twh": 150,
-  "estimated_gw": 17.12,
-  "kwh_price": 0.12,
-  "source": "BloombergNEF, IEA, Uptime Institute, industry analysis",
-  "active_gpu_est": 4000000
+  "status": "processed",
+  "task_type": "price_extraction"
 }
