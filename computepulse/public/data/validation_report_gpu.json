@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "total_records": 80,
+    "valid_records": 75,
+    "suspicious_records": 4,
+    "duplicate_records": 1
+  },
+  "anomalies": [
+    {
+      "provider": "阿里云",
+      "gpu": "H100",
+      "price": 27.78,
+      "issue": "价格远高于市场平均水平（同类供应商H100云服务每小时价格约2-5元）",
+      "severity": "high",
+      "recommendation": "验证数据准确性，确认是否为特殊配置或错误录入"
+    },
+    {
+      "provider": "Huawei Cloud",
+      "gpu": "Ascend 910B",
+      "price": 13.89,
+      "issue": "价格显著高于同型号平均价格（其他Ascend910B云服务每小时价格约1.5-2元）",
+      "severity": "high",
+      "recommendation": "检查数据录入错误，核实是否为高端配置或限时价格"
+    },
+    {
+      "provider": "Aliyun",
+      "gpu": "A100",
+      "price": 4.55,
+      "issue": "同供应商同地域同型号存在更低价格（1.64元），价格差异过大",
+      "severity": "medium",
+      "recommendation": "确认配置差异（如内存规格）或数据正确性"
+    },
+    {
+      "provider": "Vast.ai",
+      "gpu": "A100",
+      "price": 0.85,
+      "issue": "价格显著低于市场平均水平（其他A100云服务每小时价格约1.4-3.6元）",
+      "severity": "medium",
+      "recommendation": "确认是否为共享算力、限时折扣或数据错误"
+    }
+  ],
+  "market_insights": "2025年12月GPU云服务市场趋势：H100每小时价格约2-5元，A100约1.5-3.5元，Ascend910B约1.5-3元；国产GPU价格普遍低于国际品牌；Blackwell系列价格略高于H100系列。数据中部分阿里云H100、华为云Ascend910B价格偏离市场趋势。",
+  "overall_quality": "fair"
+}

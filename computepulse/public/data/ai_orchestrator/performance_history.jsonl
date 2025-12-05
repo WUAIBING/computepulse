@@ -1,0 +1,5 @@
+{"timestamp": "2025-12-05T11:40:04.667435", "model": "qwen", "task_type": "simple_query", "was_correct": true, "response_time": 2.5, "cost": 0.0006, "token_count": 0}
+{"timestamp": "2025-12-05T11:40:04.670306", "model": "qwen", "task_type": "simple_query", "was_correct": true, "response_time": 2.5, "cost": 0.0006, "token_count": 0}
+{"timestamp": "2025-12-05T11:40:04.672367", "model": "qwen", "task_type": "simple_query", "was_correct": true, "response_time": 2.5, "cost": 0.0006, "token_count": 0}
+{"timestamp": "2025-12-05T11:40:04.676941", "model": "qwen", "task_type": "simple_query", "was_correct": true, "response_time": 2.5, "cost": 0.0006, "token_count": 0}
+{"timestamp": "2025-12-05T11:40:04.680372", "model": "qwen", "task_type": "simple_query", "was_correct": true, "response_time": 2.5, "cost": 0.0006, "token_count": 0}

@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "2025-12-05T13:07:09.287197",
+    "data": {
+      "status": "processed",
+      "task_type": "simple_query"
+    },
+    "models_used": [
+      "qwen"
+    ]
+  },
+  {
+    "timestamp": "2025-12-05T14:00:00.371169",
+    "data": {
+      "status": "processed",
+      "task_type": "simple_query"
+    },
+    "models_used": [
+      "qwen"
+    ]
+  }
+]
