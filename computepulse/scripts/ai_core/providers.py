@@ -175,7 +175,9 @@ class GLMAgent(BaseAgent):
             self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
             
     def generate(self, prompt: str, system_prompt: Optional[str] = None) -> Optional[str]:
-        if not self.client: return None
+        if not self.client: 
+            print(f"[{datetime.now()}] {self.name} Error: Client not initialized (Missing ZHIPU_API_KEY?)")
+            return None
         try:
             messages = []
             if system_prompt: messages.append({'role': 'system', 'content': system_prompt})
