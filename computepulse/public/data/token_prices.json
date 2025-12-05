@@ -18,10 +18,10 @@
     "output_price": 0.6
   },
   {
-    "provider": "OpenAI",
     "model": "GPT-4o",
-    "input_price": 5.0,
-    "output_price": 15.0
+    "provider": "OpenAI",
+    "input_price": 0.0,
+    "output_price": 0.0
   },
   {
     "provider": "Anthropic",
@@ -97,7 +97,7 @@
   },
   {
     "provider": "Aliyun",
-    "model": "Qwen/通义千问",
+    "model": "Qwen/\u901a\u4e49\u5343\u95ee",
     "input_price": 0.073,
     "output_price": 0.22
   },
@@ -114,8 +114,8 @@
     "output_price": 4.4
   },
   {
-    "provider": "Anthropic",
     "model": "Claude 3.5 Sonnet",
+    "provider": "Anthropic",
     "input_price": 3.0,
     "output_price": 15.0
   },
@@ -210,10 +210,10 @@
     "output_price": 0.01
   },
   {
-    "provider": "DeepSeek",
     "model": "DeepSeek-V3",
-    "input_price": 0.14,
-    "output_price": 0.28
+    "provider": "DeepSeek",
+    "input_price": 0.0,
+    "output_price": 0.0
   },
   {
     "provider": "DeepSeek",
@@ -268,5 +268,17 @@
     "model": "MiniMax-ABAB-6",
     "input_price": 0.1,
     "output_price": 0.1
+  },
+  {
+    "model": "Qwen-Max",
+    "provider": "Alibaba Cloud",
+    "input_price": 0.0,
+    "output_price": 0.0
+  },
+  {
+    "model": "Claude 3.5",
+    "provider": "Anthropic",
+    "input_price": 0.0,
+    "output_price": 0.0
   }
 ]

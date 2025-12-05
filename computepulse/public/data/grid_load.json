@@ -1,7 +1,5 @@
 {
-  "annual_twh": 85.4,
-  "estimated_gw": 9.75,
-  "kwh_price": 0.12,
-  "source": "IEA Electricity 2024 Report & Goldman Sachs Global Investment Research",
-  "active_gpu_est": 4000000
+  "annual_twh": 130,
+  "estimated_gw": 15.5,
+  "kwh_price": 0.12
 }
