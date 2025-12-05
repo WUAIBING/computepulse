@@ -325,8 +325,8 @@ function App() {
       <div className="space-y-6">
         {/* Header Section */}
         <div className={`pb-4 border-b ${themeClasses.border}`}>
-          {/* View Mode Buttons - Full Width on Mobile */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-3">
+          {/* View Mode Buttons - Removed as requested */}
+          {/* <div className="flex flex-col sm:flex-row gap-3 mb-3">
             <div className="flex gap-2 justify-center sm:justify-start">
               <button 
                 onClick={() => setViewMode('COMPUTE')}
@@ -347,7 +347,7 @@ function App() {
                 {t.viewGridLoad}
               </button>
             </div>
-          </div>
+          </div> */}
 
           {/* Settings Row - Organized on Mobile */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-stretch sm:items-center">
@@ -419,8 +419,8 @@ function App() {
             
             {viewMode === 'COMPUTE' && (
               <>
-                 {/* 1. Trend Chart */}
-                 <TrendChart 
+                 {/* 1. Trend Chart - Removed as requested */}
+                 {/* <TrendChart 
                     data={computeHistory} 
                     title={t.gpuIndexTitle} 
                     lineColor="#FFD700"
@@ -429,14 +429,14 @@ function App() {
                     currency={currency}
                     language={language}
                     theme={theme}
-                 />
+                 /> */}
               </>
             )}
 
             {viewMode === 'TOKENS' && (
               <>
-                 {/* Token View */}
-                 <TrendChart 
+                 {/* Token View - TrendChart Removed as requested */}
+                 {/* <TrendChart 
                     data={tokenHistory} 
                     title={language === 'EN' ? "Token Cost Index Trend" : "Token 成本指数趋势"} 
                     lineColor="#bc13fe"
@@ -445,21 +445,21 @@ function App() {
                     currency={currency}
                     language={language}
                     theme={theme}
-                 />
+                 /> */}
               </>
             )}
 
             {viewMode === 'GRID_LOAD' && (
               <div className="space-y-6">
-                {/* Annual Energy Consumption Bar Chart */}
-                <AnnualBarChart 
+                {/* Annual Energy Consumption Bar Chart - Removed as requested */}
+                {/* <AnnualBarChart 
                   data={annualEnergyData} 
                   title={language === 'CN' ? '全球AI能耗趋势' : 'Global AI Energy Consumption Trend'}
                   barColor="#f59e0b"
                   yUnit=" TWh"
                   language={language} 
                   theme={theme} 
-                />
+                /> */}
                 
                 {/* Reusing MacroDashboard components or custom stats for Grid Load */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -483,7 +483,7 @@ function App() {
 
           {/* Sidebar Column */}
           <div className="lg:col-span-4 flex flex-col gap-6">
-            <MarketVitals cvix={cvix} currency={currency} language={language} kwhPrice={kwhPrice} theme={theme} />
+            {/* <MarketVitals cvix={cvix} currency={currency} language={language} kwhPrice={kwhPrice} theme={theme} /> */}
           </div>
 
         </div>

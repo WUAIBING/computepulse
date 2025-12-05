@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { Language, Theme } from '../types';
 import { TRANSLATIONS } from '../translations';
 import { getThemeClasses } from '../theme';
@@ -29,9 +30,9 @@ interface AIConsortiumStatusProps {
 }
 
 export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language, theme }) => {
+  const [isExpanded, setIsExpanded] = useState(true);
+  // const [showInfo, setShowInfo] = useState(false); // Removed state-based tooltip
   const [consortiumData, setConsortiumData] = useState<AIConsortiumData | null>(null);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [showInfo, setShowInfo] = useState(false);
   
   const t = TRANSLATIONS[language];
   const themeClasses = getThemeClasses(theme);
@@ -156,16 +157,13 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
               
               {/* Info Icon */}
               <div 
-                className="relative"
-                onMouseEnter={() => setShowInfo(true)}
-                onMouseLeave={() => setShowInfo(false)}
+                className="relative group"
               >
                 <svg className="w-4 h-4 text-gray-500 cursor-help hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 
-                {showInfo && (
-                  <div className={`absolute left-0 bottom-full mb-2 w-80 ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
+                <div className={`absolute left-0 bottom-full mb-2 w-80 ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
                     <div className="text-neon-blue font-bold text-sm mb-2">
                       {language === 'CN' ? 'AI 联合体系统' : 'AI Consortium System'}
                     </div>
@@ -175,8 +173,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                         : 'Multi-model collaboration system using EWMA algorithm for continuous learning and optimization. Real-time monitoring of AI model confidence, task processing capability, and response speed to ensure data accuracy and system reliability.'
                       }
                     </p>
-                  </div>
-                )}
+                </div>
               </div>
             </h3>
             <div className={`${themeClasses.textMuted} text-xs flex items-center gap-2`}>

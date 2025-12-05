@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { CurrencyConfig, Language, HistoricalDataPoint, Theme } from '../types';
 import { MACRO_CONSTANTS } from '../constants';
 import { TRANSLATIONS } from '../translations';
@@ -27,9 +27,11 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
   language,
   theme
 }) => {
-  const [showCostInfo, setShowCostInfo] = useState(false);
-  const [showTokenInfo, setShowTokenInfo] = useState(false);
-  const [showPowerInfo, setShowPowerInfo] = useState(false);
+  const {
+    // showCostInfo, setShowCostInfo, // Removed state-based tooltip
+    // showTokenInfo, setShowTokenInfo, // Removed state-based tooltip
+    // showPowerInfo, setShowPowerInfo // Removed state-based tooltip
+  } = React.useMemo(() => ({}), []); // Placeholder to avoid breaking destructuring if any
   const t = TRANSLATIONS[language];
   const themeClasses = getThemeClasses(theme);
 
@@ -79,15 +81,13 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
            <div className="flex items-center gap-2">
              <h2 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider`}>{t.gcciTitle}</h2>
              <div 
-                className="relative overflow-visible"
-                onMouseEnter={() => setShowCostInfo(true)}
-                onMouseLeave={() => setShowCostInfo(false)}
+                className="relative overflow-visible group"
               >
                 <svg className="w-4 h-4 text-gray-500 cursor-help hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                {showCostInfo && (
-                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
+                
+                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
                       <div className="text-neon-blue font-bold text-sm mb-2">{t.gcciMethodology}</div>
                       <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
                         {t.gcciDesc}
@@ -97,7 +97,6 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
                         <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.hardwareAmort}:</span> <span>${MACRO_CONSTANTS.HARDWARE_AMORTIZATION_HR}/{language === 'CN' ? '小时' : 'hr'}</span></div>
                       </div>
                    </div>
-                )}
              </div>
            </div>
            <div className="flex items-baseline gap-1">
@@ -137,21 +136,18 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
            <div className="flex items-center gap-2">
              <h2 className="text-gray-400 text-xs font-bold uppercase tracking-wider">{t.tokenPriceIndex}</h2>
              <div 
-                className="relative overflow-visible"
-                onMouseEnter={() => setShowTokenInfo(true)}
-                onMouseLeave={() => setShowTokenInfo(false)}
+                className="relative overflow-visible group"
               >
                 <svg className="w-4 h-4 text-gray-500 cursor-help hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                {showTokenInfo && (
-                  <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
+                
+                  <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
                     <div className="text-neon-purple font-bold text-sm mb-2">{t.tokenMethodology}</div>
                     <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
                       {t.tokenDesc}
                     </p>
                   </div>
-                )}
              </div>
            </div>
            <div className="flex items-baseline gap-1">
@@ -189,15 +185,13 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
            <div className="flex items-center gap-2">
              <h2 className="text-gray-400 text-xs font-bold uppercase tracking-wider">{t.gaglTitle}</h2>
              <div 
-                className="relative overflow-visible"
-                onMouseEnter={() => setShowPowerInfo(true)}
-                onMouseLeave={() => setShowPowerInfo(false)}
+                className="relative overflow-visible group"
               >
                 <svg className="w-4 h-4 text-gray-500 cursor-help hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                {showPowerInfo && (
-                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none`}>
+                
+                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
                       <div className="text-amber-500 font-bold text-sm mb-2">{t.energyModel}</div>
                       <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
                         {t.energyDesc}
@@ -211,7 +205,6 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
                         <div className="flex justify-between"><span className={themeClasses.textMuted}>Global PUE:</span> <span>{MACRO_CONSTANTS.GLOBAL_PUE}</span></div>
                       </div>
                    </div>
-                )}
              </div>
            </div>
            <div className="flex items-baseline gap-1">
@@ -222,7 +215,8 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
            </div>
         </div>
         
-        <div className="h-24 w-full mb-4">
+        {/* Removed chart as requested */}
+        {/* <div className="h-24 w-full mb-4">
           <TokenTrendChart 
              data={tokenHistory.map(p => ({ ...p, price: calculatedGW + (Math.random() * 0.02 - 0.01) }))} // Mock small fluctuation around base
              lineColor="#f97316" 
@@ -231,6 +225,14 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
              showXAxis={false}
              showYAxis={false}
           />
+        </div> */}
+        
+        {/* Spacer to match height with other cards */}
+        <div className="h-24 w-full mb-4 flex items-center justify-center">
+            <div className="text-center">
+               <div className="text-4xl font-bold text-amber-500/20 animate-pulse">{calculatedGW.toFixed(1)} GW</div>
+               <div className="text-xs text-amber-500/40 mt-1">{language === 'CN' ? '实时负荷' : 'Real-time Load'}</div>
+            </div>
         </div>
         
         <div className="grid grid-cols-2 gap-4 text-[10px] text-gray-500 font-mono">
