@@ -160,3 +160,83 @@ class KimiAgent(BaseAgent):
         except Exception as e:
             print(f"[{datetime.now()}] {self.name} Search Error: {e}")
             return None
+
+class GLMAgent(BaseAgent):
+    """Agent implementation for Zhipu GLM-4 (via OpenAI compatible API)."""
+    
+    def __init__(self, name: str, role: str, model_name: str = "glm-4.6"):
+        super().__init__(name, role)
+        self.model_name = model_name
+        # Use ZHIPU_API_KEY environment variable
+        self.api_key = os.getenv('ZHIPU_API_KEY')
+        self.base_url = "https://open.bigmodel.cn/api/paas/v4/"
+        self.client = None
+        if self.api_key and OpenAI:
+            self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+            
+    def generate(self, prompt: str, system_prompt: Optional[str] = None) -> Optional[str]:
+        if not self.client: return None
+        try:
+            messages = []
+            if system_prompt: messages.append({'role': 'system', 'content': system_prompt})
+            messages.append({'role': 'user', 'content': prompt})
+            
+            completion = self.client.chat.completions.create(
+                model=self.model_name, messages=messages, stream=False
+            )
+            return completion.choices[0].message.content
+        except Exception as e:
+            print(f"[{datetime.now()}] {self.name} Gen Error: {e}")
+            return None
+            
+    def search(self, query: str) -> Optional[str]:
+        # GLM standalone web search implementation
+        if not self.api_key: return None
+        try:
+            import requests
+            import json
+            
+            url = "https://open.bigmodel.cn/api/paas/v4/web_search"
+            headers = {
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json"
+            }
+            data = {
+                "search_query": query,
+                "search_engine": "search_std",
+                "search_intent": False # Optional but good practice
+            }
+            
+            response = requests.post(url, headers=headers, json=data)
+            if response.status_code == 200:
+                result = response.json()
+                
+                # The response structure is typically:
+                # { "id": "...", "request_id": "...", "search_result": [ { "title": "...", "content": "...", "link": "..." } ] }
+                
+                items = result.get('search_result', [])
+                if not items:
+                    return f"No search results found for: {query}"
+                
+                context = "Search Results:\n"
+                for idx, item in enumerate(items):
+                    context += f"{idx+1}. {item.get('title', 'No Title')}\n"
+                    context += f"   {item.get('content', 'No Content')[:200]}...\n"
+                    context += f"   Source: {item.get('link', 'N/A')}\n\n"
+                
+                # Now use the model to synthesize the answer based on search results
+                synthesis_prompt = f"""
+                Based on the following search results, answer the user's query: "{query}"
+                
+                {context}
+                
+                Synthesize a concise and accurate answer.
+                """
+                return self.generate(synthesis_prompt)
+            else:
+                print(f"[{datetime.now()}] {self.name} Web Search API Error: {response.status_code} - {response.text}")
+                return None
+                
+        except Exception as e:
+            print(f"[{datetime.now()}] {self.name} Search Error: {e}")
+            return None

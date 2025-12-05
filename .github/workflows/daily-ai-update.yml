@@ -37,9 +37,10 @@ jobs:
         env:
           # Secrets must be configured in GitHub Repository Settings
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }} # Required for GLM Agent
         run: |
           echo "Starting AI Market Analysis..."
-          # 1. Run the modular price fetcher (using AI Consortium: Qwen, DeepSeek, Kimi)
+          # 1. Run the modular price fetcher (using AI Consortium: Qwen, DeepSeek, Kimi, GLM)
           python scripts/fetch_prices_modular.py
           
           # 2. (Optional) Run other specific analysis scripts

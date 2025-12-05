@@ -30,6 +30,7 @@ print(f"[{datetime.now()}] Initializing AI Consortium Agents...")
 architect = AgentFactory.create("qwen")      # Qwen
 hunter = AgentFactory.create("deepseek")     # DeepSeek
 researcher = AgentFactory.create("kimi")     # Kimi
+analyst = AgentFactory.create("glm")         # GLM (The Analyst)
 
 # --- Helper Functions (Parsing & Validation) ---
 # [Reuse the robust parsing logic from optimized script]
@@ -195,6 +196,43 @@ def validate_and_fix():
     # ... (Validation logic would go here) ...
     append_log("System", "Integrity scan complete. No critical anomalies.", "info")
 
+def generate_market_insight():
+    """Generate a daily market summary using GLM (The Analyst)"""
+    print(f"[{datetime.now()}] Task: Market Insight (GLM)")
+    
+    try:
+        # Read collected data to form the context
+        with open(GPU_FILE, 'r', encoding='utf-8') as f: gpu_data = json.load(f)
+        with open(TOKEN_FILE, 'r', encoding='utf-8') as f: token_data = json.load(f)
+        with open(GRID_FILE, 'r', encoding='utf-8') as f: grid_data = json.load(f)
+        
+        # Prepare a summary context
+        gpu_summary = f"{len(gpu_data)} GPU records. Avg price example: {gpu_data[0].get('price', 'N/A')}" if gpu_data else "No GPU data"
+        token_summary = f"{len(token_data)} Token records. Avg input price example: {token_data[0].get('input_price', 'N/A')}" if token_data else "No Token data"
+        
+        prompt = f"""
+        You are 'The Analyst' (GLM-4), a cynical but sharp AI market observer in a cyberpunk future.
+        Based on today's data scan:
+        - GPU Market: {gpu_summary}
+        - AI Grid Load: {grid_data.get('annual_twh', 'N/A')} TWh/year
+        
+        Generate a single, witty, insightful sentence (max 20 words) about the current state of the global compute market.
+        Style: Professional but with a slight futuristic edge.
+        """
+        
+        append_log("GLM", "Synthesizing cross-market data streams...", "action")
+        insight = analyst.generate(prompt)
+        
+        if insight:
+            clean_insight = insight.strip().replace('"', '')
+            print(f"GLM Insight: {clean_insight}")
+            append_log("GLM", f"Daily Insight: {clean_insight}", "success")
+        else:
+            print("GLM failed to generate insight")
+            
+    except Exception as e:
+        print(f"Insight Generation Error: {e}")
+
 if __name__ == "__main__":
     # Ensure data dir exists
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -204,6 +242,7 @@ if __name__ == "__main__":
         fetch_token_prices()
         fetch_grid_load()
         validate_and_fix()
+        generate_market_insight()
     except Exception as e:
         print(f"Critical Error: {e}")
         append_log("System", f"Critical Failure: {str(e)}", "warning")
