@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 cluster capex hitting $3.29/hr as supply constraints ease from new Taiwan fab expansions."
+    "text": "H100 procurement costs rising 12% Q-o-Q as hyperscalers compete for constrained Taiwan fab capacity amid 2025 AI infrastructure expansion."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token pricing pressure intensifies with $1.33/1M inputs driving aggressive model distillation wars."
+    "text": "DeepSeek-v3 achieves 40% lower inference cost than GPT-4 through quantized MoE architecture, forcing API price compression industry-wide."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "160 TWh annual AI load forcing grid operators to accelerate nuclear baseload procurement."
+    "text": "AI data center energy demand pushing grid operators toward 24/7 carbon-free nuclear procurement agreements for 100MW+ loads."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Current consolidation wave suggests sustainable growth trajectory amid reduced speculative valuations."
+    "text": "Enterprise AI adoption plateauing at 35% despite funding surge, signaling potential valuation recalibration in overhyped generative AI subsectors."
   }
 }
