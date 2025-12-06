@@ -1,14 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 capex cycles align with peak supply availability asFoundries ramp production."
+    "text": "H100 supply tightens as foundry allocations shift toward enterprise clusters, pushing buyers toward alternative GPUs and long-term capex commitments."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token pricing compression driven by efficient inference models intensifying API competition."
+    "text": "Token costs compress as API price wars intensify and model efficiency gains outpace pricing headwinds."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh annual load strain accelerates nuclear baseload adoption for AI data centers."
+    "text": "Grid strain accelerates nuclear baseload proposals for new GW-scale AI clusters to stabilize load and cut emissions."
+  },
+  "aipi": {
+    "agent": "GLM",
+    "text": "Market consolidation and muted IPOs suggest sustainable growth while tempering bubble risks through tighter capital discipline."
   }
 }
