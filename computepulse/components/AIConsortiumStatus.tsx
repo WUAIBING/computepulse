@@ -336,10 +336,12 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
             
           </div>
 
-          {/* --- RIGHT: LIVE THOUGHT STREAM (The Logs) --- */}
+          {/* --- RIGHT: LIVE TEAM CHAT (The Logs) --- */}
           <div className="flex flex-col bg-black/20">
              <div className="p-3 border-b border-gray-800 bg-gray-900/50 flex justify-between items-center">
-               <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Live Thought Stream</span>
+               <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+                 {language === 'CN' ? '实时协作群聊' : 'Live Team Chat'}
+               </span>
                <div className="flex gap-1">
                  <div className="w-1.5 h-1.5 rounded-full bg-red-500/20"></div>
                  <div className="w-1.5 h-1.5 rounded-full bg-yellow-500/20"></div>
@@ -349,36 +351,65 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
              
              <div 
                ref={logContainerRef}
-               className="flex-1 p-4 overflow-y-auto max-h-[300px] font-mono text-xs space-y-3 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent"
+               className="flex-1 p-4 overflow-y-auto max-h-[300px] space-y-4 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent bg-gray-900/20"
              >
-               {logs.map((log) => (
-                 <div key={log.id} className="animate-fadeIn flex gap-3 group">
-                    <div className={`${theme === 'dark' ? 'text-gray-500' : 'text-gray-500 font-medium'} shrink-0 select-none w-auto whitespace-nowrap`}>
-                      {formatLogTime(log.timestamp)}
-                    </div>
-                    <div className="flex-1 break-words">
-                       <span className={`font-bold mr-2 ${getAgentColor(log.agent)}`}>
-                         [{log.agent}]
-                       </span>
-                       <span className={`
-                         ${log.type === 'warning' ? 'text-yellow-500' : 
-                           log.type === 'success' ? 'text-emerald-400' : 
-                           log.type === 'action' ? 'text-blue-300' : 
-                           theme === 'dark' ? 'text-gray-300' : 'text-gray-800 font-medium'}
-                       `}>
-                         {translateLogMessage(log.message, language)}
-                       </span>
-                    </div>
-                 </div>
-               ))}
-               {/* Typing Indicator - Only show if logs are empty (waiting for data) */}
+               {logs.map((log) => {
+                 const isSystem = log.agent === 'System' || log.agent === 'ComputePulse';
+                 const agentModel = consortiumData.models.find(m => m.name === log.agent);
+                 
+                 return (
+                   <div key={log.id} className={`flex w-full animate-fadeIn ${isSystem ? 'justify-end' : 'justify-start'}`}>
+                      <div className={`flex max-w-[85%] gap-2 ${isSystem ? 'flex-row-reverse' : 'flex-row'}`}>
+                        
+                        {/* Avatar */}
+                        <div className="shrink-0 mt-1">
+                          {isSystem ? (
+                            <div className="w-8 h-8 rounded-full bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center">
+                              <span className="text-[10px] font-bold text-indigo-400">CP</span>
+                            </div>
+                          ) : (
+                            <div className="w-8 h-8 rounded-full overflow-hidden shadow-sm">
+                               {agentModel?.avatar || (
+                                 <div className="w-full h-full bg-gray-700 flex items-center justify-center text-[10px] text-gray-400">?</div>
+                               )}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Message Bubble */}
+                        <div className={`flex flex-col ${isSystem ? 'items-end' : 'items-start'}`}>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className={`text-[10px] font-bold ${isSystem ? 'text-indigo-400' : getAgentColor(log.agent)}`}>
+                              {log.agent === 'System' ? 'ComputePulse' : log.agent}
+                            </span>
+                            <span className="text-[9px] text-gray-500 font-mono">
+                              {formatLogTime(log.timestamp)}
+                            </span>
+                          </div>
+                          
+                          <div className={`
+                            px-3 py-2 rounded-lg text-xs leading-relaxed border backdrop-blur-sm shadow-sm
+                            ${isSystem 
+                              ? 'bg-indigo-500/10 border-indigo-500/20 text-gray-200 rounded-tr-none' 
+                              : 'bg-gray-800/40 border-gray-700/50 text-gray-300 rounded-tl-none'}
+                            ${log.type === 'warning' ? 'border-yellow-500/30 bg-yellow-500/5' : ''}
+                            ${log.type === 'success' ? 'border-emerald-500/30 bg-emerald-500/5' : ''}
+                          `}>
+                             {translateLogMessage(log.message, language)}
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                 );
+               })}
+               
+               {/* Typing Indicator */}
                {logs.length === 0 && (
-                 <div className="flex gap-3 opacity-50">
-                   <div className="w-14"></div>
+                 <div className="flex w-full justify-center opacity-50 py-4">
                    <div className="flex gap-1 items-center h-4">
-                     <div className="w-1 h-1 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                     <div className="w-1 h-1 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                     <div className="w-1 h-1 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                     <div className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                     <div className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                     <div className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
                    </div>
                  </div>
                )}
