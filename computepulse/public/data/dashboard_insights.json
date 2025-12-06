@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply chain tightening is raising capex expectations as prices hover around $3.32/hr, prompting a shift toward regional chip allocation."
+    "text": "US-East H100 supply stabilizes, easing chip scarcity while capex remains elevated."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With input token pricing averaging $1.62 per million, the API price war is intensifying, driving rapid efficiency gains and model competition."
+    "text": "DeepSeek token pricing near $1.44/M tokens fuels API price wars as efficiency gains compress margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Annual data center energy load hitting 130 TWh is straining grids, accelerating nuclear baseload adoption to curb carbon footprint."
+    "text": "Kimi's 130 TWh annual load strains grids, pushing operators toward nuclear baseload for stable, low-carbon power."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Market sentiment remains cautiously optimistic, but bubble risk warnings underscore the need for sustainable growth trajectories."
+    "text": "AI sector sentiment turns cautious as capital concentrates on proven models, signaling a healthier, sustainable growth trajectory."
   }
 }

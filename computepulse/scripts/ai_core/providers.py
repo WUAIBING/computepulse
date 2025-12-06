@@ -152,14 +152,18 @@ class KimiAgent(BaseAgent):
         if not self.client: return None
         try:
             messages = [
-                {"role": "system", "content": "You are Kimi, capable of real-time internet search."},
+                {"role": "system", "content": "You are Kimi, an AI assistant with real-time internet access. When asked for current information like exchange rates or news, you MUST use your search tool to find the latest data. Do not say you cannot access live data."},
                 {"role": "user", "content": query}
             ]
             
             completion = self.client.chat.completions.create(
                 model=self.model_name,
                 messages=messages,
-                extra_body={"enable_search": True}, # The key parameter for Kimi/DashScope
+                # Specifically for Kimi via DashScope/OpenAI compat
+                # Sometimes 'enable_search' needs to be in tools or specific param depending on version
+                # For Moonshot API directly it is tools=[{"type": "builtin.function", "function": {"name": "$web_search"}}]]
+                # But via DashScope compat it is often 'enable_search': True
+                extra_body={"enable_search": True}, 
                 stream=False
             )
             return completion.choices[0].message.content

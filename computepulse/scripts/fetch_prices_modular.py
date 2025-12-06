@@ -446,48 +446,51 @@ def fetch_exchange_rate():
     print(f"[{datetime.now()}] Task: Fetch Exchange Rate (Kimi)")
     
     try:
-        prompt = """
-        Please search for the current real-time USD to CNY exchange rate (today).
+        # Use a two-step process: First search, then extract to JSON
+        # This is more robust than asking for JSON immediately which can suppress search
         
-        Output valid JSON ONLY:
-        {
-            "from": "USD",
-            "to": "CNY",
-            "rate": 7.07, 
-            "timestamp": "2024-..."
-        }
+        search_prompt = """
+        Please search for the current real-time USD to CNY exchange rate.
+        Report the exact rate and the time of the data.
         """
         
         append_log("Kimi", "Searching global forex markets...", "action")
         
-        # Use researcher (Kimi) which has .search() capability
-        # We use .search() to ensure 'enable_search' is True
-        res = researcher.search(prompt)
+        # Step 1: Search
+        raw_result = researcher.search(search_prompt)
         
-        data = clean_and_parse_json(res)
+        if not raw_result:
+            print("Kimi search returned no content")
+            return
+
+        # Step 2: Extract
+        extract_prompt = f"""
+        Extract the exchange rate from the following text into JSON.
+        
+        Text: "{raw_result}"
+        
+        Output valid JSON ONLY:
+        {{
+            "from": "USD",
+            "to": "CNY",
+            "rate": 7.24, 
+            "timestamp": "YYYY-MM-DD..."
+        }}
+        """
+        
+        # Use standard generation for extraction (no search needed here)
+        json_result = researcher.generate(extract_prompt)
+        data = clean_and_parse_json(json_result)
         
         if data and 'rate' in data:
-            # Validate rate is reasonable (e.g. 6.0 - 8.0)
-            if 6.0 < data['rate'] < 8.0:
-                with open(EXCHANGE_RATE_FILE, 'w', encoding='utf-8') as f:
-                    json.dump(data, f, indent=2)
-                print(f"Exchange Rate Saved: 1 USD = {data['rate']} CNY")
-                append_log("System", f"Exchange rate updated: {data['rate']}", "success")
-            else:
-                print(f"Rate {data['rate']} seems outlier, ignoring.")
+            with open(EXCHANGE_RATE_FILE, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2)
+            print(f"Exchange Rate Saved: 1 USD = {data['rate']} CNY")
+            append_log("System", f"Exchange rate updated: {data['rate']}", "success")
         else:
-            print("Failed to fetch exchange rate, using default")
-            # Fallback if file doesn't exist or valid
-            if not os.path.exists(EXCHANGE_RATE_FILE):
-                default_data = {
-                    "from": "USD",
-                    "to": "CNY", 
-                    "rate": 7.25,
-                    "timestamp": datetime.now().isoformat(),
-                    "note": "Fallback default"
-                }
-                with open(EXCHANGE_RATE_FILE, 'w', encoding='utf-8') as f:
-                    json.dump(default_data, f, indent=2)
+            print("Failed to parse exchange rate from search result")
+            # NO FALLBACK ALLOWED
+            append_log("System", "Failed to parse real-time exchange rate", "error")
             
     except Exception as e:
         print(f"Exchange Rate Error: {e}")
