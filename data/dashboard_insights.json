@@ -1,18 +1,14 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "US-East H100 supply stabilizes, easing chip scarcity while capex remains elevated."
+    "text": "H100 capex cycles align with peak supply availability asFoundries ramp production."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek token pricing near $1.44/M tokens fuels API price wars as efficiency gains compress margins."
+    "text": "Token pricing compression driven by efficient inference models intensifying API competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Kimi's 130 TWh annual load strains grids, pushing operators toward nuclear baseload for stable, low-carbon power."
-  },
-  "aipi": {
-    "agent": "GLM",
-    "text": "AI sector sentiment turns cautious as capital concentrates on proven models, signaling a healthier, sustainable growth trajectory."
+    "text": "120 TWh annual load strain accelerates nuclear baseload adoption for AI data centers."
   }
 }
