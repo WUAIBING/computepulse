@@ -3,7 +3,8 @@
     "provider": "AWS",
     "gpu": "H100",
     "price": 12.29,
-    "region": "us-east-1"
+    "region": "us-east-1",
+    "notes": "p5.48xlarge instance (8x H100 GPUs)"
   },
   {
     "provider": "Azure",
@@ -74,14 +75,15 @@
   {
     "provider": "RunPod",
     "gpu": "H100",
-    "price": 2.0,
+    "price": 3.99,
     "region": "US"
   },
   {
     "provider": "RunPod",
     "gpu": "A100",
-    "price": 1.14,
-    "region": "US"
+    "price": 2.49,
+    "region": "US",
+    "notes": "80GB SXM version"
   },
   {
     "provider": "CoreWeave",
@@ -93,7 +95,8 @@
     "provider": "AWS",
     "gpu": "A100",
     "price": 4.1,
-    "region": "us-east-1"
+    "region": "us-east-1",
+    "notes": "p4d.24xlarge instance (8x A100 40GB GPUs)"
   },
   {
     "provider": "Google Cloud",
@@ -146,8 +149,9 @@
   {
     "provider": "Vast.ai",
     "gpu": "A100",
-    "price": 0.82,
-    "region": "US"
+    "price": 0.99,
+    "region": "US",
+    "notes": "80GB version spot pricing"
   },
   {
     "provider": "CoreWeave",
@@ -188,8 +192,8 @@
   {
     "provider": "Lambda",
     "gpu": "H100",
-    "price": 1.99,
-    "region": "us-east-1"
+    "price": 2.0,
+    "region": "us-west-1"
   },
   {
     "provider": "Google Cloud",
@@ -380,8 +384,9 @@
   {
     "provider": "Vast.ai",
     "gpu": "H100",
-    "price": 1.79,
-    "region": "US"
+    "price": 1.89,
+    "region": "US",
+    "notes": "Spot pricing average"
   },
   {
     "provider": "\u817e\u8baf\u4e91",
@@ -453,25 +458,27 @@
     "provider": "Lambda",
     "gpu": "A100",
     "price": 1.1,
-    "region": "us-east-1"
+    "region": "us-west-1",
+    "notes": "80GB SXM version"
   },
   {
     "provider": "RunPod",
     "gpu": "RTX 4090",
-    "price": 0.6,
+    "price": 0.89,
     "region": "US"
   },
   {
     "provider": "Vast.ai",
     "gpu": "RTX 4090",
-    "price": 0.41,
-    "region": "US"
+    "price": 0.49,
+    "region": "US",
+    "notes": "Spot pricing average"
   },
   {
     "provider": "Lambda",
     "gpu": "RTX 4090",
     "price": 0.5,
-    "region": "us-east-1"
+    "region": "us-west-1"
   },
   {
     "provider": "AWS",
