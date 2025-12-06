@@ -57,6 +57,9 @@ jobs:
             git add public/data/
             git commit -m "Data Update: AI Analysis completed [$(date -u +'%Y-%m-%d %H:%M UTC')]"
             
+            # Stash any other changes (e.g. logs, temp files) to ensure clean working directory for rebase
+            git stash --include-untracked
+            
             # Pull rebase to avoid conflicts with other updates (e.g. manual pushes or gh-pages)
             git pull --rebase
             git push
