@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply chain is tightening as demand outpaces new fab capacity, prompting a surge in capex for fab expansions."
+    "text": "H100 chip availability is improving due to expanded manufacturing capacity, lowering capex for AI deployments."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token costs are falling rapidly due to aggressive API price wars and model distillation, intensifying competition among providers."
+    "text": "Token pricing wars are forcing rapid efficiency improvements in model architectures."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Rising AI workloads are straining electricity grids, making nuclear baseload a critical component for sustainable, low\u2011carbon scaling."
+    "text": "The 120 TWh annual energy load is stressing regional grids, prompting nuclear adoption discussions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Market sentiment remains cautiously optimistic as investors balance AI's rapid growth against emerging bubble\u2011risk concerns."
+    "text": "AI industry's maturation phase is evident as investment shifts to sustainable, profitable ventures."
   }
 }

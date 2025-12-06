@@ -3,7 +3,8 @@
     "provider": "AWS",
     "gpu": "H100",
     "price": 12.29,
-    "region": "us-east-1"
+    "region": "us-east-1",
+    "notes": "p5.48xlarge instance (8x H100), $98.32/hr total"
   },
   {
     "provider": "Azure",
@@ -74,14 +75,16 @@
   {
     "provider": "RunPod",
     "gpu": "H100",
-    "price": 3.99,
-    "region": "US"
+    "price": 2.99,
+    "region": "US",
+    "notes": "H100 80GB PCIe"
   },
   {
     "provider": "RunPod",
     "gpu": "A100",
-    "price": 1.79,
-    "region": "US"
+    "price": 1.1,
+    "region": "US",
+    "notes": "A100 40GB SXM4"
   },
   {
     "provider": "CoreWeave",
@@ -93,7 +96,8 @@
     "provider": "AWS",
     "gpu": "A100",
     "price": 4.1,
-    "region": "us-east-1"
+    "region": "us-east-1",
+    "notes": "p4d.24xlarge instance (8x A100), $32.77/hr total"
   },
   {
     "provider": "Google Cloud",
@@ -146,8 +150,9 @@
   {
     "provider": "Vast.ai",
     "gpu": "A100",
-    "price": 0.8,
-    "region": "Global"
+    "price": 0.74,
+    "region": "Global",
+    "notes": "A100 40GB (lowest available)"
   },
   {
     "provider": "CoreWeave",
@@ -188,8 +193,8 @@
   {
     "provider": "Lambda",
     "gpu": "H100",
-    "price": 2.99,
-    "region": "us"
+    "price": 1.99,
+    "region": "us-east-1"
   },
   {
     "provider": "Google Cloud",
@@ -380,8 +385,9 @@
   {
     "provider": "Vast.ai",
     "gpu": "H100",
-    "price": 3.5,
-    "region": "Global"
+    "price": 2.5,
+    "region": "Global",
+    "notes": "Lowest available price (varies by offer)"
   },
   {
     "provider": "\u817e\u8baf\u4e91",
@@ -453,25 +459,26 @@
     "provider": "Lambda",
     "gpu": "A100",
     "price": 1.1,
-    "region": "us"
+    "region": "us-east-1"
   },
   {
     "provider": "RunPod",
     "gpu": "RTX 4090",
-    "price": 0.49,
+    "price": 0.6,
     "region": "US"
   },
   {
     "provider": "Vast.ai",
     "gpu": "RTX 4090",
-    "price": 0.4,
-    "region": "Global"
+    "price": 0.5,
+    "region": "Global",
+    "notes": "Lowest available price"
   },
   {
     "provider": "Lambda",
     "gpu": "RTX 4090",
-    "price": 0.5,
-    "region": "us"
+    "price": 0.75,
+    "region": "us-east-1"
   },
   {
     "provider": "AWS",
@@ -536,8 +543,8 @@
   {
     "provider": "AWS",
     "gpu": "RTX 4090",
-    "price": 1.5,
-    "region": "US"
+    "price": null,
+    "region": null
   },
   {
     "provider": "Lambda Labs",
