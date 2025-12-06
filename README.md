@@ -38,13 +38,14 @@ Estimating real-time energy consumption of AI data centers:
 
 ## 🚀 Features
 
-### 🤖 Quad-AI Intelligence Consortium
+### 🤖 Penta-AI Intelligence Consortium
 A self-evolving AI team that collaborates to gather, verify, and analyze market data:
 
-- **🧠 Qwen (The Architect)**: Plannig & Orchestration. Defines search strategies and coordinates the team.
-- **🎯 DeepSeek (The Hunter)**: Deep Web Mining. Uses reasoning capabilities to extract precise pricing data from complex sources.
-- **🔎 Kimi (The Researcher)**: Verification & Fact-Checking. Cross-references data with news and official docs to ensure accuracy.
-- **📊 GLM-4 (The Analyst)**: Market Insight & Synthesis. Uses **standalone web search** to analyze trends and generate "Cyberpunk-style" market briefings.
+- **🧠 Qwen (The Architect)**: **Hardware Price Discovery**. Scans global cloud providers (AWS, Azure, RunPod, etc.) to fetch real-time GPU rental prices.
+- **🎯 DeepSeek (The Hunter)**: **Token Economics & Industry Index**. Tracks LLM API costs, calculates the *AI Prosperity Index*, and generates deep market insights.
+- **🔎 Kimi (The Researcher)**: **Energy & Real-Time Data**. Fetches global AI energy consumption data and performs **Real-time Exchange Rate Search** to ensure financial accuracy.
+- **⚖️ MiniMax (The Strategist)**: **Strategic Audit & Dashboard**. Conducts cross-verification of data logic (e.g., matching GPU prices with energy load) and generates rolling dashboard headlines.
+- **📊 GLM-4 (The Analyst)**: **Reserve Analyst**. Standby unit for additional market synthesis and backup validation.
 
 ### 🛡️ Modular & Resilient Architecture
 - **Dependency Inversion**: Abstract `BaseAgent` interface allows hot-swapping AI models like changing players in a game.
@@ -74,26 +75,28 @@ A self-evolving AI team that collaborates to gather, verify, and analyze market 
 ### Backend & AI Core
 - **Python 3.x**: Data processing and orchestration
 - **AI Providers**:
-  - **Alibaba Cloud DashScope**: Qwen-Max, DeepSeek-R1
-  - **Moonshot AI**: Kimi
-  - **Zhipu AI**: GLM-4.6 (with Web Search)
+  - **Alibaba Cloud DashScope**: Qwen-Max, DeepSeek-R1, Kimi (via compat)
+  - **MiniMax**: Babababa (Strategist)
+  - **Zhipu AI**: GLM-4.6
+- **Real-Time Search**: Kimi (via Moonshot/DashScope) for Live Exchange Rates
 
 ### Data Architecture
 ```
-┌─────────────────────────────────────────┐
-│         AI Consortium Layer             │
-│  Qwen + DeepSeek + Kimi + GLM           │
-└──────────────┬──────────────────────────┘
-               ↓
-┌─────────────────────────────────────────┐
-│      Data Integration Layer             │
-│  Smart Merging + Deduplication          │
-└──────────────┬──────────────────────────┘
-               ↓
-┌─────────────────────────────────────────┐
-│   Market Insight Generation             │
-│  GLM-4 Analyst (Web Search Enabled)     │
-└─────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                  AI Consortium Layer                        │
+│  Qwen (GPU) + DeepSeek (Token/Index) + Kimi (Energy/Rate)   │
+│              + MiniMax (Audit/Dashboard)                    │
+└──────────────────────────┬──────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────────┐
+│                 Data Integration Layer                      │
+│        Smart Merging + Deduplication + Validation           │
+└──────────────────────────┬──────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────────┐
+│               Market Insight Generation                     │
+│    DeepSeek (Market Pulse) + MiniMax (Rolling Headlines)    │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ### Deployment
@@ -123,7 +126,10 @@ Create a `.env.local` file in the root directory or export env vars:
 # Required: DashScope API Key (for Qwen + DeepSeek + Kimi via DashScope)
 DASHSCOPE_API_KEY=sk-your-dashscope-key-here
 
-# Required: Zhipu AI API Key (for GLM Analyst)
+# Required: MiniMax API Key (for Strategist)
+MINIMAX_API_KEY=your-minimax-key-here
+
+# Optional: Zhipu AI API Key (for GLM Analyst)
 ZHIPU_API_KEY=your-zhipu-key-here
 ```
 
