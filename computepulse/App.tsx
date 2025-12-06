@@ -188,8 +188,8 @@ function App() {
     // Initial fetch
     fetchRealData();
 
-    // Poll every 5 minutes (300,000 ms)
-    const interval = setInterval(fetchRealData, 300000);
+    // Poll every 60 seconds (Testing Mode)
+    const interval = setInterval(fetchRealData, 60000);
     return () => clearInterval(interval);
   }, []);
 
