@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply improves with normalized lead times, easing capex risk and stabilizing deployment schedules."
+    "text": "H100 pricing at $3.34/hr is stabilizing as capacity expansions and improved US-East supply reduce chip scarcity, easing capex concerns for new deployments."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API price wars compress input-token rates as efficiency-focused models intensify competition."
+    "text": "DeepSeek's $1.31/1M token input pricing reflects intensified API price wars, driving rapid model distillation and efficiency gains."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Grid strain from 160 TWh annual AI load accelerates nuclear baseload commitments and grid interconnection upgrades."
+    "text": "Kimi reports a 160 TWh annual load, highlighting grid strain that pushes utilities toward nuclear baseload and carbon\u2011neutral strategies."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Optimistic but cautious sentiment persists as growth outpaces cost discipline, with consolidation signaling bubble risk alongside sustainability concerns."
+    "text": "GLM sees market sentiment turning cautious amid bubble warnings, with growth now reliant on sustainable AI infrastructure investments."
   }
 }
