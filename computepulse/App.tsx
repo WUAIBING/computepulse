@@ -70,72 +70,55 @@ function App() {
     localStorage.setItem('computepulse-theme', newTheme);
   };
 
-  // Initialize Data
+  // Initialize Data & Polling
   useEffect(() => {
     const fetchRealData = async () => {
       try {
-        // 1. Fetch GPU Prices
-        // Use special Vite public path resolution
-        // In Vite/GH Pages, files in 'public/data' are served at '/computepulse/data/...' or './data/...'
-        // We'll try a robust approach: use import.meta.env.BASE_URL
         const baseUrl = import.meta.env.BASE_URL;
-
-        // Debug logging for GitHub Pages troubleshooting
-        console.log('[ComputePulse] Base URL:', baseUrl);
-        console.log('[ComputePulse] Environment mode:', import.meta.env.MODE);
-
-        // Ensure baseUrl ends with '/'
         const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
-        console.log('[ComputePulse] Clean base URL for data fetching:', cleanBaseUrl);
+        // Add timestamp to prevent caching
+        const timestamp = new Date().getTime();
         
-        console.log(`[ComputePulse] Fetching GPU prices from: ${cleanBaseUrl}data/gpu_prices.json`);
-        const gpuResponse = await fetch(`${cleanBaseUrl}data/gpu_prices.json`);
+        console.log(`[ComputePulse] Fetching fresh data (ts=${timestamp})...`);
 
+        // 1. Fetch GPU Prices
+        const gpuResponse = await fetch(`${cleanBaseUrl}data/gpu_prices.json?t=${timestamp}`);
         if (gpuResponse.ok) {
-          console.log(`[ComputePulse] GPU prices loaded successfully, status: ${gpuResponse.status}`);
           const realPrices = await gpuResponse.json();
-          console.log(`[ComputePulse] GPU prices data count: ${realPrices?.length || 0}`);
-
           if (realPrices && realPrices.length > 0) {
             const mappedData: ComputeProvider[] = realPrices.map((item: any, index: number) => ({
               id: `real-${index}`,
               name: item.provider,
               region: item.region || 'US-East',
               pricePerHour: item.price,
-              availability: 95, // Default availability
+              availability: 95, 
               gpuType: item.gpu.includes('H100') ? 'NVIDIA H100' : (item.gpu.includes('A100') ? 'NVIDIA A100' : 'NVIDIA V100'),
               lastUpdated: new Date().toISOString()
             }));
             const validatedData = mappedData.filter(d => !isNaN(d.pricePerHour) && d.pricePerHour > 0);
-            console.log(`[ComputePulse] Valid GPU data items: ${validatedData.length}`);
-
+            
             if (validatedData.length > 0) {
               setData(validatedData);
-              console.log('[ComputePulse] GPU data set successfully');
-            } else {
-              console.warn('[ComputePulse] No valid GPU data after validation');
-              setData(generateMockData());
+              
+              // Calculate Metrics based on REAL data
+              const avgPrice = validatedData.reduce((acc, c) => acc + c.pricePerHour, 0) / validatedData.length;
+              setAvgSpotPriceUSD(avgPrice);
+              
+              const prices = validatedData.map(d => d.pricePerHour);
+              const mean = prices.reduce((a, b) => a + b, 0) / prices.length;
+              const variance = prices.reduce((a, b) => a + Math.pow(b - mean, 2), 0) / prices.length;
+              const stdDev = Math.sqrt(variance);
+              const calculatedCvix = mean > 0 ? (stdDev / mean) * 100 : 0;
+              setCvix(calculatedCvix);
             }
-          } else {
-            console.warn('[ComputePulse] GPU prices data empty or invalid');
-            setData(generateMockData());
           }
-        } else {
-          console.error(`[ComputePulse] Failed to load GPU prices: ${gpuResponse.status} ${gpuResponse.statusText}`);
-          setData(generateMockData());
         }
 
         // 2. Fetch Token Prices
-        console.log(`[ComputePulse] Fetching token prices from: ${cleanBaseUrl}data/token_prices.json`);
-        const tokenResponse = await fetch(`${cleanBaseUrl}data/token_prices.json`);
-
+        const tokenResponse = await fetch(`${cleanBaseUrl}data/token_prices.json?t=${timestamp}`);
         if (tokenResponse.ok) {
-            console.log(`[ComputePulse] Token prices loaded successfully, status: ${tokenResponse.status}`);
             const realTokens = await tokenResponse.json();
-            console.log(`[ComputePulse] Token prices data count: ${realTokens?.length || 0}`);
-
             if (realTokens && realTokens.length > 0) {
-                // Filter out entries with null prices and map to TokenProvider format
                 const mappedTokens: TokenProvider[] = realTokens
                     .filter((item: any) => item.input_price !== null && item.output_price !== null)
                     .map((item: any, index: number) => ({
@@ -144,174 +127,53 @@ function App() {
                         provider: item.provider,
                         inputCost: item.input_price,
                         outputCost: item.output_price,
-                        benchmark: 85 + Math.random() * 10, // Default benchmark score (85-95), TODO: fetch real MMLU scores
-                        latency: Math.floor(Math.random() * 50) + 20,
+                        benchmark: 85, // Placeholder, would be fetched in a real scenario
+                        latency: 50, // Placeholder
                         isOpenSource: false,
                         lastUpdated: new Date().toISOString()
                     }));
                 
                 if (mappedTokens.length > 0) {
                     setTokenData(mappedTokens);
-                    console.log(`[ComputePulse] Token data set successfully: ${mappedTokens.length} models`);
-                } else {
-                    console.warn('[ComputePulse] All token prices were null, using mock data');
-                    setTokenData(generateMockTokenData());
                 }
-            } else {
-                console.warn('[ComputePulse] Token prices data empty or invalid');
-                setTokenData(generateMockTokenData());
             }
-        } else {
-            console.error(`[ComputePulse] Failed to load token prices: ${tokenResponse.status} ${tokenResponse.statusText}`);
-            setTokenData(generateMockTokenData());
         }
 
         // 3. Fetch Grid Load
-        console.log(`[ComputePulse] Fetching grid load from: ${cleanBaseUrl}data/grid_load.json`);
-        const gridResponse = await fetch(`${cleanBaseUrl}data/grid_load.json`);
-
+        const gridResponse = await fetch(`${cleanBaseUrl}data/grid_load.json?t=${timestamp}`);
         if (gridResponse.ok) {
-           console.log(`[ComputePulse] Grid load loaded successfully, status: ${gridResponse.status}`);
            const gridData = await gridResponse.json();
-           console.log("[ComputePulse] Grid data:", gridData);
-
            if (gridData) {
-             if (gridData.active_gpu_est) {
-               setActiveGpus(gridData.active_gpu_est);
-               console.log(`[ComputePulse] Active GPUs set: ${gridData.active_gpu_est}`);
-             }
-             if (gridData.kwh_price) {
-               setKwhPrice(gridData.kwh_price);
-               console.log(`[ComputePulse] kWh price set: ${gridData.kwh_price}`);
-             }
-             if (gridData.annual_twh) {
-               setAnnualTWh(gridData.annual_twh);
-               console.log(`[ComputePulse] Annual TWh set: ${gridData.annual_twh}`);
-             }
-           } else {
-             console.warn('[ComputePulse] Grid load data is null or undefined');
+             if (gridData.active_gpu_est) setActiveGpus(gridData.active_gpu_est);
+             if (gridData.kwh_price) setKwhPrice(gridData.kwh_price);
+             if (gridData.annual_twh) setAnnualTWh(gridData.annual_twh);
            }
-        } else {
-          console.error(`[ComputePulse] Failed to load grid load: ${gridResponse.status} ${gridResponse.statusText}`);
         }
 
         // 4. Fetch Annual Energy Data
-        console.log(`[ComputePulse] Fetching annual energy data from: ${cleanBaseUrl}data/annual_energy.json`);
-        const annualResponse = await fetch(`${cleanBaseUrl}data/annual_energy.json`);
-
+        const annualResponse = await fetch(`${cleanBaseUrl}data/annual_energy.json?t=${timestamp}`);
         if (annualResponse.ok) {
-           console.log(`[ComputePulse] Annual energy data loaded successfully, status: ${annualResponse.status}`);
            const annualData = await annualResponse.json();
-           console.log("[ComputePulse] Annual energy data:", annualData);
-
            if (annualData && Array.isArray(annualData) && annualData.length > 0) {
              setAnnualEnergyData(annualData);
-             console.log(`[ComputePulse] Annual energy data set: ${annualData.length} years`);
-           } else {
-             console.warn('[ComputePulse] Annual energy data is empty or invalid');
            }
-        } else {
-          console.error(`[ComputePulse] Failed to load annual energy data: ${annualResponse.status} ${annualResponse.statusText}`);
         }
 
       } catch (e) {
-        console.error("[ComputePulse] Critical error fetching real data:", e);
-        console.warn("[ComputePulse] Falling back to mock data due to critical error");
-        setData(generateMockData());
-        setTokenData(generateMockTokenData());
+        console.error("[ComputePulse] Error fetching real data:", e);
+        // No mock fallback - show empty or stale state
       }
     };
 
+    // Initial fetch
     fetchRealData();
-  }, []);
 
-  // Simulate Live Updates & History Tracking
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const timeLabel = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute:'2-digit', second:'2-digit' });
-
-      // 1. Update Compute Data
-      setData(prevData => {
-        const newData = prevData.map(item => {
-          if (Math.random() > 0.7) {
-            const change = (Math.random() * 0.1) - 0.05;
-            return {
-              ...item,
-              pricePerHour: Math.max(0.1, parseFloat((item.pricePerHour + change).toFixed(3))),
-              lastUpdated: now.toISOString()
-            };
-          }
-          return item;
-        });
-
-        const avgPrice = newData.length > 0 ? newData.reduce((acc, c) => acc + c.pricePerHour, 0) / newData.length : 0;
-        setAvgSpotPriceUSD(avgPrice); 
-        
-        const prices = newData.map(d => d.pricePerHour);
-        const mean = prices.length > 0 ? prices.reduce((a, b) => a + b, 0) / prices.length : 0;
-        const variance = prices.length > 0 ? prices.reduce((a, b) => a + Math.pow(b - mean, 2), 0) / prices.length : 0;
-        const stdDev = Math.sqrt(variance);
-        const calculatedCvix = mean > 0 ? (stdDev / mean) * 100 : 0;
-        
-        setCvix(calculatedCvix);
-
-        setComputeHistory(prev => {
-          const newHistory = [...prev, { time: timeLabel, price: avgPrice }];
-          return newHistory.slice(-20);
-        });
-
-        return newData;
-      });
-
-      // 2. Update Token Data
-      setTokenData(prevData => {
-         const newData = prevData.map(item => {
-           if (Math.random() > 0.9) {
-             const change = (Math.random() * 0.05) - 0.025;
-             return {
-               ...item,
-               inputCost: parseFloat((item.inputCost + change).toFixed(4)),
-               lastUpdated: now.toISOString()
-             }
-           }
-           return item;
-         });
-
-         const avgInputCost = newData.reduce((acc, t) => acc + t.inputCost, 0) / newData.length;
-         
-         setTokenHistory(prev => {
-            const newHistory = [...prev, { time: timeLabel, price: avgInputCost }];
-            return newHistory.slice(-20);
-         });
-
-         return newData;
-      });
-
-      // 3. Fluctuate Active GPU Count
-      setActiveGpus(prev => {
-         // const fluctuation = Math.floor((Math.random() * 1000) - 500); 
-         // const newCount = prev + fluctuation;
-         const newCount = prev; // Keep stable for now, using real data
-         
-         // Calculate Grid Load (GW)
-         // Watts = Count * Avg TDP * PUE
-         // GW = Watts / 1e9
-         const totalWatts = newCount * MACRO_CONSTANTS.AVG_TDP_WATTS * MACRO_CONSTANTS.GLOBAL_PUE;
-         const gw = totalWatts / 1e9;
-
-         setGridLoadHistory(prevHist => {
-            const newHistory = [...prevHist, { time: timeLabel, price: gw }];
-            return newHistory.slice(-20);
-         });
-
-         return newCount;
-      });
-
-    }, 3000); 
-
+    // Poll every 5 minutes (300,000 ms)
+    const interval = setInterval(fetchRealData, 300000);
     return () => clearInterval(interval);
   }, []);
+
+  // REMOVED: Simulation useEffect (setInterval with random fluctuations)
 
   const dominanceData = [
     { name: 'NVIDIA H100', pct: 40 },
