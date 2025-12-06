@@ -322,9 +322,8 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
                        </div>
                     </div>
                     
-                    {/* Name & Confidence */}
+                    {/* Name & Confidence - Removed Name as per request */}
                     <div className="mt-1 md:mt-2 text-center">
-                      <div className={`text-[10px] md:text-xs font-bold ${isActive ? 'text-white' : 'text-gray-500'}`}>{model.name}</div>
                       <div className={`text-[8px] md:text-[10px] font-mono ${isActive ? 'text-neon-green' : 'text-gray-600'}`}>{model.confidence}%</div>
                     </div>
 
@@ -383,24 +382,18 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
 
                         {/* Message Bubble */}
                         <div className={`flex flex-col ${isSystem ? 'items-end' : 'items-start'}`}>
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className={`text-[10px] font-bold ${isSystem ? 'text-indigo-400' : getAgentColor(log.agent)}`}>
-                              {log.agent === 'System' ? 'ComputePulse' : log.agent}
-                            </span>
-                            <span className="text-[9px] text-gray-500 font-mono">
-                              {formatLogTime(log.timestamp)}
-                            </span>
-                          </div>
-                          
                           <div className={`
-                            px-3 py-2 rounded-lg text-xs leading-relaxed border backdrop-blur-sm shadow-sm
+                            px-3 py-2 rounded-lg text-xs leading-relaxed border backdrop-blur-sm shadow-sm min-w-[120px]
                             ${isSystem 
                               ? 'bg-indigo-500/10 border-indigo-500/20 text-gray-200 rounded-tr-none' 
                               : 'bg-gray-800/40 border-gray-700/50 text-gray-300 rounded-tl-none'}
                             ${log.type === 'warning' ? 'border-yellow-500/30 bg-yellow-500/5' : ''}
                             ${log.type === 'success' ? 'border-emerald-500/30 bg-emerald-500/5' : ''}
                           `}>
-                             {translateLogMessage(log.message, language)}
+                             <div className="break-words">{translateLogMessage(log.message, language)}</div>
+                             <div className={`text-[9px] opacity-40 mt-1 font-mono select-none text-right`}>
+                               {formatLogTime(log.timestamp)}
+                             </div>
                           </div>
                         </div>
                       </div>
