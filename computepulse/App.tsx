@@ -233,20 +233,6 @@ function App() {
 
           {/* Settings Row - Organized on Mobile */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-stretch sm:items-center">
-            {/* Currency Selector */}
-            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} px-3 py-2`}>
-              <span className={`${themeClasses.textMuted} text-xs mr-2`}>{t.unit}</span>
-              <select 
-                value={currencyCode} 
-                onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
-                className={`bg-transparent ${themeClasses.text} text-xs font-mono font-bold focus:outline-none cursor-pointer flex-1`}
-              >
-                {CURRENCIES.map((c) => (
-                  <option key={c.code} value={c.code} className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>{c.code} ({c.symbol})</option>
-                ))}
-              </select>
-            </div>
-
             {/* Language Toggle */}
             <div className={`flex ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} p-1`}>
               <button 
@@ -261,6 +247,19 @@ function App() {
               >
                 EN
               </button>
+            </div>
+
+            {/* Currency Selector */}
+            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} px-3 py-2`}>
+              <select 
+                value={currencyCode} 
+                onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
+                className={`bg-transparent ${themeClasses.text} text-xs font-mono font-bold focus:outline-none cursor-pointer flex-1`}
+              >
+                {CURRENCIES.map((c) => (
+                  <option key={c.code} value={c.code} className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>{c.code} ({c.symbol})</option>
+                ))}
+              </select>
             </div>
 
             {/* Verify Data Button */}

@@ -135,23 +135,8 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
         <div className="flex justify-between items-start mb-3">
            <div className="flex items-center gap-2">
              <h2 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider`}>{t.gcciTitle}</h2>
-             <div 
-                className="relative overflow-visible group"
-              >
-                <svg className="w-4 h-4 text-gray-500 cursor-help hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                
-                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
-                      <div className="text-neon-blue font-bold text-sm mb-2">{t.gcciMethodology}</div>
-                      <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
-                        {t.gcciDesc}
-                      </p>
-                      <div className="space-y-1 text-xs">
-                        <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.globalEnergyRate}:</span> <span>${effectiveKwhPrice.toFixed(3)}/kWh</span></div>
-                        <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.hardwareAmort}:</span> <span>${MACRO_CONSTANTS.HARDWARE_AMORTIZATION_HR}/{language === 'CN' ? '小时' : 'hr'}</span></div>
-                      </div>
-                   </div>
+             <div className={`flex items-center justify-center w-4 h-4 rounded-full border ${theme === 'dark' ? 'border-gray-600 text-gray-400' : 'border-gray-400 text-gray-600'} text-[10px] font-mono`}>
+               1
              </div>
            </div>
            <div className="flex items-baseline gap-1">
@@ -193,19 +178,8 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
         <div className="flex justify-between items-start mb-3">
            <div className="flex items-center gap-2">
              <h2 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider`}>{t.tokenPriceIndex}</h2>
-             <div 
-                className="relative overflow-visible group"
-              >
-                <svg className="w-4 h-4 text-gray-500 cursor-help hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                
-                  <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
-                    <div className="text-neon-purple font-bold text-sm mb-2">{t.tokenMethodology}</div>
-                    <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
-                      {t.tokenDesc}
-                    </p>
-                  </div>
+             <div className={`flex items-center justify-center w-4 h-4 rounded-full border ${theme === 'dark' ? 'border-gray-600 text-gray-400' : 'border-gray-400 text-gray-600'} text-[10px] font-mono`}>
+               2
              </div>
            </div>
            <div className="flex items-baseline gap-1">
@@ -259,26 +233,8 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
         <div className="flex justify-between items-start mb-3">
            <div className="flex items-center gap-2">
              <h2 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider`}>{t.gaglTitle}</h2>
-             <div 
-                className="relative overflow-visible group"
-              >
-                <svg className="w-4 h-4 text-gray-500 cursor-help hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                
-                   <div className={`absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-2 w-72 max-w-[calc(100vw-2rem)] ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
-                      <div className="text-amber-500 font-bold text-sm mb-2">{t.energyModel}</div>
-                      <p className={`text-xs ${themeClasses.textMuted} mb-3 leading-relaxed`}>
-                        {t.energyDesc}
-                      </p>
-                      <div className={`font-mono ${theme === 'dark' ? 'bg-gray-900 border-gray-800' : 'bg-gray-100 border-gray-300'} p-2 rounded border text-xs mb-2`}>
-                         Load = GPUs × TDP × PUE
-                      </div>
-                      <div className="space-y-1 text-xs">
-                        <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.activeGPUs}:</span> <span>{activeGpus.toLocaleString()}</span></div>
-                        <div className="flex justify-between"><span className={themeClasses.textMuted}>{t.avgTDP}:</span> <span>{MACRO_CONSTANTS.AVG_TDP_WATTS}W</span></div>
-                      </div>
-                   </div>
+             <div className={`flex items-center justify-center w-4 h-4 rounded-full border ${theme === 'dark' ? 'border-gray-600 text-gray-400' : 'border-gray-400 text-gray-600'} text-[10px] font-mono`}>
+               3
              </div>
            </div>
            <div className="flex items-baseline gap-1">
@@ -321,17 +277,8 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
         <div className="flex justify-between items-start mb-3">
            <div className="flex items-center gap-2">
              <h2 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider`}>AIPI Index</h2>
-             <div className="relative overflow-visible group">
-                <svg className="w-4 h-4 text-gray-500 cursor-help hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                   <div className={`absolute right-0 bottom-full mb-2 w-64 ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
-                      <div className="text-cyan-500 font-bold text-sm mb-2">AI Industry Prosperity Index</div>
-                      <p className={`text-xs ${themeClasses.textMuted} mb-2 leading-relaxed`}>
-                        {language === 'CN' ? '综合 GPU 租赁价格、巨头 Capex 支出与模型发布频率的实时指数。' : 'Real-time index synthesizing GPU rental prices, Giant Capex spend, and model release frequency.'}
-                      </p>
-                      <div className="text-[10px] text-gray-500">Source: GLM Analysis</div>
-                   </div>
+             <div className={`flex items-center justify-center w-4 h-4 rounded-full border ${theme === 'dark' ? 'border-gray-600 text-gray-400' : 'border-gray-400 text-gray-600'} text-[10px] font-mono`}>
+               4
              </div>
            </div>
            <div className="flex items-baseline gap-1">
