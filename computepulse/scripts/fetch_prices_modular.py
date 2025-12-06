@@ -25,6 +25,7 @@ GRID_FILE = os.path.join(DATA_DIR, 'grid_load.json')
 LOG_FILE = os.path.join(DATA_DIR, 'system_logs.json')
 HISTORY_FILE = os.path.join(os.path.dirname(DATA_DIR), '..', 'history_data.json')
 INDEX_FILE = os.path.join(DATA_DIR, 'industry_index.json')
+INSIGHTS_FILE = os.path.join(DATA_DIR, 'dashboard_insights.json')
 
 # Initialize Agents
 print(f"[{datetime.now()}] Initializing AI Consortium Agents...")
@@ -351,6 +352,61 @@ def generate_industry_index():
     except Exception as e:
         print(f"Index Error: {e}")
 
+def generate_dashboard_insights():
+    """Generate agent-specific insights for dashboard cards using MiniMax (The Strategist)"""
+    print(f"[{datetime.now()}] Task: Dashboard Insights (MiniMax)")
+    
+    try:
+        # Context
+        with open(GPU_FILE, 'r', encoding='utf-8') as f: gpu_data = json.load(f)
+        with open(TOKEN_FILE, 'r', encoding='utf-8') as f: token_data = json.load(f)
+        with open(GRID_FILE, 'r', encoding='utf-8') as f: grid_data = json.load(f)
+        
+        avg_gpu = sum([d['price'] for d in gpu_data])/len(gpu_data) if gpu_data else 0
+        avg_token = sum([d['input_price'] for d in token_data])/len(token_data) if token_data else 0
+        
+        prompt = f"""
+        You are MiniMax, the Strategist. 
+        
+        Task: Generate 3 distinct, professional one-sentence insights for the dashboard cards, roleplaying as specific agents.
+        
+        Data Context:
+        - Hardware (Qwen): Avg H100 Price ${avg_gpu:.2f}/hr. 
+        - Tokens (DeepSeek): Avg Input Price ${avg_token:.2f}/1M.
+        - Energy (Kimi): Annual Load {grid_data.get('annual_twh', 'N/A')} TWh.
+        
+        Requirements:
+        1. GCCI (Hardware/Qwen): Focus on supply chain, chip availability, or capex.
+        2. GTPI (Tokens/DeepSeek): Focus on API price wars, efficiency, or model competition.
+        3. GAGL (Energy/Kimi): Focus on grid strain, nuclear adoption, or carbon footprint.
+        
+        Output JSON ONLY:
+        {{
+            "gcci": {{ "agent": "Qwen", "text": "H100 supply stabilizes as US-East availability improves." }},
+            "gtpi": {{ "agent": "DeepSeek", "text": "Token costs plummeting due to aggressive model distillation." }},
+            "gagl": {{ "agent": "Kimi", "text": "Nuclear baseload becoming critical for new GW-scale clusters." }}
+        }}
+        """
+        
+        append_log("MiniMax", "Coordinating agent insights...", "action")
+        res = strategist.generate(prompt)
+        
+        # Strip <thinking> if present (MiniMax might output it)
+        if res:
+            res = re.sub(r'<thinking>.*?</thinking>', '', res, flags=re.DOTALL).strip()
+            
+        data = clean_and_parse_json(res)
+        
+        if data and 'gcci' in data:
+            with open(INSIGHTS_FILE, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2)
+            print("Dashboard Insights Saved")
+        else:
+            print("Failed to generate Dashboard Insights")
+            
+    except Exception as e:
+        print(f"Insights Error: {e}")
+
 if __name__ == "__main__":
     # Ensure data dir exists
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -362,6 +418,7 @@ if __name__ == "__main__":
         validate_and_fix()
         generate_market_insight()
         generate_industry_index()
+        generate_dashboard_insights()
     except Exception as e:
         print(f"Critical Error: {e}")
         append_log("System", f"Critical Failure: {str(e)}", "warning")

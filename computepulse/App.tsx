@@ -42,6 +42,7 @@ function App() {
   const [annualTWh, setAnnualTWh] = useState<number>(0); 
   const [avgSpotPriceUSD, setAvgSpotPriceUSD] = useState<number>(0);
   const [industryIndex, setIndustryIndex] = useState<{score: number, trend: string, summary: string} | null>(null);
+  const [dashboardInsights, setDashboardInsights] = useState<any>(null);
 
   const [showCalcModal, setShowCalcModal] = useState(false);
   const [calcModalTab, setCalcModalTab] = useState<'GPU' | 'TOKEN'>('GPU');
@@ -169,6 +170,15 @@ function App() {
            }
         }
 
+        // 6. Fetch Dashboard Insights
+        const insightsResponse = await fetch(`${cleanBaseUrl}data/dashboard_insights.json?t=${timestamp}`);
+        if (insightsResponse.ok) {
+           const insightsData = await insightsResponse.json();
+           if (insightsData) {
+             setDashboardInsights(insightsData);
+           }
+        }
+
       } catch (e) {
         console.error("[ComputePulse] Error fetching real data:", e);
         // No mock fallback - show empty or stale state
@@ -276,6 +286,7 @@ function App() {
             kwhPrice={kwhPrice}
             annualTWh={annualTWh}
             industryIndex={industryIndex}
+            dashboardInsights={dashboardInsights}
             currency={currency}
             language={language}
             theme={theme}

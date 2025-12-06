@@ -13,6 +13,11 @@ interface MacroDashboardProps {
   kwhPrice?: number;
   annualTWh?: number; 
   industryIndex?: { score: number; trend: string; summary: string } | null;
+  dashboardInsights?: {
+    gcci?: { agent: string; text: string };
+    gtpi?: { agent: string; text: string };
+    gagl?: { agent: string; text: string };
+  } | null;
   currency: CurrencyConfig;
   language: Language;
   theme: Theme;
@@ -25,10 +30,28 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
   kwhPrice,
   annualTWh,
   industryIndex,
+  dashboardInsights,
   currency,
   language,
   theme
 }) => {
+  // Styles for Marquee
+  const marqueeStyle = `
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+      animation: marquee 15s linear infinite;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    /* Pause on hover for readability */
+    .group:hover .animate-marquee {
+      animation-play-state: paused;
+    }
+  `;
+
   const {
     // showCostInfo, setShowCostInfo, // Removed state-based tooltip
     // showTokenInfo, setShowTokenInfo, // Removed state-based tooltip
@@ -74,7 +97,36 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
   const pctInput = 30;
   const pctOutput = 70;
 
+  // New Calculation: Token Generation Cost (H100 Reference)
+  // Throughput: ~3000 tokens/s = 10.8M tokens/hr
+  const REF_H100_THROUGHPUT_M_HR = 10.8; 
+  const estGenCostPer1M = avgSpotPrice / REF_H100_THROUGHPUT_M_HR;
+  const displayGenCost = (estGenCostPer1M * currency.rate).toFixed(3);
+
+  const renderInsightFooter = (insight: { agent: string, text: string } | undefined, defaultAgent: string, colorClass: string) => {
+    const agentName = insight?.agent || defaultAgent;
+    const text = insight?.text || (language === 'CN' ? '正在分析市场数据...' : 'Analyzing market data...');
+    
+    return (
+      <div className={`mt-3 pt-2 border-t ${theme === 'dark' ? 'border-gray-800' : 'border-gray-200'} flex flex-col gap-1 text-[10px] font-mono min-h-[40px] overflow-hidden`}>
+         <div className="flex justify-between items-center z-10">
+            <span className={`${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'} font-medium uppercase text-[9px] tracking-wider`}>Insight</span>
+            <span className={`${colorClass} font-bold flex items-center gap-1 uppercase`}>
+              {agentName}
+            </span>
+         </div>
+         <div className="relative w-full overflow-hidden h-4">
+            <div className={`absolute whitespace-nowrap animate-marquee ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+               {text}
+            </div>
+         </div>
+      </div>
+    );
+  };
+
   return (
+    <>
+    <style>{marqueeStyle}</style>
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
       
       {/* LEFT: GCCI (Financial Index) */}
@@ -130,6 +182,9 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
               <span className={`pl-2.5 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-800'}`}>Variable</span>
            </div>
         </div>
+        
+        {/* Insight Footer */}
+        {renderInsightFooter(dashboardInsights?.gcci, 'Qwen', 'text-purple-400')}
       </div>
 
       {/* MIDDLE: Token Price Index (GTPI) */}
@@ -166,7 +221,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
           <div style={{ width: `${pctOutput}%` }} className="bg-pink-500/80 hover:bg-pink-500 transition-colors" title="Output Cost"></div>
         </div>
         
-        <div className="grid grid-cols-2 gap-2 text-[10px] font-mono">
+        <div className="grid grid-cols-2 gap-2 text-[10px] font-mono mb-2">
            <div className="flex flex-col">
               <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'} flex items-center gap-1 whitespace-nowrap`}><div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div> {t.avgInput}</span>
               <span className={`pl-2.5 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-800'}`}>{currency.symbol}{(inputCost * currency.rate).toFixed(2)}</span>
@@ -177,8 +232,25 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
            </div>
         </div>
 
+        {/* NEW: Generation Cost Line */}
+        <div className={`pt-2 border-t ${theme === 'dark' ? 'border-gray-800' : 'border-gray-200'} flex justify-between items-center text-[10px] font-mono`}>
+           <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} flex items-center gap-1`}>
+             <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div>
+             Est. H100 Cost
+           </span>
+           <div className="text-right flex items-baseline gap-1">
+             <span className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-800'} font-bold`}>
+               {currency.symbol}{displayGenCost}
+             </span>
+             <span className="text-gray-500 text-[9px]">/ 1M</span>
+           </div>
+        </div>
+
         {/* Background Animation */}
         <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-neon-purple/5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        {/* Insight Footer */}
+        {renderInsightFooter(dashboardInsights?.gtpi, 'DeepSeek', 'text-blue-400')}
       </div>
 
       {/* RIGHT: GAGL (Physical Index) */}
@@ -238,6 +310,9 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
 
         {/* Background Animation */}
         <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        {/* Insight Footer */}
+        {renderInsightFooter(dashboardInsights?.gagl, 'Kimi', 'text-amber-500')}
       </div>
 
       {/* NEW: AI Industry Prosperity Index (AIPI) */}
@@ -273,15 +348,17 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
           <div style={{ width: industryIndex ? `${industryIndex.score}%` : '0%' }} className={`h-full transition-all duration-1000 ${industryIndex && industryIndex.score > 60 ? 'bg-cyan-500' : 'bg-yellow-500'}`}></div>
         </div>
         
-        <div className="flex flex-col gap-1 text-[10px] font-mono min-h-[40px]">
-           <div className="flex justify-between items-center">
+        <div className="flex flex-col gap-1 text-[10px] font-mono min-h-[40px] overflow-hidden">
+           <div className="flex justify-between items-center z-10">
               <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'}`}>Trend</span>
               <span className={`${industryIndex?.trend === 'up' ? 'text-emerald-400' : industryIndex?.trend === 'down' ? 'text-red-400' : 'text-gray-400'} uppercase font-bold flex items-center gap-1`}>
                 {industryIndex?.trend === 'up' ? '▲ BULLISH' : industryIndex?.trend === 'down' ? '▼ BEARISH' : '▶ NEUTRAL'}
               </span>
            </div>
-           <div className={`leading-tight mt-1 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-700'}`} title={industryIndex?.summary}>
-              {industryIndex ? industryIndex.summary : (language === 'CN' ? '正在分析资本支出数据...' : 'Analyzing Capex data...')}
+           <div className="relative w-full overflow-hidden h-4">
+              <div className={`absolute whitespace-nowrap animate-marquee ${theme === 'dark' ? 'text-gray-500' : 'text-gray-700'}`} title={industryIndex?.summary}>
+                 {industryIndex ? industryIndex.summary : (language === 'CN' ? '正在分析资本支出数据...' : 'Analyzing Capex data...')}
+              </div>
            </div>
         </div>
 
