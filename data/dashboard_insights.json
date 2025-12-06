@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply chain diversification in Southeast Asia drives chip availability back to pre-surge levels."
+    "text": "US-East H100 supply stabilizes, easing chip scarcity while capex remains elevated."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API pricing compression intensifies as efficiency-focused model architectures trigger competitive discounting."
+    "text": "DeepSeek token pricing near $1.44/M tokens fuels API price wars as efficiency gains compress margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Nuclear baseload capacity expansion becomes essential to support AI infrastructure's 160 TWh annual load surge."
+    "text": "Kimi's 130 TWh annual load strains grids, pushing operators toward nuclear baseload for stable, low-carbon power."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Consolidation wave indicates sector maturity as valuation discipline replaces speculative growth narratives."
+    "text": "AI sector sentiment turns cautious as capital concentrates on proven models, signaling a healthier, sustainable growth trajectory."
   }
 }
