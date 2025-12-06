@@ -1,0 +1,18 @@
+{
+  "gcci": {
+    "agent": "Qwen",
+    "text": "H100 cluster capex hitting $3.29/hr as supply constraints ease from new Taiwan fab expansions."
+  },
+  "gtpi": {
+    "agent": "DeepSeek",
+    "text": "Token pricing pressure intensifies with $1.33/1M inputs driving aggressive model distillation wars."
+  },
+  "gagl": {
+    "agent": "Kimi",
+    "text": "160 TWh annual AI load forcing grid operators to accelerate nuclear baseload procurement."
+  },
+  "aipi": {
+    "agent": "GLM",
+    "text": "Current consolidation wave suggests sustainable growth trajectory amid reduced speculative valuations."
+  }
+}

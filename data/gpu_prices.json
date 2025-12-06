@@ -3,8 +3,7 @@
     "provider": "AWS",
     "gpu": "H100",
     "price": 12.29,
-    "region": "us-east-1",
-    "notes": "p5.48xlarge instance (8x H100 GPUs at $98.32/hr)"
+    "region": "us-east-1"
   },
   {
     "provider": "Azure",
@@ -75,16 +74,14 @@
   {
     "provider": "RunPod",
     "gpu": "H100",
-    "price": 3.67,
-    "region": "US",
-    "notes": "H100 SXM5 80GB"
+    "price": 1.89,
+    "region": "US"
   },
   {
     "provider": "RunPod",
     "gpu": "A100",
-    "price": 1.79,
-    "region": "US",
-    "notes": "A100 80GB PCIe"
+    "price": 0.78,
+    "region": "US"
   },
   {
     "provider": "CoreWeave",
@@ -95,9 +92,8 @@
   {
     "provider": "AWS",
     "gpu": "A100",
-    "price": 5.12,
-    "region": "us-east-1",
-    "notes": "p4d.24xlarge instance (8x A100 GPUs at $40.96/hr)"
+    "price": 4.1,
+    "region": "us-east-1"
   },
   {
     "provider": "Google Cloud",
@@ -150,9 +146,8 @@
   {
     "provider": "Vast.ai",
     "gpu": "A100",
-    "price": 1.0,
-    "region": "US",
-    "notes": "Average spot price (range: $0.80-$1.50)"
+    "price": 0.75,
+    "region": "US"
   },
   {
     "provider": "CoreWeave",
@@ -193,9 +188,8 @@
   {
     "provider": "Lambda",
     "gpu": "H100",
-    "price": 2.99,
-    "region": "us-west-2",
-    "notes": "Standard on-demand pricing"
+    "price": 2.0,
+    "region": "us-east-1"
   },
   {
     "provider": "Google Cloud",
@@ -386,9 +380,8 @@
   {
     "provider": "Vast.ai",
     "gpu": "H100",
-    "price": 3.5,
-    "region": "US",
-    "notes": "Average spot price (range: $2.50-$4.50)"
+    "price": 1.75,
+    "region": "US"
   },
   {
     "provider": "\u817e\u8baf\u4e91",
@@ -459,54 +452,50 @@
   {
     "provider": "Lambda",
     "gpu": "A100",
-    "price": 1.99,
-    "region": "us-west-2",
-    "notes": "A100 80GB SXM4"
+    "price": 1.1,
+    "region": "us-east-1"
   },
   {
     "provider": "RunPod",
     "gpu": "RTX 4090",
-    "price": 0.89,
-    "region": "US",
-    "notes": "24GB VRAM"
+    "price": 0.3,
+    "region": "US"
   },
   {
     "provider": "Vast.ai",
     "gpu": "RTX 4090",
-    "price": 0.5,
-    "region": "US",
-    "notes": "Average spot price (range: $0.40-$0.60)"
+    "price": 0.3,
+    "region": "US"
   },
   {
     "provider": "Lambda",
     "gpu": "RTX 4090",
-    "price": 0.75,
-    "region": "us-west-2",
-    "notes": "Standard on-demand"
+    "price": 0.5,
+    "region": "us-east-1"
   },
   {
     "provider": "AWS",
     "gpu": "A100 80GB",
-    "price": 3.93,
+    "price": 5.12,
     "region": "us-east-1"
   },
   {
     "provider": "AWS",
     "gpu": "A100 40GB",
-    "price": 2.48,
+    "price": 4.1,
     "region": "us-east-1"
   },
   {
     "provider": "Lambda",
     "gpu": "A100 80GB",
-    "price": 1.99,
-    "region": "us-west-1"
+    "price": 1.4,
+    "region": "US"
   },
   {
     "provider": "Lambda",
     "gpu": "A100 40GB",
     "price": 1.1,
-    "region": "us-west-1"
+    "region": "US"
   },
   {
     "provider": "RunPod",
@@ -517,13 +506,13 @@
   {
     "provider": "RunPod",
     "gpu": "A100 80GB",
-    "price": 1.89,
+    "price": 1.4,
     "region": "US"
   },
   {
     "provider": "RunPod",
     "gpu": "A100 40GB",
-    "price": 1.09,
+    "price": 1.1,
     "region": "US"
   },
   {
@@ -535,13 +524,13 @@
   {
     "provider": "Vast.ai",
     "gpu": "A100 80GB",
-    "price": 1.1,
+    "price": 1.2,
     "region": "US"
   },
   {
     "provider": "Vast.ai",
     "gpu": "A100 40GB",
-    "price": 0.8,
+    "price": 0.9,
     "region": "US"
   },
   {
@@ -555,5 +544,23 @@
     "gpu": "RTX 4090",
     "price": 0.6,
     "region": "us-west-1"
+  },
+  {
+    "provider": "Lambda",
+    "gpu": "RTX4090",
+    "price": 0.5,
+    "region": "us-east-1"
+  },
+  {
+    "provider": "RunPod",
+    "gpu": "RTX4090",
+    "price": 0.6,
+    "region": "US"
+  },
+  {
+    "provider": "Vast.ai",
+    "gpu": "RTX4090",
+    "price": 0.4,
+    "region": "US"
   }
 ]
