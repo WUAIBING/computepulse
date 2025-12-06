@@ -21,10 +21,11 @@ function App() {
   
   // Currency, Language & Theme State
   const [currencyCode, setCurrencyCode] = useState<CurrencyCode>('USD');
+  const [availableCurrencies, setAvailableCurrencies] = useState<CurrencyConfig[]>(CURRENCIES);
   const [language, setLanguage] = useState<Language>('CN');
   const [theme, setTheme] = useState<Theme>('dark');
     
-  const currency = CURRENCIES.find(c => c.code === currencyCode) || CURRENCIES[0];
+  const currency = availableCurrencies.find(c => c.code === currencyCode) || availableCurrencies[0];
   const t = TRANSLATIONS[language];
   const themeClasses = getThemeClasses(theme);
 
@@ -179,6 +180,21 @@ function App() {
            }
         }
 
+        // 7. Fetch Real-time Exchange Rate
+        try {
+           const rateResponse = await fetch(`${cleanBaseUrl}data/exchange_rate.json?t=${timestamp}`);
+           if (rateResponse.ok) {
+              const rateData = await rateResponse.json();
+              if (rateData && rateData.rate) {
+                 setAvailableCurrencies(prev => prev.map(c => 
+                    c.code === 'CNY' ? { ...c, rate: rateData.rate } : c
+                 ));
+              }
+           }
+        } catch (e) {
+           console.warn("Failed to load exchange rate", e);
+        }
+
       } catch (e) {
         console.error("[ComputePulse] Error fetching real data:", e);
         // No mock fallback - show empty or stale state
@@ -256,7 +272,7 @@ function App() {
                 onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
                 className={`bg-transparent ${themeClasses.text} text-[10px] md:text-xs font-mono font-bold focus:outline-none cursor-pointer h-full`}
               >
-                {CURRENCIES.map((c) => (
+                {availableCurrencies.map((c) => (
                   <option key={c.code} value={c.code} className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>{c.code} ({c.symbol})</option>
                 ))}
               </select>

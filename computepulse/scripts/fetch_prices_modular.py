@@ -39,6 +39,7 @@ LOG_FILE = os.path.join(DATA_DIR, 'system_logs.json')
 HISTORY_FILE = os.path.join(os.path.dirname(DATA_DIR), '..', 'history_data.json')
 INDEX_FILE = os.path.join(DATA_DIR, 'industry_index.json')
 INSIGHTS_FILE = os.path.join(DATA_DIR, 'dashboard_insights.json')
+EXCHANGE_RATE_FILE = os.path.join(DATA_DIR, 'exchange_rate.json')
 
 # Initialize Agents
 print(f"[{datetime.now()}] Initializing AI Consortium Agents...")
@@ -440,6 +441,55 @@ def generate_dashboard_insights():
     except Exception as e:
         print(f"Insights Error: {e}")
 
+def fetch_exchange_rate():
+    """Fetch real-time USD to CNY exchange rate using DeepSeek"""
+    print(f"[{datetime.now()}] Task: Fetch Exchange Rate (DeepSeek)")
+    
+    try:
+        prompt = """
+        You are a financial data assistant.
+        Task: Search for the current real-time USD to CNY exchange rate.
+        
+        Output JSON ONLY:
+        {
+            "from": "USD",
+            "to": "CNY",
+            "rate": 7.25,
+            "timestamp": "2024-..."
+        }
+        """
+        
+        append_log("DeepSeek", "Fetching real-time exchange rates...", "action")
+        # Use hunter (DeepSeek)
+        res = hunter.generate(prompt)
+        
+        # Strip <thinking> if present
+        if res:
+            res = re.sub(r'<thinking>.*?</thinking>', '', res, flags=re.DOTALL).strip()
+            
+        data = clean_and_parse_json(res)
+        
+        if data and 'rate' in data:
+            with open(EXCHANGE_RATE_FILE, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2)
+            print(f"Exchange Rate Saved: 1 USD = {data['rate']} CNY")
+            append_log("System", f"Exchange rate updated: {data['rate']}", "success")
+        else:
+            print("Failed to fetch exchange rate, using default")
+            # Fallback
+            default_data = {
+                "from": "USD",
+                "to": "CNY", 
+                "rate": 7.25,
+                "timestamp": datetime.now().isoformat(),
+                "note": "Fallback default"
+            }
+            with open(EXCHANGE_RATE_FILE, 'w', encoding='utf-8') as f:
+                json.dump(default_data, f, indent=2)
+            
+    except Exception as e:
+        print(f"Exchange Rate Error: {e}")
+
 if __name__ == "__main__":
     # Ensure data dir exists
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -448,6 +498,7 @@ if __name__ == "__main__":
         fetch_gpu_prices()
         fetch_token_prices()
         fetch_grid_load()
+        fetch_exchange_rate()
         validate_and_fix()
         generate_market_insight()
         generate_industry_index()

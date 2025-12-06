@@ -122,16 +122,13 @@ export const CalculationModal: React.FC<CalculationModalProps> = ({ isOpen, onCl
             </div>
           ) : (
             <div className="space-y-4 sm:space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-4">
+              <div className="grid grid-cols-1 gap-3 sm:gap-4 mb-4">
                  <div className="bg-purple-900/20 border border-purple-800 rounded-lg p-3 sm:p-4 text-xs sm:text-sm text-purple-200">
                   <strong>{t.sviFormula}</strong>
                   <div className="mt-2 font-mono text-xs">
                     {t.sviFormulaDesc}<br/>
                     {t.higherBetter}
                   </div>
-                </div>
-                <div className="bg-gray-800 border border-gray-700 rounded-lg p-3 sm:p-4 text-xs sm:text-sm text-gray-300">
-                  <strong>{t.exchangeRateApplied}</strong> 1 USD = {currency.rate} {currency.code}
                 </div>
               </div>
 
