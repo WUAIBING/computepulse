@@ -39,8 +39,9 @@ function App() {
   // Macro Metrics
   const [activeGpus, setActiveGpus] = useState<number>(MACRO_CONSTANTS.EST_GLOBAL_ACTIVE_GPUS);
   const [kwhPrice, setKwhPrice] = useState<number>(MACRO_CONSTANTS.GLOBAL_KWH_PRICE);
-  const [annualTWh, setAnnualTWh] = useState<number>(0); // New state
+  const [annualTWh, setAnnualTWh] = useState<number>(0); 
   const [avgSpotPriceUSD, setAvgSpotPriceUSD] = useState<number>(0);
+  const [industryIndex, setIndustryIndex] = useState<{score: number, trend: string, summary: string} | null>(null);
 
   const [showCalcModal, setShowCalcModal] = useState(false);
   const [calcModalTab, setCalcModalTab] = useState<'GPU' | 'TOKEN'>('GPU');
@@ -159,6 +160,15 @@ function App() {
            }
         }
 
+        // 5. Fetch Industry Index
+        const indexResponse = await fetch(`${cleanBaseUrl}data/industry_index.json?t=${timestamp}`);
+        if (indexResponse.ok) {
+           const indexData = await indexResponse.json();
+           if (indexData && indexData.score) {
+             setIndustryIndex(indexData);
+           }
+        }
+
       } catch (e) {
         console.error("[ComputePulse] Error fetching real data:", e);
         // No mock fallback - show empty or stale state
@@ -260,15 +270,16 @@ function App() {
 
         {/* NEW MACRO DASHBOARD */}
         <MacroDashboard 
-          avgSpotPrice={avgSpotPriceUSD} 
-          activeGpus={activeGpus} 
-          tokenHistory={tokenHistory}
-          kwhPrice={kwhPrice}
-          annualTWh={annualTWh}
-          currency={currency}
-          language={language}
-          theme={theme}
-        />
+            avgSpotPrice={avgSpotPriceUSD} 
+            activeGpus={activeGpus} 
+            tokenHistory={tokenHistory}
+            kwhPrice={kwhPrice}
+            annualTWh={annualTWh}
+            industryIndex={industryIndex}
+            currency={currency}
+            language={language}
+            theme={theme}
+          />
 
         {/* AI Consortium Status */}
         <AIConsortiumStatus language={language} theme={theme} />

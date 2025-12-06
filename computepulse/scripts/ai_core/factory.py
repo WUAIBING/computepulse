@@ -1,5 +1,5 @@
 from .base_agent import BaseAgent
-from .providers import DashScopeAgent, DeepSeekAgent, KimiAgent, GLMAgent
+from .providers import DashScopeAgent, DeepSeekAgent, KimiAgent, GLMAgent, MiniMaxAgent
 
 class AgentFactory:
     @staticmethod
@@ -13,5 +13,7 @@ class AgentFactory:
             return KimiAgent("Kimi", "Researcher", **kwargs)
         elif p_type == "glm":
             return GLMAgent("GLM", "Analyst", **kwargs)
+        elif p_type == "minimax":
+            return MiniMaxAgent("MiniMax", "Strategist", **kwargs)
         else:
             raise ValueError(f"Unknown provider: {provider_type}")

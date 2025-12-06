@@ -161,6 +161,71 @@ class KimiAgent(BaseAgent):
             print(f"[{datetime.now()}] {self.name} Search Error: {e}")
             return None
 
+class MiniMaxAgent(BaseAgent):
+    """Agent implementation for MiniMax (HaiLuo) via OpenAI compatible API."""
+    
+    def __init__(self, name: str, role: str, model_name: str = "MiniMax-M2"):
+        super().__init__(name, role)
+        self.model_name = model_name
+        self.api_key = os.getenv('MINIMAX_API_KEY')
+        self.base_url = "https://api.minimaxi.com/v1"
+        self.client = None
+        if self.api_key and OpenAI:
+            self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+
+    def generate(self, prompt: str, system_prompt: Optional[str] = None) -> Optional[str]:
+        if not self.client:
+             print(f"[{datetime.now()}] {self.name} Error: Client not initialized (Missing MINIMAX_API_KEY?)")
+             return None
+        
+        try:
+            messages = []
+            if system_prompt: messages.append({'role': 'system', 'content': system_prompt})
+            messages.append({'role': 'user', 'content': prompt})
+            
+            # Enable reasoning_split to capture the "Interleaved Thinking"
+            completion = self.client.chat.completions.create(
+                model=self.model_name,
+                messages=messages,
+                extra_body={"reasoning_split": True},
+                stream=False
+            )
+            
+            message = completion.choices[0].message
+            content = message.content
+            
+            # Extract reasoning if available
+            reasoning = ""
+            # Check if reasoning_details exists in the message object
+            if hasattr(message, 'reasoning_details') and message.reasoning_details:
+                try:
+                    # It returns a list of items, usually the first one has the text
+                    # We need to handle both object access and dict access depending on SDK version
+                    details = message.reasoning_details
+                    if isinstance(details, list) and len(details) > 0:
+                        first_item = details[0]
+                        if hasattr(first_item, 'text'):
+                            reasoning = first_item.text
+                        elif isinstance(first_item, dict) and 'text' in first_item:
+                            reasoning = first_item['text']
+                except Exception as parse_err:
+                    print(f"[{datetime.now()}] {self.name} Reasoning Parse Error: {parse_err}")
+            
+            # If reasoning exists, embed it in the output so the caller can extract it
+            if reasoning:
+                return f"<thinking>{reasoning}</thinking>\n{content}"
+            
+            return content
+
+        except Exception as e:
+            print(f"[{datetime.now()}] {self.name} Gen Error: {e}")
+            return None
+            
+    def search(self, query: str) -> Optional[str]:
+        # MiniMax M2 is strong at reasoning, not necessarily web search tool native in this API wrapper
+        # We fallback to generate with a specific system prompt
+        return self.generate(query, system_prompt="You are a helpful assistant with strong reasoning capabilities.")
+
 class GLMAgent(BaseAgent):
     """Agent implementation for Zhipu GLM-4 (via OpenAI compatible API)."""
     

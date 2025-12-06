@@ -11,7 +11,8 @@ interface MacroDashboardProps {
   activeGpus: number;
   tokenHistory?: HistoricalDataPoint[];
   kwhPrice?: number;
-  annualTWh?: number; // Add this prop
+  annualTWh?: number; 
+  industryIndex?: { score: number; trend: string; summary: string } | null;
   currency: CurrencyConfig;
   language: Language;
   theme: Theme;
@@ -23,6 +24,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
   tokenHistory = [],
   kwhPrice,
   annualTWh,
+  industryIndex,
   currency,
   language,
   theme
@@ -73,7 +75,7 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
   const pctOutput = 70;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
       
       {/* LEFT: GCCI (Financial Index) */}
       <div className={`${themeClasses.panelBg} rounded-xl border ${themeClasses.border} p-5 relative overflow-hidden group hover:border-neon-blue/30 transition-colors`}>
@@ -236,6 +238,55 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
 
         {/* Background Animation */}
         <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      </div>
+
+      {/* NEW: AI Industry Prosperity Index (AIPI) */}
+      <div className={`${themeClasses.panelBg} rounded-xl border ${themeClasses.border} p-5 relative overflow-hidden group hover:border-cyan-500/30 transition-colors`}>
+        <div className="flex justify-between items-start mb-3">
+           <div className="flex items-center gap-2">
+             <h2 className={`${themeClasses.textMuted} text-xs font-bold uppercase tracking-wider`}>AIPI Index</h2>
+             <div className="relative overflow-visible group">
+                <svg className="w-4 h-4 text-gray-500 cursor-help hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                   <div className={`absolute right-0 bottom-full mb-2 w-64 ${theme === 'dark' ? 'bg-black/95 border-gray-700' : 'bg-white border-gray-300 shadow-xl'} border p-4 rounded-lg shadow-2xl z-50 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
+                      <div className="text-cyan-500 font-bold text-sm mb-2">AI Industry Prosperity Index</div>
+                      <p className={`text-xs ${themeClasses.textMuted} mb-2 leading-relaxed`}>
+                        {language === 'CN' ? '综合 GPU 租赁价格、巨头 Capex 支出与模型发布频率的实时指数。' : 'Real-time index synthesizing GPU rental prices, Giant Capex spend, and model release frequency.'}
+                      </p>
+                      <div className="text-[10px] text-gray-500">Source: GLM Analysis</div>
+                   </div>
+             </div>
+           </div>
+           <div className="flex items-baseline gap-1">
+             <span className={`text-2xl md:text-3xl font-mono font-bold tracking-tight ${industryIndex ? (industryIndex.score > 60 ? 'text-cyan-500' : industryIndex.score < 40 ? 'text-red-500' : 'text-yellow-500') : 'text-gray-600'}`}>
+               {industryIndex ? industryIndex.score : '--'}
+             </span>
+             <span className={`text-[10px] md:text-xs font-bold uppercase ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+               / 100
+             </span>
+           </div>
+        </div>
+        
+        {/* Sentiment Bar */}
+        <div className="flex w-full h-2 rounded-full overflow-hidden mb-3 bg-gray-700/30">
+          <div style={{ width: industryIndex ? `${industryIndex.score}%` : '0%' }} className={`h-full transition-all duration-1000 ${industryIndex && industryIndex.score > 60 ? 'bg-cyan-500' : 'bg-yellow-500'}`}></div>
+        </div>
+        
+        <div className="flex flex-col gap-1 text-[10px] font-mono min-h-[40px]">
+           <div className="flex justify-between items-center">
+              <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'}`}>Trend</span>
+              <span className={`${industryIndex?.trend === 'up' ? 'text-emerald-400' : industryIndex?.trend === 'down' ? 'text-red-400' : 'text-gray-400'} uppercase font-bold flex items-center gap-1`}>
+                {industryIndex?.trend === 'up' ? '▲ BULLISH' : industryIndex?.trend === 'down' ? '▼ BEARISH' : '▶ NEUTRAL'}
+              </span>
+           </div>
+           <div className={`leading-tight mt-1 truncate ${theme === 'dark' ? 'text-gray-500' : 'text-gray-700'}`} title={industryIndex?.summary}>
+              {industryIndex ? industryIndex.summary : (language === 'CN' ? '正在分析资本支出数据...' : 'Analyzing Capex data...')}
+           </div>
+        </div>
+
+        {/* Background Animation */}
+        <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
       </div>
 
     </div>

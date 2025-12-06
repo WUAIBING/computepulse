@@ -24,6 +24,7 @@ TOKEN_FILE = os.path.join(DATA_DIR, 'token_prices.json')
 GRID_FILE = os.path.join(DATA_DIR, 'grid_load.json')
 LOG_FILE = os.path.join(DATA_DIR, 'system_logs.json')
 HISTORY_FILE = os.path.join(os.path.dirname(DATA_DIR), '..', 'history_data.json')
+INDEX_FILE = os.path.join(DATA_DIR, 'industry_index.json')
 
 # Initialize Agents
 print(f"[{datetime.now()}] Initializing AI Consortium Agents...")
@@ -31,6 +32,7 @@ architect = AgentFactory.create("qwen")      # Qwen
 hunter = AgentFactory.create("deepseek")     # DeepSeek
 researcher = AgentFactory.create("kimi")     # Kimi
 analyst = AgentFactory.create("glm")         # GLM (The Analyst)
+strategist = AgentFactory.create("minimax")  # MiniMax (The Strategist/Auditor)
 
 # --- Helper Functions (Parsing & Validation) ---
 # [Reuse the robust parsing logic from optimized script]
@@ -179,22 +181,54 @@ def fetch_grid_load():
         print("Grid Data Validation Failed")
 
 def validate_and_fix():
-    """Data Quality Check using Kimi (The Researcher)"""
-    print(f"[{datetime.now()}] Task: Data Validation")
+    """Data Quality Check using MiniMax (The Strategist) with Interleaved Thinking"""
+    print(f"[{datetime.now()}] Task: Strategic Audit (MiniMax)")
     
-    # Load current data
     try:
+        # Load current data
         with open(GPU_FILE, 'r', encoding='utf-8') as f: gpu_data = json.load(f)
         with open(TOKEN_FILE, 'r', encoding='utf-8') as f: token_data = json.load(f)
-    except:
-        return
-
-    # We could send this data to Kimi for analysis, but for now we use local logic
-    # to save tokens, or we could implement the 'data_validator' logic here.
-    # For this modular script proof-of-concept, we'll log the action.
-    append_log("Kimi", "Running integrity scan on dataset...", "action")
-    # ... (Validation logic would go here) ...
-    append_log("System", "Integrity scan complete. No critical anomalies.", "info")
+        with open(GRID_FILE, 'r', encoding='utf-8') as f: grid_data = json.load(f)
+        
+        summary_text = f"GPU Prices (Avg): ${sum(d['price'] for d in gpu_data)/len(gpu_data):.2f}. " if gpu_data else "No GPU data. "
+        summary_text += f"Token Prices (Avg Input): ${sum(d['input_price'] for d in token_data)/len(token_data):.2f}. " if token_data else "No Token data. "
+        summary_text += f"Grid Load: {grid_data.get('annual_twh', 'N/A')} TWh."
+        
+        prompt = f"""
+        You are the Consortium Strategist (MiniMax).
+        
+        Review the collected data:
+        {summary_text}
+        
+        Task:
+        1. Audit the data for logical inconsistencies (e.g. extremely low GPU price but high energy cost).
+        2. Provide a strategic recommendation for the Consortium.
+        
+        Output format: Just the audit conclusion in one sentence.
+        """
+        
+        append_log("MiniMax", "Initiating deep logic audit...", "action")
+        
+        # This call generates the <thinking>... response
+        response = strategist.generate(prompt)
+        
+        if response:
+            # Parse out thinking vs content
+            thinking_match = re.search(r'<thinking>(.*?)</thinking>', response, re.DOTALL)
+            content = re.sub(r'<thinking>.*?</thinking>', '', response, flags=re.DOTALL).strip()
+            
+            if thinking_match:
+                thinking_process = thinking_match.group(1).strip()
+                # Log the thinking process!
+                # Truncate if too long for UI
+                display_thought = thinking_process[:200] + "..." if len(thinking_process) > 200 else thinking_process
+                append_log("MiniMax", f"Thinking: {display_thought}", "info")
+            
+            print(f"MiniMax Audit: {content}")
+            append_log("MiniMax", f"Audit Result: {content}", "success")
+            
+    except Exception as e:
+        print(f"Audit Error: {e}")
 
 def generate_market_insight():
     """Generate a daily market summary using GLM (The Analyst)"""
@@ -265,6 +299,58 @@ def generate_market_insight():
     except Exception as e:
         print(f"Insight Generation Error: {e}")
 
+def generate_industry_index():
+    """Generate AI Industry Prosperity Index based on GPU prices and Capex trends"""
+    print(f"[{datetime.now()}] Task: AI Industry Index (GLM)")
+    
+    try:
+        # Context from other data
+        with open(GPU_FILE, 'r', encoding='utf-8') as f: gpu_data = json.load(f)
+        avg_price = sum([d['price'] for d in gpu_data]) / len(gpu_data) if gpu_data else 0
+        
+        prompt = f"""
+        You are a Chief Financial Analyst for the AI Sector.
+        
+        Task: Calculate the "AI Industry Prosperity Index" (0-100).
+        
+        Inputs:
+        1. Current Avg H100/A100 Rental Price: ${avg_price:.2f}/hr
+        2. External Knowledge: Search for latest 2024/2025 Capex guidance from Hyperscalers (Microsoft, Google, Meta, AWS). Are they increasing or cutting AI spend?
+        
+        Algorithm:
+        - Base Score: 50
+        - If Capex is increasing aggressively: +20
+        - If GPU rental prices are stable/high (demand > supply): +10
+        - If GPU prices are crashing (oversupply): -10
+        - If new models (GPT-5, Gemini 2) are rumored/released: +10
+        
+        Output JSON ONLY:
+        {{
+            "score": 85,
+            "trend": "up",
+            "summary": "Capex expansion from Microsoft and Google fuels the index, despite slight spot price softening.",
+            "capex_sentiment": "bullish"
+        }}
+        """
+        
+        append_log("GLM", "Analyzing Big Tech Capex reports...", "action")
+        # Use search if possible, or just generate based on internal knowledge/reasoning
+        # Since 'analyst' is GLM, we'll try to rely on its knowledge/search.
+        res = analyst.generate(prompt)
+        data = clean_and_parse_json(res)
+        
+        if data and 'score' in data:
+            data['last_updated'] = datetime.now().isoformat()
+            with open(INDEX_FILE, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2)
+            print(f"Index Saved: {data['score']}")
+            append_log("System", f"AI Prosperity Index updated: {data['score']}", "success")
+        else:
+            print("Failed to generate Index")
+            
+    except Exception as e:
+        print(f"Index Error: {e}")
+
 if __name__ == "__main__":
     # Ensure data dir exists
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -275,6 +361,7 @@ if __name__ == "__main__":
         fetch_grid_load()
         validate_and_fix()
         generate_market_insight()
+        generate_industry_index()
     except Exception as e:
         print(f"Critical Error: {e}")
         append_log("System", f"Critical Failure: {str(e)}", "warning")

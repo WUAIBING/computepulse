@@ -9,7 +9,7 @@ interface AIModel {
   confidence: number;
   tasksProcessed: number;
   avgResponseTime: number;
-  role: 'Architect' | 'Hunter' | 'Researcher' | 'Analyst'; // Roles for the narrative
+  role: 'Architect' | 'Hunter' | 'Researcher' | 'Analyst' | 'Strategist'; // Roles for the narrative
   color: string; // Theme color for the model
   avatar: React.ReactNode; // SVG Avatar
 }
@@ -60,6 +60,12 @@ const GLMLogo = ({ className }: { className?: string }) => (
   </div>
 );
 
+const MiniMaxLogo = ({ className }: { className?: string }) => (
+  <div className={`${className} flex items-center justify-center bg-[#F50057]/10 rounded-full border border-[#F50057]/20`}>
+    <span className="text-[#F50057] font-bold text-[10px] md:text-xs">M2</span>
+  </div>
+);
+
 // Removed SCRIPT_TEMPLATES (Zero Simulation Policy)
 
 export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language, theme }) => {
@@ -80,6 +86,7 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
         { name: 'DeepSeek', confidence: 96.2, tasksProcessed: 3450, avgResponseTime: 320, role: 'Hunter', color: '#00A9FF', avatar: <DeepSeekLogo className="w-full h-full" /> },
         { name: 'Kimi', confidence: 95.5, tasksProcessed: 890, avgResponseTime: 180, role: 'Researcher', color: '#E64A19', avatar: <KimiLogo className="w-full h-full" /> },
         { name: 'GLM', confidence: 97.8, tasksProcessed: 450, avgResponseTime: 210, role: 'Analyst', color: '#3B82F6', avatar: <GLMLogo className="w-full h-full" /> },
+        { name: 'MiniMax', confidence: 99.1, tasksProcessed: 120, avgResponseTime: 450, role: 'Strategist', color: '#F50057', avatar: <MiniMaxLogo className="w-full h-full" /> },
       ],
       lastUpdate: new Date().toISOString(),
       totalTasksProcessed: 5580,
@@ -91,7 +98,10 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
       try {
         const baseUrl = import.meta.env.BASE_URL;
         const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
-        const response = await fetch(`${cleanBaseUrl}data/system_logs.json`);
+        // Add timestamp to prevent caching and ensure fresh data on manual refresh
+        const timestamp = new Date().getTime();
+        const response = await fetch(`${cleanBaseUrl}data/system_logs.json?t=${timestamp}`);
+        
         if (response.ok) {
            const data = await response.json();
            // Update System Stats from Real Log Data
@@ -104,26 +114,21 @@ export const AIConsortiumStatus: React.FC<AIConsortiumStatusProps> = ({ language
            
            // Set Initial Logs
            if (data.logs && Array.isArray(data.logs)) {
-              // Keep timestamp as raw string or ISO, formatting happens in render
               setLogs(data.logs);
            }
         }
       } catch (e) {
         console.warn('Failed to fetch system logs:', e);
-        // Fallback: Empty logs or static message indicating system offline
-        setLogs([
-          { 
-             id: '0', 
-             timestamp: new Date().toISOString(), 
-             agent: 'System', 
-             message: 'Waiting for data stream...', 
-             type: 'info' 
-          }
-        ]);
+        // Fallback handled by initial state or error UI if needed
       }
     };
     
+    // Initial fetch
     fetchLogs();
+
+    // Poll every 60 seconds
+    const interval = setInterval(fetchLogs, 60000);
+    return () => clearInterval(interval);
   }, []);
 
   // Helper to format time based on language
