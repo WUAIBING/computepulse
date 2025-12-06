@@ -54,25 +54,31 @@ class DashScopeAgent(BaseAgent):
         if not dashscope or not self.api_key:
             return None
             
-        try:
-            messages = [{'role': 'user', 'content': query}]
-            # Qwen uses 'enable_search' flag in DashScope SDK
-            response = dashscope.Generation.call(
-                model=self.model_name,
-                messages=messages,
-                result_format='message',
-                enable_search=True, 
-                api_key=self.api_key
-            )
-            
-            if response.status_code == 200:
-                return response.output.choices[0].message.content
-            else:
-                print(f"[{datetime.now()}] {self.name} Search Error: {response.code} - {response.message}")
-                return None
-        except Exception as e:
-            print(f"[{datetime.now()}] {self.name} Search Exception: {e}")
-            return None
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                messages = [{'role': 'user', 'content': query}]
+                # Qwen uses 'enable_search' flag in DashScope SDK
+                response = dashscope.Generation.call(
+                    model=self.model_name,
+                    messages=messages,
+                    result_format='message',
+                    enable_search=True, 
+                    api_key=self.api_key
+                )
+                
+                if response.status_code == 200:
+                    return response.output.choices[0].message.content
+                else:
+                    print(f"[{datetime.now()}] {self.name} Search Error (Attempt {attempt+1}): {response.code} - {response.message}")
+                    if attempt < max_retries - 1:
+                        time.sleep(2)
+            except Exception as e:
+                print(f"[{datetime.now()}] {self.name} Search Exception (Attempt {attempt+1}): {e}")
+                if attempt < max_retries - 1:
+                    time.sleep(2)
+        
+        return None
 
 class DeepSeekAgent(BaseAgent):
     """Agent implementation for DeepSeek (via OpenAI compatible API)."""
