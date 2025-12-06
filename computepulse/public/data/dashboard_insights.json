@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply normalizes as domestic fabs lift yields, easing lead times and stabilizing capex planning."
+    "text": "US-East H100 availability improves as supply chains stabilize, easing capex urgency for new builds."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API price wars compress token costs as distilled, efficient models undercut incumbents."
+    "text": "API price wars intensify as model distillation and architectural efficiencies compress input token costs."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Grid load rises toward 150 TWh annually, pushing new nuclear baseload and demand response to stabilize carbon intensity."
+    "text": "120 TWh annual AI load strains grids, accelerating nuclear baseload adoption to curb carbon footprint."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Funding rotation and unit-economics scrutiny suggest a maturing cycle with selective growth and lower bubble risk."
+    "text": "Industry consolidation signals healthy maturation, yet valuation dispersion underscores bubble risk if growth stalls."
   }
 }
