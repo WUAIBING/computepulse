@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 spot pricing dips to $3.34/hr as US-East availability eases, unlocking capex relief for new clusters."
+    "text": "H100 supply chain is tightening as demand outpaces new fab capacity, prompting a surge in capex for fab expansions."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Input token prices compress to $1.41 per 1M as API price wars and distillation-driven efficiency intensify."
+    "text": "Token costs are falling rapidly due to aggressive API price wars and model distillation, intensifying competition among providers."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "125 TWh annual load underscores grid strain, prompting nuclear baseload expansion for sustained AI growth."
+    "text": "Rising AI workloads are straining electricity grids, making nuclear baseload a critical component for sustainable, low\u2011carbon scaling."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Consolidation and margin normalization signal maturing fundamentals amid sustainable, capex-backed growth."
+    "text": "Market sentiment remains cautiously optimistic as investors balance AI's rapid growth against emerging bubble\u2011risk concerns."
   }
 }
