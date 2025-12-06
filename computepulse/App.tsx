@@ -232,7 +232,7 @@ function App() {
           </div> */}
 
           {/* Settings Row - Organized on Mobile */}
-          <div className="flex flex-row gap-2 items-center">
+          <div className="flex flex-row gap-1 md:gap-2 items-center">
             {/* Language Toggle */}
             <div className={`flex ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} p-0.5 md:p-1`}>
               <button 
@@ -250,7 +250,7 @@ function App() {
             </div>
 
             {/* Currency Selector */}
-            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} px-2 md:px-3 py-1 md:py-2`}>
+            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} px-1.5 md:px-3 py-1 md:py-2`}>
               <select 
                 value={currencyCode} 
                 onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
@@ -272,7 +272,7 @@ function App() {
               <svg className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
-              <span className="whitespace-nowrap">{t.verifyData}</span>
+              <span className="hidden sm:inline whitespace-nowrap">{t.verifyData}</span>
             </button>
           </div>
         </div>
