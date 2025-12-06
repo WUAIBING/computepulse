@@ -442,50 +442,52 @@ def generate_dashboard_insights():
         print(f"Insights Error: {e}")
 
 def fetch_exchange_rate():
-    """Fetch real-time USD to CNY exchange rate using DeepSeek"""
-    print(f"[{datetime.now()}] Task: Fetch Exchange Rate (DeepSeek)")
+    """Fetch real-time USD to CNY exchange rate using Kimi (Researcher) with Web Search"""
+    print(f"[{datetime.now()}] Task: Fetch Exchange Rate (Kimi)")
     
     try:
         prompt = """
-        You are a financial data assistant.
-        Task: Search for the current real-time USD to CNY exchange rate.
+        Please search for the current real-time USD to CNY exchange rate (today).
         
-        Output JSON ONLY:
+        Output valid JSON ONLY:
         {
             "from": "USD",
             "to": "CNY",
-            "rate": 7.25,
+            "rate": 7.28, 
             "timestamp": "2024-..."
         }
         """
         
-        append_log("DeepSeek", "Fetching real-time exchange rates...", "action")
-        # Use hunter (DeepSeek)
-        res = hunter.generate(prompt)
+        append_log("Kimi", "Searching global forex markets...", "action")
         
-        # Strip <thinking> if present
-        if res:
-            res = re.sub(r'<thinking>.*?</thinking>', '', res, flags=re.DOTALL).strip()
-            
+        # Use researcher (Kimi) which has .search() capability
+        # We use .search() to ensure 'enable_search' is True
+        res = researcher.search(prompt)
+        
         data = clean_and_parse_json(res)
         
         if data and 'rate' in data:
-            with open(EXCHANGE_RATE_FILE, 'w', encoding='utf-8') as f:
-                json.dump(data, f, indent=2)
-            print(f"Exchange Rate Saved: 1 USD = {data['rate']} CNY")
-            append_log("System", f"Exchange rate updated: {data['rate']}", "success")
+            # Validate rate is reasonable (e.g. 6.0 - 8.0)
+            if 6.0 < data['rate'] < 8.0:
+                with open(EXCHANGE_RATE_FILE, 'w', encoding='utf-8') as f:
+                    json.dump(data, f, indent=2)
+                print(f"Exchange Rate Saved: 1 USD = {data['rate']} CNY")
+                append_log("System", f"Exchange rate updated: {data['rate']}", "success")
+            else:
+                print(f"Rate {data['rate']} seems outlier, ignoring.")
         else:
             print("Failed to fetch exchange rate, using default")
-            # Fallback
-            default_data = {
-                "from": "USD",
-                "to": "CNY", 
-                "rate": 7.25,
-                "timestamp": datetime.now().isoformat(),
-                "note": "Fallback default"
-            }
-            with open(EXCHANGE_RATE_FILE, 'w', encoding='utf-8') as f:
-                json.dump(default_data, f, indent=2)
+            # Fallback if file doesn't exist or valid
+            if not os.path.exists(EXCHANGE_RATE_FILE):
+                default_data = {
+                    "from": "USD",
+                    "to": "CNY", 
+                    "rate": 7.25,
+                    "timestamp": datetime.now().isoformat(),
+                    "note": "Fallback default"
+                }
+                with open(EXCHANGE_RATE_FILE, 'w', encoding='utf-8') as f:
+                    json.dump(default_data, f, indent=2)
             
     except Exception as e:
         print(f"Exchange Rate Error: {e}")

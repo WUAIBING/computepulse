@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply stabilizes as US-East availability improves, easing capex pressure on new deployments."
+    "text": "H100 supply stabilizes as US-East availability improves."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token costs plunge as distilled models intensify API price competition, squeezing margins."
+    "text": "Token costs plummeting due to aggressive model distillation."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Nuclear baseload is becoming essential to relieve grid strain and reduce emissions from AI growth."
+    "text": "Grid strain from a 130 TWh annual AI load pushes utilities toward nuclear baseload to curb emissions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Investor optimism remains high, but sustainability hinges on normalizing capex and avoiding overcapacity."
+    "text": "Market consolidation phase indicates a healthy maturation of the AI sector."
   }
 }
