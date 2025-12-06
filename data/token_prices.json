@@ -212,8 +212,8 @@
   {
     "model": "DeepSeek-V3",
     "provider": "DeepSeek",
-    "input_price": 0.0,
-    "output_price": 0.0
+    "input_price": 0.2,
+    "output_price": 0.8
   },
   {
     "provider": "DeepSeek",
@@ -278,13 +278,19 @@
   {
     "model": "Claude 3.5",
     "provider": "Anthropic",
-    "input_price": 0.0,
-    "output_price": 0.0
+    "input_price": 0.01102,
+    "output_price": 0.03268
   },
   {
     "model": "DeepSeek-V3",
     "provider": "Unknown",
-    "input_price": 0.0,
-    "output_price": 0.0
+    "input_price": null,
+    "output_price": null
+  },
+  {
+    "model": "GPT-4",
+    "provider": "OpenAI",
+    "input_price": 0.03,
+    "output_price": 0.06
   }
 ]
