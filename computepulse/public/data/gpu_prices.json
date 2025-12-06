@@ -74,14 +74,14 @@
   {
     "provider": "RunPod",
     "gpu": "H100",
-    "price": 2.0,
+    "price": 4.69,
     "region": "US"
   },
   {
     "provider": "RunPod",
     "gpu": "A100",
-    "price": 1.14,
-    "region": "US"
+    "price": 1.09,
+    "region": "US-Central"
   },
   {
     "provider": "CoreWeave",
@@ -92,7 +92,7 @@
   {
     "provider": "AWS",
     "gpu": "A100",
-    "price": 4.1,
+    "price": 2.21,
     "region": "us-east-1"
   },
   {
@@ -146,7 +146,7 @@
   {
     "provider": "Vast.ai",
     "gpu": "A100",
-    "price": 0.9,
+    "price": 0.85,
     "region": "US"
   },
   {
@@ -188,8 +188,8 @@
   {
     "provider": "Lambda",
     "gpu": "H100",
-    "price": 1.99,
-    "region": "us-east-1"
+    "price": 1.1,
+    "region": "US"
   },
   {
     "provider": "Google Cloud",
@@ -380,7 +380,7 @@
   {
     "provider": "Vast.ai",
     "gpu": "H100",
-    "price": 1.75,
+    "price": 3.5,
     "region": "US"
   },
   {
@@ -453,12 +453,12 @@
     "provider": "Lambda",
     "gpu": "A100",
     "price": 1.1,
-    "region": "us-east-1"
+    "region": "us-west-2"
   },
   {
     "provider": "RunPod",
     "gpu": "RTX 4090",
-    "price": 0.45,
+    "price": 0.5,
     "region": "US"
   },
   {
@@ -471,31 +471,31 @@
     "provider": "Lambda",
     "gpu": "RTX 4090",
     "price": 0.5,
-    "region": "us-east-1"
+    "region": "US"
   },
   {
     "provider": "AWS",
     "gpu": "A100 80GB",
-    "price": 3.93,
+    "price": 5.12,
     "region": "us-east-1"
   },
   {
     "provider": "AWS",
     "gpu": "A100 40GB",
-    "price": 2.48,
+    "price": 4.1,
     "region": "us-east-1"
   },
   {
     "provider": "Lambda",
     "gpu": "A100 80GB",
-    "price": 1.99,
-    "region": "us-west-1"
+    "price": 1.4,
+    "region": "US"
   },
   {
     "provider": "Lambda",
     "gpu": "A100 40GB",
     "price": 1.1,
-    "region": "us-west-1"
+    "region": "US"
   },
   {
     "provider": "RunPod",
@@ -506,13 +506,13 @@
   {
     "provider": "RunPod",
     "gpu": "A100 80GB",
-    "price": 1.89,
+    "price": 1.4,
     "region": "US"
   },
   {
     "provider": "RunPod",
     "gpu": "A100 40GB",
-    "price": 1.09,
+    "price": 1.1,
     "region": "US"
   },
   {
@@ -524,13 +524,13 @@
   {
     "provider": "Vast.ai",
     "gpu": "A100 80GB",
-    "price": 1.1,
+    "price": 1.2,
     "region": "US"
   },
   {
     "provider": "Vast.ai",
     "gpu": "A100 40GB",
-    "price": 0.8,
+    "price": 0.9,
     "region": "US"
   },
   {
