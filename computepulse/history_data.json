@@ -84,38 +84,38 @@
         "output_price": null
       },
       {
-        "provider": "阿里云",
-        "model": "通义千问",
+        "provider": "\u963f\u91cc\u4e91",
+        "model": "\u901a\u4e49\u5343\u95ee",
         "input_price": null,
         "output_price": null
       },
       {
-        "provider": "百度",
-        "model": "文心一言",
+        "provider": "\u767e\u5ea6",
+        "model": "\u6587\u5fc3\u4e00\u8a00",
         "input_price": null,
         "output_price": null
       },
       {
-        "provider": "智谱",
+        "provider": "\u667a\u8c31",
         "model": "GLM-4",
         "input_price": null,
         "output_price": null
       },
       {
-        "provider": "月之暗面",
+        "provider": "\u6708\u4e4b\u6697\u9762",
         "model": "Kimi",
         "input_price": null,
         "output_price": null
       },
       {
-        "provider": "字节跳动",
-        "model": "豆包",
+        "provider": "\u5b57\u8282\u8df3\u52a8",
+        "model": "\u8c46\u5305",
         "input_price": null,
         "output_price": null
       },
       {
         "provider": "MiniMax",
-        "model": "未指定具体模型",
+        "model": "\u672a\u6307\u5b9a\u5177\u4f53\u6a21\u578b",
         "input_price": null,
         "output_price": null
       },
@@ -187,5 +187,41 @@
       "source": "IEA 2024 Data",
       "active_gpu_est": 4000000
     }
+  },
+  {
+    "date": "2025-12-06",
+    "gpu_count": 91,
+    "token_count": 48,
+    "grid_twh": 130
+  },
+  {
+    "date": "2025-12-06",
+    "gpu_count": 91,
+    "token_count": 48,
+    "grid_twh": 160
+  },
+  {
+    "date": "2025-12-06",
+    "gpu_count": 94,
+    "token_count": 48,
+    "grid_twh": 130
+  },
+  {
+    "date": "2025-12-06",
+    "gpu_count": 94,
+    "token_count": 48,
+    "grid_twh": 150
+  },
+  {
+    "date": "2025-12-06",
+    "gpu_count": 94,
+    "token_count": 48,
+    "grid_twh": 150
+  },
+  {
+    "date": "2025-12-06",
+    "gpu_count": 94,
+    "token_count": 48,
+    "grid_twh": 160
   }
 ]

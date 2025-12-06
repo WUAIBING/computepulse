@@ -17,6 +17,7 @@ interface MacroDashboardProps {
     gcci?: { agent: string; text: string };
     gtpi?: { agent: string; text: string };
     gagl?: { agent: string; text: string };
+    aipi?: { agent: string; text: string };
   } | null;
   currency: CurrencyConfig;
   language: Language;
@@ -348,19 +349,16 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
           <div style={{ width: industryIndex ? `${industryIndex.score}%` : '0%' }} className={`h-full transition-all duration-1000 ${industryIndex && industryIndex.score > 60 ? 'bg-cyan-500' : 'bg-yellow-500'}`}></div>
         </div>
         
-        <div className="flex flex-col gap-1 text-[10px] font-mono min-h-[40px] overflow-hidden">
-           <div className="flex justify-between items-center z-10">
-              <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'}`}>Trend</span>
-              <span className={`${industryIndex?.trend === 'up' ? 'text-emerald-400' : industryIndex?.trend === 'down' ? 'text-red-400' : 'text-gray-400'} uppercase font-bold flex items-center gap-1`}>
-                {industryIndex?.trend === 'up' ? '▲ BULLISH' : industryIndex?.trend === 'down' ? '▼ BEARISH' : '▶ NEUTRAL'}
-              </span>
-           </div>
-           <div className="relative w-full overflow-hidden h-4">
-              <div className={`absolute whitespace-nowrap animate-marquee ${theme === 'dark' ? 'text-gray-500' : 'text-gray-700'}`} title={industryIndex?.summary}>
-                 {industryIndex ? industryIndex.summary : (language === 'CN' ? '正在分析资本支出数据...' : 'Analyzing Capex data...')}
-              </div>
-           </div>
+        {/* Trend Line */}
+        <div className="flex justify-between items-center text-[10px] font-mono mb-2">
+           <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600 font-medium'}`}>Trend</span>
+           <span className={`${industryIndex?.trend === 'up' ? 'text-emerald-400' : industryIndex?.trend === 'down' ? 'text-red-400' : 'text-gray-400'} uppercase font-bold flex items-center gap-1`}>
+             {industryIndex?.trend === 'up' ? '▲ BULLISH' : industryIndex?.trend === 'down' ? '▼ BEARISH' : '▶ NEUTRAL'}
+           </span>
         </div>
+
+        {/* Insight Footer */}
+        {renderInsightFooter(dashboardInsights?.aipi, 'GLM', 'text-cyan-500')}
 
         {/* Background Animation */}
         <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>

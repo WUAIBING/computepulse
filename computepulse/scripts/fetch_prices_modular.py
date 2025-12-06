@@ -12,6 +12,19 @@ import time
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 
+# Load .env.local
+try:
+    env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env.local')
+    if os.path.exists(env_path):
+        with open(env_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, value = line.split('=', 1)
+                    os.environ[key] = value
+except Exception as e:
+    print(f"Warning: Failed to load .env.local: {e}")
+
 # Add script dir to path for imports
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
@@ -191,9 +204,17 @@ def validate_and_fix():
         with open(TOKEN_FILE, 'r', encoding='utf-8') as f: token_data = json.load(f)
         with open(GRID_FILE, 'r', encoding='utf-8') as f: grid_data = json.load(f)
         
-        summary_text = f"GPU Prices (Avg): ${sum(d['price'] for d in gpu_data)/len(gpu_data):.2f}. " if gpu_data else "No GPU data. "
-        summary_text += f"Token Prices (Avg Input): ${sum(d['input_price'] for d in token_data)/len(token_data):.2f}. " if token_data else "No Token data. "
+        # Safe calculation of averages
+        valid_gpu_prices = [d.get('price') for d in gpu_data if isinstance(d.get('price'), (int, float))]
+        avg_gpu = sum(valid_gpu_prices)/len(valid_gpu_prices) if valid_gpu_prices else 0
+        
+        valid_token_prices = [d.get('input_price') for d in token_data if isinstance(d.get('input_price'), (int, float))]
+        avg_token = sum(valid_token_prices)/len(valid_token_prices) if valid_token_prices else 0
+        
         grid_val = grid_data.get('annual_twh') if grid_data else None
+        
+        summary_text = f"GPU Prices (Avg): ${avg_gpu:.2f}. " if valid_gpu_prices else "No valid GPU data. "
+        summary_text += f"Token Prices (Avg Input): ${avg_token:.2f}. " if valid_token_prices else "No valid Token data. "
         summary_text += f"Grid Load: {grid_val if grid_val is not None else 'N/A'} TWh."
         
         prompt = f"""
@@ -233,8 +254,8 @@ def validate_and_fix():
         print(f"Audit Error: {e}")
 
 def generate_market_insight():
-    """Generate a daily market summary using GLM (The Analyst)"""
-    print(f"[{datetime.now()}] Task: Market Insight (GLM)")
+    """Generate a daily market summary using DeepSeek (The Analyst Substitute)"""
+    print(f"[{datetime.now()}] Task: Market Insight (DeepSeek)")
     
     try:
         # Read collected data to form the context
@@ -272,7 +293,7 @@ def generate_market_insight():
         gpu_summary = f"{len(gpu_data)} GPU records. Avg price example: {gpu_data[0].get('price', 'N/A')}" if gpu_data else "No GPU data"
         
         prompt = f"""
-        You are 'The Analyst' (GLM-4), a cynical but sharp AI market observer in a cyberpunk future.
+        You are 'The Analyst' (DeepSeek), a cynical but sharp AI market observer in a cyberpunk future.
         
         Current Data:
         - GPU Market: {gpu_summary}
@@ -287,28 +308,32 @@ def generate_market_insight():
         Style: Professional but with a slight futuristic/noir edge.
         """
         
-        append_log("GLM", "Synthesizing cross-market data streams...", "action")
-        # Use standard generation, GLM has search capability if needed but here we provide context
-        insight = analyst.generate(prompt)
+        append_log("DeepSeek", "Synthesizing cross-market data streams...", "action")
+        # Use hunter (DeepSeek)
+        insight = hunter.generate(prompt)
         
         if insight:
             clean_insight = insight.strip().replace('"', '')
-            print(f"GLM Insight: {clean_insight}")
-            append_log("GLM", f"Daily Insight: {clean_insight}", "success")
+            # Remove thinking block if present
+            clean_insight = re.sub(r'<thinking>.*?</thinking>', '', clean_insight, flags=re.DOTALL).strip()
+            print(f"DeepSeek Insight: {clean_insight}")
+            append_log("DeepSeek", f"Daily Insight: {clean_insight}", "success")
         else:
-            print("GLM failed to generate insight")
+            print("DeepSeek failed to generate insight")
             
     except Exception as e:
         print(f"Insight Generation Error: {e}")
 
 def generate_industry_index():
-    """Generate AI Industry Prosperity Index based on GPU prices and Capex trends"""
-    print(f"[{datetime.now()}] Task: AI Industry Index (GLM)")
+    """Generate AI Industry Prosperity Index based on GPU prices and Capex trends using DeepSeek"""
+    print(f"[{datetime.now()}] Task: AI Industry Index (DeepSeek)")
     
     try:
         # Context from other data
         with open(GPU_FILE, 'r', encoding='utf-8') as f: gpu_data = json.load(f)
-        avg_price = sum([d['price'] for d in gpu_data]) / len(gpu_data) if gpu_data else 0
+        
+        valid_gpu_prices = [d.get('price') for d in gpu_data if isinstance(d.get('price'), (int, float))]
+        avg_price = sum(valid_gpu_prices) / len(valid_gpu_prices) if valid_gpu_prices else 0
         
         prompt = f"""
         You are a Chief Financial Analyst for the AI Sector.
@@ -335,10 +360,9 @@ def generate_industry_index():
         }}
         """
         
-        append_log("GLM", "Analyzing Big Tech Capex reports...", "action")
-        # Use search if possible, or just generate based on internal knowledge/reasoning
-        # Since 'analyst' is GLM, we'll try to rely on its knowledge/search.
-        res = analyst.generate(prompt)
+        append_log("DeepSeek", "Analyzing Big Tech Capex reports...", "action")
+        # Use hunter (DeepSeek)
+        res = hunter.generate(prompt)
         data = clean_and_parse_json(res)
         
         if data and 'score' in data:
@@ -363,8 +387,13 @@ def generate_dashboard_insights():
         with open(TOKEN_FILE, 'r', encoding='utf-8') as f: token_data = json.load(f)
         with open(GRID_FILE, 'r', encoding='utf-8') as f: grid_data = json.load(f)
         
-        avg_gpu = sum([d['price'] for d in gpu_data])/len(gpu_data) if gpu_data else 0
-        avg_token = sum([d['input_price'] for d in token_data])/len(token_data) if token_data else 0
+        # Safe calculation of averages
+        valid_gpu_prices = [d.get('price') for d in gpu_data if isinstance(d.get('price'), (int, float))]
+        avg_gpu = sum(valid_gpu_prices)/len(valid_gpu_prices) if valid_gpu_prices else 0
+        
+        valid_token_prices = [d.get('input_price') for d in token_data if isinstance(d.get('input_price'), (int, float))]
+        avg_token = sum(valid_token_prices)/len(valid_token_prices) if valid_token_prices else 0
+        
         grid_val = grid_data.get('annual_twh') if grid_data else None
         
         prompt = f"""
@@ -381,19 +410,21 @@ def generate_dashboard_insights():
         1. GCCI (Hardware/Qwen): Focus on supply chain, chip availability, or capex.
         2. GTPI (Tokens/DeepSeek): Focus on API price wars, efficiency, or model competition.
         3. GAGL (Energy/Kimi): Focus on grid strain, nuclear adoption, or carbon footprint.
+        4. AIPI (Macro/GLM): Focus on overall industry sentiment, bubble risks, or growth sustainability.
         
         Output JSON ONLY:
         {{
             "gcci": {{ "agent": "Qwen", "text": "H100 supply stabilizes as US-East availability improves." }},
             "gtpi": {{ "agent": "DeepSeek", "text": "Token costs plummeting due to aggressive model distillation." }},
-            "gagl": {{ "agent": "Kimi", "text": "Nuclear baseload becoming critical for new GW-scale clusters." }}
+            "gagl": {{ "agent": "Kimi", "text": "Nuclear baseload becoming critical for new GW-scale clusters." }},
+            "aipi": {{ "agent": "GLM", "text": "Market consolidation phase indicates a healthy maturation of the AI sector." }}
         }}
         """
         
         append_log("MiniMax", "Coordinating agent insights...", "action")
         res = strategist.generate(prompt)
         
-        # Strip <thinking> if present (MiniMax might output it)
+        # Strip <thinking> if present
         if res:
             res = re.sub(r'<thinking>.*?</thinking>', '', res, flags=re.DOTALL).strip()
             
