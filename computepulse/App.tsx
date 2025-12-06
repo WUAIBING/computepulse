@@ -232,29 +232,29 @@ function App() {
           </div> */}
 
           {/* Settings Row - Organized on Mobile */}
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-stretch sm:items-center">
+          <div className="flex flex-row gap-2 items-center">
             {/* Language Toggle */}
-            <div className={`flex ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} p-1`}>
+            <div className={`flex ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} p-0.5 md:p-1`}>
               <button 
                 onClick={() => { setLanguage('CN'); setCurrencyCode('CNY'); }}
-                className={`flex-1 px-4 py-1.5 text-xs font-bold rounded-md transition-all ${language === 'CN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
+                className={`px-2 md:px-4 py-1 md:py-1.5 text-[10px] md:text-xs font-bold rounded-md transition-all whitespace-nowrap ${language === 'CN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
               >
                 中文
               </button>
               <button 
                 onClick={() => { setLanguage('EN'); setCurrencyCode('USD'); }}
-                className={`flex-1 px-4 py-1.5 text-xs font-bold rounded-md transition-all ${language === 'EN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
+                className={`px-2 md:px-4 py-1 md:py-1.5 text-[10px] md:text-xs font-bold rounded-md transition-all whitespace-nowrap ${language === 'EN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
               >
                 EN
               </button>
             </div>
 
             {/* Currency Selector */}
-            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} px-3 py-2`}>
+            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} px-2 md:px-3 py-1 md:py-2`}>
               <select 
                 value={currencyCode} 
                 onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
-                className={`bg-transparent ${themeClasses.text} text-xs font-mono font-bold focus:outline-none cursor-pointer flex-1`}
+                className={`bg-transparent ${themeClasses.text} text-[10px] md:text-xs font-mono font-bold focus:outline-none cursor-pointer`}
               >
                 {CURRENCIES.map((c) => (
                   <option key={c.code} value={c.code} className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>{c.code} ({c.symbol})</option>
@@ -265,11 +265,11 @@ function App() {
             {/* Verify Data Button */}
             <button
               onClick={() => setShowCalcModal(true)}
-              className={`px-4 py-2 ${theme === 'dark' ? 'bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border-gray-800 hover:border-gray-700' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 border-gray-300 hover:border-gray-400'} text-xs font-medium rounded-lg border transition-all duration-200 flex items-center justify-center gap-2 active:scale-95 touch-manipulation`}
+              className={`px-2 md:px-4 py-1 md:py-2 ${theme === 'dark' ? 'bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border-gray-800 hover:border-gray-700' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 border-gray-300 hover:border-gray-400'} text-[10px] md:text-xs font-medium rounded-lg border transition-all duration-200 flex items-center justify-center gap-1 md:gap-2 active:scale-95 touch-manipulation whitespace-nowrap`}
               title={t.verifyData}
               aria-label={t.verifyData}
             >
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
               <span className="whitespace-nowrap">{t.verifyData}</span>
