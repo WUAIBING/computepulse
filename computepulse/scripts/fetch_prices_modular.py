@@ -193,7 +193,8 @@ def validate_and_fix():
         
         summary_text = f"GPU Prices (Avg): ${sum(d['price'] for d in gpu_data)/len(gpu_data):.2f}. " if gpu_data else "No GPU data. "
         summary_text += f"Token Prices (Avg Input): ${sum(d['input_price'] for d in token_data)/len(token_data):.2f}. " if token_data else "No Token data. "
-        summary_text += f"Grid Load: {grid_data.get('annual_twh', 'N/A')} TWh."
+        grid_val = grid_data.get('annual_twh') if grid_data else None
+        summary_text += f"Grid Load: {grid_val if grid_val is not None else 'N/A'} TWh."
         
         prompt = f"""
         You are the Consortium Strategist (MiniMax).
@@ -364,6 +365,7 @@ def generate_dashboard_insights():
         
         avg_gpu = sum([d['price'] for d in gpu_data])/len(gpu_data) if gpu_data else 0
         avg_token = sum([d['input_price'] for d in token_data])/len(token_data) if token_data else 0
+        grid_val = grid_data.get('annual_twh') if grid_data else None
         
         prompt = f"""
         You are MiniMax, the Strategist. 
@@ -373,7 +375,7 @@ def generate_dashboard_insights():
         Data Context:
         - Hardware (Qwen): Avg H100 Price ${avg_gpu:.2f}/hr. 
         - Tokens (DeepSeek): Avg Input Price ${avg_token:.2f}/1M.
-        - Energy (Kimi): Annual Load {grid_data.get('annual_twh', 'N/A')} TWh.
+        - Energy (Kimi): Annual Load {grid_val if grid_val is not None else 'N/A'} TWh.
         
         Requirements:
         1. GCCI (Hardware/Qwen): Focus on supply chain, chip availability, or capex.
