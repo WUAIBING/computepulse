@@ -232,29 +232,29 @@ function App() {
           </div> */}
 
           {/* Settings Row - Organized on Mobile */}
-          <div className="flex flex-row gap-1 md:gap-2 items-center">
+          <div className="flex flex-row gap-2 items-center">
             {/* Language Toggle */}
-            <div className={`flex ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} p-0.5 md:p-1`}>
+            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} p-0.5 md:p-1 h-8 md:h-10`}>
               <button 
                 onClick={() => { setLanguage('CN'); setCurrencyCode('CNY'); }}
-                className={`px-2 md:px-4 py-1 md:py-1.5 text-[10px] md:text-xs font-bold rounded-md transition-all whitespace-nowrap ${language === 'CN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
+                className={`h-full px-2 md:px-4 flex items-center justify-center text-[10px] md:text-xs font-bold rounded-md transition-all whitespace-nowrap ${language === 'CN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
               >
                 中文
               </button>
               <button 
                 onClick={() => { setLanguage('EN'); setCurrencyCode('USD'); }}
-                className={`px-2 md:px-4 py-1 md:py-1.5 text-[10px] md:text-xs font-bold rounded-md transition-all whitespace-nowrap ${language === 'EN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
+                className={`h-full px-2 md:px-4 flex items-center justify-center text-[10px] md:text-xs font-bold rounded-md transition-all whitespace-nowrap ${language === 'EN' ? `${themeClasses.activeBg} ${themeClasses.text} shadow-sm` : `${themeClasses.textMuted} ${themeClasses.hoverBg}`}`}
               >
                 EN
               </button>
             </div>
 
             {/* Currency Selector */}
-            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} px-1.5 md:px-3 py-1 md:py-2`}>
+            <div className={`flex items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} rounded-lg border ${themeClasses.border} px-2 md:px-3 h-8 md:h-10`}>
               <select 
                 value={currencyCode} 
                 onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
-                className={`bg-transparent ${themeClasses.text} text-[10px] md:text-xs font-mono font-bold focus:outline-none cursor-pointer`}
+                className={`bg-transparent ${themeClasses.text} text-[10px] md:text-xs font-mono font-bold focus:outline-none cursor-pointer h-full`}
               >
                 {CURRENCIES.map((c) => (
                   <option key={c.code} value={c.code} className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>{c.code} ({c.symbol})</option>
@@ -265,11 +265,11 @@ function App() {
             {/* Verify Data Button */}
             <button
               onClick={() => setShowCalcModal(true)}
-              className={`px-2 md:px-4 py-1 md:py-2 ${theme === 'dark' ? 'bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border-gray-800 hover:border-gray-700' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 border-gray-300 hover:border-gray-400'} text-[10px] md:text-xs font-medium rounded-lg border transition-all duration-200 flex items-center justify-center gap-1 md:gap-2 active:scale-95 touch-manipulation whitespace-nowrap`}
+              className={`h-8 md:h-10 px-3 md:px-4 ${theme === 'dark' ? 'bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border-gray-800 hover:border-gray-700' : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 border-gray-300 hover:border-gray-400'} text-[10px] md:text-xs font-medium rounded-lg border transition-all duration-200 flex items-center justify-center gap-1.5 md:gap-2 active:scale-95 touch-manipulation whitespace-nowrap`}
               title={t.verifyData}
               aria-label={t.verifyData}
             >
-              <svg className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-3.5 h-3.5 md:w-4 md:h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
               <span className="hidden sm:inline whitespace-nowrap">{t.verifyData}</span>
