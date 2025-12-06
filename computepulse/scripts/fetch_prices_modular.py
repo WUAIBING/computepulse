@@ -453,7 +453,7 @@ def fetch_exchange_rate():
         {
             "from": "USD",
             "to": "CNY",
-            "rate": 7.28, 
+            "rate": 7.07, 
             "timestamp": "2024-..."
         }
         """
