@@ -365,5 +365,6 @@ export const MacroDashboard: React.FC<MacroDashboardProps> = ({
       </div>
 
     </div>
+    </>
   );
 };
