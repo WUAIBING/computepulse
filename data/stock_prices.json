@@ -1,0 +1,79 @@
+{
+  "updated_at": "2025-12-07T13:06:08.293410",
+  "source": "Yahoo Finance API (Direct)",
+  "note": "直接 API 调用，100% 精确",
+  "prices": {
+    "NVDA": {
+      "symbol": "NVDA",
+      "price": 182.41,
+      "currency": "USD",
+      "exchange": "NMS",
+      "market_state": "unknown",
+      "timestamp": "2025-12-07T13:05:55.027071",
+      "source": "Yahoo Finance API"
+    },
+    "AMD": {
+      "symbol": "AMD",
+      "price": 217.97,
+      "currency": "USD",
+      "exchange": "NMS",
+      "market_state": "unknown",
+      "timestamp": "2025-12-07T13:05:56.882540",
+      "source": "Yahoo Finance API"
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "price": 321.27,
+      "currency": "USD",
+      "exchange": "NMS",
+      "market_state": "unknown",
+      "timestamp": "2025-12-07T13:05:58.795267",
+      "source": "Yahoo Finance API"
+    },
+    "AAPL": {
+      "symbol": "AAPL",
+      "price": 278.78,
+      "currency": "USD",
+      "exchange": "NMS",
+      "market_state": "unknown",
+      "timestamp": "2025-12-07T13:06:00.728022",
+      "source": "Yahoo Finance API"
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "price": 229.53,
+      "currency": "USD",
+      "exchange": "NMS",
+      "market_state": "unknown",
+      "timestamp": "2025-12-07T13:06:02.568243",
+      "source": "Yahoo Finance API"
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "price": 483.16,
+      "currency": "USD",
+      "exchange": "NMS",
+      "market_state": "unknown",
+      "timestamp": "2025-12-07T13:06:04.567157",
+      "source": "Yahoo Finance API"
+    },
+    "META": {
+      "symbol": "META",
+      "price": 673.42,
+      "currency": "USD",
+      "exchange": "NMS",
+      "market_state": "unknown",
+      "timestamp": "2025-12-07T13:06:06.403728",
+      "source": "Yahoo Finance API"
+    },
+    "TSLA": {
+      "symbol": "TSLA",
+      "price": 455.0,
+      "currency": "USD",
+      "exchange": "NMS",
+      "market_state": "unknown",
+      "timestamp": "2025-12-07T13:06:08.283735",
+      "source": "Yahoo Finance API"
+    }
+  }
+}
