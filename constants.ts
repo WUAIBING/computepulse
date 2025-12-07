@@ -158,7 +158,6 @@ export const generateMockTokenData = (): TokenProvider[] => [
   { id: 'glm-4-9b', provider: 'Zhipu AI', model: 'GLM-4 9B', inputCost: 0.10, outputCost: 0.10, benchmark: 72.0, latency: 80, isOpenSource: true, lastUpdated: new Date().toISOString() },
   { id: 'moonshot-v1-8k', provider: 'Moonshot (Kimi)', model: 'Moonshot V1 8k', inputCost: 1.70, outputCost: 1.70, benchmark: 84.5, latency: 300, isOpenSource: false, lastUpdated: new Date().toISOString() },
   { id: 'abab-6-5', provider: 'MiniMax', model: 'abab 6.5', inputCost: 2.80, outputCost: 2.80, benchmark: 83.0, latency: 350, isOpenSource: false, lastUpdated: new Date().toISOString() },
-  { id: 'doubao-pro-32k', provider: 'ByteDance', model: 'Doubao Pro 32k', inputCost: 0.11, outputCost: 0.28, benchmark: 82.5, latency: 120, isOpenSource: false, lastUpdated: new Date().toISOString() },
   { id: 'ernie-4-0', provider: 'Baidu', model: 'Ernie 4.0', inputCost: 16.50, outputCost: 16.50, benchmark: 82.0, latency: 500, isOpenSource: false, lastUpdated: new Date().toISOString() },
   { id: 'ernie-3-5', provider: 'Baidu', model: 'Ernie 3.5', inputCost: 1.50, outputCost: 1.50, benchmark: 78.0, latency: 250, isOpenSource: false, lastUpdated: new Date().toISOString() },
   

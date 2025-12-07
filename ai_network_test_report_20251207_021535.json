@@ -1,0 +1,84 @@
+{
+  "test_date": "2025-12-07",
+  "baseline_rate": 7.0751,
+  "results": [
+    {
+      "agent": "Kimi (月之暗面)",
+      "response_time": 6.941111326217651,
+      "analysis": {
+        "success": true,
+        "rate": 7.2785,
+        "timestamp": "2025-12-07T14:42:00Z",
+        "is_today": true,
+        "has_source": true,
+        "has_real_time_keywords": false,
+        "error": null,
+        "raw_response": "{\n    \"from\": \"USD\",\n    \"to\": \"CNY\",\n    \"rate\": 7.2785,\n    \"timestamp\": \"2025-12-07T14:42:00Z\",\n    \"source\": \"XE.com\",\n    \"date_verified\": \"2025-12-07\"\n}",
+        "diff_from_baseline": 0.20340000000000025
+      }
+    },
+    {
+      "agent": "Qwen (通义千问)",
+      "response_time": 5.571215867996216,
+      "analysis": {
+        "success": false,
+        "rate": null,
+        "timestamp": null,
+        "is_today": true,
+        "has_source": true,
+        "has_real_time_keywords": true,
+        "error": "无法解析JSON数据",
+        "raw_response": "I'm unable to perform real-time web searches or access the internet directly. Therefore, I can't provide the current USD to CNY exchange rate for today, 2025-12-07, with a specific timestamp and data source.\n\nHowever, you can easily find this information by visiting a reliable financial news website or using a currency converter tool online. Websites like XE.com, Bloomberg, or Reuters typically provide up-to-date exchange rates."
+      }
+    },
+    {
+      "agent": "GLM-4 (智谱)",
+      "response_time": 1.7153875827789307,
+      "analysis": {
+        "success": false,
+        "rate": null,
+        "timestamp": null,
+        "is_today": false,
+        "has_source": false,
+        "has_real_time_keywords": false,
+        "error": "无法解析JSON数据",
+        "raw_response": "异常: Error code: 401 - {'error': {'code': '401', 'message': '令牌已过期或验证不正确'}}"
+      }
+    },
+    {
+      "agent": "DeepSeek",
+      "response_time": 11.527568340301514,
+      "analysis": {
+        "success": true,
+        "rate": 7.2348,
+        "timestamp": "2025-12-07T10:15:00Z",
+        "is_today": true,
+        "has_source": true,
+        "has_real_time_keywords": false,
+        "error": null,
+        "raw_response": "```json\n{\n    \"from\": \"USD\",\n    \"to\": \"CNY\",\n    \"rate\": 7.2348,\n    \"timestamp\": \"2025-12-07T10:15:00Z\",\n    \"source\": \"XE.com\",\n    \"date_verified\": \"2025-12-07\"\n}\n```",
+        "diff_from_baseline": 0.15969999999999995
+      }
+    },
+    {
+      "agent": "MiniMax",
+      "response_time": 37.07637119293213,
+      "analysis": {
+        "success": false,
+        "rate": null,
+        "timestamp": null,
+        "is_today": true,
+        "has_source": false,
+        "has_real_time_keywords": true,
+        "error": "无法解析JSON数据",
+        "raw_response": "I'll search for the current USD to CNY exchange rate for today (2025-12-07). Let me perform a web search to find this information.\n</think>\n\n[TOOL_CALL]\n{tool => \"web_search\", args => {\n  --query \"USD CNY exchange rate today December 7 2025 real time\"\n}}\n[/TOOL_CALL]"
+      }
+    }
+  ],
+  "summary": {
+    "total_models": 5,
+    "success_count": 2,
+    "today_count": 4,
+    "source_count": 3
+  }
+}

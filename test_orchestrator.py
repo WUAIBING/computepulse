@@ -38,11 +38,13 @@ print("\n✓ Test 3: Registering AI models...")
 try:
     qwen = AIModel(name="qwen", provider="Alibaba", cost_per_1m_tokens=0.6, avg_response_time=3.5)
     deepseek = AIModel(name="deepseek", provider="DeepSeek", cost_per_1m_tokens=0.8, avg_response_time=5.0)
-    doubao = AIModel(name="doubao", provider="Volcengine", cost_per_1m_tokens=1.2, avg_response_time=15.0)
+    kimi = AIModel(name="kimi", provider="Moonshot", cost_per_1m_tokens=0.12, avg_response_time=2.0)
+    minimax = AIModel(name="minimax", provider="MiniMax", cost_per_1m_tokens=0.1, avg_response_time=1.5)
     
     orchestrator.register_model(qwen)
     orchestrator.register_model(deepseek)
-    orchestrator.register_model(doubao)
+    orchestrator.register_model(kimi)
+    orchestrator.register_model(minimax)
     
     print(f"  ✅ Registered {len(orchestrator.models)} models:")
     for name in orchestrator.models:
