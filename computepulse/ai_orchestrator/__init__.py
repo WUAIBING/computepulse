@@ -21,14 +21,65 @@ __version__ = "1.0.0"
 __author__ = "ComputePulse Team"
 
 from .orchestrator import AIOrchestrator
-from .models import TaskType, Request, Response, AIModel
+from .models import (
+    TaskType,
+    Request,
+    Response,
+    AIModel,
+    PerformanceRecord,
+    MergedResult,
+    ValidationResult,
+    ConfidenceScore,
+    RoutingStrategy,
+    MetricsSummary,
+    ValidationError,
+    validate_confidence_score,
+    validate_positive_number,
+    validate_non_empty_string,
+)
 from .config import OrchestratorConfig
+from .storage import StorageManager, StorageError
+from .task_classifier import TaskClassifier, ClassificationResult
+from .learning_engine import LearningEngine, PerformanceReport
+from .adaptive_router import AdaptiveRouter, RoutingDecision
+from .parallel_executor import ParallelExecutor, ExecutionResult
+from .merger import ConfidenceWeightedMerger, MergeMetadata
+from .cache import ResponseCache, SemanticCache, CacheEntry, CacheStats, create_cache
+from .async_storage import AsyncStorageManager
 
 __all__ = [
     "AIOrchestrator",
+    "TaskClassifier",
+    "ClassificationResult",
+    "LearningEngine",
+    "PerformanceReport",
+    "AdaptiveRouter",
+    "RoutingDecision",
+    "ParallelExecutor",
+    "ExecutionResult",
+    "ConfidenceWeightedMerger",
+    "MergeMetadata",
     "TaskType",
     "Request",
     "Response",
     "AIModel",
+    "PerformanceRecord",
+    "MergedResult",
+    "ValidationResult",
+    "ConfidenceScore",
+    "RoutingStrategy",
+    "MetricsSummary",
+    "ValidationError",
     "OrchestratorConfig",
+    "StorageManager",
+    "StorageError",
+    "validate_confidence_score",
+    "validate_positive_number",
+    "validate_non_empty_string",
+    "ResponseCache",
+    "SemanticCache",
+    "CacheEntry",
+    "CacheStats",
+    "create_cache",
+    "AsyncStorageManager",
 ]
