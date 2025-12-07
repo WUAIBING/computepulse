@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100s now averaging $3.30/hr, hyperscalers are re-energizing capex plans while US-East availability stabilizes."
+    "text": "H100 pricing at $3.30/hr is stabilizing as US\u2011East supply chain expansions ease chip bottlenecks, enabling more predictable capex planning."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "As DeepSeek's token price averages $1.28/1M, API price compression is reshaping model competition."
+    "text": "With input tokens averaging $1.45/1M, the intensifying API price war is pushing developers toward more efficient model distillation to cut costs."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "With AI now drawing ~120 TWh annually, grid strain is accelerating nuclear baseload discussions."
+    "text": "A 160\u202fTWh annual load underscores grid strain, prompting a strategic shift toward nuclear baseload to curb carbon emissions and secure energy for AI clusters."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment shows cautious optimism as consolidation and pricing normalization temper bubble concerns."
+    "text": "Industry sentiment remains cautiously optimistic despite bubble concerns, as sustainable growth in AI workloads drives disciplined investment."
   }
 }
