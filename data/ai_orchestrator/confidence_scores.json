@@ -1,7 +1,11 @@
 {
-  "version": "1.0",
-  "last_updated": "2025-12-05T11:40:04.750905",
+  "version": "1.1",
+  "last_updated": "2025-12-08T03:28:41.763677",
   "scores": {
-    "qwen_simple_query": 0.6749999999999999
+    "qwen_simple_query": {
+      "score": 0.5875,
+      "sample_count": 10,
+      "last_updated": "2025-12-08T03:28:41.763561"
+    }
   }
 }
