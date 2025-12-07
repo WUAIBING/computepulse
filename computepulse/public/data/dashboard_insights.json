@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply stabilizes as US-East availability improves, easing capex pressures for AI clusters."
+    "text": "H100 supply stabilizes as US-East availability improves."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token input prices have fallen to $1.30 per million due to intensified API price wars and model efficiency gains."
+    "text": "Token costs plummet as aggressive model distillation intensifies API price wars."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Annual AI load of 150 TWh is pushing grid strain, prompting accelerated nuclear baseload adoption to curb carbon emissions."
+    "text": "Nuclear baseload becoming critical for new GW-scale clusters."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The current consolidation wave suggests the AI sector is maturing, but lingering bubble risks demand disciplined growth strategies."
+    "text": "Market consolidation phase indicates a healthy maturation of the AI sector."
   }
 }
