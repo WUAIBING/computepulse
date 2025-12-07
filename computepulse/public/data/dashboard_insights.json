@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 price at $3.34/hr signals tightening supply yet sustained capex is stabilizing chip availability for large\u2011scale deployments."
+    "text": "H100 supply constraints ease as capex cycles mature, but lead times remain uneven across regions."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token input cost at $1.30/1M is being driven down by fierce API price wars, pushing providers to improve model efficiency and competitiveness."
+    "text": "API token pricing is compressing toward marginal cost amid intensified model competition and efficiency gains."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Annual electricity load of 180 TWh is straining regional grids, prompting accelerated adoption of nuclear baseload to curb carbon emissions."
+    "text": "Grid operators confront rising peak loads from AI clusters, accelerating baseload additions and demand flexibility programs."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Overall AI sector sentiment remains cautiously bullish, yet escalating hardware and energy expenditures raise bubble\u2011risk concerns about long\u2011term growth sustainability."
+    "text": "Overall industry sentiment remains cautiously bullish, with capex discipline offset by fears of a capacity overshoot."
   }
 }
