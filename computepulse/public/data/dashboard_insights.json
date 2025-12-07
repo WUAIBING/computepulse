@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply constraints ease as capex cycles mature, but lead times remain uneven across regions."
+    "text": "H100 supply stabilizes as US-East availability improves, unlocking next-wave capex for scaled cluster expansions."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API token pricing is compressing toward marginal cost amid intensified model competition and efficiency gains."
+    "text": "API price wars intensify as distilled models compress inference costs, driving sharp token-price deflation."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Grid operators confront rising peak loads from AI clusters, accelerating baseload additions and demand flexibility programs."
+    "text": "AI load pushes grids to strain; nuclear baseload is becoming essential for new GW-scale clusters."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Overall industry sentiment remains cautiously bullish, with capex discipline offset by fears of a capacity overshoot."
+    "text": "Consolidation signals maturing fundamentals, but valuations still warrant vigilance against bubble risks."
   }
 }
