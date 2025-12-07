@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply chain constraints easing as foundries ramp 4nm production, driving capex ROI above 18% for new deployments."
+    "text": "Qwen reports that the H100 average price of $3.25/hr reflects easing supply constraints, prompting US\u2011East data centers to accelerate capex upgrades."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API pricing compression accelerating as frontier models compete on efficiency, with distilled variants reaching sub-$1/1M input costs."
+    "text": "DeepSeek observes that token input costs at $1.28 per million are fueling aggressive API price wars, compelling competitors to prioritize model efficiency."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh annual AI load pushing grid infrastructure toward SMR nuclear baseload to maintain reliability during peak inference."
+    "text": "Kimi warns that the 120\u202fTWh annual load is stretching the grid, amplifying the case for nuclear baseload to reduce carbon emissions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry entering rationalization phase as venture funding concentrates on provable ROI, signaling sustainable long-term growth trajectory."
+    "text": "GLM notes that market sentiment remains cautiously bullish, with growth sustainability offsetting moderate bubble concerns as capital continues to flow."
   }
 }
