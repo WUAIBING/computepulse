@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 pricing at $3.30/hr is stabilizing as US\u2011East supply chain expansions ease chip bottlenecks, enabling more predictable capex planning."
+    "text": "H100 supply chain constraints easing as foundries ramp 4nm production, driving capex ROI above 18% for new deployments."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With input tokens averaging $1.45/1M, the intensifying API price war is pushing developers toward more efficient model distillation to cut costs."
+    "text": "API pricing compression accelerating as frontier models compete on efficiency, with distilled variants reaching sub-$1/1M input costs."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 160\u202fTWh annual load underscores grid strain, prompting a strategic shift toward nuclear baseload to curb carbon emissions and secure energy for AI clusters."
+    "text": "120 TWh annual AI load pushing grid infrastructure toward SMR nuclear baseload to maintain reliability during peak inference."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment remains cautiously optimistic despite bubble concerns, as sustainable growth in AI workloads drives disciplined investment."
+    "text": "Industry entering rationalization phase as venture funding concentrates on provable ROI, signaling sustainable long-term growth trajectory."
   }
 }
