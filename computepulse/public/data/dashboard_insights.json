@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply eases as US-East channel inventories expand, easing capex pressure for new clusters."
+    "text": "H100 procurement costs stabilizing around $3.28/hr as supply chain bottlenecks ease across major data center regions."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Input token rates compress amid API price wars, but sustained savings hinge on efficiency gains from newer models."
+    "text": "API pricing compression at $1.30/1M tokens accelerating model optimization and specialized deployment strategies."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Rising 140 TWh AI load heightens grid strain, accelerating interest in nuclear baseload to stabilize decarbonization."
+    "text": "120 TWh annual energy demand requiring nuclear baseload integration to maintain AI cluster reliability and sustainability targets."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Capital concentration and platform lock\u2011in signal a maturing AI cycle, yet valuation dispersion keeps bubble risk in focus."
+    "text": "AI infrastructure investment cycles showing healthy maturation signs with strategic consolidation replacing speculative expansion."
   }
 }
