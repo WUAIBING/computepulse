@@ -103,9 +103,13 @@ class ResponseCache:
         """
         Generate cache key from request parameters.
 
+        Note: task_type is not included in key generation to ensure cache hits
+        regardless of task classification, but it's stored in CacheEntry metadata
+        for invalidation purposes.
+
         Args:
             prompt: The request prompt
-            task_type: Optional task type
+            task_type: Optional task type (not used in key generation)
             quality_threshold: Optional quality threshold
             cost_limit: Optional cost limit
 
@@ -114,7 +118,6 @@ class ResponseCache:
         """
         key_parts = [
             prompt.strip().lower(),
-            str(task_type) if task_type else "",
             f"q{quality_threshold:.2f}" if quality_threshold else "",
             f"c{cost_limit:.2f}" if cost_limit else ""
         ]

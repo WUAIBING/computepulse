@@ -21,8 +21,15 @@ __version__ = "1.0.0"
 __author__ = "ComputePulse Team"
 
 from .orchestrator import AIOrchestrator
-from .models import TaskType, Request, Response, AIModel
+from .models import TaskType, Request, Response, AIModel, MergedResult, ValidationResult
 from .config import OrchestratorConfig
+from .adaptive_router import AdaptiveRouter
+from .parallel_executor import ParallelExecutor
+from .merger import ConfidenceWeightedMerger
+from .feedback_loop import FeedbackLoop
+from .data_validator import DataValidator
+from .performance_tracker import PerformanceTracker
+from .migration_adapter import MigrationAdapter, fetch_data_with_collaboration
 
 __all__ = [
     "AIOrchestrator",
@@ -30,5 +37,15 @@ __all__ = [
     "Request",
     "Response",
     "AIModel",
+    "MergedResult",
+    "ValidationResult",
     "OrchestratorConfig",
+    "AdaptiveRouter",
+    "ParallelExecutor",
+    "ConfidenceWeightedMerger",
+    "FeedbackLoop",
+    "DataValidator",
+    "PerformanceTracker",
+    "MigrationAdapter",
+    "fetch_data_with_collaboration",
 ]

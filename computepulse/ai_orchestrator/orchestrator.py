@@ -38,8 +38,10 @@ class AIOrchestrator:
 
         # Initialize components
         self.storage = StorageManager(self.config)
-        self.learning_engine = LearningEngine(self.config, self.storage)
-        self.task_classifier = TaskClassifier(self.config)
+        self.learning_engine = LearningEngine(self.storage)
+        self.task_classifier = TaskClassifier(
+            low_confidence_threshold=self.config.default_quality_threshold
+        )
 
         # Initialize cache
         self.enable_cache = enable_cache
@@ -457,7 +459,14 @@ class AIOrchestrator:
         # Get learning engine stats
         perf_report = self.learning_engine.get_performance_report()
         if perf_report:
-            report_data.update(perf_report)
+            # Convert PerformanceReport to dict if needed
+            if hasattr(perf_report, '__dict__'):
+                report_data["total_requests"] = getattr(perf_report, 'total_requests', 0)
+                report_data["success_rate"] = getattr(perf_report, 'accuracy', 0) * 100
+                report_data["avg_response_time"] = getattr(perf_report, 'avg_response_time', 0)
+                report_data["avg_cost"] = getattr(perf_report, 'avg_cost', 0)
+            elif isinstance(perf_report, dict):
+                report_data.update(perf_report)
 
         if output_format == 'dict':
             return report_data

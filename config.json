@@ -1,0 +1,168 @@
+{
+  "version": "1.0.0",
+  "description": "ComputePulse AI Orchestrator Configuration",
+
+  "system": {
+    "use_orchestrator": true,
+    "migration_mode": "gradual",
+    "rollback_enabled": true
+  },
+
+  "feature_flags": {
+    "enable_validation": true,
+    "enable_performance_tracking": true,
+    "enable_feedback_loop": true,
+    "enable_model_selection": true,
+    "enable_parallel_execution": true,
+    "enable_result_merging": true,
+    "enable_caching": true,
+    "enable_anomaly_detection": true
+  },
+
+  "orchestrator": {
+    "default_quality_threshold": 0.8,
+    "default_cost_limit": 1.0,
+    "confidence_decay_factor": 0.95,
+    "min_samples_for_confidence": 10,
+    "confidence_smoothing_factor": 0.7,
+    "simple_query_model_count": 1,
+    "complex_reasoning_model_count": 2,
+    "validation_model_count": 3,
+    "model_timeout_seconds": 30.0,
+    "enable_early_result_processing": true
+  },
+
+  "models": [
+    {
+      "name": "qwen-max",
+      "provider": "Alibaba",
+      "display_name": "Qwen Max",
+      "cost_per_1m_tokens": 0.4,
+      "avg_response_time": 2.0,
+      "enabled": true,
+      "api_config": {
+        "type": "dashscope",
+        "model_id": "qwen-max",
+        "search_enabled": true
+      }
+    },
+    {
+      "name": "deepseek-v3",
+      "provider": "DeepSeek",
+      "display_name": "DeepSeek V3",
+      "cost_per_1m_tokens": 0.15,
+      "avg_response_time": 1.8,
+      "enabled": true,
+      "api_config": {
+        "type": "dashscope",
+        "model_id": "deepseek-v3",
+        "reasoning_mode": true
+      }
+    },
+    {
+      "name": "kimi-k2",
+      "provider": "Moonshot",
+      "display_name": "Kimi K2 Instruct",
+      "cost_per_1m_tokens": 0.3,
+      "avg_response_time": 2.5,
+      "enabled": true,
+      "api_config": {
+        "type": "dashscope",
+        "model_id": "Moonshot-Kimi-K2-Instruct",
+        "search_enabled": true
+      }
+    },
+    {
+      "name": "glm-4-flash",
+      "provider": "ZHIPU AI",
+      "display_name": "GLM-4-Flash",
+      "cost_per_1m_tokens": 0.2,
+      "avg_response_time": 1.5,
+      "enabled": true,
+      "api_config": {
+        "type": "zhipu",
+        "model_id": "glm-4-flash",
+        "search_enabled": true
+      }
+    },
+    {
+      "name": "minimax",
+      "provider": "MiniMax",
+      "display_name": "MiniMax ABAB6.5",
+      "cost_per_1m_tokens": 0.1,
+      "avg_response_time": 2.0,
+      "enabled": true,
+      "api_config": {
+        "type": "minimax",
+        "model_id": "abab6.5s-chat"
+      }
+    }
+  ],
+
+  "storage": {
+    "base_dir": "./public/data/ai_orchestrator",
+    "confidence_scores_file": "confidence_scores.json",
+    "performance_history_file": "performance_history.jsonl",
+    "corrections_file": "corrections.jsonl",
+    "feedback_file": "feedback.jsonl",
+    "cleanup_days_to_keep": 90
+  },
+
+  "performance": {
+    "enable_performance_tracking": true,
+    "enable_anomaly_detection": true,
+    "anomaly_threshold": 0.3,
+    "max_response_time": 60.0,
+    "max_cost_per_request": 1.0,
+    "min_confidence_score": 0.5
+  },
+
+  "validation": {
+    "enable_validation": true,
+    "auto_validate_results": true,
+    "validation_timeout": 180,
+    "gpu_price": {
+      "min_price": 0.01,
+      "max_price": 1000.0,
+      "required_fields": ["provider", "gpu", "price", "region"]
+    },
+    "token_price": {
+      "min_price": 0.001,
+      "max_price": 100.0,
+      "required_fields": ["provider", "model", "input_price", "output_price"],
+      "output_to_input_ratio": {
+        "min": 1.5,
+        "max": 5.0
+      }
+    },
+    "grid_load": {
+      "min_load": 0.0,
+      "max_load": 100.0,
+      "required_fields": ["region", "timestamp", "load_percentage"]
+    }
+  },
+
+  "logging": {
+    "level": "INFO",
+    "enable_detailed_logging": true,
+    "log_file": "./logs/ai_orchestrator.log",
+    "max_log_size_mb": 100,
+    "backup_count": 5
+  },
+
+  "legacy_system": {
+    "enabled": false,
+    "api_endpoint": "http://localhost:8000",
+    "api_key": null,
+    "timeout": 30,
+    "retry_count": 3,
+    "retry_delay": 1.0
+  },
+
+  "api_keys": {
+    "dashscope": null,
+    "volcengine": null,
+    "openai": null,
+    "description": "API keys should be set via environment variables or .env file"
+  }
+}

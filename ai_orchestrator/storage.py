@@ -6,7 +6,7 @@ import json
 import os
 from collections import defaultdict
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 import logging
 
 from .models import AIModel, TaskType, PerformanceRecord
@@ -23,7 +23,11 @@ class StorageManager:
         self.config = config
         self.confidence_scores_path = config.confidence_scores_path
         self.performance_history_path = config.performance_history_path
-        
+
+        # Additional file paths for feedback
+        self.corrections_file = os.path.join(config.storage_dir, "corrections.jsonl")
+        self.feedback_file = os.path.join(config.storage_dir, "feedback.jsonl")
+
         # Ensure storage directory exists
         os.makedirs(config.storage_dir, exist_ok=True)
     
@@ -259,3 +263,61 @@ class StorageManager:
         except Exception as e:
             logger.error(f"Failed to cleanup old records: {e}")
             return 0
+
+    def get_corrections_file(self) -> str:
+        """Get path to corrections file."""
+        return self.corrections_file
+
+    def get_feedback_file(self) -> str:
+        """Get path to feedback file."""
+        return self.feedback_file
+
+    def _append_to_jsonl(self, file_path: str, data: Dict[str, Any]) -> bool:
+        """
+        Append data to a JSONL file.
+
+        Args:
+            file_path: Path to the file
+            data: Data to append
+
+        Returns:
+            True if successful, False otherwise
+        """
+        try:
+            with open(file_path, 'a', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False)
+                f.write('\n')
+            return True
+        except Exception as e:
+            logger.error(f"Failed to append to JSONL file {file_path}: {e}")
+            return False
+
+    def _read_from_jsonl(self, file_path: str) -> List[Dict[str, Any]]:
+        """
+        Read data from a JSONL file.
+
+        Args:
+            file_path: Path to the file
+
+        Returns:
+            List of records
+        """
+        if not os.path.exists(file_path):
+            return []
+
+        try:
+            records = []
+            with open(file_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    if not line.strip():
+                        continue
+                    try:
+                        data = json.loads(line)
+                        records.append(data)
+                    except json.JSONDecodeError as e:
+                        logger.warning(f"Failed to parse JSONL line: {e}")
+                        continue
+            return records
+        except Exception as e:
+            logger.error(f"Failed to read from JSONL file {file_path}: {e}")
+            return []
