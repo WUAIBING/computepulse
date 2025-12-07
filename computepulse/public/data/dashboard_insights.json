@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "Global H100 supply stabilizes as new fab capacity comes online, easing procurement bottlenecks and shifting capex toward AI\u2011specific accelerators."
+    "text": "With H100s now averaging $3.30/hr, hyperscalers are re-energizing capex plans while US-East availability stabilizes."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API price wars intensify as model providers compress inference costs, driving token rates below $1/1M and spurring rapid efficiency gains."
+    "text": "As DeepSeek's token price averages $1.28/1M, API price compression is reshaping model competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Rising AI workloads strain the grid, accelerating nuclear baseload adoption to meet sustainability targets while reducing carbon footprints."
+    "text": "With AI now drawing ~120 TWh annually, grid strain is accelerating nuclear baseload discussions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment reflects cautious optimism, with investors tempering bubble concerns as AI growth aligns with long\u2011term productivity gains."
+    "text": "Industry sentiment shows cautious optimism as consolidation and pricing normalization temper bubble concerns."
   }
 }
