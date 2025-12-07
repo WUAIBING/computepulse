@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "Qwen reports that the H100 average price of $3.25/hr reflects easing supply constraints, prompting US\u2011East data centers to accelerate capex upgrades."
+    "text": "H100 supply stabilizes as US-East availability improves, easing capex constraints."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek observes that token input costs at $1.28 per million are fueling aggressive API price wars, compelling competitors to prioritize model efficiency."
+    "text": "API price wars intensify as distillation compresses costs, driving token prices lower."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Kimi warns that the 120\u202fTWh annual load is stretching the grid, amplifying the case for nuclear baseload to reduce carbon emissions."
+    "text": "Grid strain intensifies as annual load approaches 120 TWh, making nuclear baseload essential."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "GLM notes that market sentiment remains cautiously bullish, with growth sustainability offsetting moderate bubble concerns as capital continues to flow."
+    "text": "Consolidation signals healthy sector maturation amid sustained growth and cautious bubble risk."
   }
 }
