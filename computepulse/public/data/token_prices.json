@@ -212,8 +212,8 @@
   {
     "model": "DeepSeek-V3",
     "provider": "DeepSeek",
-    "input_price": 0.07,
-    "output_price": 0.27
+    "input_price": 0.0,
+    "output_price": 0.0
   },
   {
     "provider": "DeepSeek",
