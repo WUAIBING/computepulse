@@ -1,14 +1,6 @@
 {
-  "base": "USD",
-  "timestamp": "2025-12-08T08:27:05.493787",
-  "source": "ExchangeRate API",
-  "rates": {
-    "USD": 1.0,
-    "CNY": 7.08,
-    "EUR": 0.859,
-    "GBP": 0.75
-  },
   "from": "USD",
   "to": "CNY",
-  "rate": 7.08
+  "rate": 7.24,
+  "timestamp": "2024-06-10T14:35:00Z"
 }
