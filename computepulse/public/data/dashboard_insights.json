@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply stabilizes as US-East availability improves."
+    "text": "H100 supply constraints ease as US-East allocation rises, allowing hyperscalers to reallocate capex from spot markets to long-term contracts."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token costs plummeting due to aggressive model distillation."
+    "text": "DeepSeek's aggressive token pricing drives API cost compression, shifting procurement toward smaller, efficient models."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Nuclear baseload becoming critical for new GW-scale clusters."
+    "text": "150 TWh annual AI load heightens grid strain, accelerating nuclear baseload adoption and demand response."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Market consolidation phase indicates a healthy maturation of the AI sector."
+    "text": "Consolidation phase points to sustainable growth, with investors rewarding operational efficiency over capex scale."
   }
 }
