@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 cluster deployments accelerate as supply chain bottlenecks ease, driving down per-hour compute costs for enterprise AI workloads."
+    "text": "H100 spot prices stabilizing around $3.33/hr as inventory rebuilds, with capex shifting toward liquid-cooled racks for dense AI workloads."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API price compression intensifies as frontier models achieve 40% better token efficiency through architectural optimizations."
+    "text": "Token input costs at $1.35/1M tokens signal intense API price compression as distilled models force efficiency gains across the stack."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI data centers push regional grids toward 85% capacity utilization, necessitating nuclear baseload partnerships for 24/7 reliability."
+    "text": "120 TWh annual load exposes grid vulnerability, prompting SMR nuclear adoption for baseload stability in AI hyperscale regions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Enterprise AI adoption curves suggest sustainable growth trajectory, with 78% of Fortune 500 planning multi-year infrastructure investments."
+    "text": "Valuation compression suggests sector maturation rather than bubble risk, with sustainable growth focusing on inference efficiency rather than pure parameter scaling."
   }
 }
