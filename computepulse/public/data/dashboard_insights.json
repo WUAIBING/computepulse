@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 GPU pricing at $3.39/hr signals persistent supply chain constraints and elevated capex burdens, with limited chip availability continuing to constrain AI infrastructure scaling despite gradual production ramp-ups."
+    "text": "H100 supply stabilizes as US-East availability improves."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Input token pricing at $1.35/1M demonstrates aggressive API price compression in the model competition landscape, forcing providers to optimize efficiency while maintaining competitive margins."
+    "text": "Token costs plummeting due to aggressive model distillation."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "150 TWh annual load represents substantial grid strain implications, with AI infrastructure's carbon footprint necessitating accelerated nuclear adoption and renewable integration for sustainable growth."
+    "text": "Nuclear baseload becoming critical for new GW-scale clusters."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The convergence of high hardware costs, aggressive token pricing, and significant energy demands creates a mixed sentiment environment where growth sustainability faces pressure from operational expenses and environmental concerns."
+    "text": "Runway to IPO narrows as multiples reset on profitless growth."
   }
 }
