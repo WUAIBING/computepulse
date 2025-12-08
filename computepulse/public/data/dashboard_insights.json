@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply stabilizes as US-East availability improves."
+    "text": "H100 supply stabilizes as US-East availability improves and SK Hynix expands output."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token costs plummeting due to aggressive model distillation."
+    "text": "Token costs are sliding on aggressive API price wars and efficiency gains from model competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Nuclear baseload becoming critical for new GW-scale clusters."
+    "text": "AI-driven electricity demand near 244 TWh annually is stressing grids, raising the need for baseload and nuclear adoption."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Market consolidation phase indicates a healthy maturation of the AI sector."
+    "text": "Industry sentiment is cautiously optimistic, with growth tempered by concerns over capex intensity and sustainability."
   }
 }
