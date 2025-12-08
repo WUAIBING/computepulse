@@ -1,78 +1,78 @@
 {
-  "updated_at": "2025-12-08T17:13:29.585602",
+  "updated_at": "2025-12-08T18:18:58.328701",
   "source": "Yahoo Finance API (Direct)",
   "note": "直接 API 调用，100% 精确",
   "prices": {
     "NVDA": {
       "symbol": "NVDA",
-      "price": 183.262,
+      "price": 186.67,
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T17:13:28.386811",
+      "timestamp": "2025-12-08T18:18:56.917392",
       "source": "Yahoo Finance API"
     },
     "AMD": {
       "symbol": "AMD",
-      "price": 219.3,
+      "price": 222.1,
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T17:13:28.529096",
+      "timestamp": "2025-12-08T18:18:57.072228",
       "source": "Yahoo Finance API"
     },
     "GOOGL": {
       "symbol": "GOOGL",
-      "price": 314.4,
+      "price": 312.155,
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T17:13:28.719713",
+      "timestamp": "2025-12-08T18:18:57.259101",
       "source": "Yahoo Finance API"
     },
     "AAPL": {
       "symbol": "AAPL",
-      "price": 277.205,
+      "price": 277.36,
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T17:13:28.900173",
+      "timestamp": "2025-12-08T18:18:57.539983",
       "source": "Yahoo Finance API"
     },
     "AMZN": {
       "symbol": "AMZN",
-      "price": 227.4,
+      "price": 227.509,
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T17:13:29.027286",
+      "timestamp": "2025-12-08T18:18:57.746972",
       "source": "Yahoo Finance API"
     },
     "MSFT": {
       "symbol": "MSFT",
-      "price": 490.98,
+      "price": 491.111,
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T17:13:29.275382",
+      "timestamp": "2025-12-08T18:18:57.977219",
       "source": "Yahoo Finance API"
     },
     "META": {
       "symbol": "META",
-      "price": 670.165,
+      "price": 668.38,
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T17:13:29.401417",
+      "timestamp": "2025-12-08T18:18:58.162193",
       "source": "Yahoo Finance API"
     },
     "TSLA": {
       "symbol": "TSLA",
-      "price": 437.73,
+      "price": 437.84,
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T17:13:29.584421",
+      "timestamp": "2025-12-08T18:18:58.327476",
       "source": "Yahoo Finance API"
     }
   }
