@@ -1,0 +1,45 @@
+{
+  "nvidia": {
+    "h100": {
+      "manufacturing_cost": "Undisclosed",
+      "suggested_retail": "~$25,000-$40,000 (system-dependent)",
+      "gross_margin": ">70% (industry estimate)",
+      "cost_breakdown": {
+        "silicon": "Undisclosed",
+        "packaging": "Undisclosed (CoWoS packaging major cost factor)",
+        "testing": "Undisclosed",
+        "r_and_d_allocation": "Undisclosed (significant R&D amortized)"
+      }
+    },
+    "a100": {
+      "manufacturing_cost": "Undisclosed",
+      "suggested_retail": "~$10,000-$15,000 (system-dependent)",
+      "gross_margin": "~60-70% (industry estimate)",
+      "cost_breakdown": {
+        "silicon": "Undisclosed",
+        "packaging": "Undisclosed",
+        "testing": "Undisclosed",
+        "r_and_d_allocation": "Undisclosed"
+      }
+    }
+  },
+  "amd": {
+    "mi300x": {
+      "manufacturing_cost": "Undisclosed",
+      "suggested_retail": "~$15,000-$20,000 (system-dependent)",
+      "gross_margin": ">50% (company guidance)"
+    }
+  },
+  "intel": {
+    "arc_gpu": {
+      "note": "Intel Arc consumer GPUs operate in a different market segment (lower price points) compared to NVIDIA H100/A100 and AMD MI300X datacenter/AI GPUs. Cost structures are not directly comparable."
+    }
+  },
+  "industry_analysis": {
+    "average_gross_margin": "55-70% for AI datacenter GPUs",
+    "cost_trend": "Increasing (driven by advanced packaging shortages and rising foundry prices)",
+    "main_cost_driver": "Advanced packaging (e.g., CoWoS, InFO) capacity constraints"
+  },
+  "last_updated": "2024-07-20",
+  "timestamp": "2025-12-08T15:24:34.449905"
+}

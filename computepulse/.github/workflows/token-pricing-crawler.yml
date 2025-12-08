@@ -1,0 +1,91 @@
+# GitHub Actions: Token Pricing Crawler
+# 自动爬取AI厂商官方Token定价并更新到仓库
+
+name: Token Pricing Crawler
+
+on:
+  # 定时运行 - 每天UTC 00:00 和 12:00 (北京时间 08:00 和 20:00)
+  schedule:
+    - cron: '0 0 * * *'
+    - cron: '0 12 * * *'
+
+  # 手动触发
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: 'Force update even if no changes'
+        required: false
+        default: 'false'
+
+jobs:
+  crawl-token-pricing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright requests beautifulsoup4
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Run Token Pricing Crawler
+        run: |
+          cd computepulse
+          python scripts/fetch_token_pricing_playwright.py
+        env:
+          PYTHONUNBUFFERED: 1
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          cd computepulse
+          if git diff --quiet public/data/token_pricing_official.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true' || github.event.inputs.force_update == 'true'
+        run: |
+          cd computepulse
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/data/token_pricing_official.json
+          git commit -m "Data Update: Token pricing crawled [$(date -u '+%Y-%m-%d %H:%M UTC')]
+
+          - Source: Official AI provider pricing pages
+          - Method: Playwright headless browser
+          - Automated by GitHub Actions"
+          git push
+
+      - name: Upload crawl results as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: token-pricing-data
+          path: computepulse/public/data/token_pricing_official.json
+          retention-days: 7
+
+      - name: Summary
+        run: |
+          echo "## Token Pricing Crawler Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Crawl Time: $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f "computepulse/public/data/token_pricing_official.json" ]; then
+            echo "### Statistics:" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`json" >> $GITHUB_STEP_SUMMARY
+            cat computepulse/public/data/token_pricing_official.json | python -c "import sys,json; d=json.load(sys.stdin); print(json.dumps(d.get('metadata',{}), indent=2))"
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          fi
