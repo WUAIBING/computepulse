@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "crawl_timestamp": "2025-12-08T20:13:26.635477",
+    "method": "pure_web_crawling",
+    "exchange_rate_usd_cny": 7.078456,
+    "data_source": "Official pricing pages only",
+    "no_preset_data": true,
+    "total_providers": 12,
+    "successful_crawls": 0,
+    "total_models": 0
+  },
+  "providers": [
+    {
+      "provider": "OpenAI",
+      "source_url": "https://openai.com/api/pricing/",
+      "crawl_time": "2025-12-08T20:13:28.318683",
+      "crawl_status": "no_data",
+      "models_found": 0,
+      "models": []
+    },
+    {
+      "provider": "Anthropic",
+      "source_url": "https://www.anthropic.com/pricing",
+      "crawl_time": "2025-12-08T20:13:32.693413",
+      "crawl_status": "no_data",
+      "models_found": 0,
+      "models": []
+    },
+    {
+      "provider": "Google",
+      "error": "('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))",
+      "crawl_status": "error",
+      "models": []
+    },
+    {
+      "provider": "xAI",
+      "error": "('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))",
+      "crawl_status": "error",
+      "models": []
+    },
+    {
+      "provider": "Mistral",
+      "source_url": "https://mistral.ai/technology/",
+      "crawl_time": "2025-12-08T20:13:47.018293",
+      "crawl_status": "no_data",
+      "models_found": 0,
+      "models": []
+    },
+    {
+      "provider": "Cohere",
+      "error": "HTTPSConnectionPool(host='cohere.com', port=443): Read timed out. (read timeout=15)",
+      "crawl_status": "error",
+      "models": []
+    },
+    {
+      "provider": "DeepSeek",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "crawl_time": "2025-12-08T20:14:04.785740",
+      "crawl_status": "no_data",
+      "models_found": 0,
+      "models": []
+    },
+    {
+      "provider": "Baidu",
+      "source_url": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7",
+      "crawl_time": "2025-12-08T20:14:06.473499",
+      "crawl_status": "no_data",
+      "models_found": 0,
+      "models": []
+    },
+    {
+      "provider": "Zhipu",
+      "source_url": "https://open.bigmodel.cn/pricing",
+      "crawl_time": "2025-12-08T20:14:08.032115",
+      "crawl_status": "no_data",
+      "models_found": 0,
+      "models": []
+    },
+    {
+      "provider": "MiniMax",
+      "source_url": "https://platform.minimaxi.com/document/Price",
+      "crawl_time": "2025-12-08T20:14:19.146536",
+      "crawl_status": "no_data",
+      "models_found": 0,
+      "models": []
+    },
+    {
+      "provider": "Moonshot",
+      "source_url": "https://platform.moonshot.cn/docs/pricing",
+      "crawl_time": "2025-12-08T20:14:20.547272",
+      "crawl_status": "no_data",
+      "models_found": 0,
+      "models": []
+    },
+    {
+      "provider": "Alibaba",
+      "source_url": "https://help.aliyun.com/zh/model-studio/billing",
+      "crawl_time": "2025-12-08T20:14:22.310326",
+      "crawl_status": "no_data",
+      "models_found": 0,
+      "models": []
+    }
+  ]
+}
