@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 lead times easing as US-East cloud regions add capacity, but HBM3e scarcity still constrains top-tier deployments."
+    "text": "H100 supply stabilizes as US-East availability improves."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Input token pricing compresses toward $1/M as distillation and router-level optimization intensify price competition."
+    "text": "Token costs plummeting due to aggressive model distillation."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh annual load risks grid strain; new baseload capacity and efficiency upgrades are essential to curb carbon intensity."
+    "text": "Nuclear baseload becoming critical for new GW-scale clusters."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment is cautiously optimistic, with consolidation and capex discipline signaling sustainable growth ahead."
+    "text": "Market consolidation phase indicates a healthy maturation of the AI sector."
   }
 }

@@ -1,7 +1,7 @@
 {
-  "score": 80,
+  "score": 90,
   "trend": "up",
-  "summary": "Aggressive capex increases from Microsoft, Google, and Meta drive the index higher, with new model releases (GPT-5, Gemini 2) offsetting GPU rental price stabilization.",
+  "summary": "Aggressive capex increases from Microsoft (58% YoY), Google, Meta, and AWS drive the index. GPU rental prices remain high ($3.29/hr) despite minor spot market softening, and GPT-5/Gemini 2 rumors add momentum.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-08T10:17:20.698076"
+  "last_updated": "2025-12-08T11:13:50.601011"
 }
