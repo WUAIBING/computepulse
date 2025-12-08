@@ -253,5 +253,11 @@
     "gpu_count": 94,
     "token_count": 51,
     "grid_twh": 120
+  },
+  {
+    "date": "2025-12-08",
+    "gpu_count": 95,
+    "token_count": 52,
+    "grid_twh": 150
   }
 ]

@@ -185,10 +185,19 @@ function App() {
            const rateResponse = await fetch(`${cleanBaseUrl}data/exchange_rate.json?t=${timestamp}`);
            if (rateResponse.ok) {
               const rateData = await rateResponse.json();
-              if (rateData && rateData.rate) {
-                 setAvailableCurrencies(prev => prev.map(c => 
-                    c.code === 'CNY' ? { ...c, rate: rateData.rate } : c
-                 ));
+              if (rateData) {
+                 // 新的数据格式包含完整的rates字段（USD, CNY, EUR, GBP）
+                 if (rateData.rates) {
+                    // 更新所有货币的汇率
+                    setAvailableCurrencies(prev => prev.map(c =>
+                       c.code in rateData.rates ? { ...c, rate: rateData.rates[c.code] } : c
+                    ));
+                 } else if (rateData.rate) {
+                    // 向后兼容：只更新CNY汇率
+                    setAvailableCurrencies(prev => prev.map(c =>
+                       c.code === 'CNY' ? { ...c, rate: rateData.rate } : c
+                    ));
+                 }
               }
            }
         } catch (e) {

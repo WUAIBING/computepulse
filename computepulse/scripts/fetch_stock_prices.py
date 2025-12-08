@@ -45,10 +45,21 @@ def fetch_stock_price(symbol: str) -> Optional[Dict]:
             data = response.json()
             result = data['chart']['result'][0]
             meta = result['meta']
-            
+            price = meta['regularMarketPrice']
+
+            # Data validation: price must be positive
+            if price <= 0:
+                print(f"❌ {symbol}: Invalid price {price} (must be positive)")
+                return None
+
+            # Additional validation: price must be within reasonable range (1-10000 USD)
+            if price < 1 or price > 10000:
+                print(f"⚠️ {symbol}: Price {price} outside typical range (1-10000 USD), but accepting")
+                # Continue anyway, might be valid for high-priced stocks
+
             return {
                 'symbol': symbol,
-                'price': meta['regularMarketPrice'],
+                'price': price,
                 'currency': meta['currency'],
                 'exchange': meta['exchangeName'],
                 'market_state': meta.get('marketState', 'unknown'),

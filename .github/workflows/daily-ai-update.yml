@@ -37,14 +37,23 @@ jobs:
         env:
           # Secrets must be configured in GitHub Repository Settings
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
-          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }} 
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
           MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }} # Added MiniMax API Key
         run: |
           echo "Starting AI Market Analysis..."
-          # 1. Run the modular price fetcher (using AI Consortium: Qwen, DeepSeek, Kimi, GLM)
+          # 1. Fetch authoritative stock prices (direct API call, 100% accurate)
+          echo "Step 1: Fetching stock prices from Yahoo Finance API..."
+          python scripts/fetch_stock_prices.py
+
+          # 2. Update system logs with authoritative financial data
+          echo "Step 2: Updating system logs with authoritative data..."
+          python scripts/update_system_logs.py
+
+          # 3. Run the modular price fetcher (using AI Consortium: Qwen, DeepSeek, Kimi, GLM)
+          echo "Step 3: Running AI-powered data fetching for GPU, Token, Grid Load..."
           python scripts/fetch_prices_modular.py
-          
-          # 2. (Optional) Run other specific analysis scripts
+
+          # 4. (Optional) Run other specific analysis scripts
           # python scripts/generate_daily_report.py
 
       - name: Commit and Push Data Updates

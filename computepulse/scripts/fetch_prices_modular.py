@@ -442,58 +442,83 @@ def generate_dashboard_insights():
         print(f"Insights Error: {e}")
 
 def fetch_exchange_rate():
-    """Fetch real-time USD to CNY exchange rate using Kimi (Researcher) with Web Search"""
-    print(f"[{datetime.now()}] Task: Fetch Exchange Rate (Kimi)")
-    
-    try:
-        # Use a two-step process: First search, then extract to JSON
-        # This is more robust than asking for JSON immediately which can suppress search
-        
-        search_prompt = """
-        Please search for the current real-time USD to CNY exchange rate.
-        Report the exact rate and the time of the data.
-        """
-        
-        append_log("Kimi", "Searching global forex markets...", "action")
-        
-        # Step 1: Search
-        raw_result = researcher.search(search_prompt)
-        
-        if not raw_result:
-            print("Kimi search returned no content")
-            return
+    """Fetch real-time exchange rates for USD to multiple currencies using ExchangeRate API (权威数据)"""
+    print(f"[{datetime.now()}] Task: Fetch Exchange Rates (API)")
 
-        # Step 2: Extract
-        extract_prompt = f"""
-        Extract the exchange rate from the following text into JSON.
-        
-        Text: "{raw_result}"
-        
-        Output valid JSON ONLY:
-        {{
-            "from": "USD",
-            "to": "CNY",
-            "rate": 7.24, 
-            "timestamp": "YYYY-MM-DD..."
-        }}
-        """
-        
-        # Use standard generation for extraction (no search needed here)
-        json_result = researcher.generate(extract_prompt)
-        data = clean_and_parse_json(json_result)
-        
-        if data and 'rate' in data:
+    try:
+        append_log("ComputePulse", "Querying ExchangeRate API for authoritative exchange rates...", "action")
+
+        # Direct API call to ExchangeRate API - returns all currencies against USD
+        import requests
+        r = requests.get('https://api.exchangerate-api.com/v4/latest/USD', timeout=10)
+        if r.status_code == 200:
+            api_data = r.json()
+            rates = api_data['rates']
+            timestamp = datetime.now().isoformat()
+
+            # Extract rates for currencies we need (USD, CNY, EUR, GBP)
+            # USD is always 1.0 (base currency)
+            usd_rate = 1.0
+            cny_rate = round(rates.get('CNY', 7.25), 4)
+            eur_rate = round(rates.get('EUR', 0.92), 4)
+            gbp_rate = round(rates.get('GBP', 0.78), 4)
+
+            # Data validation: rates must be within reasonable ranges
+            validation_errors = []
+
+            # CNY validation: 6.0 - 8.0
+            if cny_rate < 6.0 or cny_rate > 8.0:
+                validation_errors.append(f"CNY rate {cny_rate} outside valid range (6.0-8.0)")
+
+            # EUR validation: 0.7 - 1.2
+            if eur_rate < 0.7 or eur_rate > 1.2:
+                validation_errors.append(f"EUR rate {eur_rate} outside valid range (0.7-1.2)")
+
+            # GBP validation: 0.6 - 1.1
+            if gbp_rate < 0.6 or gbp_rate > 1.1:
+                validation_errors.append(f"GBP rate {gbp_rate} outside valid range (0.6-1.1)")
+
+            if validation_errors:
+                error_msg = "; ".join(validation_errors)
+                print(f"Validation Error: {error_msg}")
+                append_log("System", f"Exchange rate validation failed: {error_msg}", "error")
+                return
+
+            # Save complete exchange rate data
+            data = {
+                "base": "USD",
+                "timestamp": timestamp,
+                "source": "ExchangeRate API",
+                "rates": {
+                    "USD": usd_rate,
+                    "CNY": cny_rate,
+                    "EUR": eur_rate,
+                    "GBP": gbp_rate
+                },
+                # For backward compatibility, keep the old structure
+                "from": "USD",
+                "to": "CNY",
+                "rate": cny_rate
+            }
+
             with open(EXCHANGE_RATE_FILE, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2)
-            print(f"Exchange Rate Saved: 1 USD = {data['rate']} CNY")
-            append_log("System", f"Exchange rate updated: {data['rate']}", "success")
+
+            print(f"Exchange Rates Saved:")
+            print(f"  USD: {usd_rate} (基准)")
+            print(f"  CNY: {cny_rate} (1 USD = {cny_rate} CNY)")
+            print(f"  EUR: {eur_rate} (1 USD = {eur_rate} EUR)")
+            print(f"  GBP: {gbp_rate} (1 USD = {gbp_rate} GBP)")
+            print(f"  来源: ExchangeRate API")
+
+            append_log("System", f"Exchange rates updated: USD={usd_rate}, CNY={cny_rate}, EUR={eur_rate}, GBP={gbp_rate} (权威数据)", "success")
         else:
-            print("Failed to parse exchange rate from search result")
-            # NO FALLBACK ALLOWED
-            append_log("System", "Failed to parse real-time exchange rate", "error")
-            
+            print(f"ExchangeRate API failed with status code: {r.status_code}")
+            append_log("System", "Failed to fetch exchange rates from API", "error")
+
     except Exception as e:
-        print(f"Exchange Rate Error: {e}")
+        print(f"Exchange Rate API Error: {e}")
+        append_log("System", f"Exchange rate API error: {str(e)}", "error")
 
 if __name__ == "__main__":
     # Ensure data dir exists

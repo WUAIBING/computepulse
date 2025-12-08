@@ -21,10 +21,11 @@ function App() {
   
   // Currency, Language & Theme State
   const [currencyCode, setCurrencyCode] = useState<CurrencyCode>('USD');
+  const [availableCurrencies, setAvailableCurrencies] = useState<CurrencyConfig[]>(CURRENCIES);
   const [language, setLanguage] = useState<Language>('CN');
   const [theme, setTheme] = useState<Theme>('dark');
-    
-  const currency = CURRENCIES.find(c => c.code === currencyCode) || CURRENCIES[0];
+
+  const currency = availableCurrencies.find(c => c.code === currencyCode) || availableCurrencies[0];
   const t = TRANSLATIONS[language];
   const themeClasses = getThemeClasses(theme);
 
@@ -214,6 +215,31 @@ function App() {
           console.error(`[ComputePulse] Failed to load annual energy data: ${annualResponse.status} ${annualResponse.statusText}`);
         }
 
+        // 8. Fetch Real-time Exchange Rate
+        const timestamp = Date.now();
+        try {
+           const rateResponse = await fetch(`${cleanBaseUrl}data/exchange_rate.json?t=${timestamp}`);
+           if (rateResponse.ok) {
+              const rateData = await rateResponse.json();
+              if (rateData) {
+                 // 新的数据格式包含完整的rates字段（USD, CNY, EUR, GBP）
+                 if (rateData.rates) {
+                    // 更新所有货币的汇率
+                    setAvailableCurrencies(prev => prev.map(c =>
+                       c.code in rateData.rates ? { ...c, rate: rateData.rates[c.code] } : c
+                    ));
+                 } else if (rateData.rate) {
+                    // 向后兼容：只更新CNY汇率
+                    setAvailableCurrencies(prev => prev.map(c =>
+                       c.code === 'CNY' ? { ...c, rate: rateData.rate } : c
+                    ));
+                 }
+              }
+           }
+        } catch (e) {
+           console.warn("Failed to load exchange rate", e);
+        }
+
       } catch (e) {
         console.error("[ComputePulse] Critical error fetching real data:", e);
         console.warn("[ComputePulse] Falling back to mock data due to critical error");
@@ -359,7 +385,7 @@ function App() {
                 onChange={(e) => setCurrencyCode(e.target.value as CurrencyCode)}
                 className={`bg-transparent ${themeClasses.text} text-xs font-mono font-bold focus:outline-none cursor-pointer flex-1`}
               >
-                {CURRENCIES.map((c) => (
+                {availableCurrencies.map((c) => (
                   <option key={c.code} value={c.code} className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}>{c.code} ({c.symbol})</option>
                 ))}
               </select>
