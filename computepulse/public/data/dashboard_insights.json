@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply chain easing as fab capacity ramps, stabilizing pricing around $3.29/hr and reducing capex for large AI deployments."
+    "text": "H100 supply stabilizes as US-East availability improves."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token input costs have collapsed to $1.37 per million due to fierce API price wars and model efficiency gains, pressuring competitors to lower rates."
+    "text": "Token costs plummeting due to aggressive model distillation."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "The 150 TWh annual AI workload is straining power grids, accelerating nuclear baseload adoption to meet carbon reduction targets."
+    "text": "Nuclear baseload becoming critical for new GW-scale clusters."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment remains bullish but warns of bubble risks as growth sustainability is tested by high capital expenditures and rapid infrastructure scaling."
+    "text": "Runway to IPO narrows as multiples reset on profitless growth."
   }
 }
