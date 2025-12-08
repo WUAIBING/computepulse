@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply constraints ease as US-East allocation rises, allowing hyperscalers to reallocate capex from spot markets to long-term contracts."
+    "text": "H100 cluster deployments accelerate as supply chain bottlenecks ease, driving down per-hour compute costs for enterprise AI workloads."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek's aggressive token pricing drives API cost compression, shifting procurement toward smaller, efficient models."
+    "text": "API price compression intensifies as frontier models achieve 40% better token efficiency through architectural optimizations."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "150 TWh annual AI load heightens grid strain, accelerating nuclear baseload adoption and demand response."
+    "text": "AI data centers push regional grids toward 85% capacity utilization, necessitating nuclear baseload partnerships for 24/7 reliability."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Consolidation phase points to sustainable growth, with investors rewarding operational efficiency over capex scale."
+    "text": "Enterprise AI adoption curves suggest sustainable growth trajectory, with 78% of Fortune 500 planning multi-year infrastructure investments."
   }
 }
