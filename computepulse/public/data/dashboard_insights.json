@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply stabilizes with expanded upstream capacity, easing capex pressure as new fab nodes ramp."
+    "text": "H100 lead times easing as US-East cloud regions add capacity, but HBM3e scarcity still constrains top-tier deployments."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token input prices remain competitive at $1.47 per 1M tokens amid aggressive API price competition and distillation-driven efficiency gains."
+    "text": "Input token pricing compresses toward $1/M as distillation and router-level optimization intensify price competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Nuclear baseload is increasingly critical to support AI-driven grid strain, with 120 TWh annual load demanding clean, firm power."
+    "text": "120 TWh annual load risks grid strain; new baseload capacity and efficiency upgrades are essential to curb carbon intensity."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment shows cautious optimism; consolidation and tighter standards indicate sustainability over speculative overexpansion."
+    "text": "Industry sentiment is cautiously optimistic, with consolidation and capex discipline signaling sustainable growth ahead."
   }
 }
