@@ -1,5 +1,5 @@
 {
-  "updated_at": "2025-12-08T03:51:09.341109",
+  "updated_at": "2025-12-08T04:26:12.042229",
   "source": "Yahoo Finance API (Direct)",
   "note": "直接 API 调用，100% 精确",
   "prices": {
@@ -9,7 +9,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T03:51:08.775827",
+      "timestamp": "2025-12-08T04:26:11.464232",
       "source": "Yahoo Finance API"
     },
     "AMD": {
@@ -18,7 +18,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T03:51:08.842666",
+      "timestamp": "2025-12-08T04:26:11.535649",
       "source": "Yahoo Finance API"
     },
     "GOOGL": {
@@ -27,7 +27,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T03:51:08.915015",
+      "timestamp": "2025-12-08T04:26:11.611322",
       "source": "Yahoo Finance API"
     },
     "AAPL": {
@@ -36,7 +36,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T03:51:09.041308",
+      "timestamp": "2025-12-08T04:26:11.718230",
       "source": "Yahoo Finance API"
     },
     "AMZN": {
@@ -45,7 +45,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T03:51:09.107736",
+      "timestamp": "2025-12-08T04:26:11.789675",
       "source": "Yahoo Finance API"
     },
     "MSFT": {
@@ -54,7 +54,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T03:51:09.204784",
+      "timestamp": "2025-12-08T04:26:11.889835",
       "source": "Yahoo Finance API"
     },
     "META": {
@@ -63,7 +63,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T03:51:09.273174",
+      "timestamp": "2025-12-08T04:26:11.968060",
       "source": "Yahoo Finance API"
     },
     "TSLA": {
@@ -72,7 +72,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-08T03:51:09.339858",
+      "timestamp": "2025-12-08T04:26:12.041251",
       "source": "Yahoo Finance API"
     }
   }
