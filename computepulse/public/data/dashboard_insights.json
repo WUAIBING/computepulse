@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 procurement cycles extending to 6+ months as fab capacity prioritizes enterprise contracts over spot buyers."
+    "text": "H100 supply stabilizes as US-East availability improves."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Mid-tier API providers undercutting incumbents by 40% through optimized inference architectures."
+    "text": "Token costs plummet as API price wars intensify and distillation drives efficiency."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI data centers consuming 12% of total grid capacity in major metropolitan areas, driving nuclear retrofit discussions."
+    "text": "Grid strain rises with 180 TWh annual load, prompting accelerated nuclear baseload adoption."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Institutional investment patterns suggest AI infrastructure is transitioning from speculative to utility asset class."
+    "text": "Growth is sustainable but frothy valuations and rapid capex cycles raise medium-term bubble risk."
   }
 }
