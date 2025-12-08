@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply stabilizes as US-East availability improves."
+    "text": "H100 supply chain bottlenecks are easing as US-East availability improves, but ongoing capex commitments will determine long\u2011term chip availability."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token costs plummeting due to aggressive model distillation."
+    "text": "Token costs are falling sharply as API price wars intensify, with aggressive model distillation driving rapid efficiency gains at $1.35 per million tokens."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Nuclear baseload becoming critical for new GW-scale clusters."
+    "text": "The 120\u202fTWh annual load is straining the grid, making nuclear baseload essential to curb carbon footprint while supporting new GW\u2011scale clusters."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Runway to IPO narrows as multiples reset on profitless growth."
+    "text": "Industry sentiment remains cautiously optimistic amid consolidation, yet soaring valuations raise bubble concerns and spotlight the need for sustainable growth."
   }
 }
