@@ -212,8 +212,8 @@
   {
     "model": "DeepSeek-V3",
     "provider": "DeepSeek",
-    "input_price": 0.14,
-    "output_price": 0.28
+    "input_price": 0.008,
+    "output_price": 0.024
   },
   {
     "provider": "DeepSeek",
@@ -272,14 +272,14 @@
   {
     "model": "Qwen-Max",
     "provider": "Alibaba Cloud",
-    "input_price": 0.02,
-    "output_price": 0.04
+    "input_price": 0.005,
+    "output_price": 0.015
   },
   {
     "model": "Claude 3.5",
     "provider": "Anthropic",
-    "input_price": 0.01,
-    "output_price": 0.02
+    "input_price": 0.011,
+    "output_price": 0.032
   },
   {
     "model": "DeepSeek-V3",
