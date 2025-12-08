@@ -1,7 +1,7 @@
 {
-  "score": 85,
+  "score": 90,
   "trend": "up",
-  "summary": "Major hyperscalers (Microsoft, Google, Meta) project aggressive AI capex growth for 2024/2025, driving index strength. GPU rental prices remain elevated ($3.29/hr) despite minor softening from peaks, indicating sustained demand. New model releases (Claude 3, Llama 3) and rumors of GPT-5/Gemini Ultra further support momentum.",
+  "summary": "Hyperscalers (Microsoft, Google, Meta, AWS) are aggressively increasing AI Capex in 2024/2025, driving sustained demand for GPUs. High rental prices ($3.28/hr) indicate tight supply. Anticipation of GPT-5 and Gemini 2 releases further boosts sentiment.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-08T12:27:44.649434"
+  "last_updated": "2025-12-08T13:31:24.723549"
 }

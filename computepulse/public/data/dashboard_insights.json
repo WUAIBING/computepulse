@@ -1,11 +1,11 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply stabilizes as US-East availability improves, easing capex premiums."
+    "text": "H100 supply stabilizes as US-East availability improves."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token costs plummeting due to aggressive model distillation and API price wars."
+    "text": "Token costs plummeting due to aggressive model distillation."
   },
   "gagl": {
     "agent": "Kimi",
