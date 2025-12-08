@@ -5,14 +5,14 @@
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token costs plummet as API price wars intensify and distillation drives efficiency."
+    "text": "Token costs plummeting due to aggressive model distillation."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Grid strain rises with 180 TWh annual load, prompting accelerated nuclear baseload adoption."
+    "text": "Nuclear baseload becoming critical for new GW-scale clusters."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Growth is sustainable but frothy valuations and rapid capex cycles raise medium-term bubble risk."
+    "text": "Market consolidation phase indicates a healthy maturation of the AI sector."
   }
 }

@@ -1,5 +1,5 @@
 {
-  "annual_twh": 180,
-  "estimated_gw": 21,
-  "kwh_price": 0.1
+  "annual_twh": 120,
+  "estimated_gw": 15,
+  "kwh_price": 0.12
 }
