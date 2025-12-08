@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply stabilizes as US-East availability improves, easing lead times from 8 to 12 weeks."
+    "text": "H100 supply stabilizes with expanded upstream capacity, easing capex pressure as new fab nodes ramp."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API price wars intensify as distilled models drive input costs below $1.00 per million tokens."
+    "text": "Token input prices remain competitive at $1.47 per 1M tokens amid aggressive API price competition and distillation-driven efficiency gains."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Nuclear baseload adoption accelerates as AI load threatens grid stability with 40% carbon intensity."
+    "text": "Nuclear baseload is increasingly critical to support AI-driven grid strain, with 120 TWh annual load demanding clean, firm power."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Market consolidation phase signals healthy maturation despite bubble concerns in hyperscaler capex."
+    "text": "Industry sentiment shows cautious optimism; consolidation and tighter standards indicate sustainability over speculative overexpansion."
   }
 }
