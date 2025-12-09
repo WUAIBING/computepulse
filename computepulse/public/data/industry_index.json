@@ -1,7 +1,7 @@
 {
-  "score": 90,
+  "score": 70,
   "trend": "up",
-  "summary": "The AI Industry Prosperity Index reflects strong bullish conditions driven by aggressive hyperscaler capex increases, sustained high GPU rental prices indicating robust demand, and anticipation around new AI model releases. Hyperscalers (Microsoft, Google, Meta, AWS) have all signaled significant increases in AI infrastructure investments for 2024/2025. Current H100/A100 rental prices remain elevated at $3.12/hr, confirming tight supply-demand dynamics. Rumors of GPT-5 and the release of Gemini 1.5 further fuel positive sentiment.",
+  "summary": "The AI Industry Prosperity Index scores 70/100, reflecting strong underlying growth despite GPU price corrections. Hyperscalers are aggressively increasing AI infrastructure investments (Microsoft $50B, Google prioritizing AI, Meta $35-40B), driving bullish capex sentiment. However, H100/A100 rental prices have fallen ~30% from recent highs ($4.50\u2192$3.14/hr), signaling temporary oversupply. This is offset by imminent innovation catalysts like GPT-5 (confirmed 2024 release) and Gemini 2.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-09T21:17:02.327411"
+  "last_updated": "2025-12-09T22:18:16.247299"
 }

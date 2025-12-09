@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The stable H100 price of $3.12 per hour indicates that supply chain bottlenecks have largely resolved, enabling more predictable capex planning and wider chip availability for AI workloads."
+    "text": "The $3.14/hr H100 pricing reflects constrained supply driving capex inflation, as chip allocation prioritizes hyperscalers over enterprise buyers, creating a two-tier market."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek\u2019s $1.35 per million input tokens pricing triggers an API price war that compresses margins and pushes other providers to improve model efficiency to stay competitive."
+    "text": "At $1.47/1M tokens, DeepSeek's aggressive pricing signals intense API competition that will force efficiency innovations and potentially consolidate the mid-tier model providers."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120\u202fTWh annual electricity load for AI data centers underscores rising grid strain, prompting accelerated nuclear and renewable deployment to keep carbon emissions within target ranges."
+    "text": "The 120 TWh annual AI load represents 2-3% of global electricity demand, creating grid strain that will accelerate nuclear adoption and carbon offset investments."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The confluence of sub-$4 hardware rates and sub-$2 token costs hints at a potential AI bubble; long-term growth will depend on balancing capacity expansion with energy sustainability and regulatory safeguards."
+    "text": "Current AI infrastructure spending shows bubble characteristics with $500B+ in announced projects, but underlying productivity gains suggest sustainable growth beyond current valuations."
   }
 }
