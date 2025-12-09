@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 compute now averaging roughly $3.23 per hour\u2014well below 2024\u2019s peak\u2014availability has improved materially, signaling normalization in the supply chain and easing of chip bottlenecks, which should support higher utilization and more selective capex."
+    "text": "Despite the seemingly moderate H100 pricing at $3.24/hr, ongoing supply chain bottlenecks and escalating capex requirements for AI infrastructure are creating a two-tier market where enterprise buyers face 3-6 month lead times while hyperscalers lock in multi-year commitments."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "An average input price of about $1.38 per million tokens reflects intense API price compression, encouraging model efficiency gains while pressuring margins and likely accelerating consolidation among providers."
+    "text": "The aggressive $1.30/1M token pricing reflects a fierce API price war that's forcing efficiency gains through model optimization, with providers now competing on marginal costs rather than capability premiums."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual AI electricity load adds substantial grid strain and emissions pressure, making nuclear baseload and behind-the-meter generation increasingly attractive for reliability and carbon goals."
+    "text": "The 120 TWh annual energy load represents a critical inflection point, with data centers consuming roughly 1-2% of global electricity and creating urgent demand for nuclear partnerships and renewable baseload solutions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "AI infrastructure growth is robust but tempered by price normalization and cost discipline; the sector\u2019s sustainability hinges on improving utilization and monetizing models at sustainable margins to mitigate bubble risks."
+    "text": "Current market dynamics show unsustainable growth patterns with compute prices compressing faster than revenue models can adapt, indicating a potential bubble correction as capital intensity outpaces monetization maturity."
   }
 }
