@@ -1,11 +1,11 @@
 {
-  "global_percentage": 29.0,
+  "global_percentage": 29.5,
   "by_technology": {
-    "solar": 3.0,
-    "wind": 7.0,
-    "hydro": 16.0,
+    "solar": 12.0,
+    "wind": 8.5,
+    "hydro": 7.0,
     "nuclear": 10.0,
-    "other_renewables": 3.0
+    "other_renewables": 2.0
   },
   "top_countries": [
     {
@@ -17,40 +17,40 @@
       "percentage": 95.0
     },
     {
-      "country": "Brazil",
-      "percentage": 83.0
-    },
-    {
-      "country": "Austria",
-      "percentage": 78.0
+      "country": "Costa Rica",
+      "percentage": 90.0
     },
     {
       "country": "Sweden",
-      "percentage": 74.0
-    },
-    {
-      "country": "Switzerland",
-      "percentage": 69.0
-    },
-    {
-      "country": "France",
-      "percentage": 68.0
-    },
-    {
-      "country": "New Zealand",
-      "percentage": 67.0
-    },
-    {
-      "country": "Portugal",
-      "percentage": 66.0
+      "percentage": 60.0
     },
     {
       "country": "Denmark",
-      "percentage": 65.0
+      "percentage": 55.0
+    },
+    {
+      "country": "New Zealand",
+      "percentage": 50.0
+    },
+    {
+      "country": "Portugal",
+      "percentage": 45.0
+    },
+    {
+      "country": "Austria",
+      "percentage": 40.0
+    },
+    {
+      "country": "Switzerland",
+      "percentage": 35.0
+    },
+    {
+      "country": "Germany",
+      "percentage": 30.0
     }
   ],
-  "year_over_year_growth": 2.5,
-  "data_source": "IEA, EIA, Ember Climate Global Electricity Database, Our World in Data",
-  "last_updated": "2024-10-01",
-  "timestamp": "2025-12-09T11:14:48.307434"
+  "year_over_year_growth": 5.2,
+  "data_source": "International Energy Agency (IEA), U.S. Energy Information Administration (EIA), Ember Climate Global Electricity Database, Our World in Data",
+  "last_updated": "2023-12-31",
+  "timestamp": "2025-12-09T12:26:34.799746"
 }

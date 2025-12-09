@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
-      "suggested_retail": 35000,
-      "gross_margin": 66.8,
+      "manufacturing_cost": "Est. $3,320-3,500 (based on TechInsights analysis)",
+      "suggested_retail": "$25,000-40,000 (varies by configuration/vendor)",
+      "gross_margin": "Est. 70-80% (based on NVIDIA financial reports)",
       "cost_breakdown": {
-        "silicon": 1300,
-        "packaging": 1500,
-        "testing": 500,
-        "r_and_d_allocation": 10000
+        "silicon": "Est. $2,800-3,000 (TSMC 4N wafer cost + CoWoS)",
+        "packaging": "Est. $300-400 (advanced packaging)",
+        "testing": "Est. $100-150",
+        "r_and_d_allocation": "Not disclosed (allocated across product lifecycle)"
       }
     },
     "a100": {
-      "manufacturing_cost": 1800,
-      "suggested_retail": 12000,
-      "gross_margin": 64,
+      "manufacturing_cost": "Est. $1,500-1,800 (TSMC 7nm)",
+      "suggested_retail": "$10,000-15,000 (current market price)",
+      "gross_margin": "Est. 60-70%",
       "cost_breakdown": {
-        "silicon": 800,
-        "packaging": 700,
-        "testing": 300,
-        "r_and_d_allocation": 10000
+        "silicon": "Est. $1,200-1,400",
+        "packaging": "Est. $150-200",
+        "testing": "Est. $80-100",
+        "r_and_d_allocation": "Not disclosed"
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4500,
-      "suggested_retail": 15000,
-      "gross_margin": 44
+      "manufacturing_cost": "Est. $3,000-3,400 (chiplet design, TSMC 5/6nm)",
+      "suggested_retail": "$30,000-35,000",
+      "gross_margin": "Est. 60-65%"
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 58,
-    "cost_trend": "Increasing due to advanced node and packaging costs",
-    "main_cost_driver": "Advanced packaging (e.g., CoWoS) and HBM"
+    "average_gross_margin": "65-75% (AI GPUs)",
+    "cost_trend": "Increasing due to advanced node pricing (TSMC 3nm >$20k/wafer) and packaging costs",
+    "main_cost_driver": "TSMC wafer prices and advanced packaging (CoWoS, 3D stacking)"
   },
-  "last_updated": "2024-05-15",
-  "timestamp": "2025-12-09T11:17:33.621285"
+  "last_updated": "2024-10-15",
+  "timestamp": "2025-12-09T12:28:24.851139"
 }

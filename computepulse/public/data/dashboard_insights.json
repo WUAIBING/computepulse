@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The $3.25/hr H100 price reflects tight supply and high capex pressure, incentivizing providers to diversify into older architectures for cost-efficient scaling."
+    "text": "At an average spot-market price of $3.14/hour, H100 utilization must stay above ~55% for capex payback, pushing buyers to prioritize long-term supply agreements over spot procurement."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At $1.28 per million input tokens, the API market is locked in a price war that rewards efficiency but compresses margins, forcing models to compress context and reduce memory."
+    "text": "With an average input token price of $1.38 per 1M, the token market reflects intense price compression driven by model competition and hardware efficiency gains, pressuring margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load highlights grid strain and rising carbon footprint, accelerating data-center nuclear adoption and behind-the-meter generation to stabilize power."
+    "text": "An annual AI-related load of 120 TWh implies substantial grid strain and rising baseload needs, making dispatchable low-carbon sources like nuclear essential for reliability and decarbonization."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "AI sentiment is bullish yet fragile: hardware scarcity, aggressive token pricing, and surging energy loads heighten bubble risks while signaling growth may outpace sustainable margins and grid capacity."
+    "text": "AI capex remains robust on the back of falling unit costs, but forward-looking investors are closely monitoring deployment pace to guard against growth overshoot and bubble risk."
   }
 }
