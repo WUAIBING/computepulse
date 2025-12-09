@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 procurement costs stabilizing as supply constraints ease, enabling predictable capex planning for new training clusters."
+    "text": "H100 allocations are easing as supply normalizes across US-East clusters, though 2025 capex constraints keep premium pricing sticky."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token pricing compression accelerates as model efficiency gains outpace capacity expansion, intensifying API margin pressure."
+    "text": "Distillation and aggressive API price cuts compress input costs toward $1.28/M tokens, intensifying model competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh annual AI load drives grid modernization imperatives, with nuclear baseload emerging as critical reliability anchor."
+    "text": "At 150 TWh annual load, grid strain is rising; nuclear baseload is becoming critical for sustainable GW-scale deployments."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Consolidation signals healthy market maturation as capital efficiency replaces growth-at-all-costs mentalities."
+    "text": "Macro sentiment is tempered by capex intensity and power bottlenecks, signaling a measured but durable growth trajectory."
   }
 }

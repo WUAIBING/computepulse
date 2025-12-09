@@ -1,7 +1,7 @@
 {
-  "score": 80,
+  "score": 85,
   "trend": "up",
-  "summary": "Hyperscalers (Microsoft, Google, Meta) are aggressively increasing AI Capex in 2024/2025, driving index growth. New model rumors (GPT-5, Gemini 2) add momentum, offsetting minor GPU price softening.",
+  "summary": "Hyperscalers (Microsoft, Google, Meta, AWS) are aggressively increasing AI infrastructure investments in 2024/2025, driving demand. GPU rental prices remain high despite minor fluctuations, and new model releases (GPT-5, Gemini 2) are imminent.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-09T04:23:22.291892"
+  "last_updated": "2025-12-09T05:16:30.733121"
 }
