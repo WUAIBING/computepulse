@@ -1,18 +1,14 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 pricing at $3.11/hr reflects constrained supply meeting persistent demand, with hyperscalers prioritizing capex efficiency over rapid expansion amid lingering chip shortage concerns."
+    "text": "With H100 GPUs averaging $3.14/hr, the premium pricing reflects persistent supply chain constraints and limited chip availability, forcing organizations to make strategic capex decisions between immediate deployment and waiting for potential price normalization."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Input token pricing at $1.39/1M signals intensified API price compression, driving providers to optimize model efficiency and leverage competitive pricing strategies to capture market share."
+    "text": "The $1.28/1M token input pricing positions DeepSeek competitively in the API market, where aggressive pricing is driving efficiency improvements and intensifying model competition as providers balance profitability with market share gains."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Annual load of 120 TWh from AI infrastructure creates unprecedented grid strain, accelerating nuclear adoption discussions while highlighting the critical need for carbon-conscious data center expansion."
-  },
-  "aipi": {
-    "agent": "GLM",
-    "text": "Current AI investment velocity suggests frothy sentiment with sustainability concerns, as rapid capacity additions may outpace genuine demand while infrastructure costs create potential bubble risks."
+    "text": "At 120 TWh annual load, the substantial energy consumption highlights growing grid strain concerns and underscores the urgency for sustainable solutions, particularly nuclear adoption, to mitigate the sector's expanding carbon footprint."
   }
 }
