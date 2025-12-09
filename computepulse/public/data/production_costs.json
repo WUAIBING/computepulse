@@ -5,50 +5,36 @@
       "suggested_retail": 30000,
       "gross_margin": 85,
       "cost_breakdown": {
-        "silicon": 2000,
-        "packaging": 1000,
-        "testing": 200,
-        "r_and_d_allocation": 120
+        "silicon": 2200,
+        "packaging": 700,
+        "testing": 120,
+        "r_and_d_allocation": 300
       }
     },
     "a100": {
-      "manufacturing_cost": 1500,
-      "suggested_retail": 10000,
-      "gross_margin": 80,
+      "manufacturing_cost": 2200,
+      "suggested_retail": 15000,
+      "gross_margin": 82,
       "cost_breakdown": {
-        "silicon": 800,
-        "packaging": 500,
-        "testing": 150,
-        "r_and_d_allocation": 50
+        "silicon": 1500,
+        "packaging": 400,
+        "testing": 80,
+        "r_and_d_allocation": 220
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4250,
+      "manufacturing_cost": 4200,
       "suggested_retail": 15000,
-      "gross_margin": 65
-    }
-  },
-  "intel": {
-    "arc_gpu": {
-      "manufacturing_cost": 200,
-      "suggested_retail": 350,
-      "gross_margin": 30
+      "gross_margin": 72
     }
   },
   "industry_analysis": {
-    "average_gross_margin": "60-80% (AI GPUs), 15-40% (consumer GPUs)",
-    "cost_trend": "Increasing due to advanced node pricing (TSMC 3nm) and complex packaging (CoWoS, Foveros)",
-    "main_cost_driver": "Advanced packaging (40-50% of total cost) and wafer prices"
+    "average_gross_margin": 65,
+    "cost_trend": "Increasing due to advanced node (3nm/5nm) wafer costs and CoWoS packaging shortages",
+    "main_cost_driver": "TSMC CoWoS packaging capacity constraints"
   },
-  "last_updated": "2024-07-15",
-  "notes": [
-    "Costs based on industry teardowns, financial reports, and analyst estimates (TechInsights, Wells Fargo, etc.)",
-    "Retail prices represent enterprise/list prices; actual system costs vary",
-    "R&D allocation estimates based on 2-4% amortization per unit",
-    "TSMC 5nm wafer cost: ~$10,000; 3nm wafer cost: ~$20,000",
-    "CoWoS-L packaging adds $700-$1,200 per GPU"
-  ],
-  "timestamp": "2025-12-09T06:28:27.070484"
+  "last_updated": "2024-07-20",
+  "timestamp": "2025-12-09T07:20:56.808336"
 }

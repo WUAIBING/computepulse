@@ -1,19 +1,19 @@
 {
   "openai": {
     "gpt_4o": {
-      "input_price_per_million": 5.0,
-      "output_price_per_million": 15.0,
+      "input_price_per_million": 2.5,
+      "output_price_per_million": 10.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 80 messages every 3 hours on GPT-4o; unlimited on GPT-4o mini. Limits are dynamic and subject to change based on capacity."
+        "monthly_limit": "Up to 80 messages per 3 hours for GPT-4o"
       },
-      "efficiency_score": 95.5
+      "efficiency_score": 85
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 50.0
+      "efficiency_score": 70
     }
   },
   "anthropic": {
@@ -22,18 +22,109 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x the usage limit of the free tier, allowing for significantly more conversations. Exact token count is not specified."
+        "monthly_limit": "5x more usage than free tier with Claude 3.5 Sonnet"
       },
-      "efficiency_score": 100.0
+      "efficiency_score": 90
+    },
+    "claude_3_haiku": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 1.25,
+      "subscription_alternative": {
+        "claude_pro": 20.0,
+        "monthly_limit": "5x more usage than free tier with Claude 3 Haiku"
+      },
+      "efficiency_score": 95
+    }
+  },
+  "google": {
+    "gemini_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Access to Gemini models with higher usage limits"
+      },
+      "efficiency_score": 88
+    },
+    "gemini_ultra": {
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Access to Gemini Ultra 1.0 with priority access"
+      },
+      "efficiency_score": 80
+    }
+  },
+  "meta": {
+    "llama_3": {
+      "input_price_per_million": 0.75,
+      "output_price_per_million": 3.0,
+      "subscription_alternative": null,
+      "efficiency_score": 85
+    },
+    "llama_pro": {
+      "input_price_per_million": 1.5,
+      "output_price_per_million": 4.0,
+      "subscription_alternative": null,
+      "efficiency_score": 78
+    }
+  },
+  "microsoft": {
+    "copilot_pro": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_pro": 20.0,
+        "monthly_limit": "Priority access during peak times and faster responses"
+      },
+      "efficiency_score": 75
+    },
+    "copilot_for_m365": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_for_m365": 30.0,
+        "monthly_limit": "Full integration with Microsoft 365 apps"
+      },
+      "efficiency_score": 80
+    }
+  },
+  "deepseek": {
+    "deepseek_v2": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 95
+    },
+    "deepseek_coder": {
+      "input_price_per_million": 0.19,
+      "output_price_per_million": 0.38,
+      "subscription_alternative": null,
+      "efficiency_score": 92
+    }
+  },
+  "qwen": {
+    "qwen_max": {
+      "input_price_per_million": 0.02,
+      "output_price_per_million": 0.06,
+      "subscription_alternative": null,
+      "efficiency_score": 98
+    },
+    "qwen_plus": {
+      "input_price_per_million": 0.004,
+      "output_price_per_million": 0.012,
+      "subscription_alternative": null,
+      "efficiency_score": 94
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 6.0,
-    "average_output_cost": 20.0,
-    "most_efficient": "Claude 3.5 Sonnet",
-    "subscription_adoption_rate": "High and growing, driven by power users seeking consistent access and integrated experiences, though exact public figures are not disclosed.",
-    "trend": "Aggressive price competition is significantly lowering the cost per token for top-tier models. The market is bifurcating between pay-per-use APIs for developers and flat-rate subscription models for consumer-facing products, with a focus on ecosystem lock-in and integrated AI suites."
+    "average_input_cost": 2.09,
+    "average_output_cost": 7.06,
+    "most_efficient": "Qwen Max",
+    "subscription_adoption_rate": 0.65,
+    "trend": "Aggressive price competition from Chinese models like Qwen and DeepSeek driving down token costs globally, while subscription models becoming mainstream for regular users"
   },
-  "last_updated": "2024-05-21",
-  "timestamp": "2025-12-09T06:30:50.029861"
+  "last_updated": "2024-06-17",
+  "timestamp": "2025-12-09T07:22:18.551329"
 }
