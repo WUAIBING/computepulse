@@ -1,7 +1,7 @@
 {
-  "score": 80,
+  "score": 90,
   "trend": "up",
-  "summary": "The AI Industry Prosperity Index reflects strong positive momentum driven by hyperscalers' aggressive Capex increases for AI infrastructure (Microsoft +31% YoY, Google +27%, Meta +40%, AWS +25%), stable GPU rental prices ($3.21/hr) indicating sustained demand, and upcoming model releases (GPT-5 in training, Gemini 2 rumored).",
+  "summary": "Hyperscalers (Microsoft, Google, Meta) are aggressively increasing AI infrastructure investments in 2024, driving sustained demand for GPU compute. Current H100/A100 rental prices remain high at $3.25/hr, indicating tight supply. Anticipation for GPT-5 and Gemini 2 releases further fuels market optimism.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-09T10:22:27.305184"
+  "last_updated": "2025-12-09T11:21:43.367484"
 }

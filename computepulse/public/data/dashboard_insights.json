@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The average H100 price of $3.21/hr underscores persistent chip scarcity that constrains supply chain flexibility and raises capex breakeven hurdles for new GPU builds."
+    "text": "The $3.25/hr H100 price reflects tight supply and high capex pressure, incentivizing providers to diversify into older architectures for cost-efficient scaling."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "An average input price of $1.56/1M tokens is aggressively competitive and likely to trigger API price wars, forcing providers to differentiate on model quality and throughput efficiency."
+    "text": "At $1.28 per million input tokens, the API market is locked in a price war that rewards efficiency but compresses margins, forcing models to compress context and reduce memory."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load highlights rising grid strain and favors accelerated nuclear and low\u2011carbon baseload adoption to stabilize AI data center power draw."
+    "text": "A 120 TWh annual load highlights grid strain and rising carbon footprint, accelerating data-center nuclear adoption and behind-the-meter generation to stabilize power."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "H100 at $3.21/hr and tokens at $1.56/1M point to an efficiency race amid compressed margins, keeping macro sentiment cautious about bubble risks despite strong growth."
+    "text": "AI sentiment is bullish yet fragile: hardware scarcity, aggressive token pricing, and surging energy loads heighten bubble risks while signaling growth may outpace sustainable margins and grid capacity."
   }
 }

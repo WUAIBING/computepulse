@@ -17,40 +17,40 @@
       "percentage": 95.0
     },
     {
-      "country": "Costa Rica",
-      "percentage": 90.0
-    },
-    {
-      "country": "Sweden",
-      "percentage": 80.0
-    },
-    {
       "country": "Brazil",
-      "percentage": 75.0
+      "percentage": 83.0
     },
     {
       "country": "Austria",
-      "percentage": 70.0
+      "percentage": 78.0
     },
     {
-      "country": "Canada",
-      "percentage": 65.0
+      "country": "Sweden",
+      "percentage": 74.0
     },
     {
       "country": "Switzerland",
-      "percentage": 60.0
+      "percentage": 69.0
     },
     {
       "country": "France",
-      "percentage": 55.0
+      "percentage": 68.0
     },
     {
-      "country": "Finland",
-      "percentage": 50.0
+      "country": "New Zealand",
+      "percentage": 67.0
+    },
+    {
+      "country": "Portugal",
+      "percentage": 66.0
+    },
+    {
+      "country": "Denmark",
+      "percentage": 65.0
     }
   ],
-  "year_over_year_growth": 4.5,
-  "data_source": "IEA, EIA, Ember Climate, Our World in Data",
-  "last_updated": "2024-01-01",
-  "timestamp": "2025-12-09T10:17:26.750581"
+  "year_over_year_growth": 2.5,
+  "data_source": "IEA, EIA, Ember Climate Global Electricity Database, Our World in Data",
+  "last_updated": "2024-10-01",
+  "timestamp": "2025-12-09T11:14:48.307434"
 }
