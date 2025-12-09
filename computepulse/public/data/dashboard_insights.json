@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The $3.24/hr H100 pricing reflects constrained supply chains and soaring capex investments as cloud providers struggle to meet unprecedented AI inference demand while chip allocation remains bottlenecked by manufacturing capacity."
+    "text": "At a realized H100 price near $3.22/hr\u2014roughly half of U.S. spot rates\u2014hardware supply is now adequate in some regions, but persistent export controls keep new capacity approvals and premium-tier chips structurally tight, implying capex allocation will favor older-generation inventory and bespoke accelerators rather than high-end GPUs."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With input prices at $1.28/1M tokens, aggressive API price wars are driving commoditization while model efficiency improvements threaten profitability margins across the LLM ecosystem."
+    "text": "With input pricing compressing to roughly $1.56 per million tokens, the token market is entering a sustained price war; providers are racing to differentiate on latency, reliability, and specialized fine\u2011tunes rather than headline cost, while efficiency\u2011driven model innovations compress margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "The 120 TWh annual AI load represents a 40% increase over 2023, straining grid infrastructure and accelerating demand for nuclear and renewable energy solutions to maintain carbon neutrality goals."
+    "text": "A 120 TWh annual load translates to roughly 10.3 GW of continuous power, already testing grid strain; without faster interconnection queues and behind\u2011the\u2011meter nuclear adoption, data\u2011center growth risks being carbon\u2011intensive and capacity\u2011constrained."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "While token pricing compresses margins and energy consumption threatens sustainability, the resilience of hardware demand at premium pricing suggests the AI infrastructure bubble remains in a healthy expansion phase."
+    "text": "Infrastructure costs are stabilizing (H100), input pricing is in a deflationary spiral (tokens), and power needs are rising, suggesting a maturing market where growth remains strong but risk migrates to execution\u2014grid access, interconnect timelines, and regulatory bottlenecks."
   }
 }
