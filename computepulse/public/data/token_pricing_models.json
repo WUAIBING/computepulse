@@ -5,9 +5,9 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Usage limits apply, with higher limits for GPT-4o compared to GPT-4. Not a hard token cap."
+        "monthly_limit": "Up to 5x more usage for GPT-4o compared to free users. Higher limits during peak hours. Message caps reset every 3-5 hours depending on load."
       },
-      "efficiency_score": 10
+      "efficiency_score": 9
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
@@ -22,7 +22,7 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with access to higher-tier models like Claude 3.5 Sonnet."
+        "monthly_limit": "5x more usage than the free tier, with a higher capacity for creating longer conversations and using complex features like Projects. Usage limits are not explicitly stated but are significantly higher."
       },
       "efficiency_score": 9
     },
@@ -33,13 +33,73 @@
       "efficiency_score": 10
     }
   },
-  "pricing_analysis": {
-    "average_input_cost": 4.42,
-    "average_output_cost": 15.31,
-    "most_efficient": "Claude 3 Haiku (for speed tasks), DeepSeek V2 & Qwen2 (for cost-to-performance ratio), GPT-4o (for flagship model efficiency). Self-hosted open-source models like Meta Llama 3 can be the most efficient if infrastructure costs are managed.",
-    "subscription_adoption_rate": null,
-    "trend": "The market is in a significant price war, drastically lowering token costs, especially for input tokens. Subscriptions for premium consumer access have largely standardized around $20/month. Output token costs remain higher than input costs. A new tier of highly efficient, lower-cost models (e.g., Claude Haiku, Gemini 1.5 Flash) is emerging, and open-source models hosted by providers like DeepSeek and Qwen are offering aggressive pricing, challenging established players. Enterprise pricing remains highly customized and volume-based."
+  "google": {
+    "gemini_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Access to Gemini 1.5 Pro, 1.5 Flash, and 1.0 Ultra. Includes 1TB of Google One storage and other Google One benefits. No specific token limit is published for the chat interface."
+      },
+      "efficiency_score": 8
+    },
+    "gemini_ultra": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Included in the 'Gemini Advanced' subscription. No direct API access or token pricing available for Ultra; it's bundled into the subscription."
+      },
+      "efficiency_score": 5
+    }
   },
-  "last_updated": "2024-06-04",
-  "timestamp": "2025-12-09T22:17:41.512313"
+  "meta": {
+    "llama_3_70b": {
+      "input_price_per_million": 0.99,
+      "output_price_per_million": 0.99,
+      "subscription_alternative": {
+        "chatgpt_plus": null,
+        "monthly_limit": "Open source model; free to self-host. Managed service providers (e.g., AWS, Google Cloud) offer API access with pay-per-token pricing and no subscription. True cost depends on self-hosting infrastructure."
+      },
+      "efficiency_score": 9
+    }
+  },
+  "microsoft": {
+    "copilot_subscriptions": {
+      "copilot_pro": {
+        "price_per_month": 20.0,
+        "description": "For individuals. Priority access to latest models, faster performance, and creator tools across web, Windows, macOS, and mobile."
+      },
+      "copilot_for_microsoft_365": {
+        "price_per_month": 30.0,
+        "description": "For enterprise/education. Includes all Pro features plus integration into Microsoft 365 apps (Word, Excel, PowerPoint, Outlook, Teams) with enterprise-grade data protection."
+      },
+      "efficiency_score": 7
+    }
+  },
+  "deepseek": {
+    "deepseek_v2": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 10
+    }
+  },
+  "qwen": {
+    "qwen2_72b": {
+      "input_price_per_million": 0.4,
+      "output_price_per_million": 1.1,
+      "subscription_alternative": null,
+      "efficiency_score": 9
+    }
+  },
+  "pricing_analysis": {
+    "average_input_cost": 2.31,
+    "average_output_cost": 7.36,
+    "most_efficient": "DeepSeek V2",
+    "subscription_adoption_rate": "High and accelerating for consumer-tier access, while pay-per-token remains dominant for enterprise/developer use.",
+    "trend": "A two-tier market has emerged: a 'price war' at the high-performance tier (GPT-4o vs Claude 3.5 Sonnet) driving down costs, and a 'race to the bottom' at the efficiency tier where new models like DeepSeek and Haiku offer extreme cost savings. Subscriptions are the primary access method for end-users, with API pricing focused on developers and businesses."
+  },
+  "last_updated": "2024-06-10",
+  "timestamp": "2025-12-09T23:18:07.938270"
 }
