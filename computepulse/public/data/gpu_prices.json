@@ -75,13 +75,13 @@
   {
     "provider": "RunPod",
     "gpu": "H100",
-    "price": 3.49,
+    "price": 4.5,
     "region": "US"
   },
   {
     "provider": "RunPod",
     "gpu": "A100",
-    "price": 1.89,
+    "price": 1.14,
     "region": "US"
   },
   {
@@ -147,7 +147,7 @@
   {
     "provider": "Vast.ai",
     "gpu": "A100",
-    "price": 0.7,
+    "price": 0.8,
     "region": "US"
   },
   {
@@ -189,7 +189,7 @@
   {
     "provider": "Lambda",
     "gpu": "H100",
-    "price": 2.99,
+    "price": 2.0,
     "region": "us-east-1"
   },
   {
@@ -381,7 +381,7 @@
   {
     "provider": "Vast.ai",
     "gpu": "H100",
-    "price": 1.5,
+    "price": 3.0,
     "region": "US"
   },
   {
@@ -459,13 +459,13 @@
   {
     "provider": "RunPod",
     "gpu": "RTX 4090",
-    "price": 0.89,
+    "price": 0.6,
     "region": "US"
   },
   {
     "provider": "Vast.ai",
     "gpu": "RTX 4090",
-    "price": 0.25,
+    "price": 0.4,
     "region": "US"
   },
   {
@@ -537,7 +537,7 @@
   {
     "provider": "AWS",
     "gpu": "RTX 4090",
-    "price": 1.5,
+    "price": 2.5,
     "region": "US"
   },
   {
@@ -561,7 +561,7 @@
   {
     "provider": "Vast.ai",
     "gpu": "RTX4090",
-    "price": 0.32,
+    "price": 0.25,
     "region": "US"
   },
   {
@@ -569,5 +569,23 @@
     "gpu": "X 4090",
     "price": 0.29,
     "region": "US"
+  },
+  {
+    "provider": "Lambda Cloud",
+    "gpu": "H100",
+    "price": 1.1,
+    "region": "us-east-1"
+  },
+  {
+    "provider": "Lambda Cloud",
+    "gpu": "A100",
+    "price": 1.1,
+    "region": "us-east-1"
+  },
+  {
+    "provider": "Lambda Cloud",
+    "gpu": "RTX 4090",
+    "price": 0.75,
+    "region": "us-east-1"
   }
 ]

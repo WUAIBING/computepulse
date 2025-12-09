@@ -1,7 +1,7 @@
 {
-  "score": 80,
+  "score": 85,
   "trend": "up",
-  "summary": "Aggressive capex increases from Microsoft (doubling), Google (+50%), and Meta ($5B boost) drive the index. New model anticipation (GPT-5, Gemini 2) adds momentum, offsetting moderate GPU price softening from $4.00+ earlier in 2024.",
+  "summary": "Hyperscalers (Microsoft, Google, Meta, AWS) are aggressively increasing AI infrastructure investments in 2024/2025, driving demand. GPU rental prices remain high despite minor fluctuations, and new model releases (GPT-5, Gemini 2) are imminent.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-08T15:16:10.396771"
+  "last_updated": "2025-12-09T05:16:30.733121"
 }
