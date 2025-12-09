@@ -316,5 +316,11 @@
     "provider": "Unknown (as DeepSeek is not a widely recognized model name, please verify the provider)",
     "input_price": 0.0,
     "output_price": 0.0
+  },
+  {
+    "model": "DeepSeek-V3",
+    "provider": "Unknown (as it's not a widely recognized model name, please verify the provider)",
+    "input_price": 0.0,
+    "output_price": 0.0
   }
 ]

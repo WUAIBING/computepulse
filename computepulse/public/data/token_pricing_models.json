@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 80 messages every 3 hours for GPT-4o"
+        "monthly_limit": "Higher usage limits than free tier, with caps on GPT-4o messages during peak hours."
       },
-      "efficiency_score": 92
+      "efficiency_score": 10.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 85
+      "efficiency_score": 5.0
     }
   },
   "anthropic": {
@@ -22,106 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, with higher limits for conversations"
+        "monthly_limit": "Approx. 5x more usage than free tier, with a message limit on Claude 3.5 Sonnet."
       },
-      "efficiency_score": 94
-    },
-    "claude_3_haiku": {
-      "input_price_per_million": 0.25,
-      "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 98
-    }
-  },
-  "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
-      "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Part of Google One AI Premium plan"
-      },
-      "efficiency_score": 96
-    },
-    "gemini_ultra": {
-      "input_price_per_million": 3.0,
-      "output_price_per_million": 15.0,
-      "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Part of Google One AI Premium plan"
-      },
-      "efficiency_score": 88
-    }
-  },
-  "meta": {
-    "llama_3": {
-      "input_price_per_million": 0,
-      "output_price_per_million": 0,
-      "subscription_alternative": null,
-      "efficiency_score": 100
-    }
-  },
-  "microsoft": {
-    "copilot_pro": {
-      "input_price_per_million": 0,
-      "output_price_per_million": 0,
-      "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "monthly_limit": "Unlimited usage with priority access during peak times"
-      },
-      "efficiency_score": 93
-    },
-    "microsoft_365_copilot": {
-      "input_price_per_million": 0,
-      "output_price_per_million": 0,
-      "subscription_alternative": {
-        "microsoft_365_copilot": 30.0,
-        "monthly_limit": "Integrated with Microsoft 365, enterprise features"
-      },
-      "efficiency_score": 91
-    }
-  },
-  "deepseek": {
-    "deepseek_chat": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 97
-    },
-    "deepseek_coder": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 97
-    }
-  },
-  "qwen": {
-    "qwen_turbo": {
-      "input_price_per_million": 3.0,
-      "output_price_per_million": 6.0,
-      "subscription_alternative": null,
-      "efficiency_score": 90
-    },
-    "qwen_plus": {
-      "input_price_per_million": 8.0,
-      "output_price_per_million": 24.0,
-      "subscription_alternative": null,
-      "efficiency_score": 86
-    },
-    "qwen_max": {
-      "input_price_per_million": 42.0,
-      "output_price_per_million": 120.0,
-      "subscription_alternative": null,
-      "efficiency_score": 78
+      "efficiency_score": 11.11
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 5.76,
-    "average_output_cost": 16.67,
-    "most_efficient": "Llama 3",
-    "subscription_adoption_rate": 68,
-    "trend": "Moving toward hybrid models with both pay-per-token and subscription options, increased competition driving down prices"
+    "average_input_cost": 6.0,
+    "average_output_cost": 20.0,
+    "most_efficient": "Claude 3.5 Sonnet",
+    "subscription_adoption_rate": "Not publicly disclosed",
+    "trend": "Aggressive price drops with new model releases (e.g., GPT-4o vs. GPT-4 Turbo), a clear 'sweet spot' emerging at the $3-5 / 1M input token price point for top-tier intelligence. Subscription models are solidifying as the primary consumer access method."
   },
-  "last_updated": "2024-06-12",
-  "timestamp": "2025-12-09T19:14:07.576002"
+  "last_updated": "2024-05-28",
+  "timestamp": "2025-12-09T20:17:31.761568"
 }
