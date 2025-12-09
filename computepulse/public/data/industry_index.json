@@ -1,7 +1,7 @@
 {
   "score": 90,
   "trend": "up",
-  "summary": "Hyperscalers are aggressively increasing AI-related capex for 2024/2025 (Microsoft: ~$50B, Google: $49B, Meta: $35-40B, AWS: doubling data center spend). GPU rental prices remain elevated at $3.14/hr, indicating sustained demand pressure. Rumors of GPT-5 (Q3/Q4 2024) and Gemini 2 further drive bullish sentiment.",
+  "summary": "The AI Industry Prosperity Index reflects strong bullish conditions driven by aggressive hyperscaler capex increases, sustained high GPU rental prices indicating robust demand, and anticipation around new AI model releases. Hyperscalers (Microsoft, Google, Meta, AWS) have all signaled significant increases in AI infrastructure investments for 2024/2025. Current H100/A100 rental prices remain elevated at $3.12/hr, confirming tight supply-demand dynamics. Rumors of GPT-5 and the release of Gemini 1.5 further fuel positive sentiment.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-09T20:18:04.508364"
+  "last_updated": "2025-12-09T21:17:02.327411"
 }

@@ -2,46 +2,39 @@
   "nvidia": {
     "h100": {
       "manufacturing_cost": 3320,
-      "suggested_retail": 30000,
-      "gross_margin": 89,
+      "suggested_retail": 35000,
+      "gross_margin": 85,
       "cost_breakdown": {
-        "silicon": 1200,
-        "packaging": 700,
-        "testing": 150,
-        "r_and_d_allocation": 1270
+        "silicon": 2500,
+        "packaging": 600,
+        "testing": 120,
+        "r_and_d_allocation": 100
       }
     },
     "a100": {
-      "manufacturing_cost": 2200,
-      "suggested_retail": 15000,
-      "gross_margin": 85,
+      "manufacturing_cost": 1500,
+      "suggested_retail": 12000,
+      "gross_margin": 75,
       "cost_breakdown": {
-        "silicon": 900,
-        "packaging": 450,
+        "silicon": 1000,
+        "packaging": 300,
         "testing": 100,
-        "r_and_d_allocation": 750
+        "r_and_d_allocation": 100
       }
     }
   },
   "amd": {
     "mi300x": {
       "manufacturing_cost": 4000,
-      "suggested_retail": 21000,
-      "gross_margin": 81
-    }
-  },
-  "intel": {
-    "arc_battlemage": {
-      "manufacturing_cost": 350,
-      "suggested_retail": 499,
-      "gross_margin": 30
+      "suggested_retail": 18000,
+      "gross_margin": 60
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 65,
-    "cost_trend": "Increasing due to advanced node premiums (N3, N2) and advanced packaging (CoWoS-L, FOWLP) shortages. Wafer prices up 10-15% YoY.",
-    "main_cost_driver": "TSMC CoWoS packaging capacity constraints and N5/N4 wafer costs"
+    "average_gross_margin": 73,
+    "cost_trend": "Increasing due to advanced packaging and foundry price hikes",
+    "main_cost_driver": "TSMC CoWoS packaging and 4N/5nm wafer prices"
   },
-  "last_updated": "2024-07-15",
-  "timestamp": "2025-12-09T20:16:26.731648"
+  "last_updated": "2024-06-01",
+  "timestamp": "2025-12-09T21:14:56.658343"
 }
