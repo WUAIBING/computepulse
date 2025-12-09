@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At an average spot-market price of $3.14/hour, H100 utilization must stay above ~55% for capex payback, pushing buyers to prioritize long-term supply agreements over spot procurement."
+    "text": "The $3.24/hr H100 pricing reflects persistent supply chain constraints driving capex inflation as data centers prioritize GPU procurement over traditional infrastructure investments."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With an average input token price of $1.38 per 1M, the token market reflects intense price compression driven by model competition and hardware efficiency gains, pressuring margins."
+    "text": "DeepSeek's $1.47/1M token pricing signals intensifying API price wars, with efficiency gains from smaller models pressuring established players to optimize cost structures."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "An annual AI-related load of 120 TWh implies substantial grid strain and rising baseload needs, making dispatchable low-carbon sources like nuclear essential for reliability and decarbonization."
+    "text": "The 120 TWh annual load indicates grid strain from AI workloads, potentially accelerating nuclear power adoption as grids struggle to meet carbon-neutral targets."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "AI capex remains robust on the back of falling unit costs, but forward-looking investors are closely monitoring deployment pace to guard against growth overshoot and bubble risk."
+    "text": "Despite robust growth, the sector faces bubble risks as capex commitments outpace sustainable monetization, with infrastructure investments potentially outpacing real demand."
   }
 }

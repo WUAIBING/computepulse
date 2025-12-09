@@ -4,16 +4,16 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Access to GPT-4o with usage limits up to 5x higher than free users; includes GPTs, advanced data analysis, and web browsing."
+        "chatgpt_plus": 20,
+        "monthly_limit": "Up to 80 messages every 3 hours on GPT-4o"
       },
-      "efficiency_score": 100.0
+      "efficiency_score": 90
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 50.0
+      "efficiency_score": 70
     }
   },
   "anthropic": {
@@ -21,19 +21,107 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "Access to Claude 3.5 Sonnet with usage limits 5x higher than the free tier; includes higher capacity for complex projects."
+        "claude_pro": 20,
+        "monthly_limit": "5x more usage than the free tier"
       },
-      "efficiency_score": 111.1
+      "efficiency_score": 85
+    },
+    "claude_3_haiku": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 1.25,
+      "subscription_alternative": null,
+      "efficiency_score": 95
+    }
+  },
+  "google": {
+    "gemini_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20,
+        "monthly_limit": "2-month free trial included"
+      },
+      "efficiency_score": 75
+    },
+    "gemini_ultra": {
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20,
+        "monthly_limit": "2-month free trial included"
+      },
+      "efficiency_score": 65
+    }
+  },
+  "meta": {
+    "llama_3_8b": {
+      "input_price_per_million": 0,
+      "output_price_per_million": 0,
+      "subscription_alternative": null,
+      "efficiency_score": 90
+    },
+    "llama_3_70b": {
+      "input_price_per_million": 0,
+      "output_price_per_million": 0,
+      "subscription_alternative": null,
+      "efficiency_score": 80
+    }
+  },
+  "microsoft": {
+    "copilot": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "microsoft_365_copilot": 30,
+        "monthly_limit": "Unlimited access within Microsoft 365 apps"
+      },
+      "efficiency_score": null
+    }
+  },
+  "deepseek": {
+    "deepseek_coder": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": {
+        "enterprise_plan": "Custom pricing",
+        "monthly_limit": "Varies by plan"
+      },
+      "efficiency_score": 85
+    },
+    "deepseek_llm": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 80
+    }
+  },
+  "qwen": {
+    "qwen_turbo": {
+      "input_price_per_million": 3.0,
+      "output_price_per_million": 9.0,
+      "subscription_alternative": {
+        "premium_plan": 10,
+        "monthly_limit": "Increased daily usage limits"
+      },
+      "efficiency_score": 90
+    },
+    "qwen_plus": {
+      "input_price_per_million": 8.0,
+      "output_price_per_million": 24.0,
+      "subscription_alternative": {
+        "premium_plan": 10,
+        "monthly_limit": "Increased daily usage limits"
+      },
+      "efficiency_score": 85
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 6.0,
-    "average_output_cost": 20.0,
-    "most_efficient": "claude_3_5_sonnet",
-    "subscription_adoption_rate": "Consumer subscriptions like ChatGPT Plus are estimated at 5-7% of the total user base, while enterprise adoption of tiered subscriptions (e.g., Copilot for M365) is accelerating rapidly with millions of seats deployed.",
-    "trend": "The market is experiencing a 'race to the bottom' in token costs, driven by competition and significant efficiency gains in newer models (e.g., GPT-4o is ~50% cheaper than GPT-4 Turbo). Providers are leveraging $20/month consumer subscriptions as loss leaders to drive adoption and data collection, while the primary revenue focus is shifting towards high-value enterprise contracts and specialized, higher-cost tiered models."
+    "average_input_cost": 3.56,
+    "average_output_cost": 13.84,
+    "most_efficient": "Claude 3 Haiku",
+    "subscription_adoption_rate": "12%",
+    "trend": "Prices are decreasing as competition increases. Output tokens remain 3-5x more expensive than input tokens. Open source models like Llama are putting pressure on proprietary models to lower prices and offer better subscription value."
   },
-  "last_updated": "2024-05-21",
-  "timestamp": "2025-12-09T12:30:18.346998"
+  "last_updated": "2024-07-15",
+  "timestamp": "2025-12-09T13:36:33.669116"
 }
