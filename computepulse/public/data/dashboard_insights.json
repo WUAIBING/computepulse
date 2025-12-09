@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 availability improves on US-East routes as capex normalization unlocks second\u2011hand inventory, easing lead times and stabilizing $/hr around $3.31."
+    "text": "H100 procurement costs stabilizing as supply constraints ease, enabling predictable capex planning for new training clusters."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Input token pricing stays aggressive near $1.31/1M as distillation and inference optimization compress costs, intensifying API price wars."
+    "text": "Token pricing compression accelerates as model efficiency gains outpace capacity expansion, intensifying API margin pressure."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh annual load pushes grid interconnections to capacity, making nuclear baseload and storage essential to manage strain and carbon intensity."
+    "text": "120 TWh annual AI load drives grid modernization imperatives, with nuclear baseload emerging as critical reliability anchor."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment consolidates as utilization rises and capex cycles normalize, signaling a maturing market with measured growth and lower bubble risk."
+    "text": "Consolidation signals healthy market maturation as capital efficiency replaces growth-at-all-costs mentalities."
   }
 }
