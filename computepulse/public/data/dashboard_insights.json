@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "Despite the seemingly moderate H100 pricing at $3.24/hr, ongoing supply chain bottlenecks and escalating capex requirements for AI infrastructure are creating a two-tier market where enterprise buyers face 3-6 month lead times while hyperscalers lock in multi-year commitments."
+    "text": "With H100 GPU pricing at $3.26/hour, constrained supply and high capex are driving cloud providers to prioritize larger, more profitable workloads, creating a utilization premium for AI training clusters."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The aggressive $1.30/1M token pricing reflects a fierce API price war that's forcing efficiency gains through model optimization, with providers now competing on marginal costs rather than capability premiums."
+    "text": "The $1.30/1M token input pricing reflects intense API competition where models like DeepSeek are capturing market share through aggressive cost undercutting while maintaining performance parity."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "The 120 TWh annual energy load represents a critical inflection point, with data centers consuming roughly 1-2% of global electricity and creating urgent demand for nuclear partnerships and renewable baseload solutions."
+    "text": "At 120 TWh annual load, AI infrastructure is approaching grid capacity limits in major regions, with nuclear baseload power becoming increasingly critical for sustainable scaling."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Current market dynamics show unsustainable growth patterns with compute prices compressing faster than revenue models can adapt, indicating a potential bubble correction as capital intensity outpaces monetization maturity."
+    "text": "Industry growth remains robust but sustainability concerns are rising as infrastructure costs and energy demands outpace revenue growth, indicating potential bubble risks in unprofitable AI ventures."
   }
 }

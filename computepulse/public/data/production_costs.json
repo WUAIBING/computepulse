@@ -3,38 +3,45 @@
     "h100": {
       "manufacturing_cost": 3320,
       "suggested_retail": 30000,
-      "gross_margin": 89,
+      "gross_margin": 90,
       "cost_breakdown": {
-        "silicon": 2100,
-        "packaging": 700,
-        "testing": 120,
-        "r_and_d_allocation": 400
+        "silicon": 1500,
+        "packaging": 1000,
+        "testing": 200,
+        "r_and_d_allocation": 620
       }
     },
     "a100": {
-      "manufacturing_cost": 2200,
+      "manufacturing_cost": 2500,
       "suggested_retail": 15000,
-      "gross_margin": 85,
+      "gross_margin": 83,
       "cost_breakdown": {
-        "silicon": 1400,
-        "packaging": 400,
-        "testing": 100,
-        "r_and_d_allocation": 300
+        "silicon": 1100,
+        "packaging": 700,
+        "testing": 150,
+        "r_and_d_allocation": 550
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4000,
+      "manufacturing_cost": 3500,
       "suggested_retail": 15000,
-      "gross_margin": 73
+      "gross_margin": 77
+    }
+  },
+  "intel": {
+    "battlemage": {
+      "manufacturing_cost": null,
+      "suggested_retail": null,
+      "gross_margin": null
     }
   },
   "industry_analysis": {
-    "average_gross_margin": "High-end: 75-90%, Mid-range: 45-60%",
-    "cost_trend": "Increasing due to advanced packaging (CoWoS, 3D stacking) and higher wafer prices at leading nodes (3nm/4nm)",
-    "main_cost_driver": "Advanced packaging and wafer costs"
+    "average_gross_margin": 80,
+    "cost_trend": "Increasing due to advanced node complexity and packaging",
+    "main_cost_driver": "Wafer pricing and advanced packaging (e.g., CoWoS)"
   },
-  "last_updated": "2024-04-15",
-  "timestamp": "2025-12-09T08:23:23.093829"
+  "last_updated": "2024-09-15",
+  "timestamp": "2025-12-09T09:20:49.671861"
 }
