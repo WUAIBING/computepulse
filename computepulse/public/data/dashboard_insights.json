@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.21/hour for H100s, the hardware market shows constrained supply driving elevated pricing, with limited chip availability likely pressuring enterprises to accelerate procurement cycles despite high capex requirements."
+    "text": "The $3.24/hr H100 pricing reflects constrained supply chains and soaring capex investments as cloud providers struggle to meet unprecedented AI inference demand while chip allocation remains bottlenecked by manufacturing capacity."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The $1.42/1M input token pricing reflects intensifying API price wars among model providers, with competitive efficiency gains enabling aggressive cost-down strategies while maintaining quality differentiation."
+    "text": "With input prices at $1.28/1M tokens, aggressive API price wars are driving commoditization while model efficiency improvements threaten profitability margins across the LLM ecosystem."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI's 120 TWh annual load represents significant grid strain, with data center power consumption patterns requiring nuclear capacity expansion to maintain sustainability targets and grid stability."
+    "text": "The 120 TWh annual AI load represents a 40% increase over 2023, straining grid infrastructure and accelerating demand for nuclear and renewable energy solutions to maintain carbon neutrality goals."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry momentum shows mixed signals with hardware costs stabilizing while token prices plummet, indicating sustainable growth despite bubble concerns around rapid AI infrastructure scaling."
+    "text": "While token pricing compresses margins and energy consumption threatens sustainability, the resilience of hardware demand at premium pricing suggests the AI infrastructure bubble remains in a healthy expansion phase."
   }
 }

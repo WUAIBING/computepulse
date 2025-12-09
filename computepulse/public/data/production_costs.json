@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
-      "suggested_retail": 35000,
-      "gross_margin": 89.5,
+      "manufacturing_cost": "unavailable (estimated $3,500-$4,500)",
+      "suggested_retail": "unavailable (market price ~$30,000-$40,000)",
+      "gross_margin": "unavailable (NVIDIA datacenter gross margin ~75-80%)",
       "cost_breakdown": {
-        "silicon": 2300,
-        "packaging": 650,
-        "testing": 170,
-        "r_and_d_allocation": 200
+        "silicon": "unavailable (TSMC 4N wafer cost ~$10,000-$15,000; die size ~814mm\u00b2)",
+        "packaging": "unavailable (CoWoS cost ~$500-$1,000+)",
+        "testing": "unavailable",
+        "r_and_d_allocation": "unavailable (significant allocation)"
       }
     },
     "a100": {
-      "manufacturing_cost": 2100,
-      "suggested_retail": 15000,
-      "gross_margin": 86.0,
+      "manufacturing_cost": "unavailable (estimated $2,000-$2,500)",
+      "suggested_retail": "unavailable (market price ~$10,000-$15,000)",
+      "gross_margin": "unavailable",
       "cost_breakdown": {
-        "silicon": 1450,
-        "packaging": 400,
-        "testing": 150,
-        "r_and_d_allocation": 100
+        "silicon": "unavailable (TSMC 7nm wafer cost)",
+        "packaging": "unavailable",
+        "testing": "unavailable",
+        "r_and_d_allocation": "unavailable"
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4200,
-      "suggested_retail": 15000,
-      "gross_margin": 72.0
+      "manufacturing_cost": "unavailable (estimated $4,000-$6,000)",
+      "suggested_retail": "unavailable (market price ~$15,000-$21,000)",
+      "gross_margin": "unavailable (AMD datacenter GPU margin lower than NVIDIA)"
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 70.0,
-    "cost_trend": "Increasing due to advanced packaging (CoWoS) constraints and rising wafer prices at TSMC",
-    "main_cost_driver": "Advanced packaging (CoWoS) and wafer costs"
+    "average_gross_margin": "unavailable (NVIDIA datacenter ~75-80%; AMD lower)",
+    "cost_trend": "Increasing due to advanced nodes (3nm/2nm), complex packaging (CoWoS), and AI-driven demand",
+    "main_cost_driver": "Advanced packaging (CoWoS) and cutting-edge foundry nodes (TSMC 4N/3nm)"
   },
-  "last_updated": "2024-03-15",
-  "timestamp": "2025-12-09T14:18:36.873521"
+  "last_updated": "2024-07-20",
+  "timestamp": "2025-12-09T15:18:43.150212"
 }

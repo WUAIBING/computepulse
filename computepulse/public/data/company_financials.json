@@ -1,65 +1,24 @@
 {
   "nvidia": {
-    "stock_price": 200.0,
-    "market_cap": 500000.0,
-    "ai_revenue_q3": 10000.0,
-    "data_center_growth": 20.0,
-    "next_earnings_date": "2024-10-15",
-    "source": "NVIDIA Q3 2024 Earnings Report"
-  },
-  "amd": {
-    "stock_price": 150.0,
-    "market_cap": 150000.0,
-    "data_center_gpu_revenue": 5000.0,
-    "source": "AMD Q3 2024 Earnings Report"
+    "stock_price": 0,
+    "market_cap": 0,
+    "ai_revenue_q3": 0,
+    "data_center_growth": 0,
+    "next_earnings_date": "",
+    "source": ""
   },
   "microsoft": {
-    "stock_price": 400.0,
-    "market_cap": 2000000.0,
-    "azure_ai_revenue": 20000.0,
-    "openai_investment": 10000.0,
-    "source": "Microsoft Q3 2024 Earnings Report"
-  },
-  "google": {
-    "stock_price": 3000.0,
-    "market_cap": 2500000.0,
-    "ai_ml_revenue": 15000.0,
-    "tpu_costs": 5000.0,
-    "source": "Google Q3 2024 Earnings Report"
-  },
-  "amazon": {
-    "stock_price": 120.0,
-    "market_cap": 1200000.0,
-    "aws_ai_services_revenue": 8000.0,
-    "source": "Amazon Q3 2024 Earnings Report"
-  },
-  "meta": {
-    "stock_price": 250.0,
-    "market_cap": 700000.0,
-    "ai_infrastructure_spending": 3000.0,
-    "source": "Meta Q3 2024 Earnings Report"
-  },
-  "openai": {
-    "funding_rounds": [
-      {
-        "round": "Series D",
-        "amount": 1000.0,
-        "date": "2024-01-01"
-      }
-    ],
-    "valuation": 100000.0,
-    "source": "OpenAI Press Release"
-  },
-  "anthropic": {
-    "funding": 500.0,
-    "revenue_model": "Subscription and API-based",
-    "source": "Anthropic Investor Relations"
+    "stock_price": 0,
+    "market_cap": 0,
+    "azure_ai_revenue": 0,
+    "openai_investment": 0,
+    "source": ""
   },
   "industry_metrics": {
-    "total_ai_market_cap": 6000000.0,
-    "average_pe_ratio": 30.0,
-    "top_performer": "NVIDIA"
+    "total_ai_market_cap": 0,
+    "average_pe_ratio": 0,
+    "top_performer": ""
   },
-  "last_updated": "2024-10-01",
-  "timestamp": "2025-12-09T14:18:55.286473"
+  "last_updated": "",
+  "timestamp": "2025-12-09T15:19:00.886076"
 }

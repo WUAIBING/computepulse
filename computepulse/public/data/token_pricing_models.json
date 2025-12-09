@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 80 messages per 3 hours on GPT-4o"
+        "monthly_limit": "Up to 80 messages every 3 hours on GPT-4"
       },
-      "efficiency_score": 9.2
+      "efficiency_score": 1.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 8.5
+      "efficiency_score": 0.5
     }
   },
   "anthropic": {
@@ -24,13 +24,16 @@
         "claude_pro": 20.0,
         "monthly_limit": "5x more usage than free tier"
       },
-      "efficiency_score": 9.5
+      "efficiency_score": 1.2
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 8.0
+      "subscription_alternative": {
+        "claude_pro": 20.0,
+        "monthly_limit": "5x more usage than free tier"
+      },
+      "efficiency_score": 2.0
     }
   },
   "google": {
@@ -38,66 +41,63 @@
       "input_price_per_million": 0.5,
       "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "ai_premium": 19.99,
-        "monthly_limit": "Unlimited Gemini Advanced access"
+        "google_one_ai_premium": 19.99,
+        "monthly_limit": "Unlimited access within Google's ecosystem"
       },
-      "efficiency_score": 8.5
+      "efficiency_score": 3.0
     },
     "gemini_ultra": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
+      "input_price_per_million": null,
+      "output_price_per_million": null,
       "subscription_alternative": {
-        "ai_premium": 19.99,
-        "monthly_limit": "Unlimited Gemini Advanced access"
+        "google_one_ai_premium": 19.99,
+        "monthly_limit": "Unlimited access within Google's ecosystem"
       },
-      "efficiency_score": 9.0
+      "efficiency_score": null
     }
   },
   "meta": {
     "llama_3": {
       "input_price_per_million": 0.0,
       "output_price_per_million": 0.0,
-      "subscription_alternative": {
-        "cloud_hosting": "Varies by provider (AWS, GCP, Azure)",
-        "monthly_limit": "Self-hosted unlimited"
-      },
-      "efficiency_score": 9.8
+      "subscription_alternative": null,
+      "efficiency_score": 5.0
     }
   },
   "microsoft": {
-    "copilot_pro": {
+    "copilot": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
         "copilot_pro": 20.0,
-        "monthly_limit": "Priority access during peak hours"
+        "monthly_limit": "Access within Microsoft products"
       },
-      "efficiency_score": 8.5
+      "efficiency_score": null
     }
   },
   "deepseek": {
     "deepseek_coder": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
+      "input_price_per_million": 1.0,
+      "output_price_per_million": 2.0,
       "subscription_alternative": null,
-      "efficiency_score": 7.5
+      "efficiency_score": 1.5
     }
   },
   "qwen": {
     "qwen_plus": {
-      "input_price_per_million": 0.4,
+      "input_price_per_million": 0.8,
       "output_price_per_million": 2.0,
       "subscription_alternative": null,
-      "efficiency_score": 7.8
+      "efficiency_score": 1.75
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.3,
-    "average_output_cost": 8.0,
+    "average_input_cost": 2.05,
+    "average_output_cost": 7.5,
     "most_efficient": "Llama 3",
-    "subscription_adoption_rate": 67.5,
-    "trend": "Prices decreasing 30-40% YoY while capabilities improve 2x, driving subscription adoption"
+    "subscription_adoption_rate": 0.65,
+    "trend": "Prices decreasing while capabilities increasing; token efficiency becoming key competitive factor. Open-source models challenging commercial pricing."
   },
-  "last_updated": "2024-06-30",
-  "timestamp": "2025-12-09T14:19:32.034937"
+  "last_updated": "2024-03-01",
+  "timestamp": "2025-12-09T15:20:53.257299"
 }
