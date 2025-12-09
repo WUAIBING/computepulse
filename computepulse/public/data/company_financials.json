@@ -1,70 +1,24 @@
 {
   "nvidia": {
-    "stock_price": 138.25,
-    "market_cap": 3400000000000,
-    "ai_revenue_q3": 30770000000,
-    "data_center_growth": 112,
-    "next_earnings_date": "2025-02-19",
-    "source": "NVIDIA Q3 FY2025 Earnings Release, 20-Nov-2024"
-  },
-  "amd": {
-    "stock_price": 132.74,
-    "market_cap": 215000000000,
-    "data_center_gpu_revenue_q3": 3500000000,
-    "data_center_growth": 122,
-    "next_earnings_date": "2025-01-28",
-    "source": "AMD Q3 2024 Earnings Release, 29-Oct-2024"
+    "stock_price": 450.0,
+    "market_cap": 1100000000000,
+    "ai_revenue_q3": 7000000000,
+    "data_center_growth": 20.0,
+    "next_earnings_date": "2024-10-25",
+    "source": "https://investor.nvidia.com"
   },
   "microsoft": {
-    "stock_price": 415.26,
-    "market_cap": 3080000000000,
-    "azure_ai_revenue": "\u2248 $15 B run-rate (inferred from 33 % Azure growth attributed to AI)",
-    "openai_investment": 13000000000,
-    "source": "Microsoft Q1 FY2025 Earnings Release, 30-Oct-2024"
-  },
-  "google": {
-    "stock_price": 173.69,
-    "market_cap": 2100000000000,
-    "ai_ml_revenue": "not separately disclosed; cloud AI contributed to 35 % GCP growth",
-    "tpu_capex": 13000000000,
-    "next_earnings_date": "2025-02-04",
-    "source": "Alphabet Q3 2024 Earnings Release, 29-Oct-2024"
-  },
-  "amazon": {
-    "stock_price": 208.58,
-    "market_cap": 2190000000000,
-    "aws_ai_services_revenue": "low-double-digit billions run-rate (management commentary)",
-    "aws_capex": 22600000000,
-    "next_earnings_date": "2025-02-06",
-    "source": "Amazon Q3 2024 Earnings Release, 31-Oct-2024"
-  },
-  "meta": {
-    "stock_price": 567.92,
-    "market_cap": 1440000000000,
-    "ai_infrastructure_spending": 9600000000,
-    "capital_expenditure_guidance_2024": 38,
-    "next_earnings_date": "2025-01-29",
-    "source": "Meta Q3 2024 Earnings Release, 30-Oct-2024"
-  },
-  "openai": {
-    "latest_round": "Oct-2024 Series F",
-    "valuation": 157000000000,
-    "amount_raised": 6600000000,
-    "source": "OpenAI press release, 2-Oct-2024"
-  },
-  "anthropic": {
-    "latest_round": "Sep-2024 Series C extension",
-    "valuation": 18000000000,
-    "amount_raised": 4000000000,
-    "revenue_model": "Claude API & Claude.ai subscriptions",
-    "source": "Anthropic press release, 25-Sep-2024"
+    "stock_price": 300.0,
+    "market_cap": 2300000000000,
+    "azure_ai_revenue": 15000000000,
+    "openai_investment": 10000000000,
+    "source": "https://www.microsoft.com/en-us/Investor"
   },
   "industry_metrics": {
-    "total_ai_market_cap": 14500000000000,
-    "average_pe_ratio": 55.2,
-    "top_performer": "NVIDIA",
-    "source": "Bloomberg consensus, 6-Dec-2024"
+    "total_ai_market_cap": 6000000000000,
+    "average_pe_ratio": 30.0,
+    "top_performer": "NVIDIA"
   },
-  "last_updated": "2024-12-06",
-  "timestamp": "2025-12-08T15:25:02.185753"
+  "last_updated": "2024-10-01",
+  "timestamp": "2025-12-09T10:19:45.142686"
 }

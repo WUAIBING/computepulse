@@ -5,18 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "80 messages every 3 hours for GPT-4o"
+        "monthly_limit": "Approximately 40 messages per 3 hours with GPT-4o"
       },
-      "efficiency_score": 50.4
+      "efficiency_score": 85
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
-      "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "40 messages every 3 hours for GPT-4 Turbo"
-      },
-      "efficiency_score": 0.0
+      "subscription_alternative": null,
+      "efficiency_score": 70
     }
   },
   "anthropic": {
@@ -25,117 +22,79 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x higher usage limits than free tier, priority access"
+        "monthly_limit": "Approximately 100 messages per day"
       },
-      "efficiency_score": 55.5
+      "efficiency_score": 90
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x higher usage limits than free tier, priority access"
-      },
-      "efficiency_score": 97.0
+      "subscription_alternative": null,
+      "efficiency_score": 95
     }
   },
   "google": {
     "gemini_pro": {
       "input_price_per_million": 0.5,
       "output_price_per_million": 1.5,
-      "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Access to Gemini Ultra 1.0, with usage limits"
-      },
-      "efficiency_score": 95.7
+      "subscription_alternative": null,
+      "efficiency_score": 92
     },
     "gemini_ultra": {
-      "input_price_per_million": 10.0,
-      "output_price_per_million": 30.0,
+      "input_price_per_million": null,
+      "output_price_per_million": null,
       "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Access to Gemini Ultra 1.0, with usage limits"
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Unlimited usage within fair use policy"
       },
-      "efficiency_score": 0.0
+      "efficiency_score": null
     }
   },
   "meta": {
-    "llama_2": {
-      "input_price_per_million": 1.0,
-      "output_price_per_million": 1.0,
-      "subscription_alternative": null,
-      "efficiency_score": 95.0,
-      "pricing_model": "Open-source with commercial licensing for >700M MAU"
-    },
-    "llama_3": {
-      "input_price_per_million": 0.8,
-      "output_price_per_million": 0.8,
-      "subscription_alternative": null,
-      "efficiency_score": 96.0,
-      "pricing_model": "Open-source with commercial licensing for >700M MAU"
+    "llama_3_models": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "open_source": "Free to use and modify",
+        "hosting_costs": "Varies by provider ($0.50-$5.00 per million tokens)"
+      },
+      "efficiency_score": 93
     }
   },
   "microsoft": {
-    "copilot_pro": {
+    "copilot": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
         "copilot_pro": 20.0,
-        "monthly_limit": "Unlimited access, priority access to latest models"
-      },
-      "efficiency_score": null
-    },
-    "microsoft_365_copilot": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "microsoft_365_copilot": 30.0,
-        "monthly_limit": "Unlimited access, integration with Microsoft 365 apps"
+        "m365_copilot": 30.0
       },
       "efficiency_score": null
     }
   },
   "deepseek": {
-    "deepseek_coder": {
+    "deepseek_coder_v2": {
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 99.7
-    },
-    "deepseek_chat": {
-      "input_price_per_million": 0.1,
-      "output_price_per_million": 0.2,
-      "subscription_alternative": null,
-      "efficiency_score": 100.0
+      "efficiency_score": 88
     }
   },
   "qwen": {
-    "qwen_turbo": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.6,
-      "subscription_alternative": null,
-      "efficiency_score": 98.7
-    },
-    "qwen_plus": {
-      "input_price_per_million": 0.4,
-      "output_price_per_million": 1.2,
-      "subscription_alternative": null,
-      "efficiency_score": 96.7
-    },
     "qwen_max": {
-      "input_price_per_million": 1.0,
-      "output_price_per_million": 2.0,
+      "input_price_per_million": 0.6,
+      "output_price_per_million": 1.8,
       "subscription_alternative": null,
-      "efficiency_score": 93.2
+      "efficiency_score": 80
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.09,
-    "average_output_cost": 8.05,
-    "most_efficient": "DeepSeek-chat",
-    "subscription_adoption_rate": 28.5,
-    "trend": "Increasing competition driving down token costs, rise of specialized models, growing hybrid pricing combining token usage with subscription benefits, shift toward smaller, more efficient models for specific tasks"
+    "average_input_cost": 2.78,
+    "average_output_cost": 9.26,
+    "most_efficient": "Claude 3 Haiku",
+    "subscription_adoption_rate": "Around 30-35% for mainstream AI chat subscriptions",
+    "trend": "Token costs have been decreasing by approximately 10-20% quarterly while model capabilities continue to improve, leading to better cost efficiency across all providers. The market is shifting toward tiered offerings with better entry-point pricing."
   },
-  "last_updated": "2024-06-01",
-  "timestamp": "2025-12-09T09:28:26.061984"
+  "last_updated": "June 2024",
+  "timestamp": "2025-12-09T10:21:46.110298"
 }

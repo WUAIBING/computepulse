@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 GPU pricing at $3.26/hour, constrained supply and high capex are driving cloud providers to prioritize larger, more profitable workloads, creating a utilization premium for AI training clusters."
+    "text": "The average H100 price of $3.21/hr underscores persistent chip scarcity that constrains supply chain flexibility and raises capex breakeven hurdles for new GPU builds."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The $1.30/1M token input pricing reflects intense API competition where models like DeepSeek are capturing market share through aggressive cost undercutting while maintaining performance parity."
+    "text": "An average input price of $1.56/1M tokens is aggressively competitive and likely to trigger API price wars, forcing providers to differentiate on model quality and throughput efficiency."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "At 120 TWh annual load, AI infrastructure is approaching grid capacity limits in major regions, with nuclear baseload power becoming increasingly critical for sustainable scaling."
+    "text": "A 120 TWh annual load highlights rising grid strain and favors accelerated nuclear and low\u2011carbon baseload adoption to stabilize AI data center power draw."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry growth remains robust but sustainability concerns are rising as infrastructure costs and energy demands outpace revenue growth, indicating potential bubble risks in unprofitable AI ventures."
+    "text": "H100 at $3.21/hr and tokens at $1.56/1M point to an efficiency race amid compressed margins, keeping macro sentiment cautious about bubble risks despite strong growth."
   }
 }
