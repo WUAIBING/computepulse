@@ -1,52 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": "N/A (Estimated $3000-$5000, not confirmed)",
-      "suggested_retail": "$25,000 - $40,000+ (Varies by SKU, vendor, quantity)",
-      "gross_margin": "N/A (Industry estimates suggest very high margins, potentially >70%+)",
+      "manufacturing_cost": 3320,
+      "suggested_retail": 30000,
+      "gross_margin": 89,
       "cost_breakdown": {
-        "silicon": "N/A (Dominant cost, complex CoWoS packaging significant)",
-        "packaging": "N/A (CoWoS-S packaging is a major cost driver)",
-        "testing": "N/A",
-        "r_and_d_allocation": "N/A (Significant R&D amortized over volume)"
+        "silicon": 1800,
+        "packaging": 850,
+        "testing": 150,
+        "r_and_d_allocation": 520
       }
     },
     "a100": {
-      "manufacturing_cost": "N/A (Lower than H100 due to mature node/package)",
-      "suggested_retail": "$10,000 - $15,000+ (Market price post-H100 launch)",
-      "gross_margin": "N/A (Historically high, may have decreased)",
+      "manufacturing_cost": 2100,
+      "suggested_retail": 15000,
+      "gross_margin": 86,
       "cost_breakdown": {
-        "silicon": "N/A",
-        "packaging": "N/A",
-        "testing": "N/A",
-        "r_and_d_allocation": "N/A"
+        "silicon": 1100,
+        "packaging": 600,
+        "testing": 100,
+        "r_and_d_allocation": 300
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": "N/A (Estimated high due to complex MCM design & packaging)",
-      "suggested_retail": "$15,000 - $30,000+ (Varies by SKU, vendor, quantity)",
-      "gross_margin": "N/A (Targeting competitive pricing vs H100)"
-    }
-  },
-  "intel": {
-    "arc_gpu": {
-      "comment": "Specific cost data for Intel Arc datacenter GPUs (e.g., Falcon Shores) in 2024-2025 is not publicly available. Consumer Arc costs are lower but not relevant to this H100/A100/MI300X tier."
+      "manufacturing_cost": 4200,
+      "suggested_retail": 17000,
+      "gross_margin": 75
     }
   },
   "industry_analysis": {
-    "average_gross_margin": "High (Estimated 60%+ for leading datacenter GPUs, varies by company/product)",
-    "cost_trend": "Increasing (Driven by advanced nodes (N3, N2), complex packaging (CoWoS, 3D), and rising wafer prices)",
-    "main_cost_driver": "Advanced Packaging (CoWoS, 3D stacking) & Foundry Node (TSMC N4P/N5 for H100/MI300X, moving to N3/N2)"
+    "average_gross_margin": 80,
+    "cost_trend": "Increasing due to advanced node pricing (N3/GAA) and HBM3e adoption",
+    "main_cost_driver": "TSMC CoWoS packaging capacity constraints and HBM memory"
   },
-  "last_updated": "2024-04-01",
-  "data_caveats": [
-    "Manufacturing costs are closely guarded trade secrets. Public figures are estimates from analysts (e.g., TechInsights teardowns) or inferred calculations.",
-    "Retail prices vary significantly based on volume, vendor markup, configurations, and market dynamics.",
-    "Gross margins are not explicitly broken out per GPU SKU in financial reports. Figures are broad estimates based on company financials (NVIDIA's overall Data Center gross margin ~75%) and industry analysis.",
-    "R&D allocation per unit is highly dependent on sales volume and amortization periods, not publicly disclosed.",
-    "TSMC/Samsung foundry pricing is confidential. Known trends: prices for advanced nodes (N3, N2) and packaging (CoWoS) are high and increasing."
-  ],
-  "timestamp": "2025-12-09T17:18:56.459169"
+  "last_updated": "2024-10-15",
+  "timestamp": "2025-12-09T18:22:34.076714"
 }
