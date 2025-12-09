@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 spot prices stabilizing around $3.33/hr as inventory rebuilds, with capex shifting toward liquid-cooled racks for dense AI workloads."
+    "text": "H100 supply stabilizes as US-East availability improves, keeping the $3.29/hr average price in check and unlocking deferred capex."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token input costs at $1.35/1M tokens signal intense API price compression as distilled models force efficiency gains across the stack."
+    "text": "Token costs compress with DeepSeek driving price competition, while the $1.28/1M input benchmark pushes vendors to boost efficiency."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh annual load exposes grid vulnerability, prompting SMR nuclear adoption for baseload stability in AI hyperscale regions."
+    "text": "Annual AI data center load near 180 TWh heightens grid strain, prompting nuclear baseload and faster interconnection upgrades."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Valuation compression suggests sector maturation rather than bubble risk, with sustainable growth focusing on inference efficiency rather than pure parameter scaling."
+    "text": "Macro sentiment remains constructive yet selective, rewarding sustainable growth as unit economics mature and capital shifts toward efficient leaders."
   }
 }
