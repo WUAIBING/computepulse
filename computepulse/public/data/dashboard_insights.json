@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At a realized H100 price near $3.22/hr\u2014roughly half of U.S. spot rates\u2014hardware supply is now adequate in some regions, but persistent export controls keep new capacity approvals and premium-tier chips structurally tight, implying capex allocation will favor older-generation inventory and bespoke accelerators rather than high-end GPUs."
+    "text": "At $3.14/hr for H100s, the premium pricing reflects constrained supply chains and high capex requirements, with chip availability remaining the primary bottleneck for scaling AI infrastructure."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With input pricing compressing to roughly $1.56 per million tokens, the token market is entering a sustained price war; providers are racing to differentiate on latency, reliability, and specialized fine\u2011tunes rather than headline cost, while efficiency\u2011driven model innovations compress margins."
+    "text": "The $1.40/1M input token pricing indicates aggressive API price wars are driving efficiency gains, while model competition forces continuous optimization to maintain cost competitiveness."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load translates to roughly 10.3 GW of continuous power, already testing grid strain; without faster interconnection queues and behind\u2011the\u2011meter nuclear adoption, data\u2011center growth risks being carbon\u2011intensive and capacity\u2011constrained."
+    "text": "With 120 TWh annual load, AI computing demands are creating unprecedented grid strain, necessitating accelerated nuclear adoption and carbon footprint mitigation strategies."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Infrastructure costs are stabilizing (H100), input pricing is in a deflationary spiral (tokens), and power needs are rising, suggesting a maturing market where growth remains strong but risk migrates to execution\u2014grid access, interconnect timelines, and regulatory bottlenecks."
+    "text": "The juxtaposition of rising infrastructure costs against aggressive pricing suggests an unsustainable growth trajectory, with bubble risks emerging from overcapacity in compute resources."
   }
 }
