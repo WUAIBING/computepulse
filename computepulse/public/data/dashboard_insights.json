@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply stabilizes as US-East availability improves, keeping the $3.29/hr average price in check and unlocking deferred capex."
+    "text": "H100 availability improves on US-East routes as capex normalization unlocks second\u2011hand inventory, easing lead times and stabilizing $/hr around $3.31."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token costs compress with DeepSeek driving price competition, while the $1.28/1M input benchmark pushes vendors to boost efficiency."
+    "text": "Input token pricing stays aggressive near $1.31/1M as distillation and inference optimization compress costs, intensifying API price wars."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Annual AI data center load near 180 TWh heightens grid strain, prompting nuclear baseload and faster interconnection upgrades."
+    "text": "120 TWh annual load pushes grid interconnections to capacity, making nuclear baseload and storage essential to manage strain and carbon intensity."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Macro sentiment remains constructive yet selective, rewarding sustainable growth as unit economics mature and capital shifts toward efficient leaders."
+    "text": "Industry sentiment consolidates as utilization rises and capex cycles normalize, signaling a maturing market with measured growth and lower bubble risk."
   }
 }

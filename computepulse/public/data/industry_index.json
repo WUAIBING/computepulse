@@ -1,7 +1,7 @@
 {
-  "score": 80,
+  "score": 85,
   "trend": "up",
-  "summary": "Aggressive Capex increases by Microsoft, Google, and Meta drive the index higher, with stable GPU rental prices indicating sustained demand.",
+  "summary": "Hyperscalers (Microsoft, Google, Meta, AWS) all announced aggressive AI capex increases for 2024/2025, offsetting minor GPU rental price normalization from supply chain improvements.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-09T02:46:48.885081"
+  "last_updated": "2025-12-09T03:48:23.348114"
 }
