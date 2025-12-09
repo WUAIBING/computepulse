@@ -1,12 +1,18 @@
 {
   "base": "USD",
-  "timestamp": "2025-12-09T05:16:03.476518",
+  "timestamp": "2025-12-09T06:30:50.079807",
   "source": "ExchangeRate API",
   "rates": {
     "USD": 1.0,
     "CNY": 7.08,
     "EUR": 0.859,
-    "GBP": 0.751
+    "GBP": 0.751,
+    "JPY": 155.73,
+    "INR": 90.17,
+    "CAD": 1.38,
+    "AUD": 1.51,
+    "KRW": 1467.77,
+    "BRL": 5.43
   },
   "from": "USD",
   "to": "CNY",

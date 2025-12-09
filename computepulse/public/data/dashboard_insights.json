@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 allocations are easing as supply normalizes across US-East clusters, though 2025 capex constraints keep premium pricing sticky."
+    "text": "H100 lease rates at $3.22/hr reflect easing but tight supply as Blackwell ramps and capex surges, while 2.5D packaging capacity expansion provides a path to balanced inventories by 2026."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Distillation and aggressive API price cuts compress input costs toward $1.28/M tokens, intensifying model competition."
+    "text": "DeepSeek\u2019s $1.30/1M input token pricing ignites an API price war, rewarding efficient architectures like MoE and distillation while compressing margins across the model market."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "At 150 TWh annual load, grid strain is rising; nuclear baseload is becoming critical for sustainable GW-scale deployments."
+    "text": "AI\u2019s 120 TWh annual load (~13.7 GW average) stresses power grids, accelerating adoption of nuclear (SMRs) and firm clean PPAs to sustain growth without inflating carbon intensity."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Macro sentiment is tempered by capex intensity and power bottlenecks, signaling a measured but durable growth trajectory."
+    "text": "Macro sentiment is cautiously optimistic as falling unit costs and steady capex offset pricing pressure and grid constraints, with growth tethered to sustainable power solutions and disciplined returns."
   }
 }
