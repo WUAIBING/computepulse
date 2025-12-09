@@ -1,0 +1,56 @@
+{
+  "global_percentage": 30.8,
+  "by_technology": {
+    "solar": 6.7,
+    "wind": 8.2,
+    "hydro": 14.2,
+    "nuclear": 9.0,
+    "other_renewables": 2.7
+  },
+  "top_countries": [
+    {
+      "country": "Iceland",
+      "percentage": 100
+    },
+    {
+      "country": "Norway",
+      "percentage": 98.5
+    },
+    {
+      "country": "Costa Rica",
+      "percentage": 97.8
+    },
+    {
+      "country": "Brazil",
+      "percentage": 89.1
+    },
+    {
+      "country": "Canada",
+      "percentage": 82.3
+    },
+    {
+      "country": "Sweden",
+      "percentage": 81.8
+    },
+    {
+      "country": "Denmark",
+      "percentage": 80.5
+    },
+    {
+      "country": "Austria",
+      "percentage": 78.2
+    },
+    {
+      "country": "Portugal",
+      "percentage": 75.5
+    },
+    {
+      "country": "Spain",
+      "percentage": 72.1
+    }
+  ],
+  "year_over_year_growth": 2.3,
+  "data_source": "Ember Global Electricity Review 2025 (released Jan 2025)",
+  "last_updated": "2025-01-31",
+  "timestamp": "2025-12-08T15:23:33.151494"
+}
