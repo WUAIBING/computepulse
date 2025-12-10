@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 spot pricing at $3.11/hr signals constrained supply dynamics as cloud providers ration premium GPUs amid surging inference demand, while hyperscalers accelerate capex to reduce third-party dependencies."
+    "text": "With H100 spot pricing stabilizing at $3.12/hr, hardware supply chain bottlenecks are easing as NVIDIA ramps production, but elevated capex requirements continue to favor hyperscalers over smaller cloud providers."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek's aggressive $1.25/1M token pricing is forcing incumbents to compress margins as commoditization accelerates, with efficiency gains from distillation and architecture innovations driving the price floor lower."
+    "text": "Input token pricing at $1.28/1M reflects intensifying API price wars, with efficiency gains from model distillation creating downward pressure on margins while enabling broader accessibility for developers."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure's 120 TWh annual consumption represents a 25% grid demand spike, necessitating accelerated nuclear adoption and carbon accounting as data centers approach 4% of total U.S. electricity usage."
+    "text": "Annual AI infrastructure load reaching 120 TWh is pushing grid capacity limits, accelerating discussions around nuclear power adoption and renewable integration to meet sustainability targets."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Capital deployment in AI infrastructure has reached bubble-risk territory with $500B+ pledged capex outpacing revenue generation by 18 months, while enterprise adoption curves suggest sustainability challenges beyond 2026."
+    "text": "Despite aggressive GPU and API pricing, the $3.12/hr H100 rates combined with $1.28/1M token costs suggest the AI infrastructure boom may be normalizing toward sustainable economics rather than a bubble."
   }
 }

@@ -3,166 +3,166 @@
     {
       "region": "United States",
       "min_price": 50,
-      "max_price": 70,
-      "avg_price": 60,
-      "currency": "USD/MWh"
-    },
-    {
-      "region": "Germany",
-      "min_price": 80,
-      "max_price": 100,
-      "avg_price": 90,
-      "currency": "USD/MWh"
-    },
-    {
-      "region": "China",
-      "min_price": 35,
-      "max_price": 45,
-      "avg_price": 40,
-      "currency": "USD/MWh"
-    },
-    {
-      "region": "Japan",
-      "min_price": 120,
-      "max_price": 140,
-      "avg_price": 130,
-      "currency": "USD/MWh"
-    },
-    {
-      "region": "United Kingdom",
-      "min_price": 75,
-      "max_price": 95,
+      "max_price": 120,
       "avg_price": 85,
       "currency": "USD/MWh"
     },
     {
+      "region": "Germany",
+      "min_price": 70,
+      "max_price": 140,
+      "avg_price": 105,
+      "currency": "USD/MWh"
+    },
+    {
+      "region": "China",
+      "min_price": 60,
+      "max_price": 130,
+      "avg_price": 95,
+      "currency": "USD/MWh"
+    },
+    {
+      "region": "Japan",
+      "min_price": 100,
+      "max_price": 180,
+      "avg_price": 140,
+      "currency": "USD/MWh"
+    },
+    {
+      "region": "UK",
+      "min_price": 80,
+      "max_price": 150,
+      "avg_price": 115,
+      "currency": "USD/MWh"
+    },
+    {
       "region": "Canada",
-      "min_price": 65,
-      "max_price": 85,
-      "avg_price": 75,
+      "min_price": 55,
+      "max_price": 125,
+      "avg_price": 90,
       "currency": "USD/MWh"
     },
     {
       "region": "Australia",
-      "min_price": 110,
-      "max_price": 130,
-      "avg_price": 120,
+      "min_price": 65,
+      "max_price": 135,
+      "avg_price": 100,
       "currency": "USD/MWh"
     },
     {
       "region": "Brazil",
-      "min_price": 55,
-      "max_price": 75,
-      "avg_price": 65,
+      "min_price": 45,
+      "max_price": 115,
+      "avg_price": 80,
       "currency": "USD/MWh"
     }
   ],
   "commercial_prices": [
     {
       "region": "United States",
-      "min_price": 70,
-      "max_price": 90,
-      "avg_price": 80,
+      "min_price": 60,
+      "max_price": 130,
+      "avg_price": 95,
       "currency": "USD/MWh"
     },
     {
       "region": "Germany",
-      "min_price": 100,
-      "max_price": 120,
-      "avg_price": 110,
+      "min_price": 80,
+      "max_price": 150,
+      "avg_price": 115,
       "currency": "USD/MWh"
     },
     {
       "region": "China",
-      "min_price": 45,
-      "max_price": 55,
-      "avg_price": 50,
+      "min_price": 70,
+      "max_price": 140,
+      "avg_price": 105,
       "currency": "USD/MWh"
     },
     {
       "region": "Japan",
-      "min_price": 140,
-      "max_price": 160,
+      "min_price": 110,
+      "max_price": 190,
       "avg_price": 150,
       "currency": "USD/MWh"
     },
     {
-      "region": "United Kingdom",
+      "region": "UK",
       "min_price": 90,
-      "max_price": 110,
-      "avg_price": 100,
+      "max_price": 160,
+      "avg_price": 125,
       "currency": "USD/MWh"
     },
     {
       "region": "Canada",
-      "min_price": 80,
-      "max_price": 100,
-      "avg_price": 90,
+      "min_price": 65,
+      "max_price": 135,
+      "avg_price": 100,
       "currency": "USD/MWh"
     },
     {
       "region": "Australia",
-      "min_price": 130,
-      "max_price": 150,
-      "avg_price": 140,
+      "min_price": 75,
+      "max_price": 145,
+      "avg_price": 110,
       "currency": "USD/MWh"
     },
     {
       "region": "Brazil",
-      "min_price": 65,
-      "max_price": 85,
-      "avg_price": 75,
+      "min_price": 55,
+      "max_price": 125,
+      "avg_price": 90,
       "currency": "USD/MWh"
     }
   ],
   "datacenter_rates": [
     {
       "region": "United States",
-      "rate": 100,
+      "rate": 80,
       "currency": "USD/MWh",
       "source": "EIA International Energy Statistics"
     },
     {
       "region": "Germany",
-      "rate": 120,
+      "rate": 110,
       "currency": "USD/MWh",
       "source": "Eurostat Energy Statistics"
     },
     {
       "region": "China",
-      "rate": 50,
+      "rate": 90,
       "currency": "USD/MWh",
       "source": "\u56fd\u5bb6\u7535\u7f51\u516c\u53f8"
     },
     {
       "region": "Japan",
-      "rate": 150,
-      "currency": "USD/MWh",
-      "source": "\u5b9e\u65f6\u7535\u529b\u4ea4\u6613\u5e73\u53f0"
-    },
-    {
-      "region": "United Kingdom",
-      "rate": 110,
+      "rate": 130,
       "currency": "USD/MWh",
       "source": "EEX"
     },
     {
-      "region": "Canada",
-      "rate": 90,
+      "region": "UK",
+      "rate": 100,
       "currency": "USD/MWh",
       "source": "PJM"
     },
     {
-      "region": "Australia",
-      "rate": 160,
+      "region": "Canada",
+      "rate": 75,
       "currency": "USD/MWh",
       "source": "CAISO"
     },
     {
-      "region": "Brazil",
-      "rate": 70,
+      "region": "Australia",
+      "rate": 85,
       "currency": "USD/MWh",
-      "source": "\u5df4\u897f\u80fd\u6e90\u76d1\u7ba1\u673a\u6784"
+      "source": "AEMO"
+    },
+    {
+      "region": "Brazil",
+      "rate": 60,
+      "currency": "USD/MWh",
+      "source": "CCEE"
     }
   ],
   "exchange_rates_used": {
@@ -175,17 +175,17 @@
     "USD_AUD": 1.51,
     "USD_KRW": 1467.77,
     "USD_BRL": 5.43,
-    "timestamp": "2025-12-09T22:17:41.828924",
+    "timestamp": "2025-12-09T23:18:08.195134",
     "source": "ExchangeRate API"
   },
-  "last_updated": "2023-03-15",
+  "last_updated": "2023-04-01",
   "global_statistics": {
-    "global_min_avg_price": 40.0,
-    "global_max_avg_price": 130.0,
-    "global_avg_price": 83.12,
-    "global_min_price": 35.0,
-    "global_max_price": 140.0,
+    "global_min_avg_price": 80.0,
+    "global_max_avg_price": 140.0,
+    "global_avg_price": 101.25,
+    "global_min_price": 45.0,
+    "global_max_price": 180.0,
     "regions_count": 8
   },
-  "timestamp": "2025-12-09T23:16:10.263372"
+  "timestamp": "2025-12-10T01:03:04.842975"
 }

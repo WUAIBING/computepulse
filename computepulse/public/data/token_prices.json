@@ -20,8 +20,8 @@
   {
     "model": "GPT-4o",
     "provider": "OpenAI",
-    "input_price": 0.0,
-    "output_price": 0.0
+    "input_price": 0.03,
+    "output_price": 0.06
   },
   {
     "provider": "Anthropic",
@@ -272,14 +272,14 @@
   {
     "model": "Qwen-Max",
     "provider": "Alibaba Cloud",
-    "input_price": 0.0,
-    "output_price": 0.0
+    "input_price": 0.0005,
+    "output_price": 0.001
   },
   {
     "model": "Claude 3.5",
     "provider": "Anthropic",
-    "input_price": 0.0,
-    "output_price": 0.0
+    "input_price": 0.01102,
+    "output_price": 0.03268
   },
   {
     "model": "DeepSeek-V3",
@@ -302,8 +302,8 @@
   {
     "model": "DeepSeek-V3",
     "provider": "Unknown Provider",
-    "input_price": 0.05,
-    "output_price": 0.1
+    "input_price": null,
+    "output_price": null
   },
   {
     "model": "DeepSeek-V3",
