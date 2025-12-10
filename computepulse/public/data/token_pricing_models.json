@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Higher usage limits on GPT-4o, up to 5x more messages compared to free users."
+        "monthly_limit": "Usage limits apply; higher limits during peak times compared to GPT-4o Mini/GPT-3.5. Up to 5x more usage for GPT-4o than free users."
       },
-      "efficiency_score": 50.0
+      "efficiency_score": 90
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 25.0
+      "efficiency_score": 45
     }
   },
   "anthropic": {
@@ -22,80 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with higher priority access during high-traffic periods."
+        "monthly_limit": "5x higher usage limits than the free tier, with access to the highest capacity model (Claude 3.5 Sonnet)."
       },
-      "efficiency_score": 55.56
-    },
-    "claude_3_haiku": {
-      "input_price_per_million": 0.25,
-      "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 666.67
-    }
-  },
-  "google": {
-    "gemini_1_5_pro": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
-      "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Included in the Google One AI Premium plan; access to the Gemini Ultra 1.0 model and 1 million token context window."
-      },
-      "efficiency_score": 70.59
-    },
-    "gemini_1_5_flash": {
-      "input_price_per_million": 0.075,
-      "output_price_per_million": 0.15,
-      "subscription_alternative": null,
-      "efficiency_score": 2222.22
-    }
-  },
-  "meta": {
-    "llama_3_instruct_70b": {
-      "input_price_per_million": 0.97,
-      "output_price_per_million": 0.97,
-      "subscription_alternative": {
-        "model_type": "Open Source",
-        "monthly_limit": "No subscription. Models are free to download. API pricing shown is for hosted versions on cloud platforms (e.g., AWS Bedrock, Google Cloud Vertex AI), where you pay per-token."
-      },
-      "efficiency_score": 515.46
-    }
-  },
-  "microsoft": {
-    "copilot_subscriptions": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "copilot_for_m365": 30.0,
-        "model_access": "Consumer tier offers priority access to latest models. Enterprise tier includes Microsoft Graph grounding and business data integration. No public pay-per-token API."
-      },
-      "efficiency_score": 0
-    }
-  },
-  "deepseek": {
-    "deepseek_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 2380.95
-    }
-  },
-  "qwen": {
-    "qwen_plus": {
-      "input_price_per_million": 0.004,
-      "output_price_per_million": 0.012,
-      "subscription_alternative": null,
-      "efficiency_score": 62500.0
+      "efficiency_score": 100
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.87,
-    "average_output_cost": 9.52,
-    "most_efficient": "Qwen Plus",
-    "subscription_adoption_rate": "Exact data is proprietary, but consumer adoption for $20/mo tiers (ChatGPT Plus, Claude Pro, Copilot Pro) is estimated to be high (15-25% of active power users). Enterprise adoption of per-token APIs is widespread.",
-    "trend": "The market is undergoing a massive price war driven by new architectural efficiencies and highly competitive open-source and Chinese models (e.g., DeepSeek, Qwen). Input costs are plummeting, while $20/month is solidifying as the standard price point for consumer subscriptions. Output tokens remain 2-5x more expensive than input tokens. Ultra-large context windows (1M+ tokens) are now a standard competitive feature for top-tier models."
+    "average_input_cost": 6.0,
+    "average_output_cost": 20.0,
+    "most_efficient": "Claude 3.5 Sonnet",
+    "subscription_adoption_rate": null,
+    "trend": "Aggressive price competition and rapid cost reduction in 2024, driven by new model architectures (e.g., OpenAI's GPT-4o) and pressure from highly efficient open-source models (Llama, DeepSeek, Qwen). Output costs remain significantly higher than input costs across all providers."
   },
-  "last_updated": "2024-08-01",
-  "timestamp": "2025-12-10T16:24:48.485695"
+  "last_updated": "2024-06-04",
+  "timestamp": "2025-12-10T17:21:10.096750"
 }

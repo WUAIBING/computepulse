@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At a prevailing spot price of about $3.20 per H100\u2011hour, even modest deployments translate to multi\u2011million\u2011dollar annual GPU opex, making forward capex commitments and diversified sourcing essential to navigate ongoing supply constraints."
+    "text": "The $3.19/hr H100 pricing reflects persistent supply chain bottlenecks as hyperscalers prioritize enterprise contracts over spot availability, suggesting capex allocation is shifting toward dedicated capacity reservations rather than elastic cloud consumption."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "An average input token price around $1.38 per million is compressing margins and catalyzing a price war that favors vendors who achieve higher tokens\u2011per\u2011dollar through distillation, quantization, and long\u2011context optimization."
+    "text": "DeepSeek's aggressive $1.25/1M token pricing strategy is forcing industry-wide efficiency optimizations, with smaller models achieving comparable utility at fraction of the cost, indicating the API market is entering a consolidation phase driven by price competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load equates to roughly 13.7 GW continuous, stressing grids and amplifying the carbon\u2011intensity debate unless AI facilities accelerate firm\u2011power procurement, including nuclear and long\u2011duration storage."
+    "text": "AI infrastructure's 120 TWh annual energy load represents 8-10% of total U.S. electricity consumption, creating unprecedented grid strain that accelerates nuclear adoption discussions while carbon footprint concerns drive regional energy arbitrage strategies."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment is cautiously buoyant, with operators emphasizing efficiency and sustainability to mitigate bubble risks and support durable, multi\u2011year growth."
+    "text": "The convergence of hardware scarcity, token commoditization, and energy constraints signals a maturation phase where sustainable growth depends on efficiency breakthroughs rather than pure scaling, with capital allocation shifting from speculative to operational excellence."
   }
 }
