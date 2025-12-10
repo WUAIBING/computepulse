@@ -1,7 +1,7 @@
 {
   "score": 90,
   "trend": "up",
-  "summary": "Hyperscalers are aggressively increasing AI capex (Microsoft, Google, Meta, AWS) while GPU rental prices remain high ($3.16/hr) and next-gen models (GPT-5, Gemini 2) are confirmed in development.",
+  "summary": "The AI Industry Prosperity Index reflects robust growth driven by aggressive hyperscaler investments and sustained GPU demand. Meta raised its 2024 Capex forecast to $35-40B (up 46% YoY), Microsoft plans ~$50B in Capex (prioritizing AI infrastructure), and Google expects to exceed $30B. AWS is also increasing spend on AI accelerators. GPU rental prices remain stable at $3.23/hr (down from 2023 peaks but well above historical lows), indicating balanced supply-demand dynamics. Anticipation for GPT-5 (2025 release) and Gemini 2 further fuels market optimism.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-10T07:25:02.874129"
+  "last_updated": "2025-12-10T08:27:31.789728"
 }

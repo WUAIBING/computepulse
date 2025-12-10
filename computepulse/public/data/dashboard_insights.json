@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At an average H100 on\u2011prem lease of roughly $3.16/hour, the hardware market remains tight as NVIDIA allocates scarce wafers amid rising capex, tightening supply chain resilience for hyperscalers and enterprises."
+    "text": "At $3.23/hr for H100s, chip scarcity is forcing hyperscalers to lock in longer-term contracts and diversify suppliers, raising capex as availability trumps marginal cost."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With input pricing near $1.53 per million tokens, the API price wars are compressing unit costs and pushing providers toward smarter routing, fine\u2011tuning, and sparsity to maintain margins in a fiercely competitive market."
+    "text": "With an average input price of $1.25 per million tokens, API price wars are pushing providers to optimize inference via caching and quantization to defend margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI\u2019s projected 120 TWh annual load will stress grids and accelerate nuclear adoption as operators seek reliable, low\u2011carbon baseload to meet surging compute demand while keeping carbon footprints in check."
+    "text": "A 120 TWh annual AI load (~13.7 GW average) is straining grids, accelerating nuclear and long\u2011duration storage adoption to meet reliability and carbon goals."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment is mixed: rapid price declines and 120 TWh energy footprints signal durable growth, yet the surge in capex and aggressive pricing could fuel a bubble unless cost curves and ROI normalize."
+    "text": "Rising capex, falling API prices, and surging energy demand create cautious optimism, but the sector must manage bubble risk through disciplined scaling and energy\u2011efficient architectures."
   }
 }

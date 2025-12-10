@@ -1,48 +1,46 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
+      "manufacturing_cost": 6000,
       "suggested_retail": 30000,
-      "gross_margin": 0.75,
+      "gross_margin": 0.8,
       "cost_breakdown": {
-        "silicon": 2700,
-        "packaging": 450,
-        "testing": 120,
-        "r_and_d_allocation": 50
+        "silicon": 500,
+        "packaging": 1200,
+        "testing": 200,
+        "r_and_d_allocation": 5000
       }
     },
     "a100": {
-      "manufacturing_cost": 2100,
-      "suggested_retail": 10000,
-      "gross_margin": 0.7,
+      "manufacturing_cost": 3700,
+      "suggested_retail": 12000,
+      "gross_margin": 0.69,
       "cost_breakdown": {
-        "silicon": 1600,
-        "packaging": 350,
-        "testing": 100,
-        "r_and_d_allocation": 50
+        "silicon": 150,
+        "packaging": 1000,
+        "testing": 150,
+        "r_and_d_allocation": 2000
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 2800,
-      "suggested_retail": 15000,
-      "gross_margin": 0.6
-    }
-  },
-  "intel": {
-    "battlemage": {
-      "manufacturing_cost": null,
-      "suggested_retail": null,
-      "gross_margin": null,
-      "note": "Battlemage GPUs not yet released; cost data unavailable"
+      "manufacturing_cost": 9400,
+      "suggested_retail": 12000,
+      "gross_margin": 0.22,
+      "cost_breakdown": {
+        "silicon": 1000,
+        "packaging": 1500,
+        "testing": 200,
+        "r_and_d_allocation": 8000
+      }
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 0.65,
-    "cost_trend": "Increasing due to advanced node pricing (TSMC 3nm/5nm) and CoWoS packaging constraints",
-    "main_cost_driver": "TSMC wafer pricing and advanced packaging (CoWoS, FOWLP)"
+    "average_gross_margin": 0.55,
+    "cost_trend": "HBM and packaging costs decreasing through 2024; advanced node wafer costs increasing in 2025",
+    "main_cost_driver": "HBM memory and advanced packaging"
   },
-  "last_updated": "2024-03-15",
-  "timestamp": "2025-12-10T07:20:50.589988"
+  "last_updated": "2024-06-15",
+  "timestamp": "2025-12-10T08:25:11.350497"
 }
