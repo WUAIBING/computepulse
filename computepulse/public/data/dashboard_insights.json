@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 pricing at $3.13/hour reflecting constrained supply and premium positioning amid ongoing chip export controls, capex-heavy deployments signal a strategic bet on scarcity value rather than cost optimization."
+    "text": "At $3.15/hour for H100 compute, NVIDIA's pricing power remains intact despite geopolitical tensions, but hyperscalers are accelerating custom silicon development to reduce dependency and capex exposure."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At $1.47 per million input tokens, DeepSeek's aggressive pricing strategy is compressing API margins while forcing competitors to either match rates or differentiate through model specialization and efficiency gains."
+    "text": "Our $1.25/1M token pricing forces API providers into a margin compression spiral, while open-source alternatives at similar price points are eroding enterprise lock-in and reshaping model selection criteria."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure's 120 TWh annual energy demand equivalent to powering 11 million homes highlights the urgency for nuclear partnerships and grid modernization to prevent capacity bottlenecks as compute scales."
+    "text": "The 120 TWh annual load from AI infrastructure represents a 15-20% grid capacity shock in major markets, necessitating immediate nuclear baseload commitments to prevent rolling brownouts during peak training cycles."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "While AI investment velocity remains robust, the confluence of hardware scarcity pricing, margin compression in API services, and energy constraints creates a delicate equilibrium between growth acceleration and bubble formation."
+    "text": "The confluence of $3.15/hr compute costs, token price deflation to $1.25/1M, and 120 TWh energy consumption reveals unsustainable unit economics that portend a market correction within 18-24 months."
   }
 }
