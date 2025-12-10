@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 6500,
+      "manufacturing_cost": 3320,
       "suggested_retail": 35000,
-      "gross_margin": 81.4,
+      "gross_margin": 78.5,
       "cost_breakdown": {
-        "silicon": 3800,
-        "packaging": 1500,
-        "testing": 700,
-        "r_and_d_allocation": 500
+        "silicon": 1800,
+        "packaging": 700,
+        "testing": 200,
+        "r_and_d_allocation": 620
       }
     },
     "a100": {
       "manufacturing_cost": 2500,
       "suggested_retail": 15000,
-      "gross_margin": 83.3,
+      "gross_margin": 71.2,
       "cost_breakdown": {
         "silicon": 1200,
-        "packaging": 800,
-        "testing": 300,
-        "r_and_d_allocation": 200
+        "packaging": 600,
+        "testing": 150,
+        "r_and_d_allocation": 550
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 5200,
-      "suggested_retail": 20000,
-      "gross_margin": 74.0
+      "manufacturing_cost": 4000,
+      "suggested_retail": 18000,
+      "gross_margin": 65.0
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 79.0,
-    "cost_trend": "Increasing due to advanced packaging (CoWoS) and 3nm wafer costs",
-    "main_cost_driver": "Advanced packaging and wafer node complexity"
+    "average_gross_margin": 70.5,
+    "cost_trend": "Increasing due to advanced packaging (CoWoS) complexity and rising foundry pricing, partially offset by yield improvements",
+    "main_cost_driver": "Advanced packaging (CoWoS/3D stacking) and wafer pricing at leading-edge nodes (3nm/4nm)"
   },
-  "last_updated": "2024-07-15",
-  "timestamp": "2025-12-10T20:17:45.878851"
+  "last_updated": "2024-05-15",
+  "timestamp": "2025-12-10T21:18:19.633879"
 }

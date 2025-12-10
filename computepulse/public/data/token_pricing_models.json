@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Higher usage limits than free tier, access to GPT-4o and other models, subject to demand-based caps"
+        "monthly_limit": "Usage-based access to GPT-4o, GPT-4 Turbo, and advanced tools. Higher limits than free tier, but no fixed token count."
       },
-      "efficiency_score": 10
+      "efficiency_score": 133.33
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 6
+      "efficiency_score": 66.67
     }
   },
   "anthropic": {
@@ -22,18 +22,24 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with a minimum cap that is higher than Claude's free plan"
+        "monthly_limit": "Usage-based access to Claude models, including Claude 3.5 Sonnet. Higher usage limits than the free tier."
       },
-      "efficiency_score": 9
+      "efficiency_score": 166.67
+    },
+    "claude_3_haiku": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 1.25,
+      "subscription_alternative": null,
+      "efficiency_score": 2000.0
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 6.0,
-    "average_output_cost": 20.0,
-    "most_efficient": "GPT-4o",
-    "subscription_adoption_rate": "~5-7%",
-    "trend": "Aggressive price competition is driving down token costs for flagship models. The market is bifurcating between low-cost consumer subscriptions for general use and a pay-per-use API model for developers and enterprises. Key differentiators are shifting towards model intelligence, multimodal capabilities, and context window size rather than just speed."
+    "average_input_cost": 6.08,
+    "average_output_cost": 15.31,
+    "most_efficient": "Claude 3 Haiku",
+    "subscription_adoption_rate": null,
+    "trend": "Aggressive price competition is driving down costs, with flagship models like GPT-4o offering significantly better price-performance than their predecessors (GPT-4 Turbo). A new tier of highly efficient, smaller models (e.g., Claude 3 Haiku, Google's Gemini 1.5 Flash) is emerging at very low price points. Subscription models for individual consumers are converging around the $20/month price point, offering access to the latest models. Open-source options like Meta's Llama 3 continue to pressure the market, offering zero-cost model weights for self-hosting."
   },
-  "last_updated": "2024-05-29",
-  "timestamp": "2025-12-10T20:18:41.047195"
+  "last_updated": "2024-06-03",
+  "timestamp": "2025-12-10T21:20:27.821983"
 }

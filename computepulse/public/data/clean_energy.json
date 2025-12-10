@@ -1,20 +1,28 @@
 {
-  "global_percentage": 29.0,
+  "global_percentage": 29.8,
   "by_technology": {
-    "solar": 3.0,
-    "wind": 7.0,
+    "solar": 3.7,
+    "wind": 6.8,
     "hydro": 16.0,
-    "nuclear": 10.0,
-    "other_renewables": 3.0
+    "nuclear": 10.1,
+    "other_renewables": 3.2
   },
   "top_countries": [
+    {
+      "country": "Iceland",
+      "percentage": 99.9
+    },
     {
       "country": "Norway",
       "percentage": 98.0
     },
     {
-      "country": "New Zealand",
-      "percentage": 85.0
+      "country": "Costa Rica",
+      "percentage": 98.0
+    },
+    {
+      "country": "Austria",
+      "percentage": 80.0
     },
     {
       "country": "Brazil",
@@ -25,32 +33,24 @@
       "percentage": 67.0
     },
     {
-      "country": "Finland",
-      "percentage": 40.0
+      "country": "Portugal",
+      "percentage": 58.0
+    },
+    {
+      "country": "Spain",
+      "percentage": 47.0
     },
     {
       "country": "Sweden",
-      "percentage": 35.0
-    },
-    {
-      "country": "France",
-      "percentage": 34.0
+      "percentage": 50.0
     },
     {
       "country": "Switzerland",
-      "percentage": 33.0
-    },
-    {
-      "country": "Austria",
-      "percentage": 32.0
-    },
-    {
-      "country": "Portugal",
-      "percentage": 31.0
+      "percentage": 58.0
     }
   ],
   "year_over_year_growth": 2.5,
   "data_source": "IEA, EIA, Ember Climate, Our World in Data",
   "last_updated": "2023-10-01",
-  "timestamp": "2025-12-10T20:16:33.896054"
+  "timestamp": "2025-12-10T21:16:27.852806"
 }

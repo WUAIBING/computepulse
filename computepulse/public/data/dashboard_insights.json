@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 pricing at $3.13/hour reflects constrained supply from export controls and limited foundry capacity, driving a 23% surge in capex for alternative accelerators as enterprises hedge against geopolitical chip bottlenecks."
+    "text": "At an average H100 price of $3.15/hr, hyperscalers\u2019 capex hinges on supply chain stability and chip allocation, with constrained availability potentially delaying capacity expansions and raising the total cost of ownership for large-scale AI clusters."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek's $1.33/1M input token pricing signals intensifying API price compression amid model commoditization, forcing competitors to either achieve superior efficiency or face consolidation pressures in the crowded inference market."
+    "text": "With the average input price at $1.45/1M tokens, API providers are locked in a price war that rewards efficiency; providers with lower per-token costs gain share, while marginal players struggle to remain viable amid intensifying model competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh annual AI energy load represents a critical grid strain point, accelerating nuclear power revival discussions as data centers seek baseload reliability while reducing their 0.3 kg CO2/kWh carbon footprint to meet ESG mandates."
+    "text": "An annual AI energy load of 120 TWh is a grid-scale baseload that heightens regional strain and makes a compelling case for low-carbon baseload additions like nuclear to stabilize carbon intensity."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Converging pressures from chip scarcity, token pricing deflation, and energy constraints suggest the AI bubble may burst within 18 months unless breakthrough efficiency gains offset unsustainable cost structures across the entire value chain."
+    "text": "Sentiment remains cautiously optimistic but aware of bubble risks as AI infrastructure spending surges, with sustainability tied to clear revenue capture beyond pilots and continued productivity gains."
   }
 }
