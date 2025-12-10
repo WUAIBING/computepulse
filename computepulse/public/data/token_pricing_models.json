@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Usage limits apply; higher limits during peak times compared to GPT-4o Mini/GPT-3.5. Up to 5x more usage for GPT-4o than free users."
+        "monthly_limit": "40 messages every 3 hours for GPT-4o"
       },
-      "efficiency_score": 90
+      "efficiency_score": 84
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 45
+      "efficiency_score": 75
     }
   },
   "anthropic": {
@@ -22,18 +22,115 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x higher usage limits than the free tier, with access to the highest capacity model (Claude 3.5 Sonnet)."
+        "monthly_limit": "5x usage compared to free tier"
       },
-      "efficiency_score": 100
+      "efficiency_score": 87
+    },
+    "claude_3_haiku": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 1.25,
+      "subscription_alternative": {
+        "claude_pro": 20.0,
+        "monthly_limit": "5x usage compared to free tier"
+      },
+      "efficiency_score": 81
+    }
+  },
+  "google": {
+    "gemini_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Unlimited usage with subscription"
+      },
+      "efficiency_score": 82
+    },
+    "gemini_ultra": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Unlimited usage with subscription"
+      },
+      "efficiency_score": 80
+    }
+  },
+  "meta": {
+    "llama_3_8b": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
+      "subscription_alternative": null,
+      "efficiency_score": 78
+    },
+    "llama_3_70b": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
+      "subscription_alternative": null,
+      "efficiency_score": 85
+    }
+  },
+  "microsoft": {
+    "copilot_pro": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_pro": 20.0,
+        "monthly_limit": "Unlimited usage with subscription"
+      },
+      "efficiency_score": 77
+    },
+    "microsoft_365_copilot": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "microsoft_365_copilot": 30.0,
+        "monthly_limit": "Unlimited usage with subscription"
+      },
+      "efficiency_score": 80
+    }
+  },
+  "deepseek": {
+    "deepseek_v2": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 81
+    },
+    "deepseek_coder_v2": {
+      "input_price_per_million": 0.19,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 79
+    }
+  },
+  "qwen": {
+    "qwen_turbo": {
+      "input_price_per_million": 3.0,
+      "output_price_per_million": 3.0,
+      "subscription_alternative": null,
+      "efficiency_score": 72
+    },
+    "qwen_plus": {
+      "input_price_per_million": 8.0,
+      "output_price_per_million": 8.0,
+      "subscription_alternative": null,
+      "efficiency_score": 74
+    },
+    "qwen_max": {
+      "input_price_per_million": 20.0,
+      "output_price_per_million": 20.0,
+      "subscription_alternative": null,
+      "efficiency_score": 74
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 6.0,
-    "average_output_cost": 20.0,
+    "average_input_cost": 4.86,
+    "average_output_cost": 8.86,
     "most_efficient": "Claude 3.5 Sonnet",
-    "subscription_adoption_rate": null,
-    "trend": "Aggressive price competition and rapid cost reduction in 2024, driven by new model architectures (e.g., OpenAI's GPT-4o) and pressure from highly efficient open-source models (Llama, DeepSeek, Qwen). Output costs remain significantly higher than input costs across all providers."
+    "subscription_adoption_rate": 68,
+    "trend": "Rapid price compression in token costs, with frontier model prices decreasing by 30-50% since early 2024. Subscription models becoming dominant for regular users with most providers settling on $20/month price point."
   },
-  "last_updated": "2024-06-04",
-  "timestamp": "2025-12-10T17:21:10.096750"
+  "last_updated": "2024-11-01",
+  "timestamp": "2025-12-10T18:24:49.471580"
 }

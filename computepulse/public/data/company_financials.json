@@ -1,59 +1,59 @@
 {
   "nvidia": {
-    "stock_price": "[actual price]",
-    "market_cap": "[actual cap]",
-    "ai_revenue_q3": "[actual revenue]",
-    "data_center_growth": "[actual growth]",
-    "next_earnings_date": "[actual date]",
-    "source": "[official source]"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "ai_revenue_q3": 0.0,
+    "data_center_growth": 0.0,
+    "next_earnings_date": "",
+    "source": ""
   },
   "amd": {
-    "stock_price": "[actual price]",
-    "market_cap": "[actual cap]",
-    "data_center_gpu_revenue": "[actual revenue]",
-    "source": "[official source]"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "data_center_gpu_revenue": 0.0,
+    "source": ""
   },
   "microsoft": {
-    "stock_price": "[actual price]",
-    "market_cap": "[actual cap]",
-    "azure_ai_revenue": "[actual revenue]",
-    "openai_investment": "[actual amount]",
-    "source": "[official source]"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "azure_ai_revenue": 0.0,
+    "openai_investment": 0.0,
+    "source": ""
   },
   "google": {
-    "stock_price": "[actual price]",
-    "market_cap": "[actual cap]",
-    "ai_ml_revenue": "[actual revenue]",
-    "tpu_costs": "[actual costs]",
-    "source": "[official source]"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "ai_ml_revenue": 0.0,
+    "tpu_costs": 0.0,
+    "source": ""
   },
   "amazon": {
-    "stock_price": "[actual price]",
-    "market_cap": "[actual cap]",
-    "aws_ai_services_revenue": "[actual revenue]",
-    "source": "[official source]"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "aws_ai_services_revenue": 0.0,
+    "source": ""
   },
   "meta": {
-    "stock_price": "[actual price]",
-    "market_cap": "[actual cap]",
-    "ai_infrastructure_spending": "[actual spending]",
-    "source": "[official source]"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "ai_infrastructure_spending": 0.0,
+    "source": ""
   },
   "openai": {
-    "funding_rounds": "[actual rounds]",
-    "valuation": "[actual valuation]",
-    "source": "[official source]"
+    "funding_rounds": [],
+    "valuation": 0.0,
+    "source": ""
   },
   "anthropic": {
-    "funding": "[actual funding]",
-    "revenue_model": "[actual model]",
-    "source": "[official source]"
+    "funding": 0.0,
+    "revenue_model": "",
+    "source": ""
   },
   "industry_metrics": {
-    "total_ai_market_cap": "[actual cap]",
-    "average_pe_ratio": "[actual ratio]",
-    "top_performer": "[company name]"
+    "total_ai_market_cap": 0.0,
+    "average_pe_ratio": 0.0,
+    "top_performer": ""
   },
-  "last_updated": "[actual date]",
-  "timestamp": "2025-12-10T09:20:47.835923"
+  "last_updated": "",
+  "timestamp": "2025-12-10T18:24:27.858004"
 }

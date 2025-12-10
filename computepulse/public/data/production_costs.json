@@ -3,38 +3,38 @@
     "h100": {
       "manufacturing_cost": 3320,
       "suggested_retail": 30000,
-      "gross_margin": 89,
+      "gross_margin": 0.89,
       "cost_breakdown": {
-        "silicon": 1500,
-        "packaging": 1000,
-        "testing": 220,
-        "r_and_d_allocation": 600
+        "silicon": 2500,
+        "packaging": 700,
+        "testing": 120,
+        "r_and_d_allocation": 1000
       }
     },
     "a100": {
-      "manufacturing_cost": 1800,
+      "manufacturing_cost": 2000,
       "suggested_retail": 10000,
-      "gross_margin": 82,
+      "gross_margin": 0.8,
       "cost_breakdown": {
-        "silicon": 800,
-        "packaging": 500,
-        "testing": 150,
-        "r_and_d_allocation": 350
+        "silicon": 1000,
+        "packaging": 600,
+        "testing": 100,
+        "r_and_d_allocation": 500
       }
     }
   },
   "amd": {
     "mi300x": {
       "manufacturing_cost": 4000,
-      "suggested_retail": 15000,
-      "gross_margin": 73
+      "suggested_retail": 20000,
+      "gross_margin": 0.8
     }
   },
   "industry_analysis": {
-    "average_gross_margin": "70-90% for data center GPUs",
-    "cost_trend": "Increasing due to advanced packaging (CoWoS) complexity and foundry price hikes",
-    "main_cost_driver": "Packaging (CoWoS) and wafer prices (TSMC N4/N5)"
+    "average_gross_margin": 0.8,
+    "cost_trend": "Increasing due to advanced node and packaging costs, but may stabilize with higher volumes and mature nodes",
+    "main_cost_driver": "Silicon and advanced packaging (including HBM)"
   },
-  "last_updated": "2024-04-01",
-  "timestamp": "2025-12-10T17:19:46.481589"
+  "last_updated": "2024-01-01",
+  "timestamp": "2025-12-10T18:24:12.307789"
 }

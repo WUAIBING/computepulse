@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The $3.19/hr H100 pricing reflects persistent supply chain bottlenecks as hyperscalers prioritize enterprise contracts over spot availability, suggesting capex allocation is shifting toward dedicated capacity reservations rather than elastic cloud consumption."
+    "text": "At an average H100 price of $3.15/hr, supply tightness and limited capacity allocation are forcing buyers to pay premiums and front-load capex, delaying relief until new fab and substrate capacity ramps."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek's aggressive $1.25/1M token pricing strategy is forcing industry-wide efficiency optimizations, with smaller models achieving comparable utility at fraction of the cost, indicating the API market is entering a consolidation phase driven by price competition."
+    "text": "With the average input price at $1.35/1M tokens, API providers are locked in price compression, shifting spend toward efficiency gains through smaller models, caching, and compression."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure's 120 TWh annual energy load represents 8-10% of total U.S. electricity consumption, creating unprecedented grid strain that accelerates nuclear adoption discussions while carbon footprint concerns drive regional energy arbitrage strategies."
+    "text": "A 120 TWh annual load indicates grid strain in AI hubs, accelerating nuclear baseload and firm renewable procurement while pressuring the carbon footprint to stay within 2030 targets."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The convergence of hardware scarcity, token commoditization, and energy constraints signals a maturation phase where sustainable growth depends on efficiency breakthroughs rather than pure scaling, with capital allocation shifting from speculative to operational excellence."
+    "text": "Industry sentiment remains buoyant as compute and token prices compress, but rising capex and energy intensity elevate bubble and sustainability risks without structural efficiency gains."
   }
 }
