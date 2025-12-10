@@ -1,47 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
-      "suggested_retail": 30000,
-      "gross_margin": 89,
+      "manufacturing_cost": 6500,
+      "suggested_retail": 35000,
+      "gross_margin": 81.4,
       "cost_breakdown": {
-        "silicon": 2100,
-        "packaging": 850,
-        "testing": 120,
-        "r_and_d_allocation": 250
+        "silicon": 3800,
+        "packaging": 1500,
+        "testing": 700,
+        "r_and_d_allocation": 500
       }
     },
     "a100": {
       "manufacturing_cost": 2500,
-      "suggested_retail": 10000,
-      "gross_margin": 75,
+      "suggested_retail": 15000,
+      "gross_margin": 83.3,
       "cost_breakdown": {
-        "silicon": 1600,
-        "packaging": 600,
-        "testing": 100,
+        "silicon": 1200,
+        "packaging": 800,
+        "testing": 300,
         "r_and_d_allocation": 200
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4500,
-      "suggested_retail": 15000,
-      "gross_margin": 70
-    }
-  },
-  "intel": {
-    "arc_gpu": {
-      "manufacturing_cost": 150,
-      "suggested_retail": 200,
-      "gross_margin": 25
+      "manufacturing_cost": 5200,
+      "suggested_retail": 20000,
+      "gross_margin": 74.0
     }
   },
   "industry_analysis": {
-    "average_gross_margin": "60-70% (data center GPUs)",
-    "cost_trend": "Increasing due to advanced node complexity (3nm/2nm), advanced packaging (CoWoS, 3D stacking), and rising R&D",
-    "main_cost_driver": "TSMC/Samsung foundry wafer costs + Advanced Packaging (CoWoS, Foveros)"
+    "average_gross_margin": 79.0,
+    "cost_trend": "Increasing due to advanced packaging (CoWoS) and 3nm wafer costs",
+    "main_cost_driver": "Advanced packaging and wafer node complexity"
   },
-  "last_updated": "2024-06-15",
-  "timestamp": "2025-12-10T19:16:47.922661"
+  "last_updated": "2024-07-15",
+  "timestamp": "2025-12-10T20:17:45.878851"
 }

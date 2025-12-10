@@ -1,11 +1,11 @@
 {
   "openai": {
     "gpt_4o": {
-      "input_price_per_million": 2.5,
-      "output_price_per_million": 10.0,
+      "input_price_per_million": 5.0,
+      "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Usage limits based on server load; approximately 80 messages every 3 hours on GPT-4o model."
+        "monthly_limit": "Higher usage limits than free tier, access to GPT-4o and other models, subject to demand-based caps"
       },
       "efficiency_score": 10
     },
@@ -22,74 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "Usage limits based on server load; approximately 5x more usage than free tier."
+        "monthly_limit": "5x more usage than the free tier, with a minimum cap that is higher than Claude's free plan"
       },
       "efficiency_score": 9
-    },
-    "claude_3_haiku": {
-      "input_price_per_million": 0.25,
-      "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 8
     }
-  },
-  "google": {
-    "gemini_1_5_pro": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Included in Google One AI Premium plan, no explicit token limits for Gemini Advanced UI access."
-      },
-      "efficiency_score": 7
-    }
-  },
-  "meta": {
-    "llama_3_70b_managed": {
-      "input_price_per_million": 0.99,
-      "output_price_per_million": 0.99,
-      "subscription_alternative": null,
-      "efficiency_score": 9
-    },
-    "note": "Core Llama models are open-source and free to use. Pricing is for cloud provider managed services (e.g., AWS Bedrock, Google Vertex AI) and can vary significantly. The cost shown is an example from a major provider."
-  },
-  "microsoft": {
-    "copilot_pro": {
-      "pay_per_token": null,
-      "subscription_monthly": 20.0,
-      "target_user": "Individuals, premium features across apps"
-    },
-    "copilot_for_m365": {
-      "pay_per_token": null,
-      "subscription_monthly": 30.0,
-      "target_user": "Enterprise, integrates with Office suite"
-    },
-    "note": "Copilot offerings are primarily subscription-based. API access for underlying models (like GPT-4) is via Azure OpenAI Service, which uses pay-per-token pricing similar to OpenAI's direct rates."
-  },
-  "deepseek": {
-    "deepseek_chat": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 10
-    }
-  },
-  "alibaba_qwen": {
-    "qwen_turbo": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.3,
-      "subscription_alternative": null,
-      "efficiency_score": 10
-    },
-    "note": "Pricing is from Alibaba Cloud's Dashscope platform and is subject to change. Costs are among the lowest globally for competitive performance tiers."
   },
   "pricing_analysis": {
-    "average_input_cost_high_tier": 4.75,
-    "average_output_cost_high_tier": 16.38,
-    "most_cost_efficient": "Varies by task: GPT-4o for high-end capability vs cost, DeepSeek/Qwen-Turbo for raw token efficiency.",
-    "subscription_adoption_rate": "N/A (Proprietary Data)",
-    "trend": "Intense price competition is driving down costs for frontier models, commoditizing high-performance AI. Chinese firms like DeepSeek and Alibaba are offering ultra-low-cost APIs. The market is bifurcating into premium subscription bundles (ChatGPT Plus, Claude Pro) for consumers and low-cost pay-per-token models for developers, with open-source models (Llama) gaining traction via managed cloud services."
+    "average_input_cost": 6.0,
+    "average_output_cost": 20.0,
+    "most_efficient": "GPT-4o",
+    "subscription_adoption_rate": "~5-7%",
+    "trend": "Aggressive price competition is driving down token costs for flagship models. The market is bifurcating between low-cost consumer subscriptions for general use and a pay-per-use API model for developers and enterprises. Key differentiators are shifting towards model intelligence, multimodal capabilities, and context window size rather than just speed."
   },
-  "last_updated": "2024-06-03",
-  "timestamp": "2025-12-10T19:18:04.899027"
+  "last_updated": "2024-05-29",
+  "timestamp": "2025-12-10T20:18:41.047195"
 }

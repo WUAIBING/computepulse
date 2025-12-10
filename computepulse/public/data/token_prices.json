@@ -272,14 +272,14 @@
   {
     "model": "Qwen-Max",
     "provider": "Alibaba Cloud",
-    "input_price": 0.0,
-    "output_price": 0.0
+    "input_price": "Contact Alibaba Cloud Sales",
+    "output_price": "Contact Alibaba Cloud Sales"
   },
   {
     "model": "Claude 3.5",
     "provider": "Anthropic",
-    "input_price": 0.0,
-    "output_price": 0.0
+    "input_price": "Check Anthropic Platform",
+    "output_price": "Check Anthropic Platform"
   },
   {
     "model": "DeepSeek-V3",
@@ -290,8 +290,8 @@
   {
     "model": "GPT-4",
     "provider": "OpenAI",
-    "input_price": 0.03,
-    "output_price": 0.06
+    "input_price": "Check OpenAI Platform",
+    "output_price": "Check OpenAI Platform"
   },
   {
     "model": "DeepSeek-V3",
@@ -302,8 +302,8 @@
   {
     "model": "DeepSeek-V3",
     "provider": "Unknown Provider",
-    "input_price": null,
-    "output_price": null
+    "input_price": "Model Not Found",
+    "output_price": "Model Not Found"
   },
   {
     "model": "DeepSeek-V3",

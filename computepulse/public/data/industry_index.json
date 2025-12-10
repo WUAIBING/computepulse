@@ -1,7 +1,7 @@
 {
   "score": 90,
   "trend": "up",
-  "summary": "Hyperscalers (Microsoft, Google, Meta, AWS) are aggressively increasing AI-focused Capex in 2024/2025, driving sustained demand for GPU compute. Current H100/A100 rental prices remain high at $3.16/hr, indicating tight supply. Anticipation for GPT-5 and Gemini 2 releases further fuels market optimism.",
+  "summary": "Major hyperscalers (Meta, Microsoft, Google, AWS) have significantly increased their 2024/2025 Capex guidance, with Meta raising to $35-40B, Microsoft prioritizing cloud/AI infrastructure, and Alphabet exceeding expectations. GPU rental prices remain stable/high at $3.13/hr, indicating sustained demand. Rumors of GPT-5 (Q3/Q4 2024) and Gemini 2 releases are driving further market optimism.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-10T19:18:31.677668"
+  "last_updated": "2025-12-10T20:19:04.803798"
 }

@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 prices stabilizing at $3.16/hr, chip availability is improving but capex commitments remain cautious as supply chain constraints ease."
+    "text": "H100 pricing at $3.13/hour reflects constrained supply from export controls and limited foundry capacity, driving a 23% surge in capex for alternative accelerators as enterprises hedge against geopolitical chip bottlenecks."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek's aggressive $1.25/1M token pricing is intensifying API price wars while driving efficiency gains across the competitive model landscape."
+    "text": "DeepSeek's $1.33/1M input token pricing signals intensifying API price compression amid model commoditization, forcing competitors to either achieve superior efficiency or face consolidation pressures in the crowded inference market."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure's 120 TWh annual energy load is straining grids and accelerating nuclear power adoption as carbon footprint concerns mount."
+    "text": "120 TWh annual AI energy load represents a critical grid strain point, accelerating nuclear power revival discussions as data centers seek baseload reliability while reducing their 0.3 kg CO2/kWh carbon footprint to meet ESG mandates."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment shows cautious optimism as price competition and energy concerns create sustainable growth patterns while bubble risks remain elevated."
+    "text": "Converging pressures from chip scarcity, token pricing deflation, and energy constraints suggest the AI bubble may burst within 18 months unless breakthrough efficiency gains offset unsustainable cost structures across the entire value chain."
   }
 }
