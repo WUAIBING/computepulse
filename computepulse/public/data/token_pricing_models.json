@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Higher usage limits for GPT-4o compared to free tier; limits are dynamic and not a fixed token count but based on capacity, approximately 5-10x more messages than free users."
+        "monthly_limit": "Unlimited access to GPT-4o with usage caps during peak times"
       },
-      "efficiency_score": 10.0
+      "efficiency_score": 38.75
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 5.0
+      "efficiency_score": 19.38
     }
   },
   "anthropic": {
@@ -22,35 +22,103 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier; estimated at ~500,000 tokens per day, with limits resetting daily."
+        "monthly_limit": "5x more usage than free tier, priority access during high traffic"
       },
-      "efficiency_score": 11.1
+      "efficiency_score": 48.75
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 80.0
+      "efficiency_score": 90.0
     }
   },
   "google": {
-    "gemini_1_5_pro": {
+    "gemini_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Part of Google One AI Premium plan, includes 1 million tokens per month"
+      },
+      "efficiency_score": 85.0
+    },
+    "gemini_ultra": {
       "input_price_per_million": 3.5,
       "output_price_per_million": 10.5,
+      "subscription_alternative": null,
+      "efficiency_score": 48.57
+    }
+  },
+  "meta": {
+    "llama_3_8b": {
+      "input_price_per_million": 0.39,
+      "output_price_per_million": 0.39,
       "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Included within Google One AI Premium plan, which also includes 2TB of storage. No specific token limit, but fair use policy applies."
+        "meta_ai": null,
+        "monthly_limit": "Free through Meta AI interface"
       },
-      "efficiency_score": 13.3
+      "efficiency_score": 91.25
+    },
+    "llama_3_70b": {
+      "input_price_per_million": 0.99,
+      "output_price_per_million": 0.99,
+      "subscription_alternative": null,
+      "efficiency_score": 64.56
+    }
+  },
+  "microsoft": {
+    "copilot_pro": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_pro": 20.0,
+        "monthly_limit": "Priority access to latest models, faster response times"
+      },
+      "efficiency_score": 60.0
+    },
+    "copilot_for_m365": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_business": 30.0,
+        "monthly_limit": "Enterprise-grade security, integration with Microsoft 365"
+      },
+      "efficiency_score": 50.0
+    }
+  },
+  "deepseek": {
+    "deepseek_v2": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 100.0
+    }
+  },
+  "qwen": {
+    "qwen_turbo": {
+      "input_price_per_million": 0.29,
+      "output_price_per_million": 0.6,
+      "subscription_alternative": {
+        "dashscope": null,
+        "monthly_limit": "Free tier with limited quota"
+      },
+      "efficiency_score": 89.43
+    },
+    "qwen_plus": {
+      "input_price_per_million": 0.55,
+      "output_price_per_million": 1.1,
+      "subscription_alternative": null,
+      "efficiency_score": 70.0
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 4.19,
-    "average_output_cost": 14.35,
-    "most_efficient": "Claude 3 Haiku",
-    "subscription_adoption_rate": "Estimated 20-30% of active individual users on platforms like OpenAI and Anthropic use a paid subscription plan. Enterprise adoption of per-token models remains dominant.",
-    "trend": "Aggressive price competition driving down input token costs. Introduction of highly efficient, smaller 'utility' models (e.g., Claude 3 Haiku) at unprecedented low prices. Major shift towards bundling premium AI access into broader consumer subscriptions (Google One, Microsoft 365)."
+    "average_input_cost": 2.01,
+    "average_output_cost": 5.86,
+    "most_efficient": "DeepSeek-V2",
+    "subscription_adoption_rate": 68.0,
+    "trend": "Prices decreasing significantly in 2024-2025 with new models offering better performance at lower costs. Subscription models becoming mainstream for consumer access while pay-per-token remains primary for developers."
   },
-  "last_updated": "2024-05-21",
-  "timestamp": "2025-12-10T22:19:31.824148"
+  "last_updated": "2025-07-15",
+  "timestamp": "2025-12-10T23:14:29.445164"
 }

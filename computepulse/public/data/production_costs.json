@@ -2,39 +2,39 @@
   "nvidia": {
     "h100": {
       "manufacturing_cost": 3320,
-      "suggested_retail": 30000,
-      "gross_margin": 89,
+      "suggested_retail": 35000,
+      "gross_margin": 90.5,
       "cost_breakdown": {
-        "silicon": 2500,
-        "packaging": 600,
+        "silicon": 800,
+        "packaging": 1200,
         "testing": 120,
-        "r_and_d_allocation": 100
+        "r_and_d_allocation": 1200
       }
     },
     "a100": {
-      "manufacturing_cost": 2500,
+      "manufacturing_cost": 1500,
       "suggested_retail": 15000,
-      "gross_margin": 83,
+      "gross_margin": 90.0,
       "cost_breakdown": {
-        "silicon": 1800,
-        "packaging": 450,
+        "silicon": 600,
+        "packaging": 600,
         "testing": 100,
-        "r_and_d_allocation": 150
+        "r_and_d_allocation": 200
       }
     }
   },
   "amd": {
     "mi300x": {
       "manufacturing_cost": 4000,
-      "suggested_retail": 21000,
-      "gross_margin": 81
+      "suggested_retail": 15000,
+      "gross_margin": 73.3
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 85,
-    "cost_trend": "Increasing due to advanced packaging and AI demand",
-    "main_cost_driver": "TSMC CoWoS packaging capacity constraints"
+    "average_gross_margin": 84.6,
+    "cost_trend": "Increasing due to advanced packaging (CoWoS) and HBM3 memory costs; foundry price hikes (TSMC +6% in 2024)",
+    "main_cost_driver": "Packaging (40-50% of chip cost) and HBM memory"
   },
-  "last_updated": "2024-06-15",
-  "timestamp": "2025-12-10T22:16:58.526499"
+  "last_updated": "2024-07-15",
+  "timestamp": "2025-12-10T23:14:04.991780"
 }
