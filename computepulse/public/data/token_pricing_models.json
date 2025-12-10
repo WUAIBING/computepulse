@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Usage-based access to GPT-4o, GPT-4 Turbo, and advanced tools. Higher limits than free tier, but no fixed token count."
+        "monthly_limit": "Higher usage limits for GPT-4o compared to free tier; limits are dynamic and not a fixed token count but based on capacity, approximately 5-10x more messages than free users."
       },
-      "efficiency_score": 133.33
+      "efficiency_score": 10.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 66.67
+      "efficiency_score": 5.0
     }
   },
   "anthropic": {
@@ -22,24 +22,35 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "Usage-based access to Claude models, including Claude 3.5 Sonnet. Higher usage limits than the free tier."
+        "monthly_limit": "5x more usage than the free tier; estimated at ~500,000 tokens per day, with limits resetting daily."
       },
-      "efficiency_score": 166.67
+      "efficiency_score": 11.1
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 2000.0
+      "efficiency_score": 80.0
+    }
+  },
+  "google": {
+    "gemini_1_5_pro": {
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
+      "subscription_alternative": {
+        "gemini_advanced": 19.99,
+        "monthly_limit": "Included within Google One AI Premium plan, which also includes 2TB of storage. No specific token limit, but fair use policy applies."
+      },
+      "efficiency_score": 13.3
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 6.08,
-    "average_output_cost": 15.31,
+    "average_input_cost": 4.19,
+    "average_output_cost": 14.35,
     "most_efficient": "Claude 3 Haiku",
-    "subscription_adoption_rate": null,
-    "trend": "Aggressive price competition is driving down costs, with flagship models like GPT-4o offering significantly better price-performance than their predecessors (GPT-4 Turbo). A new tier of highly efficient, smaller models (e.g., Claude 3 Haiku, Google's Gemini 1.5 Flash) is emerging at very low price points. Subscription models for individual consumers are converging around the $20/month price point, offering access to the latest models. Open-source options like Meta's Llama 3 continue to pressure the market, offering zero-cost model weights for self-hosting."
+    "subscription_adoption_rate": "Estimated 20-30% of active individual users on platforms like OpenAI and Anthropic use a paid subscription plan. Enterprise adoption of per-token models remains dominant.",
+    "trend": "Aggressive price competition driving down input token costs. Introduction of highly efficient, smaller 'utility' models (e.g., Claude 3 Haiku) at unprecedented low prices. Major shift towards bundling premium AI access into broader consumer subscriptions (Google One, Microsoft 365)."
   },
-  "last_updated": "2024-06-03",
-  "timestamp": "2025-12-10T21:20:27.821983"
+  "last_updated": "2024-05-21",
+  "timestamp": "2025-12-10T22:19:31.824148"
 }

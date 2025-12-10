@@ -1,7 +1,7 @@
 {
   "score": 90,
   "trend": "up",
-  "summary": "Hyperscalers are aggressively increasing AI Capex (Microsoft, Google, Meta, AWS), driving sustained high demand for GPU rentals. Combined with imminent releases of next-gen AI models (GPT-5, Gemini 2), the sector shows strong growth momentum.",
+  "summary": "Hyperscalers (Microsoft, Google, Meta, AWS) are all significantly increasing AI infrastructure Capex in 2024/2025. GPU rental prices remain high ($3.14/hr), indicating sustained demand. The imminent release of next-gen models (GPT-5, Gemini 2) further fuels the positive outlook.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-10T21:21:07.524552"
+  "last_updated": "2025-12-10T22:20:06.724970"
 }

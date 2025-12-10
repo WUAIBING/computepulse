@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At an average H100 price of $3.15/hr, hyperscalers\u2019 capex hinges on supply chain stability and chip allocation, with constrained availability potentially delaying capacity expansions and raising the total cost of ownership for large-scale AI clusters."
+    "text": "H100 pricing at $3.14/hr signals constrained supply amid aggressive capex expansion, with chip availability becoming the critical bottleneck as hyperscalers accelerate data center buildouts."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With the average input price at $1.45/1M tokens, API providers are locked in a price war that rewards efficiency; providers with lower per-token costs gain share, while marginal players struggle to remain viable amid intensifying model competition."
+    "text": "Input pricing at $1.25/1M tokens reflects intense API price compression driven by model commoditization, pushing providers toward specialized efficiency optimizations rather than pure scale advantages."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "An annual AI energy load of 120 TWh is a grid-scale baseload that heightens regional strain and makes a compelling case for low-carbon baseload additions like nuclear to stabilize carbon intensity."
+    "text": "Annual load reaching 120 TWh indicates grid infrastructure approaching capacity limits, necessitating accelerated nuclear adoption and renewable baseload solutions to sustain AI compute growth."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Sentiment remains cautiously optimistic but aware of bubble risks as AI infrastructure spending surges, with sustainability tied to clear revenue capture beyond pilots and continued productivity gains."
+    "text": "Convergent pressure from hardware costs, token price deflation, and energy intensity suggests the AI industry approaching a normalization phase where sustainable economics will determine market leaders from speculative players."
   }
 }
