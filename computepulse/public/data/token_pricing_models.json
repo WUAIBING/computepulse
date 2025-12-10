@@ -4,16 +4,16 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20,
-        "monthly_limit": "Varies by model and usage"
+        "chatgpt_plus": 20.0,
+        "monthly_limit": "Higher usage limits on GPT-4o compared to the free tier, with access to advanced features like data analysis, file uploads, and web browsing. Exact message limits are dynamic and not publicly fixed."
       },
-      "efficiency_score": 8.5
+      "efficiency_score": 95
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 7.0
+      "efficiency_score": 70
     }
   },
   "anthropic": {
@@ -21,19 +21,28 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20,
-        "monthly_limit": "5x higher usage limits"
+        "claude_pro": 20.0,
+        "monthly_limit": "5x more usage than the free tier, with the ability to create more projects and chats. Priority access during high-traffic periods. Exact token limits are not publicly specified."
       },
-      "efficiency_score": 8.5
+      "efficiency_score": 92
+    },
+    "claude_3_haiku": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 1.25,
+      "subscription_alternative": {
+        "claude_pro": 20.0,
+        "monthly_limit": "Included in the Claude Pro subscription, which offers 5x usage over the free tier."
+      },
+      "efficiency_score": 99
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 6.0,
-    "average_output_cost": 20.0,
-    "most_efficient": "Claude 3.5 Sonnet",
-    "subscription_adoption_rate": 0.65,
-    "trend": "Models becoming more cost-efficient with lower token prices, subscription models gaining popularity for regular users"
+    "average_input_cost": 3.57,
+    "average_output_cost": 11.88,
+    "most_efficient": "DeepSeek-V2",
+    "subscription_adoption_rate": "High and growing rapidly. Consumer adoption is strong for services like ChatGPT Plus and Claude Pro to access premium models and avoid rate limits. Enterprise adoption is shifting towards both API usage for custom applications and seat-based subscriptions like Microsoft Copilot for productivity suites.",
+    "trend": "The market is experiencing a rapid price war and commoditization of frontier AI capabilities. New entrants like DeepSeek and Qwen are setting new lows for token costs, forcing established players like OpenAI and Google to respond with more efficient models (e.g., GPT-4o). The dominant strategy is a hybrid model: low-cost pay-per-token APIs for developers and enterprises, coupled with fixed-price consumer subscriptions for mass-market access to integrated applications."
   },
-  "last_updated": "2024-05-13",
-  "timestamp": "2025-12-10T01:06:16.431419"
+  "last_updated": "2024-05-31",
+  "timestamp": "2025-12-10T03:00:09.021363"
 }

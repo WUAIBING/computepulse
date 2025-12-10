@@ -1,40 +1,47 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": null,
-      "suggested_retail": 30000,
-      "gross_margin": null,
+      "manufacturing_cost": "Estimated $3,000-$3,500 (varies by configuration)",
+      "suggested_retail": "$25,000-$40,000+ (varies by partner/model/volume)",
+      "gross_margin": "Estimated >70% (consolidated data center margin)",
       "cost_breakdown": {
-        "silicon": null,
-        "packaging": null,
-        "testing": null,
-        "r_and_d_allocation": null
+        "silicon": "~$1,000-$1,200 (TSMC 4N/5N, large die)",
+        "packaging": "~$1,000-$1,500 (CoWoS-L, supply constrained)",
+        "testing": "~$100-$200",
+        "r_and_d_allocation": "Not per-unit allocatable (billions $ amortized)"
       }
     },
     "a100": {
-      "manufacturing_cost": null,
-      "suggested_retail": 10000,
-      "gross_margin": null,
+      "manufacturing_cost": "Estimated $1,500-$2,000",
+      "suggested_retail": "$10,000-$15,000",
+      "gross_margin": "Estimated >65% (during peak)",
       "cost_breakdown": {
-        "silicon": null,
-        "packaging": null,
-        "testing": null,
-        "r_and_d_allocation": null
+        "silicon": "~$700-$900 (TSMC 7nm)",
+        "packaging": "~$500-$700 (CoWoS)",
+        "testing": "~$100-$150",
+        "r_and_d_allocation": "Not per-unit allocatable"
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": null,
-      "suggested_retail": 15000,
-      "gross_margin": null
+      "manufacturing_cost": "Estimated $4,000-$5,000",
+      "suggested_retail": "$15,000-$16,000",
+      "gross_margin": "Estimated ~50-55% (data center GPU)"
     }
   },
   "industry_analysis": {
-    "average_gross_margin": null,
-    "cost_trend": "Increasing due to advanced node (3nm/5nm) wafer costs and CoWoS packaging shortages",
-    "main_cost_driver": "Advanced packaging (CoWoS, 3D stacking) and foundry node pricing"
+    "average_gross_margin": "NVIDIA DC: >70%; AMD DC: ~50-60%; Intel: Negative/Near Zero",
+    "cost_trend": "Increasing (Advanced Node Premium, CoWoS Shortage, HBM3 Cost)",
+    "main_cost_driver": "Advanced Packaging (CoWoS, 3D) > Silicon (N3/N4/N5) > HBM"
   },
-  "last_updated": "2023-11-15",
-  "timestamp": "2025-12-10T01:03:35.237376"
+  "last_updated": "2024-04-15 (Based on Q1 2024 earnings reports & analyst notes)",
+  "data_caveats": [
+    "Costs are analyst estimates, not official figures",
+    "R&D allocation cannot be accurately calculated per unit",
+    "Retail prices vary massively by volume, partner, region, and configuration",
+    "Intel Arc consumer GPU costs are not meaningfully disclosed",
+    "TSMC/Samsung foundry pricing is negotiated per client and confidential"
+  ],
+  "timestamp": "2025-12-10T02:57:58.846408"
 }
