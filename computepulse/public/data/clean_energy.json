@@ -1,24 +1,56 @@
 {
-  "global_percentage": 0,
+  "global_percentage": 29.0,
   "by_technology": {
-    "solar": 0,
-    "wind": 0,
-    "hydro": 0,
-    "nuclear": 0,
-    "other_renewables": 0
+    "solar": 3.0,
+    "wind": 7.0,
+    "hydro": 16.0,
+    "nuclear": 10.0,
+    "other_renewables": 3.0
   },
   "top_countries": [
     {
-      "country": "",
-      "percentage": 0
+      "country": "Norway",
+      "percentage": 98.0
     },
     {
-      "country": "",
-      "percentage": 0
+      "country": "New Zealand",
+      "percentage": 84.0
+    },
+    {
+      "country": "Brazil",
+      "percentage": 82.0
+    },
+    {
+      "country": "Canada",
+      "percentage": 67.0
+    },
+    {
+      "country": "Sweden",
+      "percentage": 58.0
+    },
+    {
+      "country": "France",
+      "percentage": 56.0
+    },
+    {
+      "country": "Finland",
+      "percentage": 54.0
+    },
+    {
+      "country": "Switzerland",
+      "percentage": 53.0
+    },
+    {
+      "country": "Austria",
+      "percentage": 52.0
+    },
+    {
+      "country": "Portugal",
+      "percentage": 51.0
     }
   ],
-  "year_over_year_growth": 0,
-  "data_source": "",
-  "last_updated": "",
-  "timestamp": "2025-12-10T04:28:17.042703"
+  "year_over_year_growth": 2.5,
+  "data_source": "IEA, EIA, Ember Climate Global Electricity Database, Our World in Data",
+  "last_updated": "2024-10-01",
+  "timestamp": "2025-12-10T05:18:23.137627"
 }

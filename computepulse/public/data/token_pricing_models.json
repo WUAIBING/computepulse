@@ -1,36 +1,36 @@
 {
   "openai": {
     "gpt_4o": {
-      "input_price_per_million": 5.0,
-      "output_price_per_million": 15.0,
+      "input_price_per_million": 5,
+      "output_price_per_million": 15,
       "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Higher usage limits compared to free tier, exact limits vary by region"
+        "chatgpt_plus": 20,
+        "monthly_limit": "Higher limits than free tier, varies based on demand"
       },
-      "efficiency_score": 85
+      "efficiency_score": 0.05
     },
     "gpt_4_turbo": {
-      "input_price_per_million": 10.0,
-      "output_price_per_million": 30.0,
+      "input_price_per_million": 10,
+      "output_price_per_million": 30,
       "subscription_alternative": null,
-      "efficiency_score": 60
+      "efficiency_score": 0.02
     }
   },
   "anthropic": {
     "claude_3_5_sonnet": {
-      "input_price_per_million": 3.0,
-      "output_price_per_million": 15.0,
+      "input_price_per_million": 3,
+      "output_price_per_million": 15,
       "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, priority access during high traffic"
+        "claude_pro": 20,
+        "monthly_limit": "Higher limits than free tier"
       },
-      "efficiency_score": 90
+      "efficiency_score": 0.05
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 98
+      "efficiency_score": 1.33
     }
   },
   "google": {
@@ -38,96 +38,80 @@
       "input_price_per_million": 0.5,
       "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "1 million tokens per month for API, higher limits with subscription"
+        "gemini_advanced": 20,
+        "monthly_limit": "Higher limits than free tier"
       },
-      "efficiency_score": 95
+      "efficiency_score": 0.48
     },
     "gemini_ultra": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Access to most capable models with higher usage limits"
-      },
-      "efficiency_score": 70
+      "input_price_per_million": 3,
+      "output_price_per_million": 15,
+      "subscription_alternative": null,
+      "efficiency_score": 0.05
     }
   },
   "meta": {
-    "llama_3_8b": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
+    "llama_3": {
+      "input_price_per_million": 0,
+      "output_price_per_million": 0,
       "subscription_alternative": {
-        "open_source": 0.0,
-        "monthly_limit": "Free for commercial use up to 700M MAU"
-      },
-      "efficiency_score": 100
-    },
-    "llama_3_70b": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
-      "subscription_alternative": {
-        "open_source": 0.0,
-        "monthly_limit": "Free for commercial use up to 700M MAU"
+        "description": "Open source, completely free to use and deploy"
       },
       "efficiency_score": 100
     }
   },
   "microsoft": {
     "copilot_pro": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
+      "input_price_per_million": 10,
+      "output_price_per_million": 30,
       "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "monthly_limit": "Unlimited usage with priority access to latest models"
+        "copilot_pro": 20,
+        "monthly_limit": "Unlimited usage within reasonable limits"
       },
-      "efficiency_score": 92
-    },
-    "copilot_m365": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
-      "subscription_alternative": {
-        "copilot_m365": 30.0,
-        "monthly_limit": "Enterprise integration with Microsoft 365 tools"
-      },
-      "efficiency_score": 88
+      "efficiency_score": 0.02
     }
   },
   "deepseek": {
-    "deepseek_v2": {
+    "deepseek_coder": {
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 99
+      "efficiency_score": 2.28
+    },
+    "deepseek_chat": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 2.28
     }
   },
-  "qwen": {
-    "qwen_plus": {
-      "input_price_per_million": 0.4,
-      "output_price_per_million": 1.2,
-      "subscription_alternative": null,
-      "efficiency_score": 96
-    },
+  "alibaba": {
     "qwen_turbo": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.6,
+      "input_price_per_million": 0.0035,
+      "output_price_per_million": 0.006,
       "subscription_alternative": null,
-      "efficiency_score": 97
+      "efficiency_score": 100
+    },
+    "qwen_plus": {
+      "input_price_per_million": 0.004,
+      "output_price_per_million": 0.006,
+      "subscription_alternative": null,
+      "efficiency_score": 100
     },
     "qwen_max": {
-      "input_price_per_million": 1.0,
-      "output_price_per_million": 2.0,
+      "input_price_per_million": 0.02,
+      "output_price_per_million": 0.06,
       "subscription_alternative": null,
-      "efficiency_score": 80
+      "efficiency_score": 16.67
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.4,
-    "average_output_cost": 7.73,
-    "most_efficient": "Llama models (Meta)",
-    "subscription_adoption_rate": 35,
-    "trend": "Token prices decreasing by 15-20% YoY, with subscription models becoming dominant for consumers. Open-source models gaining traction for cost efficiency."
+    "average_input_cost": 1.89,
+    "average_output_cost": 9.11,
+    "most_efficient": "Llama 3 (Open Source)",
+    "subscription_adoption_rate": 0.35,
+    "trend": "Increasing focus on cost-efficient models and specialized pricing for different use cases. Chinese models (Qwen, DeepSeek) offering dramatically lower prices while Western models maintaining premium positioning with subscription bundles."
   },
-  "last_updated": "2024-06-25",
-  "timestamp": "2025-12-10T04:32:46.360868"
+  "last_updated": "2024-07-10",
+  "timestamp": "2025-12-10T05:23:34.276453"
 }
