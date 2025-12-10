@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 pricing at $3.14/hr signals persistent supply constraints and capital intensity, as GPU scarcity forces operators to pay premium rates that could incentivize $100B+ capex cycles to expand capacity."
+    "text": "With H100 rental rates around $3.13/hr, supply remains tight while new capacity is delayed, forcing hyperscalers to lock in long\u2011term leases and spend billions on capex to secure chips, which could temporarily soften spot prices but keeps utilization high."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token pricing at $1.38/1M inputs reflects aggressive API price compression as providers like DeepSeek undercut incumbents to capture market share, driving 60-80% cost reductions that favor efficiency-optimized models."
+    "text": "DeepSeek\u2019s API pricing near $1.28 per 1M input tokens is pressuring margins across providers, accelerating model compression and KV\u2011cache reuse as vendors race to cut cost per token while differentiating on quality."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh annual load represents a 25-30% increase in power consumption, creating grid stability challenges that accelerate nuclear adoption discussions and pressure AI firms toward carbon-neutral commitments."
+    "text": "AI\u2019s 120 TWh annual load is stressing grids and raising carbon intensity unless firms pair compute with low\u2011carbon power, nuclear SMRs, and better PUE, while time\u2011of\u2011use scheduling helps avoid peak costs."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The convergence of $3.14/hr GPU costs, $1.38/1M token pricing, and 120 TWh energy demand suggests unsustainable growth dynamics where margin compression meets infrastructure strain, creating bubble risk if scaling continues unchecked."
+    "text": "Industry sentiment is buoyant but tempered by energy constraints and capex scrutiny, signaling a healthy growth runway if power and efficiency stay on pace and prices normalize without a bubble."
   }
 }

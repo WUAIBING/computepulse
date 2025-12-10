@@ -1,47 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": "Estimated $3,000-$3,500 (varies by configuration)",
-      "suggested_retail": "$25,000-$40,000+ (varies by partner/model/volume)",
-      "gross_margin": "Estimated >70% (consolidated data center margin)",
+      "manufacturing_cost": 3320,
+      "suggested_retail": 30000,
+      "gross_margin": 0.89,
       "cost_breakdown": {
-        "silicon": "~$1,000-$1,200 (TSMC 4N/5N, large die)",
-        "packaging": "~$1,000-$1,500 (CoWoS-L, supply constrained)",
-        "testing": "~$100-$200",
-        "r_and_d_allocation": "Not per-unit allocatable (billions $ amortized)"
+        "silicon": 2100,
+        "packaging": 700,
+        "testing": 120,
+        "r_and_d_allocation": 400
       }
     },
     "a100": {
-      "manufacturing_cost": "Estimated $1,500-$2,000",
-      "suggested_retail": "$10,000-$15,000",
-      "gross_margin": "Estimated >65% (during peak)",
+      "manufacturing_cost": 2500,
+      "suggested_retail": 15000,
+      "gross_margin": 0.83,
       "cost_breakdown": {
-        "silicon": "~$700-$900 (TSMC 7nm)",
-        "packaging": "~$500-$700 (CoWoS)",
-        "testing": "~$100-$150",
-        "r_and_d_allocation": "Not per-unit allocatable"
+        "silicon": 1600,
+        "packaging": 500,
+        "testing": 100,
+        "r_and_d_allocation": 300
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": "Estimated $4,000-$5,000",
-      "suggested_retail": "$15,000-$16,000",
-      "gross_margin": "Estimated ~50-55% (data center GPU)"
+      "manufacturing_cost": 3600,
+      "suggested_retail": 28000,
+      "gross_margin": 0.87
     }
   },
   "industry_analysis": {
-    "average_gross_margin": "NVIDIA DC: >70%; AMD DC: ~50-60%; Intel: Negative/Near Zero",
-    "cost_trend": "Increasing (Advanced Node Premium, CoWoS Shortage, HBM3 Cost)",
-    "main_cost_driver": "Advanced Packaging (CoWoS, 3D) > Silicon (N3/N4/N5) > HBM"
+    "average_gross_margin": 0.85,
+    "cost_trend": "Increasing due to advanced node complexity and packaging costs",
+    "main_cost_driver": "Chip-on-wafer-on-substrate (CoWoS) packaging"
   },
-  "last_updated": "2024-04-15 (Based on Q1 2024 earnings reports & analyst notes)",
-  "data_caveats": [
-    "Costs are analyst estimates, not official figures",
-    "R&D allocation cannot be accurately calculated per unit",
-    "Retail prices vary massively by volume, partner, region, and configuration",
-    "Intel Arc consumer GPU costs are not meaningfully disclosed",
-    "TSMC/Samsung foundry pricing is negotiated per client and confidential"
-  ],
-  "timestamp": "2025-12-10T02:57:58.846408"
+  "last_updated": "2024-07-15",
+  "timestamp": "2025-12-10T03:57:02.139996"
 }

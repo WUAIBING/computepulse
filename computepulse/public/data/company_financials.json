@@ -1,70 +1,59 @@
 {
   "nvidia": {
-    "stock_price": 500.0,
-    "market_cap": 1200000000000,
-    "ai_revenue_q3": 3000000000,
-    "data_center_growth": 0.25,
-    "next_earnings_date": "2024-10-15",
-    "source": "NVIDIA Investor Relations"
-  },
-  "microsoft": {
-    "stock_price": 300.0,
-    "market_cap": 2300000000000,
-    "azure_ai_revenue": 5000000000,
-    "openai_investment": 1000000000,
-    "source": "Microsoft Investor Relations"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "ai_revenue_q3": 0.0,
+    "data_center_growth": 0.0,
+    "next_earnings_date": "YYYY-MM-DD",
+    "source": "Official NVIDIA Earnings Report"
   },
   "amd": {
-    "stock_price": 100.0,
-    "market_cap": 110000000000,
-    "data_center_gpu_revenue": 1500000000,
-    "source": "AMD Investor Relations"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "data_center_gpu_revenue": 0.0,
+    "source": "Official AMD Earnings Report"
+  },
+  "microsoft": {
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "azure_ai_revenue": 0.0,
+    "openai_investment": 0.0,
+    "source": "Official Microsoft Earnings Report"
   },
   "google": {
-    "stock_price": 2800.0,
-    "market_cap": 1800000000000,
-    "ai_ml_revenue": 2000000000,
-    "tpu_costs": 500000000,
-    "source": "Google Investor Relations"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "ai_ml_revenue": 0.0,
+    "tpu_costs": 0.0,
+    "source": "Official Google Earnings Report"
   },
   "amazon": {
-    "stock_price": 150.0,
-    "market_cap": 1500000000000,
-    "aws_ai_services_revenue": 1000000000,
-    "source": "Amazon Investor Relations"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "aws_ai_services_revenue": 0.0,
+    "source": "Official Amazon Earnings Report"
   },
   "meta": {
-    "stock_price": 200.0,
-    "market_cap": 500000000000,
-    "ai_infrastructure_spending": 700000000,
-    "source": "Meta Investor Relations"
+    "stock_price": 0.0,
+    "market_cap": 0.0,
+    "ai_infrastructure_spending": 0.0,
+    "source": "Official Meta Earnings Report"
   },
   "openai": {
-    "funding_rounds": [
-      {
-        "round": "Series D",
-        "amount": 3000000000,
-        "date": "2024-06-01"
-      },
-      {
-        "round": "Series E",
-        "amount": 5000000000,
-        "date": "2024-09-01"
-      }
-    ],
-    "valuation": 200000000000,
-    "source": "OpenAI Press Release"
+    "funding_rounds": [],
+    "valuation": 0.0,
+    "source": "Official OpenAI Press Release"
   },
   "anthropic": {
-    "funding": 1000000000,
-    "revenue_model": "Subscription and API usage fees",
-    "source": "Anthropic Press Release"
+    "funding": 0.0,
+    "revenue_model": "Subscription/Usage-based",
+    "source": "Official Anthropic Press Release"
   },
   "industry_metrics": {
-    "total_ai_market_cap": 6000000000000,
-    "average_pe_ratio": 30.0,
-    "top_performer": "NVIDIA"
+    "total_ai_market_cap": 0.0,
+    "average_pe_ratio": 0.0,
+    "top_performer": "Company Name"
   },
-  "last_updated": "2024-10-01",
-  "timestamp": "2025-12-10T02:58:43.462557"
+  "last_updated": "YYYY-MM-DD",
+  "timestamp": "2025-12-10T03:57:25.258703"
 }
