@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "Spot H100 pricing averaging $3.19/hr reflects easing supply constraints from late-2023/early-2024 allocations combined with the debut of H200/GB200, which is redirecting capex and pressuring legacy H100 utilization, while hyperscalers increasingly tie hardware sourcing to downstream workload performance to defend margins."
+    "text": "The $3.12/hr H100 pricing suggests supply chain stabilization is improving chip availability, with capex investments in GPU infrastructure now yielding more predictable returns for hyperscalers."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At an average input price of $1.56/1M tokens, the market is pricing in aggressive API price wars and efficiency race dynamics\u2014compression, speculative decoding, and competitive models (e.g., Qwen, Llama) are compressing unit economics, compelling providers to push rate-limits and caching as differentiators to maintain margins."
+    "text": "At $1.38/1M input tokens, the API market reflects intense price compression where efficiency gains are driving competitive advantage, forcing providers to optimize model architecture for cost-performance balance."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual AI load implies rising grid strain and curtailment risk for new deployments, driving utilities and hyperscalers toward firm, low-carbon supply (nuclear PPA negotiations, geothermal, long-duration storage) to avoid brownout/carbon penalties while keeping per-token and per-GPU costs stable."
+    "text": "120 TWh annual load indicates data centers are approaching grid strain thresholds, making nuclear adoption and carbon footprint reduction critical infrastructure priorities for sustainable AI growth."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment remains constructive but cautious: investors reward efficiency-led price deflation and revenue-per-ML engineer gains, while flagging capex overhang, token-margin compression, and grid reliability as the primary constraints on sustained growth."
+    "text": "Converging compute costs and energy demands suggest the industry is transitioning from rapid expansion to sustainable optimization, with pricing normalization indicating maturity rather than bubble formation."
   }
 }
