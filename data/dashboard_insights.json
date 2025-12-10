@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 compute now averaging roughly $3.23 per hour\u2014well below 2024\u2019s peak\u2014availability has improved materially, signaling normalization in the supply chain and easing of chip bottlenecks, which should support higher utilization and more selective capex."
+    "text": "With H100 spot pricing stabilizing at $3.12/hr, hardware supply chain bottlenecks are easing as NVIDIA ramps production, but elevated capex requirements continue to favor hyperscalers over smaller cloud providers."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "An average input price of about $1.38 per million tokens reflects intense API price compression, encouraging model efficiency gains while pressuring margins and likely accelerating consolidation among providers."
+    "text": "Input token pricing at $1.28/1M reflects intensifying API price wars, with efficiency gains from model distillation creating downward pressure on margins while enabling broader accessibility for developers."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual AI electricity load adds substantial grid strain and emissions pressure, making nuclear baseload and behind-the-meter generation increasingly attractive for reliability and carbon goals."
+    "text": "Annual AI infrastructure load reaching 120 TWh is pushing grid capacity limits, accelerating discussions around nuclear power adoption and renewable integration to meet sustainability targets."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "AI infrastructure growth is robust but tempered by price normalization and cost discipline; the sector\u2019s sustainability hinges on improving utilization and monetizing models at sustainable margins to mitigate bubble risks."
+    "text": "Despite aggressive GPU and API pricing, the $3.12/hr H100 rates combined with $1.28/1M token costs suggest the AI infrastructure boom may be normalizing toward sustainable economics rather than a bubble."
   }
 }

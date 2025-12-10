@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
+      "manufacturing_cost": null,
       "suggested_retail": 30000,
-      "gross_margin": 85,
+      "gross_margin": null,
       "cost_breakdown": {
-        "silicon": 2200,
-        "packaging": 700,
-        "testing": 120,
-        "r_and_d_allocation": 300
+        "silicon": null,
+        "packaging": null,
+        "testing": null,
+        "r_and_d_allocation": null
       }
     },
     "a100": {
-      "manufacturing_cost": 2200,
-      "suggested_retail": 15000,
-      "gross_margin": 82,
+      "manufacturing_cost": null,
+      "suggested_retail": 10000,
+      "gross_margin": null,
       "cost_breakdown": {
-        "silicon": 1500,
-        "packaging": 400,
-        "testing": 80,
-        "r_and_d_allocation": 220
+        "silicon": null,
+        "packaging": null,
+        "testing": null,
+        "r_and_d_allocation": null
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4200,
+      "manufacturing_cost": null,
       "suggested_retail": 15000,
-      "gross_margin": 72
+      "gross_margin": null
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 65,
+    "average_gross_margin": null,
     "cost_trend": "Increasing due to advanced node (3nm/5nm) wafer costs and CoWoS packaging shortages",
-    "main_cost_driver": "TSMC CoWoS packaging capacity constraints"
+    "main_cost_driver": "Advanced packaging (CoWoS, 3D stacking) and foundry node pricing"
   },
-  "last_updated": "2024-07-20",
-  "timestamp": "2025-12-09T07:20:56.808336"
+  "last_updated": "2023-11-15",
+  "timestamp": "2025-12-10T01:03:35.237376"
 }

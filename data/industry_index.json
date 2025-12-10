@@ -1,7 +1,7 @@
 {
-  "score": 90,
+  "score": 70,
   "trend": "up",
-  "summary": "AI industry outlook is exceptionally strong, driven by hyperscalers' record-breaking capex commitments for AI infrastructure, sustained high GPU rental demand, and imminent next-gen model releases.",
+  "summary": "Despite a recent ~30% drop in H100/A100 rental prices (from ~$4.50/hr in Q1 2024 to $3.12/hr) indicating some near-term oversupply or demand normalization, the AI industry outlook remains strong. Major hyperscalers (Meta, Microsoft, Google, AWS) have all announced aggressive increases in 2024/2025 Capex, with Meta raising its forecast to $35-40B, Microsoft planning 'material increases', Google accelerating data center buildouts, and AWS expanding AI chip capacity. This bullish Capex surge, combined with anticipation for next-gen models (GPT-5 rumors, Gemini 2), drives the positive index.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-09T07:23:12.596052"
+  "last_updated": "2025-12-10T01:06:50.903222"
 }
