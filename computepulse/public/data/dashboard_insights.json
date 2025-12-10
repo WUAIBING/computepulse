@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 rental rates around $3.13/hr, supply remains tight while new capacity is delayed, forcing hyperscalers to lock in long\u2011term leases and spend billions on capex to secure chips, which could temporarily soften spot prices but keeps utilization high."
+    "text": "H100 pricing at $3.16/hr suggests supply chain stabilization after 2024 shortages, but elevated capex requirements continue to limit smaller players' access to premium compute infrastructure."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek\u2019s API pricing near $1.28 per 1M input tokens is pressuring margins across providers, accelerating model compression and KV\u2011cache reuse as vendors race to cut cost per token while differentiating on quality."
+    "text": "Input token pricing at $1.28/1M signals intensified API price compression, forcing providers to optimize inference efficiency or risk losing market share in the increasingly commoditized LLM service layer."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI\u2019s 120 TWh annual load is stressing grids and raising carbon intensity unless firms pair compute with low\u2011carbon power, nuclear SMRs, and better PUE, while time\u2011of\u2011use scheduling helps avoid peak costs."
+    "text": "120 TWh annual load represents a substantial grid footprint equivalent to powering 10+ million homes, highlighting the urgent need for AI infrastructure to align with renewable energy transition and carbon reduction targets."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment is buoyant but tempered by energy constraints and capex scrutiny, signaling a healthy growth runway if power and efficiency stay on pace and prices normalize without a bubble."
+    "text": "Converging cost pressures across hardware, tokens, and energy suggest the AI industry is maturing from growth-at-all-costs to sustainable profitability models, though bubble risks remain elevated in over-capitalized segments."
   }
 }
