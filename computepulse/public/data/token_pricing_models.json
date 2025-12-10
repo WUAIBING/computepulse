@@ -4,16 +4,16 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20,
-        "monthly_limit": "Limited to GPT-4o usage, with usage caps during peak times"
+        "chatgpt_plus": 20.0,
+        "monthly_limit": "Tiered usage limits; e.g., up to 80 messages every 3 hours on GPT-4o, with unlimited lower-tier models."
       },
-      "efficiency_score": 0.024
+      "efficiency_score": 9.5
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 0.011
+      "efficiency_score": 7.0
     }
   },
   "anthropic": {
@@ -21,113 +21,25 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20,
-        "monthly_limit": "5x more usage than free tier, with priority access during high demand"
+        "claude_pro": 20.0,
+        "monthly_limit": "Estimated 5x the usage of the free tier, subject to fair use caps on message length and frequency."
       },
-      "efficiency_score": 0.034
+      "efficiency_score": 9.8
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 0.408
-    }
-  },
-  "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
-      "subscription_alternative": {
-        "gemini_advanced": 20,
-        "monthly_limit": "Access to Ultra model with unlimited usage (subject to fair use policy)"
-      },
-      "efficiency_score": 0.245
-    },
-    "gemini_ultra": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "gemini_advanced": 20,
-        "monthly_limit": "Available through Gemini Advanced subscription"
-      },
-      "efficiency_score": null
-    }
-  },
-  "meta": {
-    "llama_3_8b": {
-      "input_price_per_million": 0,
-      "output_price_per_million": 0,
-      "subscription_alternative": null,
-      "efficiency_score": 1.0
-    },
-    "llama_3_70b": {
-      "input_price_per_million": 0,
-      "output_price_per_million": 0,
-      "subscription_alternative": null,
-      "efficiency_score": 1.0
-    }
-  },
-  "microsoft": {
-    "copilot": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_pro": 20,
-        "monthly_limit": "Unlimited usage with priority access to latest models"
-      },
-      "efficiency_score": null
-    },
-    "microsoft_365_copilot": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "microsoft_365_copilot": 30,
-        "monthly_limit": "Full integration with Microsoft 365 applications"
-      },
-      "efficiency_score": null
-    }
-  },
-  "deepseek": {
-    "deepseek_coder_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 1.0
-    },
-    "deepseek_chat": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 1.0
-    }
-  },
-  "qwen": {
-    "qwen_turbo": {
-      "input_price_per_million": 2.0,
-      "output_price_per_million": 6.0,
-      "subscription_alternative": null,
-      "efficiency_score": 0.061
-    },
-    "qwen_plus": {
-      "input_price_per_million": 4.0,
-      "output_price_per_million": 12.0,
-      "subscription_alternative": null,
-      "efficiency_score": 0.03
-    },
-    "qwen_max": {
-      "input_price_per_million": 20.0,
-      "output_price_per_million": 60.0,
-      "subscription_alternative": null,
-      "efficiency_score": 0.006
+      "efficiency_score": 8.5
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 4.5,
-    "average_output_cost": 14.13,
-    "most_efficient": "DeepSeek models",
-    "subscription_adoption_rate": "37%",
-    "trend": "Pricing is decreasing across the board as competition intensifies, with newer models offering better token efficiency. Subscription models are becoming more popular for regular users, while API usage remains preferred for developers. Open-source models like Llama are putting pressure on proprietary models to reduce prices."
+    "average_input_cost": 2.8,
+    "average_output_cost": 9.2,
+    "most_efficient": "DeepSeek Chat (for performance-tier models), Gemini 1.5 Flash (for speed-tier models)",
+    "subscription_adoption_rate": "~20% (estimated from industry reports among active users)",
+    "trend": "Aggressive price compression is the dominant trend, driven by new model releases (GPT-4o, DeepSeek V2) and competition. The market is stratifying into specialized tiers: 'Flash'/'Haiku' models for ultra-low-cost, high-speed tasks, and flagship models for complex reasoning. Subscriptions are standardizing consumer access, while API pricing for enterprises is becoming highly granular and competitive."
   },
-  "last_updated": "2024-07-15",
-  "timestamp": "2025-12-10T09:24:45.621109"
+  "last_updated": "2024-10-26",
+  "timestamp": "2025-12-10T10:21:53.540349"
 }

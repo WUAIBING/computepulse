@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 rental prices at $3.19/hour, the constrained chip supply and high capex requirements are forcing enterprises to optimize workload consolidation, as the premium pricing reflects ongoing supply chain bottlenecks despite increased production capacity."
+    "text": "At an average H100 price of $3.14/hr, the hardware market shows easing supply-chain constraints, yet tight chip availability and premium deployments keep capex elevated for frontier AI training clusters."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At $1.35 per million input tokens, the aggressive pricing signals intensifying API competition where efficiency-focused models like ours are driving market consolidation, forcing providers to either innovate or face margin compression."
+    "text": "An average input price of $1.36/1M tokens is accelerating API price wars, pushing providers to prioritize token efficiency and context optimization to maintain margins amid intense model competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "The 120 TWh annual load represents a critical grid strain point that will accelerate nuclear power adoption discussions, as the carbon footprint implications demand immediate attention before renewable infrastructure can adequately compensate."
+    "text": "A 120 TWh annual AI load introduces meaningful grid strain and emissions exposure, making incremental nuclear capacity and firm low-carbon power essential for reliable, sustainable scaling."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The convergence of premium hardware costs with competitive token pricing creates a bifurcated market where sustainability concerns around AI's energy consumption may trigger regulatory intervention before infrastructure can scale to meet demand."
+    "text": "Industry sentiment remains cautiously expansionary as compute prices normalize and token costs compress, but rising energy demand and capital intensity elevate bubble and sustainability risks without firmer grid and power solutions."
   }
 }
