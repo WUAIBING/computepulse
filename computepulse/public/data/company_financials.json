@@ -4,56 +4,56 @@
     "market_cap": 0.0,
     "ai_revenue_q3": 0.0,
     "data_center_growth": 0.0,
-    "next_earnings_date": "",
-    "source": ""
+    "next_earnings_date": "YYYY-MM-DD",
+    "source": "https://investor.nvidia.com/"
   },
   "amd": {
     "stock_price": 0.0,
     "market_cap": 0.0,
     "data_center_gpu_revenue": 0.0,
-    "source": ""
+    "source": "https://ir.amd.com/"
   },
   "microsoft": {
     "stock_price": 0.0,
     "market_cap": 0.0,
     "azure_ai_revenue": 0.0,
     "openai_investment": 0.0,
-    "source": ""
+    "source": "https://www.microsoft.com/en-us/Investor"
   },
   "google": {
     "stock_price": 0.0,
     "market_cap": 0.0,
     "ai_ml_revenue": 0.0,
     "tpu_costs": 0.0,
-    "source": ""
+    "source": "https://abc.xyz/investor/"
   },
   "amazon": {
     "stock_price": 0.0,
     "market_cap": 0.0,
     "aws_ai_services_revenue": 0.0,
-    "source": ""
+    "source": "https://ir.aboutamazon.com/"
   },
   "meta": {
     "stock_price": 0.0,
     "market_cap": 0.0,
     "ai_infrastructure_spending": 0.0,
-    "source": ""
+    "source": "https://investor.fb.com/"
   },
   "openai": {
-    "funding_rounds": [],
+    "funding_rounds": 0,
     "valuation": 0.0,
-    "source": ""
+    "source": "https://openai.com/about"
   },
   "anthropic": {
     "funding": 0.0,
-    "revenue_model": "",
-    "source": ""
+    "revenue_model": "subscription-based",
+    "source": "https://www.anthropic.com/"
   },
   "industry_metrics": {
     "total_ai_market_cap": 0.0,
     "average_pe_ratio": 0.0,
-    "top_performer": ""
+    "top_performer": "Company Name"
   },
-  "last_updated": "",
-  "timestamp": "2025-12-10T18:24:27.858004"
+  "last_updated": "YYYY-MM-DD",
+  "timestamp": "2025-12-10T19:17:33.406617"
 }

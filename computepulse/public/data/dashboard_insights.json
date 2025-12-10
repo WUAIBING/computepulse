@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At an average H100 price of $3.15/hr, supply tightness and limited capacity allocation are forcing buyers to pay premiums and front-load capex, delaying relief until new fab and substrate capacity ramps."
+    "text": "With H100 prices stabilizing at $3.16/hr, chip availability is improving but capex commitments remain cautious as supply chain constraints ease."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With the average input price at $1.35/1M tokens, API providers are locked in price compression, shifting spend toward efficiency gains through smaller models, caching, and compression."
+    "text": "DeepSeek's aggressive $1.25/1M token pricing is intensifying API price wars while driving efficiency gains across the competitive model landscape."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load indicates grid strain in AI hubs, accelerating nuclear baseload and firm renewable procurement while pressuring the carbon footprint to stay within 2030 targets."
+    "text": "AI infrastructure's 120 TWh annual energy load is straining grids and accelerating nuclear power adoption as carbon footprint concerns mount."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment remains buoyant as compute and token prices compress, but rising capex and energy intensity elevate bubble and sustainability risks without structural efficiency gains."
+    "text": "Industry sentiment shows cautious optimism as price competition and energy concerns create sustainable growth patterns while bubble risks remain elevated."
   }
 }
