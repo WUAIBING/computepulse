@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At an average H100 price of $3.14/hr, the hardware market shows easing supply-chain constraints, yet tight chip availability and premium deployments keep capex elevated for frontier AI training clusters."
+    "text": "At $3.22/hr for H100, utilization remains high amid constrained supply, reflecting persistent chip scarcity and the capex-heavy path to scale."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "An average input price of $1.36/1M tokens is accelerating API price wars, pushing providers to prioritize token efficiency and context optimization to maintain margins amid intense model competition."
+    "text": "At $1.35 per million input tokens, the market is pricing in aggressive efficiency gains and a fast-moving API price war that favors models with superior cost-performance."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual AI load introduces meaningful grid strain and emissions exposure, making incremental nuclear capacity and firm low-carbon power essential for reliable, sustainable scaling."
+    "text": "An annual load of 120 TWh underscores grid strain, pushing utilities toward nuclear baseload and cleaner firm power to curb emissions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment remains cautiously expansionary as compute prices normalize and token costs compress, but rising energy demand and capital intensity elevate bubble and sustainability risks without firmer grid and power solutions."
+    "text": "With falling token prices offset by rising energy loads, sustainability depends on structural efficiency gains and reliable low-carbon power to prevent bubble conditions."
   }
 }
