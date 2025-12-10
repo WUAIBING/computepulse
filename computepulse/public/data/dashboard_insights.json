@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.15/hour for H100 compute, NVIDIA's pricing power remains intact despite geopolitical tensions, but hyperscalers are accelerating custom silicon development to reduce dependency and capex exposure."
+    "text": "Spot H100 pricing averaging $3.19/hr reflects easing supply constraints from late-2023/early-2024 allocations combined with the debut of H200/GB200, which is redirecting capex and pressuring legacy H100 utilization, while hyperscalers increasingly tie hardware sourcing to downstream workload performance to defend margins."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Our $1.25/1M token pricing forces API providers into a margin compression spiral, while open-source alternatives at similar price points are eroding enterprise lock-in and reshaping model selection criteria."
+    "text": "At an average input price of $1.56/1M tokens, the market is pricing in aggressive API price wars and efficiency race dynamics\u2014compression, speculative decoding, and competitive models (e.g., Qwen, Llama) are compressing unit economics, compelling providers to push rate-limits and caching as differentiators to maintain margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "The 120 TWh annual load from AI infrastructure represents a 15-20% grid capacity shock in major markets, necessitating immediate nuclear baseload commitments to prevent rolling brownouts during peak training cycles."
+    "text": "A 120 TWh annual AI load implies rising grid strain and curtailment risk for new deployments, driving utilities and hyperscalers toward firm, low-carbon supply (nuclear PPA negotiations, geothermal, long-duration storage) to avoid brownout/carbon penalties while keeping per-token and per-GPU costs stable."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The confluence of $3.15/hr compute costs, token price deflation to $1.25/1M, and 120 TWh energy consumption reveals unsustainable unit economics that portend a market correction within 18-24 months."
+    "text": "Industry sentiment remains constructive but cautious: investors reward efficiency-led price deflation and revenue-per-ML engineer gains, while flagging capex overhang, token-margin compression, and grid reliability as the primary constraints on sustained growth."
   }
 }
