@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.22/hr for H100, utilization remains high amid constrained supply, reflecting persistent chip scarcity and the capex-heavy path to scale."
+    "text": "With H100 pricing at $3.13/hour reflecting constrained supply and premium positioning amid ongoing chip export controls, capex-heavy deployments signal a strategic bet on scarcity value rather than cost optimization."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At $1.35 per million input tokens, the market is pricing in aggressive efficiency gains and a fast-moving API price war that favors models with superior cost-performance."
+    "text": "At $1.47 per million input tokens, DeepSeek's aggressive pricing strategy is compressing API margins while forcing competitors to either match rates or differentiate through model specialization and efficiency gains."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "An annual load of 120 TWh underscores grid strain, pushing utilities toward nuclear baseload and cleaner firm power to curb emissions."
+    "text": "AI infrastructure's 120 TWh annual energy demand equivalent to powering 11 million homes highlights the urgency for nuclear partnerships and grid modernization to prevent capacity bottlenecks as compute scales."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "With falling token prices offset by rising energy loads, sustainability depends on structural efficiency gains and reliable low-carbon power to prevent bubble conditions."
+    "text": "While AI investment velocity remains robust, the confluence of hardware scarcity pricing, margin compression in API services, and energy constraints creates a delicate equilibrium between growth acceleration and bubble formation."
   }
 }

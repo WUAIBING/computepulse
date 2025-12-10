@@ -3,38 +3,38 @@
     "h100": {
       "manufacturing_cost": 3320,
       "suggested_retail": 35000,
-      "gross_margin": 85,
+      "gross_margin": 85.1,
       "cost_breakdown": {
         "silicon": 2100,
         "packaging": 750,
-        "testing": 270,
-        "r_and_d_allocation": 200
+        "testing": 120,
+        "r_and_d_allocation": 350
       }
     },
     "a100": {
-      "manufacturing_cost": 2500,
+      "manufacturing_cost": 2100,
       "suggested_retail": 15000,
-      "gross_margin": 80,
+      "gross_margin": 86.0,
       "cost_breakdown": {
-        "silicon": 1600,
+        "silicon": 1300,
         "packaging": 500,
-        "testing": 200,
-        "r_and_d_allocation": 200
+        "testing": 80,
+        "r_and_d_allocation": 220
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4000,
-      "suggested_retail": 15000,
-      "gross_margin": 73
+      "manufacturing_cost": 4200,
+      "suggested_retail": 20000,
+      "gross_margin": 79.0
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 78,
-    "cost_trend": "Increasing due to advanced packaging (CoWoS) and HBM3e shortages",
-    "main_cost_driver": "Packaging and HBM memory"
+    "average_gross_margin": 76.0,
+    "cost_trend": "Increasing due to advanced packaging and HBM3e adoption",
+    "main_cost_driver": "CoWoS packaging and HBM memory"
   },
-  "last_updated": "2024-04-15",
-  "timestamp": "2025-12-10T11:16:47.054243"
+  "last_updated": "2024-05-15",
+  "timestamp": "2025-12-10T12:29:29.688286"
 }

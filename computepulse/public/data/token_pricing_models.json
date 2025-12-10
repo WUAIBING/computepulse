@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 80 messages per 3 hours for GPT-4o"
+        "monthly_limit": "Limited usage of GPT-4o and GPT-4 (caps vary by time and demand)"
       },
-      "efficiency_score": 85
+      "efficiency_score": 50
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 70
+      "efficiency_score": 1
     }
   },
   "anthropic": {
@@ -22,15 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x higher usage than free tier"
+        "monthly_limit": "5x more usage than free tier with priority access during high-traffic"
       },
-      "efficiency_score": 88
+      "efficiency_score": 57
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 95
+      "subscription_alternative": {
+        "claude_pro": 20.0,
+        "monthly_limit": "5x more usage than free tier with priority access during high-traffic"
+      },
+      "efficiency_score": 100
     }
   },
   "google": {
@@ -39,35 +42,52 @@
       "output_price_per_million": 1.5,
       "subscription_alternative": {
         "gemini_advanced": 19.99,
-        "monthly_limit": "Unlimited usage within Google AI Studio"
+        "monthly_limit": "Included in Google One AI Premium subscription"
       },
-      "efficiency_score": 92
+      "efficiency_score": 96
     },
     "gemini_ultra": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
-      "subscription_alternative": null,
-      "efficiency_score": 82
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
+      "subscription_alternative": {
+        "gemini_advanced": 19.99,
+        "monthly_limit": "Limited availability in 2024"
+      },
+      "efficiency_score": 96
     }
   },
   "meta": {
-    "llama_3": {
-      "input_price_per_million": 0,
-      "output_price_per_million": 0,
+    "llama_3_8b": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
+      "subscription_alternative": null,
+      "efficiency_score": 100
+    },
+    "llama_3_70b": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
       "subscription_alternative": null,
       "efficiency_score": 100
     }
   },
   "microsoft": {
     "copilot": {
-      "input_price_per_million": 0,
-      "output_price_per_million": 0,
+      "input_price_per_million": null,
+      "output_price_per_million": null,
       "subscription_alternative": {
         "copilot_pro": 20.0,
-        "m365_copilot": 30.0,
-        "monthly_limit": "Varies by subscription tier"
+        "monthly_limit": "Individual subscription with Microsoft 365 integration"
       },
-      "efficiency_score": 87
+      "efficiency_score": null
+    },
+    "microsoft_365_copilot": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "enterprise": 30.0,
+        "monthly_limit": "Enterprise subscription with full Microsoft 365 integration"
+      },
+      "efficiency_score": null
     }
   },
   "deepseek": {
@@ -75,13 +95,7 @@
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 97
-    },
-    "deepseek_llm": {
-      "input_price_per_million": 0.1,
-      "output_price_per_million": 0.2,
-      "subscription_alternative": null,
-      "efficiency_score": 98
+      "efficiency_score": 100
     }
   },
   "qwen": {
@@ -89,28 +103,28 @@
       "input_price_per_million": 0.3,
       "output_price_per_million": 0.6,
       "subscription_alternative": null,
-      "efficiency_score": 94
+      "efficiency_score": 99
     },
     "qwen_plus": {
-      "input_price_per_million": 0.6,
-      "output_price_per_million": 1.2,
+      "input_price_per_million": 1.0,
+      "output_price_per_million": 2.0,
       "subscription_alternative": null,
-      "efficiency_score": 90
+      "efficiency_score": 94
     },
     "qwen_max": {
       "input_price_per_million": 2.0,
       "output_price_per_million": 6.0,
       "subscription_alternative": null,
-      "efficiency_score": 83
+      "efficiency_score": 81
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.19,
-    "average_output_cost": 6.99,
-    "most_efficient": "Meta Llama 3 (open source)",
-    "subscription_adoption_rate": 35,
-    "trend": "Prices decreasing while capability increasing, with more varied tiering options and freemium models becoming standard"
+    "average_input_cost": 2.11,
+    "average_output_cost": 6.69,
+    "most_efficient": "Meta Llama 3 & DeepSeek Coder V2",
+    "subscription_adoption_rate": 65,
+    "trend": "Prices decreasing with increased competition, smaller models gaining popularity for cost efficiency. Google's Gemini and Meta's Llama offer the most competitive pricing, while OpenAI's GPT-4o offers better value than GPT-4 Turbo."
   },
-  "last_updated": "2024-05-10",
-  "timestamp": "2025-12-10T11:17:34.690370"
+  "last_updated": "2024-08-25",
+  "timestamp": "2025-12-10T12:32:24.419717"
 }
