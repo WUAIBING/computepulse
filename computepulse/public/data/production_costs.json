@@ -1,40 +1,48 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 4500,
+      "manufacturing_cost": 3320,
       "suggested_retail": 30000,
-      "gross_margin": 85,
+      "gross_margin": 0.75,
       "cost_breakdown": {
-        "silicon": 552,
-        "packaging": 700,
-        "testing": 220,
-        "r_and_d_allocation": 1200
+        "silicon": 2700,
+        "packaging": 450,
+        "testing": 120,
+        "r_and_d_allocation": 50
       }
     },
     "a100": {
-      "manufacturing_cost": 2500,
-      "suggested_retail": 12000,
-      "gross_margin": 79,
+      "manufacturing_cost": 2100,
+      "suggested_retail": 10000,
+      "gross_margin": 0.7,
       "cost_breakdown": {
-        "silicon": 420,
-        "packaging": 500,
-        "testing": 180,
-        "r_and_d_allocation": 900
+        "silicon": 1600,
+        "packaging": 350,
+        "testing": 100,
+        "r_and_d_allocation": 50
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4000,
+      "manufacturing_cost": 2800,
       "suggested_retail": 15000,
-      "gross_margin": 73
+      "gross_margin": 0.6
+    }
+  },
+  "intel": {
+    "battlemage": {
+      "manufacturing_cost": null,
+      "suggested_retail": null,
+      "gross_margin": null,
+      "note": "Battlemage GPUs not yet released; cost data unavailable"
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 79,
-    "cost_trend": "Increasing due to rising HBM and advanced packaging costs",
-    "main_cost_driver": "HBM memory and advanced packaging (CoWoS)"
+    "average_gross_margin": 0.65,
+    "cost_trend": "Increasing due to advanced node pricing (TSMC 3nm/5nm) and CoWoS packaging constraints",
+    "main_cost_driver": "TSMC wafer pricing and advanced packaging (CoWoS, FOWLP)"
   },
-  "last_updated": "2024-05-01",
-  "timestamp": "2025-12-10T06:25:30.680463"
+  "last_updated": "2024-03-15",
+  "timestamp": "2025-12-10T07:20:50.589988"
 }

@@ -4,16 +4,16 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Higher limits for GPT-4o usage, approximately 80 messages per 3 hours"
+        "chatgpt_plus": 20,
+        "monthly_limit": "Unlimited usage with rate limiting"
       },
-      "efficiency_score": 9.5
+      "efficiency_score": 8.5
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 8.0
+      "efficiency_score": 7.0
     }
   },
   "anthropic": {
@@ -21,16 +21,16 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, approximately 200 messages per day"
+        "claude_pro": 20,
+        "monthly_limit": "5x the free tier usage limits"
       },
-      "efficiency_score": 9.0
+      "efficiency_score": 8.0
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 9.8
+      "efficiency_score": 9.5
     }
   },
   "google": {
@@ -38,63 +38,75 @@
       "input_price_per_million": 0.5,
       "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Part of Google One AI Premium with 1TB storage and other benefits"
+        "ai_premium": 20,
+        "monthly_limit": "Unlimited with rate limits"
       },
-      "efficiency_score": 8.5
+      "efficiency_score": 9.0
     },
     "gemini_ultra": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Available through subscription model, not as direct API pricing"
-      },
-      "efficiency_score": 8.2
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
+      "subscription_alternative": null,
+      "efficiency_score": 7.5
     }
   },
   "meta": {
     "llama_3": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
+      "input_price_per_million": 0.15,
+      "output_price_per_million": 0.45,
       "subscription_alternative": null,
-      "efficiency_score": 9.7
+      "efficiency_score": 9.2
     }
   },
   "microsoft": {
-    "copilot": {
+    "copilot_pro": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "monthly_limit": "Priority access to latest models during peak times"
+        "copilot_pro": 20,
+        "monthly_limit": "Unlimited usage across Microsoft apps"
       },
-      "efficiency_score": null
+      "efficiency_score": 8.0
+    },
+    "copilot_enterprise": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_enterprise": 30,
+        "monthly_limit": "Unlimited usage with enterprise features"
+      },
+      "efficiency_score": 8.5
     }
   },
   "deepseek": {
-    "deepseek_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
+    "deepseek_coder": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
       "subscription_alternative": null,
-      "efficiency_score": 9.7
+      "efficiency_score": 9.3
     }
   },
   "qwen": {
-    "qwen_max": {
-      "input_price_per_million": 2.0,
-      "output_price_per_million": 6.0,
+    "qwen_turbo": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 0.75,
       "subscription_alternative": null,
-      "efficiency_score": 8.8
+      "efficiency_score": 9.1
+    },
+    "qwen_max": {
+      "input_price_per_million": 1.0,
+      "output_price_per_million": 3.0,
+      "subscription_alternative": null,
+      "efficiency_score": 8.7
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.27,
-    "average_output_cost": 8.29,
+    "average_input_cost": 2.36,
+    "average_output_cost": 7.36,
     "most_efficient": "Claude 3 Haiku",
     "subscription_adoption_rate": 0.67,
-    "trend": "Prices decreasing while capabilities increase, with trend toward both ultra-affordable options and premium subscription models"
+    "trend": "Prices are trending downwards as competition increases, with a 40% decrease in average pricing since 2023. Most efficient models are smaller, task-specific models rather than large general-purpose models."
   },
-  "last_updated": "2024-06-25",
-  "timestamp": "2025-12-10T06:27:14.178198"
+  "last_updated": "2024-06-01",
+  "timestamp": "2025-12-10T07:24:27.506731"
 }

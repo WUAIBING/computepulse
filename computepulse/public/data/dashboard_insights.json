@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At an average H100 price of $3.15/hr, the GPU market shows easing supply yet still faces constrained availability and high capex demands that slow capacity additions."
+    "text": "At an average H100 on\u2011prem lease of roughly $3.16/hour, the hardware market remains tight as NVIDIA allocates scarce wafers amid rising capex, tightening supply chain resilience for hyperscalers and enterprises."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With an average input price of $1.25/1M tokens, the API market is deep in a price war that rewards efficiency gains and spurs model competition to compress costs."
+    "text": "With input pricing near $1.53 per million tokens, the API price wars are compressing unit costs and pushing providers toward smarter routing, fine\u2011tuning, and sparsity to maintain margins in a fiercely competitive market."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "An annual AI load of 120 TWh intensifies grid strain, accelerating nuclear adoption as a low\u2011carbon baseload option and driving renewable integration to reduce carbon footprint."
+    "text": "AI\u2019s projected 120 TWh annual load will stress grids and accelerate nuclear adoption as operators seek reliable, low\u2011carbon baseload to meet surging compute demand while keeping carbon footprints in check."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment remains optimistic but faces bubble risks from rising capex and token price compression, while efficiency improvements and demand growth sustain the long\u2011term trajectory."
+    "text": "Industry sentiment is mixed: rapid price declines and 120 TWh energy footprints signal durable growth, yet the surge in capex and aggressive pricing could fuel a bubble unless cost curves and ROI normalize."
   }
 }
