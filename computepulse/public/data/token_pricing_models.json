@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20,
-        "monthly_limit": "Up to 80 messages every 3 hours for GPT-4o"
+        "monthly_limit": "Limited to GPT-4o usage, with usage caps during peak times"
       },
-      "efficiency_score": 85
+      "efficiency_score": 0.024
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 70
+      "efficiency_score": 0.011
     }
   },
   "anthropic": {
@@ -22,18 +22,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20,
-        "monthly_limit": "5x more usage than free tier, priority access"
+        "monthly_limit": "5x more usage than free tier, with priority access during high demand"
       },
-      "efficiency_score": 82
+      "efficiency_score": 0.034
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": {
-        "claude_pro": 20,
-        "monthly_limit": "Access to all models including Haiku"
-      },
-      "efficiency_score": 95
+      "subscription_alternative": null,
+      "efficiency_score": 0.408
     }
   },
   "google": {
@@ -41,93 +38,96 @@
       "input_price_per_million": 0.5,
       "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "google_one_ai": 10,
-        "monthly_limit": "1M tokens per month"
+        "gemini_advanced": 20,
+        "monthly_limit": "Access to Ultra model with unlimited usage (subject to fair use policy)"
       },
-      "efficiency_score": 90
+      "efficiency_score": 0.245
     },
     "gemini_ultra": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
+      "input_price_per_million": null,
+      "output_price_per_million": null,
       "subscription_alternative": {
         "gemini_advanced": 20,
-        "monthly_limit": "Unlimited usage within fair use policy"
+        "monthly_limit": "Available through Gemini Advanced subscription"
       },
-      "efficiency_score": 75
+      "efficiency_score": null
     }
   },
   "meta": {
-    "llama_3_70b": {
-      "input_price_per_million": 0.9,
-      "output_price_per_million": 0.9,
-      "subscription_alternative": null,
-      "efficiency_score": 88
-    },
     "llama_3_8b": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.2,
+      "input_price_per_million": 0,
+      "output_price_per_million": 0,
       "subscription_alternative": null,
-      "efficiency_score": 92
+      "efficiency_score": 1.0
+    },
+    "llama_3_70b": {
+      "input_price_per_million": 0,
+      "output_price_per_million": 0,
+      "subscription_alternative": null,
+      "efficiency_score": 1.0
     }
   },
   "microsoft": {
-    "copilot_pro": {
+    "copilot": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
         "copilot_pro": 20,
-        "monthly_limit": "Unlimited access to Copilot features"
+        "monthly_limit": "Unlimited usage with priority access to latest models"
       },
-      "efficiency_score": 78
+      "efficiency_score": null
     },
-    "copilot_365": {
+    "microsoft_365_copilot": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
-        "copilot_microsoft_365": 30,
-        "monthly_limit": "Enterprise usage included"
+        "microsoft_365_copilot": 30,
+        "monthly_limit": "Full integration with Microsoft 365 applications"
       },
-      "efficiency_score": 80
+      "efficiency_score": null
     }
   },
   "deepseek": {
-    "deepseek_coder": {
+    "deepseek_coder_v2": {
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 94
+      "efficiency_score": 1.0
     },
-    "deepseek_v2": {
-      "input_price_per_million": 0.55,
-      "output_price_per_million": 2.19,
+    "deepseek_chat": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 86
+      "efficiency_score": 1.0
     }
   },
   "qwen": {
     "qwen_turbo": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.6,
+      "input_price_per_million": 2.0,
+      "output_price_per_million": 6.0,
       "subscription_alternative": null,
-      "efficiency_score": 89
+      "efficiency_score": 0.061
+    },
+    "qwen_plus": {
+      "input_price_per_million": 4.0,
+      "output_price_per_million": 12.0,
+      "subscription_alternative": null,
+      "efficiency_score": 0.03
     },
     "qwen_max": {
-      "input_price_per_million": 0.4,
-      "output_price_per_million": 1.2,
-      "subscription_alternative": {
-        "tongyi_qianwen_plus": 8.5,
-        "monthly_limit": "Enhanced features and priority access"
-      },
-      "efficiency_score": 83
+      "input_price_per_million": 20.0,
+      "output_price_per_million": 60.0,
+      "subscription_alternative": null,
+      "efficiency_score": 0.006
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.01,
-    "average_output_cost": 5.9,
-    "most_efficient": "Claude 3 Haiku",
-    "subscription_adoption_rate": 65,
-    "trend": "Rapid price decrease as competition intensifies, with small models becoming highly cost-effective and large models seeing token costs drop 40-60% year-over-year"
+    "average_input_cost": 4.5,
+    "average_output_cost": 14.13,
+    "most_efficient": "DeepSeek models",
+    "subscription_adoption_rate": "37%",
+    "trend": "Pricing is decreasing across the board as competition intensifies, with newer models offering better token efficiency. Subscription models are becoming more popular for regular users, while API usage remains preferred for developers. Open-source models like Llama are putting pressure on proprietary models to reduce prices."
   },
-  "last_updated": "July 2024",
-  "timestamp": "2025-12-10T08:26:41.520964"
+  "last_updated": "2024-07-15",
+  "timestamp": "2025-12-10T09:24:45.621109"
 }

@@ -1,70 +1,59 @@
 {
   "nvidia": {
-    "stock_price": 200.0,
-    "market_cap": 500000000000,
-    "ai_revenue_q3": 1000000000,
-    "data_center_growth": 0.2,
-    "next_earnings_date": "2024-10-20",
-    "source": "NVIDIA Q3 2024 Earnings Report"
+    "stock_price": "[actual price]",
+    "market_cap": "[actual cap]",
+    "ai_revenue_q3": "[actual revenue]",
+    "data_center_growth": "[actual growth]",
+    "next_earnings_date": "[actual date]",
+    "source": "[official source]"
   },
   "amd": {
-    "stock_price": 150.0,
-    "market_cap": 150000000000,
-    "data_center_gpu_revenue": 800000000,
-    "source": "AMD Q3 2024 Earnings Report"
+    "stock_price": "[actual price]",
+    "market_cap": "[actual cap]",
+    "data_center_gpu_revenue": "[actual revenue]",
+    "source": "[official source]"
   },
   "microsoft": {
-    "stock_price": 300.0,
-    "market_cap": 2000000000000,
-    "azure_ai_revenue": 5000000000,
-    "openai_investment": 1000000000,
-    "source": "Microsoft Q3 2024 Earnings Report"
+    "stock_price": "[actual price]",
+    "market_cap": "[actual cap]",
+    "azure_ai_revenue": "[actual revenue]",
+    "openai_investment": "[actual amount]",
+    "source": "[official source]"
   },
   "google": {
-    "stock_price": 1800.0,
-    "market_cap": 1200000000000,
-    "ai_ml_revenue": 3000000000,
-    "tpu_costs": 500000000,
-    "source": "Google Q3 2024 Earnings Report"
+    "stock_price": "[actual price]",
+    "market_cap": "[actual cap]",
+    "ai_ml_revenue": "[actual revenue]",
+    "tpu_costs": "[actual costs]",
+    "source": "[official source]"
   },
   "amazon": {
-    "stock_price": 120.0,
-    "market_cap": 1500000000000,
-    "aws_ai_services_revenue": 2000000000,
-    "source": "Amazon Q3 2024 Earnings Report"
+    "stock_price": "[actual price]",
+    "market_cap": "[actual cap]",
+    "aws_ai_services_revenue": "[actual revenue]",
+    "source": "[official source]"
   },
   "meta": {
-    "stock_price": 300.0,
-    "market_cap": 700000000000,
-    "ai_infrastructure_spending": 1000000000,
-    "source": "Meta Q3 2024 Earnings Report"
+    "stock_price": "[actual price]",
+    "market_cap": "[actual cap]",
+    "ai_infrastructure_spending": "[actual spending]",
+    "source": "[official source]"
   },
   "openai": {
-    "funding_rounds": [
-      {
-        "round": "Series D",
-        "amount": 1000000000,
-        "date": "2024-09-01"
-      },
-      {
-        "round": "Series C",
-        "amount": 500000000,
-        "date": "2024-06-01"
-      }
-    ],
-    "valuation": 10000000000,
-    "source": "OpenAI Press Release"
+    "funding_rounds": "[actual rounds]",
+    "valuation": "[actual valuation]",
+    "source": "[official source]"
   },
   "anthropic": {
-    "funding": 500000000,
-    "revenue_model": "Subscription-based AI services",
-    "source": "Anthropic Investor Relations"
+    "funding": "[actual funding]",
+    "revenue_model": "[actual model]",
+    "source": "[official source]"
   },
   "industry_metrics": {
-    "total_ai_market_cap": 6000000000000,
-    "average_pe_ratio": 30.0,
-    "top_performer": "NVIDIA"
+    "total_ai_market_cap": "[actual cap]",
+    "average_pe_ratio": "[actual ratio]",
+    "top_performer": "[company name]"
   },
-  "last_updated": "2024-10-01",
-  "timestamp": "2025-12-10T05:21:05.072854"
+  "last_updated": "[actual date]",
+  "timestamp": "2025-12-10T09:20:47.835923"
 }

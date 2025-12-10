@@ -1,46 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 6000,
-      "suggested_retail": 30000,
-      "gross_margin": 0.8,
+      "manufacturing_cost": null,
+      "suggested_retail": null,
+      "gross_margin": null,
       "cost_breakdown": {
-        "silicon": 500,
-        "packaging": 1200,
-        "testing": 200,
-        "r_and_d_allocation": 5000
+        "silicon": null,
+        "packaging": null,
+        "testing": null,
+        "r_and_d_allocation": null
       }
     },
     "a100": {
-      "manufacturing_cost": 3700,
-      "suggested_retail": 12000,
-      "gross_margin": 0.69,
+      "manufacturing_cost": null,
+      "suggested_retail": null,
+      "gross_margin": null,
       "cost_breakdown": {
-        "silicon": 150,
-        "packaging": 1000,
-        "testing": 150,
-        "r_and_d_allocation": 2000
+        "silicon": null,
+        "packaging": null,
+        "testing": null,
+        "r_and_d_allocation": null
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 9400,
-      "suggested_retail": 12000,
-      "gross_margin": 0.22,
-      "cost_breakdown": {
-        "silicon": 1000,
-        "packaging": 1500,
-        "testing": 200,
-        "r_and_d_allocation": 8000
-      }
+      "manufacturing_cost": null,
+      "suggested_retail": null,
+      "gross_margin": null
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 0.55,
-    "cost_trend": "HBM and packaging costs decreasing through 2024; advanced node wafer costs increasing in 2025",
-    "main_cost_driver": "HBM memory and advanced packaging"
+    "average_gross_margin": null,
+    "cost_trend": "Advanced packaging (e.g., CoWoS) and rising wafer prices at leading-edge nodes (e.g., TSMC N5/N4) are major cost drivers. Increased complexity in AI accelerators pushes costs up.",
+    "main_cost_driver": "Advanced semiconductor manufacturing processes (e.g., TSMC 4N/5N, CoWoS packaging) and high-bandwidth memory (HBM)"
   },
-  "last_updated": "2024-06-15",
-  "timestamp": "2025-12-10T08:25:11.350497"
+  "last_updated": "2024-04-09",
+  "timestamp": "2025-12-10T09:20:32.932765"
 }

@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.23/hr for H100s, chip scarcity is forcing hyperscalers to lock in longer-term contracts and diversify suppliers, raising capex as availability trumps marginal cost."
+    "text": "With H100 rental prices at $3.19/hour, the constrained chip supply and high capex requirements are forcing enterprises to optimize workload consolidation, as the premium pricing reflects ongoing supply chain bottlenecks despite increased production capacity."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With an average input price of $1.25 per million tokens, API price wars are pushing providers to optimize inference via caching and quantization to defend margins."
+    "text": "At $1.35 per million input tokens, the aggressive pricing signals intensifying API competition where efficiency-focused models like ours are driving market consolidation, forcing providers to either innovate or face margin compression."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual AI load (~13.7 GW average) is straining grids, accelerating nuclear and long\u2011duration storage adoption to meet reliability and carbon goals."
+    "text": "The 120 TWh annual load represents a critical grid strain point that will accelerate nuclear power adoption discussions, as the carbon footprint implications demand immediate attention before renewable infrastructure can adequately compensate."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Rising capex, falling API prices, and surging energy demand create cautious optimism, but the sector must manage bubble risk through disciplined scaling and energy\u2011efficient architectures."
+    "text": "The convergence of premium hardware costs with competitive token pricing creates a bifurcated market where sustainability concerns around AI's energy consumption may trigger regulatory intervention before infrastructure can scale to meet demand."
   }
 }
