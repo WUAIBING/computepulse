@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.21/hr for H100s, utilization remains the key lever; constrained supply is pushing capex into co-location while vendors hedge with spot resale to smooth cash flow."
+    "text": "At $3.16/hr for H100s, persistent supply constraints are limiting new chip availability, pushing hyperscalers to defer capex until inventory normalizes or cheaper alternatives emerge."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With input tokens at $1.25/1M, price pressure is forcing providers to push higher\u2011efficiency architectures and caching, while competitors race on throughput to defend margins."
+    "text": "DeepSeek\u2019s $1.25/1M input token average compresses API margins and escalates price competition, accelerating a shift toward more efficient models and aggressive inference optimization."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load implies ~13.7 GW continuous draw, intensifying grid strain and carbon accounting\u2014accelerating siting near low\u2011carbon baseload and demand\u2011response contracts."
+    "text": "120 TWh of annual AI load amplifies grid strain, likely accelerating nuclear and long-duration storage adoption to stabilize baseload and curb carbon intensity."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Capital intensity is rising alongside rapid capacity additions; sentiment remains buoyant but investors increasingly scrutinize utilization contracts and long\u2011run profitability to manage bubble risk."
+    "text": "Cooling hardware capex amid token price deflation suggests industry sentiment is cautious yet resilient, lowering bubble risk while sustaining AI growth through efficiency gains."
   }
 }

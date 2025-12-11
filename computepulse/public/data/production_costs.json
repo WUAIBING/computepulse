@@ -1,45 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": "Confidential (Est: Very High - $5000-$8000+ range based on die size, packaging, HBM)",
-      "suggested_retail": "~$30,000 - $40,000+ (PCIe card, varies by config/vendor)",
-      "gross_margin": "Confidential (NVIDIA Datacenter segment margin reported >70%)",
+      "manufacturing_cost": null,
+      "suggested_retail": 33000,
+      "gross_margin": null,
       "cost_breakdown": {
-        "silicon": "Confidential (Est: Dominated by large TSMC 4N die cost)",
-        "packaging": "Confidential (Est: Significant - Advanced CoWoS-L)",
-        "testing": "Confidential",
-        "r_and_d_allocation": "Confidential (Significant overall R&D amortized)"
+        "silicon": null,
+        "packaging": null,
+        "testing": null,
+        "r_and_d_allocation": null
       }
     },
     "a100": {
-      "manufacturing_cost": "Confidential (Est: Lower than H100, but still high)",
-      "suggested_retail": "Varies widely based on market availability (~$10,000 - $15,000+)",
-      "gross_margin": "Confidential",
+      "manufacturing_cost": null,
+      "suggested_retail": 15000,
+      "gross_margin": null,
       "cost_breakdown": {
-        "silicon": "Confidential (Est: TSMC 7nm die)",
-        "packaging": "Confidential",
-        "testing": "Confidential",
-        "r_and_d_allocation": "Confidential"
+        "silicon": null,
+        "packaging": null,
+        "testing": null,
+        "r_and_d_allocation": null
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": "Confidential (Est: High - Complex multi-die CoWoS packaging, HBM)",
-      "suggested_retail": "~$15,000 - $20,000+",
-      "gross_margin": "Confidential (AMD Datacenter segment margin lower than NVIDIA's)"
-    }
-  },
-  "intel": {
-    "arc_gpu": {
-      "comment": "Specific cost analysis for Intel Arc discrete GPUs (especially consumer) is scarce. Focus is currently on competitive pricing in mid-range."
+      "manufacturing_cost": null,
+      "suggested_retail": 15000,
+      "gross_margin": null
     }
   },
   "industry_analysis": {
-    "average_gross_margin": "Varies (Datacenter GPUs: Very High ~60-80%, Consumer GPUs: Lower)",
-    "cost_trend": "Increasing significantly due to advanced node (3nm/4nm) wafer costs, advanced packaging (CoWoS, Foveros), and HBM memory.",
-    "main_cost_driver": "Advanced Node Wafer Cost + Advanced Packaging + HBM Memory"
+    "average_gross_margin": "60-70% (AI GPUs)",
+    "cost_trend": "Increasing due to advanced packaging (CoWoS) and wafer price hikes",
+    "main_cost_driver": "Packaging (interposer, HBM) and TSMC wafer costs"
   },
-  "last_updated": "2024-04-10",
-  "timestamp": "2025-12-11T06:23:16.977767"
+  "last_updated": "2024-07-20",
+  "timestamp": "2025-12-11T07:20:10.775415"
 }
