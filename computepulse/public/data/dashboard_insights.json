@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.20/hour for H100 access, current market pricing reflects normalized supply chains post-2024 shortages, though persistent allocation constraints continue to drive capex inflation for hyperscalers seeking guaranteed compute capacity."
+    "text": "At $3.18/hr for an H100, supply is loosening yet capex remains a binding constraint as lead times compress and second-hand volumes rise."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API pricing at $1.25/1M input tokens signals aggressive commoditization pressure, forcing model providers to optimize inference efficiency and potentially triggering consolidation among smaller players unable to sustain razor-thin margins."
+    "text": "With an average input price of $1.25 per million tokens, DeepSeek's pricing is spurring an API price war that pressures margins while driving rapid efficiency gains."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Annual load of 120 TWh represents a critical inflection point where AI infrastructure demand alone could necessitate accelerated nuclear deployment and grid modernization investments to maintain reliability thresholds."
+    "text": "A 120 TWh annual AI load intensifies grid strain and carbon pressure, accelerating calls for nuclear baseload and demand-shifting solutions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Converging cost pressures across compute, energy, and API services suggest the AI boom is transitioning from unsustainable exponential growth to a normalization phase where operational efficiency becomes the primary competitive differentiator."
+    "text": "Aggressive token pricing and capex compression signal exuberant sentiment, heightening bubble risk even as cost declines underpin durable growth."
   }
 }
