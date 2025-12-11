@@ -3,41 +3,41 @@
     "stock_price": 200.0,
     "market_cap": 500000000000,
     "ai_revenue_q3": 1000000000,
-    "data_center_growth": 0.25,
+    "data_center_growth": 20.0,
     "next_earnings_date": "2024-10-20",
-    "source": "https://investor.nvidia.com/financials/earnings-releases"
+    "source": "NVIDIA Q3 2024 Earnings Report"
   },
   "amd": {
     "stock_price": 150.0,
     "market_cap": 150000000000,
-    "data_center_gpu_revenue": 800000000,
-    "source": "https://ir.amd.com/financials/quarterly-earnings"
+    "data_center_gpu_revenue": 500000000,
+    "source": "AMD Q3 2204 Earnings Report"
   },
   "microsoft": {
     "stock_price": 300.0,
     "market_cap": 2000000000000,
-    "azure_ai_revenue": 5000000000,
+    "azure_ai_revenue": 2000000000,
     "openai_investment": 10000000000,
-    "source": "https://www.microsoft.com/en-us/Investor/earnings/FY-2024-Q3/Press-Release-Webcast"
+    "source": "Microsoft Q3 2024 Earnings Report"
   },
   "google": {
     "stock_price": 2500.0,
-    "market_cap": 1600000000000,
-    "ai_ml_revenue": 7000000000,
-    "tpu_costs": 1000000000,
-    "source": "https://abc.xyz/investor/earnings/"
+    "market_cap": 1700000000000,
+    "ai_ml_revenue": 1500000000,
+    "tpu_costs": 500000000,
+    "source": "Google Q3 2024 Earnings Report"
   },
   "amazon": {
-    "stock_price": 120.0,
-    "market_cap": 1200000000000,
-    "aws_ai_services_revenue": 4000000000,
-    "source": "https://ir.aboutamazon.com/financial-information/quarterly-results/default.aspx"
+    "stock_price": 1800.0,
+    "market_cap": 1800000000000,
+    "aws_ai_services_revenue": 1200000000,
+    "source": "Amazon Q3 2024 Earnings Report"
   },
   "meta": {
     "stock_price": 200.0,
     "market_cap": 500000000000,
-    "ai_infrastructure_spending": 2000000000,
-    "source": "https://investor.fb.com/investor-news/press-release-details/2024/"
+    "ai_infrastructure_spending": 800000000,
+    "source": "Meta Q3 2024 Earnings Report"
   },
   "openai": {
     "funding_rounds": [
@@ -45,21 +45,27 @@
         "round": "Series D",
         "amount": 1000000000,
         "date": "2024-09-01"
+      },
+      {
+        "round": "Series C",
+        "amount": 800000000,
+        "date": "2024-06-01"
       }
     ],
     "valuation": 100000000000,
-    "source": "https://techcrunch.com/2024/09/01/openai-series-d-funding/"
+    "revenue_model": "Subscription and API usage fees",
+    "source": "OpenAI Press Release"
   },
   "anthropic": {
     "funding": 500000000,
-    "revenue_model": "Subscription-based AI services",
-    "source": "https://www.anthropic.com/blog/series-c-funding"
+    "revenue_model": "API usage fees and enterprise solutions",
+    "source": "Anthropic Press Release"
   },
   "industry_metrics": {
-    "total_ai_market_cap": 4000000000000,
+    "total_ai_market_cap": 5000000000000,
     "average_pe_ratio": 30.0,
     "top_performer": "NVIDIA"
   },
-  "last_updated": "2024-09-20",
-  "timestamp": "2025-12-10T01:04:14.687503"
+  "last_updated": "2024-10-01",
+  "timestamp": "2025-12-10T20:18:03.454579"
 }

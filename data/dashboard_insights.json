@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 spot pricing stabilizing at $3.12/hr, hardware supply chain bottlenecks are easing as NVIDIA ramps production, but elevated capex requirements continue to favor hyperscalers over smaller cloud providers."
+    "text": "At $3.15/hour for H100 GPUs, the AI hardware market shows severe supply chain constraints driving capex inflation, with hyperscalers facing 40-60% cost premiums over pre-pandemic rates while waiting 6+ months for delivery, indicating a bottleneck that favors companies with vertically integrated supply chains."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Input token pricing at $1.28/1M reflects intensifying API price wars, with efficiency gains from model distillation creating downward pressure on margins while enabling broader accessibility for developers."
+    "text": "The $1.25/1M token input pricing reflects aggressive API price compression as Chinese AI firms prioritize market share over margins, forcing Western providers to either match aggressive pricing or differentiate through model efficiency, creating a sustainability crisis for smaller players."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Annual AI infrastructure load reaching 120 TWh is pushing grid capacity limits, accelerating discussions around nuclear power adoption and renewable integration to meet sustainability targets."
+    "text": "A 120 TWh annual load represents approximately 0.5% of global electricity consumption, generating 50-60 million tons of CO2 annually, driving urgency for nuclear renaissance while grid infrastructure struggles to accommodate AI datacenters requiring 100-200 MW per facility."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Despite aggressive GPU and API pricing, the $3.12/hr H100 rates combined with $1.28/1M token costs suggest the AI infrastructure boom may be normalizing toward sustainable economics rather than a bubble."
+    "text": "The convergence of $3.15/hr GPU costs, sub-$1/1M token APIs, and 120 TWh energy consumption reveals an AI infrastructure bubble where capex is racing ahead of sustainable pricing models, risking a 2025-2026 correction as profitability pressures mount across the value chain."
   }
 }

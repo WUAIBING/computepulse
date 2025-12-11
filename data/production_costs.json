@@ -1,40 +1,47 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": null,
-      "suggested_retail": 30000,
-      "gross_margin": null,
+      "manufacturing_cost": 3320,
+      "suggested_retail": "25000-40000",
+      "gross_margin": "85-90%",
       "cost_breakdown": {
-        "silicon": null,
-        "packaging": null,
-        "testing": null,
-        "r_and_d_allocation": null
+        "silicon": 1800,
+        "packaging": 1200,
+        "testing": 200,
+        "r_and_d_allocation": 500
       }
     },
     "a100": {
-      "manufacturing_cost": null,
-      "suggested_retail": 10000,
-      "gross_margin": null,
+      "manufacturing_cost": 2500,
+      "suggested_retail": "10000-15000",
+      "gross_margin": "75-80%",
       "cost_breakdown": {
-        "silicon": null,
-        "packaging": null,
-        "testing": null,
-        "r_and_d_allocation": null
+        "silicon": 1400,
+        "packaging": 800,
+        "testing": 150,
+        "r_and_d_allocation": 450
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": null,
-      "suggested_retail": 15000,
-      "gross_margin": null
+      "manufacturing_cost": 4000,
+      "suggested_retail": "15000-20000",
+      "gross_margin": "75-80%"
+    }
+  },
+  "intel": {
+    "arc_battlemage": {
+      "manufacturing_cost": "unavailable",
+      "suggested_retail": "unavailable",
+      "gross_margin": "unavailable"
     }
   },
   "industry_analysis": {
-    "average_gross_margin": null,
-    "cost_trend": "Increasing due to advanced node (3nm/5nm) wafer costs and CoWoS packaging shortages",
-    "main_cost_driver": "Advanced packaging (CoWoS, 3D stacking) and foundry node pricing"
+    "average_gross_margin": "60-75%",
+    "cost_trend": "Increasing due to advanced packaging (CoWoS) and rising foundry prices",
+    "main_cost_driver": "Packaging (CoWoS) and foundry wafer costs"
   },
-  "last_updated": "2023-11-15",
-  "timestamp": "2025-12-10T01:03:35.237376"
+  "last_updated": "2024-07-15",
+  "timestamp": "2025-12-11T01:01:25.813238"
 }
