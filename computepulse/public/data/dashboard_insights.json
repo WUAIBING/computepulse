@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At an average H100 price of $3.22/hour, hyperscalers must balance aggressive capacity expansion against constrained chip availability and capex exposure, making multi-sourcing and longer-term procurement pivotal for supply assurance."
+    "text": "At an average H100 price of $3.18/hr, cloud capacity is easing from 2023\u20132024 peaks, but persistent supply constraints and high capex still give hyperscalers leverage over smaller buyers and push firms to pre-commit to secure priority access."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With average input pricing at $1.25/1M tokens, providers face margin pressure from API price wars, driving rapid efficiency gains and faster, lighter-weight models to sustain competitiveness."
+    "text": "With an average input price of $1.25/1M tokens, DeepSeek is intensifying API price wars, compressing margins and forcing providers to differentiate via lower latency, higher context, or on\u2011prem/offline deployments to defend share."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual data center load imposes significant grid strain and carbon impact, accelerating interest in dispatchable power and nuclear adoption to stabilize reliability and meet decarbonization goals."
+    "text": "An annual load of 120 TWh indicates rising grid strain, driving demand for flexible peakers, storage, and a re\u2011examination of nuclear options to curb carbon intensity as AI workloads expand."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Strong capital flows into AI infrastructure are tempered by the need to reconcile high hardware costs with falling token prices, signaling that sustainable growth hinges on improving price-performance and power efficiency."
+    "text": "Commodity pricing across compute ($3.18/hr), tokens ($1.25/1M), and energy (120 TWh load) signals rapid normalization and intensified competition; if capex and data center build\u2011outs outpace efficiency gains, bubble risk rises while sustainable growth depends on unit\u2011economics discipline."
   }
 }
