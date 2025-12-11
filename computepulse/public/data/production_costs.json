@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
-      "suggested_retail": 35000,
-      "gross_margin": 90.5,
+      "manufacturing_cost": "Data not publicly disclosed",
+      "suggested_retail": 30000,
+      "gross_margin": "Data not publicly disclosed",
       "cost_breakdown": {
-        "silicon": 552,
-        "packaging": 700,
-        "testing": 150,
-        "r_and_d_allocation": 1040
+        "silicon": "Data not publicly disclosed",
+        "packaging": "Data not publicly disclosed",
+        "testing": "Data not publicly disclosed",
+        "r_and_d_allocation": "Data not publicly disclosed"
       }
     },
     "a100": {
-      "manufacturing_cost": 2000,
-      "suggested_retail": 12000,
-      "gross_margin": 83.3,
+      "manufacturing_cost": "Data not publicly disclosed",
+      "suggested_retail": 10000,
+      "gross_margin": "Data not publicly disclosed",
       "cost_breakdown": {
-        "silicon": 800,
-        "packaging": 800,
-        "testing": 200,
-        "r_and_d_allocation": 800
+        "silicon": "Data not publicly disclosed",
+        "packaging": "Data not publicly disclosed",
+        "testing": "Data not publicly disclosed",
+        "r_and_d_allocation": "Data not publicly disclosed"
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4200,
+      "manufacturing_cost": "Data not publicly disclosed",
       "suggested_retail": 15000,
-      "gross_margin": 72.0
+      "gross_margin": "Data not publicly disclosed"
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 60.0,
-    "cost_trend": "Increasing due to advanced packaging and rising foundry costs",
-    "main_cost_driver": "Advanced packaging (e.g., CoWoS)"
+    "average_gross_margin": "Data varies by product segment (e.g., >60% for high-end datacenter GPUs)",
+    "cost_trend": "Increasing due to advanced node pricing (TSMC N5/N4/N3), complex packaging (CoWoS), and higher R&D",
+    "main_cost_driver": "Foundry wafer costs (TSMC/Samsung) and advanced packaging (e.g., CoWoS)"
   },
-  "last_updated": "2024-07-01",
-  "timestamp": "2025-12-11T20:18:36.712948"
+  "last_updated": "2024-07-20",
+  "timestamp": "2025-12-11T21:16:27.751853"
 }

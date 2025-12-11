@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.15/hr for an H100, utilization and capex are tightly coupled\u2014supply constraints keep chip availability tight, meaning only the most ROI-positive workloads justify expansion and inventory turns remain slow."
+    "text": "The $3.23/hr H100 pricing reflects constrained supply chains and surging capex as enterprises race to secure AI compute capacity amid semiconductor shortages."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At $1.25 per 1M input tokens, the API market is in a price war; margins are compressing toward low single digits, so providers must push inference efficiency and model compression to sustain profitability."
+    "text": "At $1.25/1M tokens, aggressive API pricing wars are compressing margins while driving rapid efficiency gains through model optimization."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load intensifies grid strain in AI hubs and accelerates the shift to nuclear and firm renewables to manage carbon intensity and reliability."
+    "text": "The 120 TWh annual load exposes critical grid strain and accelerates nuclear adoption discussions to sustainably power expanding AI infrastructure."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment is cautiously optimistic, but overcapacity risks, rising energy costs, and cooling constraints keep growth sustainability under scrutiny."
+    "text": "Contradictory signals of high hardware costs versus competitive token pricing suggest a maturing market balancing growth sustainability with margin pressures."
   }
 }
