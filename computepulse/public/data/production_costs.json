@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3500,
-      "suggested_retail": 35000,
-      "gross_margin": 0.9,
+      "manufacturing_cost": null,
+      "suggested_retail": 30000,
+      "gross_margin": null,
       "cost_breakdown": {
-        "silicon": 2000,
-        "packaging": 1000,
-        "testing": 300,
-        "r_and_d_allocation": 200
+        "silicon": null,
+        "packaging": null,
+        "testing": null,
+        "r_and_d_allocation": null
       }
     },
     "a100": {
-      "manufacturing_cost": 2500,
-      "suggested_retail": 15000,
-      "gross_margin": 0.83,
+      "manufacturing_cost": null,
+      "suggested_retail": 10000,
+      "gross_margin": null,
       "cost_breakdown": {
-        "silicon": 1200,
-        "packaging": 800,
-        "testing": 300,
-        "r_and_d_allocation": 200
+        "silicon": null,
+        "packaging": null,
+        "testing": null,
+        "r_and_d_allocation": null
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4000,
-      "suggested_retail": 20000,
-      "gross_margin": 0.8
+      "manufacturing_cost": null,
+      "suggested_retail": 15000,
+      "gross_margin": null
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 0.6,
-    "cost_trend": "Increasing due to advanced node complexity (3nm, 5nm) and advanced packaging (CoWoS, Foveros). Wafer costs at TSMC/Samsung are rising 3-5% annually. Packaging is becoming a larger cost component.",
-    "main_cost_driver": "Advanced Packaging (e.g., CoWoS for H100, multi-die packaging for MI300X) and High-End Silicon (large die sizes on leading-edge nodes)"
+    "average_gross_margin": 60,
+    "cost_trend": "Increasing due to advanced packaging (CoWoS, 3D stacking) and rising TSMC wafer prices",
+    "main_cost_driver": "Packaging (40-50% of total cost) and R&D amortization"
   },
-  "last_updated": "2024-04-15",
-  "timestamp": "2025-12-11T17:22:22.492759"
+  "last_updated": "2024-03-15",
+  "timestamp": "2025-12-11T18:20:29.267481"
 }
