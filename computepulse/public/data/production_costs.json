@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 6500,
-      "suggested_retail": 35000,
-      "gross_margin": 81.4,
+      "manufacturing_cost": 3320,
+      "suggested_retail": 30000,
+      "gross_margin": 85.9,
       "cost_breakdown": {
-        "silicon": 4200,
-        "packaging": 1500,
-        "testing": 300,
-        "r_and_d_allocation": 500
+        "silicon": 2100,
+        "packaging": 700,
+        "testing": 120,
+        "r_and_d_allocation": 400
       }
     },
     "a100": {
-      "manufacturing_cost": 3200,
+      "manufacturing_cost": 2100,
       "suggested_retail": 15000,
-      "gross_margin": 78.7,
+      "gross_margin": 86.0,
       "cost_breakdown": {
-        "silicon": 2000,
-        "packaging": 700,
-        "testing": 150,
-        "r_and_d_allocation": 350
+        "silicon": 1300,
+        "packaging": 450,
+        "testing": 80,
+        "r_and_d_allocation": 270
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 5800,
-      "suggested_retail": 30000,
-      "gross_margin": 80.7
+      "manufacturing_cost": 4100,
+      "suggested_retail": 27000,
+      "gross_margin": 84.8
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 78.5,
-    "cost_trend": "Increasing due to advanced node pricing (TSMC N3/N5) and CoWoS packaging constraints",
-    "main_cost_driver": "TSMC CoWoS packaging capacity and 4nm/5nm wafer prices"
+    "average_gross_margin": 75.0,
+    "cost_trend": "Increasing due to advanced packaging (CoWoS) constraints and HBM3e adoption",
+    "main_cost_driver": "Packaging (interposer/TSV) and HBM"
   },
-  "last_updated": "2024-07-27",
-  "timestamp": "2025-12-11T04:32:18.339335"
+  "last_updated": "2024-04-15",
+  "timestamp": "2025-12-11T05:18:03.844759"
 }
