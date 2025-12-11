@@ -5,7 +5,7 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 5x more messages than free users, access to GPT-4o, GPT-4, and GPT-3.5"
+        "monthly_limit": "Up to 80 messages per 3 hours"
       },
       "efficiency_score": 85
     },
@@ -13,7 +13,7 @@
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 75
+      "efficiency_score": 60
     }
   },
   "anthropic": {
@@ -22,15 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, priority access during high traffic"
+        "monthly_limit": "Up to 5x more usage than free tier"
       },
       "efficiency_score": 90
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 95
+      "subscription_alternative": {
+        "claude_pro": 20.0,
+        "monthly_limit": "Access to all Claude models including Haiku"
+      },
+      "efficiency_score": 98
     }
   },
   "google": {
@@ -38,63 +41,95 @@
       "input_price_per_million": 0.5,
       "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "ai_premium": 19.99,
-        "monthly_limit": "Access to Gemini Advanced in Google One"
+        "ai_studio": "Free tier with 60 requests per minute",
+        "google_cloud": "Varies by plan"
       },
-      "efficiency_score": 92
+      "efficiency_score": 97
     },
     "gemini_ultra": {
-      "input_price_per_million": 3.0,
-      "output_price_per_million": 9.0,
-      "subscription_alternative": null,
-      "efficiency_score": 88
-    }
-  },
-  "meta": {
-    "llama_3": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
-        "hosting_cost": "Variable based on deployment platform",
-        "monthly_limit": "No limits for open-source model"
+        "advanced": "Available through Google Cloud AI Platform"
       },
-      "efficiency_score": 93
+      "efficiency_score": null
+    }
+  },
+  "meta": {
+    "llama_3_70b": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "open_source": "Free to use and self-host",
+        "cloud_providers": "Pricing varies by provider"
+      },
+      "efficiency_score": 100
+    },
+    "llama_3_8b": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "open_source": "Free to use and self-host",
+        "cloud_providers": "Pricing varies by provider"
+      },
+      "efficiency_score": 100
     }
   },
   "microsoft": {
-    "copilot": {
+    "copilot_pro": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
         "copilot_pro": 20.0,
-        "monthly_limit": "Priority access to latest models, during peak times"
+        "monthly_limit": "Priority access to latest models during peak times"
       },
-      "efficiency_score": 80
+      "efficiency_score": 95
+    },
+    "copilot_m365": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_m365": 30.0,
+        "monthly_limit": "Unlimited usage within Microsoft 365 apps"
+      },
+      "efficiency_score": 92
     }
   },
   "deepseek": {
-    "deepseek_api": {
+    "deepseek_v2": {
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 98
+      "subscription_alternative": {
+        "api_access": "Pay-per-use only"
+      },
+      "efficiency_score": 99
     }
   },
   "qwen": {
-    "qwen_plus": {
-      "input_price_per_million": 0.8,
+    "qwen_turbo": {
+      "input_price_per_million": 1.0,
       "output_price_per_million": 2.0,
-      "subscription_alternative": null,
-      "efficiency_score": 90
+      "subscription_alternative": {
+        "cloud_subscription": "Available through Alibaba Cloud"
+      },
+      "efficiency_score": 94
+    },
+    "qwen_plus": {
+      "input_price_per_million": 2.0,
+      "output_price_per_million": 4.0,
+      "subscription_alternative": {
+        "cloud_subscription": "Available through Alibaba Cloud"
+      },
+      "efficiency_score": 88
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.5,
-    "average_output_cost": 7.5,
-    "most_efficient": "DeepSeek API",
-    "subscription_adoption_rate": 0.35,
-    "trend": "Prices decreasing steadily as competition increases, with Chinese models offering significantly lower costs while maintaining competitive performance"
+    "average_input_cost": 2.37,
+    "average_output_cost": 7.36,
+    "most_efficient": "Llama models (open source)",
+    "subscription_adoption_rate": 72,
+    "trend": "Overall prices decreasing by 15-30% in 2024, with subscription models becoming dominant for individual users"
   },
-  "last_updated": "2024-06-15",
-  "timestamp": "2025-12-11T18:22:54.513101"
+  "last_updated": "June 2024",
+  "timestamp": "2025-12-11T19:16:47.347397"
 }
