@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The $3.15/hr H100 pricing reflects tight supply constraints and high capex barriers, as chip availability remains the primary bottleneck preventing scaled AI infrastructure deployment."
+    "text": "With the average H100 spot price pinned near $3.20/hr, chip availability is improving but buyers still face allocation bottlenecks, prompting tier-1 cloud providers to diversify suppliers and structure capex through joint ventures rather than spot purchasing."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The $1.25/1M token input pricing signals aggressive API price wars among model providers, with efficiency gains now determining competitive survival rather than raw capability."
+    "text": "At an average input price of $1.25 per million tokens, API price wars are compressing margins, making throughput and efficiency the differentiators as providers invest in sparsity, KV-cache optimization, and specialized hardware to win model competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "The 120 TWh annual load represents critical grid strain thresholds that demand immediate nuclear adoption strategies to maintain AI infrastructure growth without carbon penalties."
+    "text": "A 120 TWh annual load indicates sustained grid strain that is accelerating behind-the-meter generation and nuclear adoption to curb carbon intensity while stabilizing data center power procurement."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Current AI infrastructure valuations show bubble characteristics with unsustainable growth rates, as capital efficiency metrics lag behind deployment pace, creating systemic risk exposure."
+    "text": "Hardware costs easing toward ~$3.20/hr for H100 and API rates averaging ~$1.25 per million tokens are sustaining rapid model deployment, but a 120 TWh energy footprint and capex commitments elevate bubble and sustainability risks."
   }
 }
