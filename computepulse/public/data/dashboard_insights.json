@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.16/hr for H100s, persistent supply constraints are limiting new chip availability, pushing hyperscalers to defer capex until inventory normalizes or cheaper alternatives emerge."
+    "text": "The $3.15/hr H100 pricing reflects tight supply constraints and high capex barriers, as chip availability remains the primary bottleneck preventing scaled AI infrastructure deployment."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek\u2019s $1.25/1M input token average compresses API margins and escalates price competition, accelerating a shift toward more efficient models and aggressive inference optimization."
+    "text": "The $1.25/1M token input pricing signals aggressive API price wars among model providers, with efficiency gains now determining competitive survival rather than raw capability."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh of annual AI load amplifies grid strain, likely accelerating nuclear and long-duration storage adoption to stabilize baseload and curb carbon intensity."
+    "text": "The 120 TWh annual load represents critical grid strain thresholds that demand immediate nuclear adoption strategies to maintain AI infrastructure growth without carbon penalties."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Cooling hardware capex amid token price deflation suggests industry sentiment is cautious yet resilient, lowering bubble risk while sustaining AI growth through efficiency gains."
+    "text": "Current AI infrastructure valuations show bubble characteristics with unsustainable growth rates, as capital efficiency metrics lag behind deployment pace, creating systemic risk exposure."
   }
 }

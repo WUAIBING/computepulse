@@ -1,40 +1,47 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": null,
-      "suggested_retail": 33000,
-      "gross_margin": null,
+      "manufacturing_cost": 3320,
+      "suggested_retail": 35000,
+      "gross_margin": 0.91,
       "cost_breakdown": {
-        "silicon": null,
-        "packaging": null,
-        "testing": null,
-        "r_and_d_allocation": null
+        "silicon": 2500,
+        "packaging": 650,
+        "testing": 100,
+        "r_and_d_allocation": 70
       }
     },
     "a100": {
-      "manufacturing_cost": null,
+      "manufacturing_cost": 2500,
       "suggested_retail": 15000,
-      "gross_margin": null,
+      "gross_margin": 0.83,
       "cost_breakdown": {
-        "silicon": null,
-        "packaging": null,
-        "testing": null,
-        "r_and_d_allocation": null
+        "silicon": 1800,
+        "packaging": 500,
+        "testing": 100,
+        "r_and_d_allocation": 100
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": null,
+      "manufacturing_cost": 4000,
       "suggested_retail": 15000,
-      "gross_margin": null
+      "gross_margin": 0.73
+    }
+  },
+  "intel": {
+    "arc_gpu": {
+      "manufacturing_cost": 280,
+      "suggested_retail": 400,
+      "gross_margin": 0.3
     }
   },
   "industry_analysis": {
-    "average_gross_margin": "60-70% (AI GPUs)",
-    "cost_trend": "Increasing due to advanced packaging (CoWoS) and wafer price hikes",
-    "main_cost_driver": "Packaging (interposer, HBM) and TSMC wafer costs"
+    "average_gross_margin": 0.65,
+    "cost_trend": "Increasing due to advanced node (N3/N2) and complex packaging (CoWoS)",
+    "main_cost_driver": "Advanced node wafer costs and advanced packaging"
   },
-  "last_updated": "2024-07-20",
-  "timestamp": "2025-12-11T07:20:10.775415"
+  "last_updated": "2024-09-01",
+  "timestamp": "2025-12-11T08:21:37.804149"
 }
