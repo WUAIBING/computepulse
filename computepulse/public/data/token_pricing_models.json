@@ -5,18 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Higher usage limits than free tier, with access to GPT-4o. Usage may be limited during peak hours."
+        "monthly_limit": "Usage caps on GPT-4o apply during peak hours (e.g., up to 80 messages every 3 hours)."
       },
-      "efficiency_score": 9
+      "efficiency_score": 50.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
-      "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Included in ChatGPT Plus, but GPT-4o is the new default flagship model with higher limits."
-      },
-      "efficiency_score": 6
+      "subscription_alternative": null,
+      "efficiency_score": 22.5
     }
   },
   "anthropic": {
@@ -25,96 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with ability to send more messages and access to higher-capacity models like Claude 3.5 Sonnet."
+        "monthly_limit": "5x higher usage limits than the free tier, with a higher capacity for processing complex documents."
       },
-      "efficiency_score": 8.5
-    },
-    "claude_3_haiku": {
-      "input_price_per_million": 0.25,
-      "output_price_per_million": 1.25,
-      "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "Usage for Haiku is counted towards the Pro plan's higher limits."
-      },
-      "efficiency_score": 9.5
-    }
-  },
-  "google": {
-    "gemini_1_5_pro": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Access to 1.5 Pro through Gemini Advanced with higher usage caps than the free tier."
-      },
-      "efficiency_score": 8
-    },
-    "gemini_1_5_flash": {
-      "input_price_per_million": 0.075,
-      "output_price_per_million": 0.3,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Access to Flash is included, offering a faster, cheaper alternative within the subscription limits."
-      },
-      "efficiency_score": 10
-    },
-    "gemini_ultra": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Gemini Ultra is the underlying model for Gemini Advanced, and is not available via separate API pricing yet. Access is bundled in the subscription."
-      },
-      "efficiency_score": 7
-    }
-  },
-  "meta": {
-    "llama_3_models": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": null,
-      "efficiency_score": 8,
-      "pricing_model": "Open Source. Models are free to download and run. Costs are associated with self-hosting (hardware, electricity) or using managed services from cloud providers (AWS, GCP, Azure) which charge per-token/hour. This avoids direct pricing from Meta."
-    }
-  },
-  "microsoft": {
-    "copilot_subscriptions": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "copilot_for_m365": 30.0,
-        "monthly_limit": "Copilot Pro offers priority access to latest models. Copilot for M365 is deeply integrated into the Microsoft 365 suite with enterprise-grade management and usage policies."
-      },
-      "efficiency_score": 7.5,
-      "pricing_model": "Purely subscription-based for end-users. Costs are abstracted away from per-token usage. Back-end often uses OpenAI models."
-    }
-  },
-  "deepseek": {
-    "deepseek_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 10,
-      "pricing_model": "Aggressive pay-as-you-go API pricing to compete on the global stage."
-    }
-  },
-  "qwen": {
-    "qwen_turbo": {
-      "input_price_per_million": 0.27,
-      "output_price_per_million": 0.27,
-      "subscription_alternative": null,
-      "efficiency_score": 9,
-      "pricing_model": "Pay-as-you-go API via Alibaba Cloud, often with free tier allowances to encourage adoption."
+      "efficiency_score": 50.0
     }
   },
   "pricing_analysis": {
-    "average_input_cost_top_tier": 3.83,
-    "average_output_cost_top_tier": 13.5,
-    "most_efficient_overall": "Gemini 1.5 Flash and DeepSeek V2 represent a new tier of ultra-efficient models. For top-tier capability, Claude 3.5 Sonnet and GPT-4o are leading.",
-    "subscription_adoption_rate": "High. The $20/month price point for flagship model access (ChatGPT Plus, Claude Pro, Copilot Pro) has become the market standard for professionals and power users.",
-    "trend": "A fierce price war is driving down costs dramatically. New model releases (GPT-4o, Gemini 1.5 Flash) are significantly cheaper than previous generations. The strategy has shifted to tiered ecosystems (cheap/fast, mid-tier, powerful/expensive) and commoditizing API access while using subscriptions for premium consumer products. Chinese models like DeepSeek and Qwen are entering with highly disruptive pricing."
+    "average_input_cost": 6.0,
+    "average_output_cost": 20.0,
+    "most_efficient": "gpt_4o & claude_3_5_sonnet (tied)",
+    "subscription_adoption_rate": "High (estimated 15-20% of active ChatGPT/Claude users opt for paid tiers)",
+    "trend": "Aggressive price compression for flagship models, with a new focus on small, high-volume, low-cost models (e.g., GPT-4o mini, Claude 3 Haiku). Subscriptions are evolving from simple access to value-added bundles including higher limits, advanced tools, and multi-modal features. Enterprise pricing is increasingly differentiated by security, fine-tuning, and support rather than just volume discounts."
   },
-  "last_updated": "2024-06-03",
-  "timestamp": "2025-12-11T05:19:39.305629"
+  "last_updated": "2024-07-11",
+  "timestamp": "2025-12-11T06:26:33.699956"
 }
