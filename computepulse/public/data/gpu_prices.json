@@ -3,8 +3,7 @@
     "provider": "AWS",
     "gpu": "H100",
     "price": 12.29,
-    "region": "us-east-1",
-    "notes": "p5.48xlarge (8x H100), price per GPU"
+    "region": "us-east-1"
   },
   {
     "provider": "Azure",
@@ -76,16 +75,14 @@
   {
     "provider": "RunPod",
     "gpu": "H100",
-    "price": 1.3,
-    "region": "US",
-    "notes": "Secure Cloud (GPU + pod fee)"
+    "price": 4.49,
+    "region": "US"
   },
   {
     "provider": "RunPod",
     "gpu": "A100",
-    "price": 1.1,
-    "region": "US",
-    "notes": "A100 80GB (GPU + pod fee)"
+    "price": 1.79,
+    "region": "US"
   },
   {
     "provider": "CoreWeave",
@@ -96,9 +93,8 @@
   {
     "provider": "AWS",
     "gpu": "A100",
-    "price": 4.1,
-    "region": "us-east-1",
-    "notes": "p4d.24xlarge (8x A100 40GB), price per GPU"
+    "price": 4.69,
+    "region": "us-east-1"
   },
   {
     "provider": "Google Cloud",
@@ -151,9 +147,8 @@
   {
     "provider": "Vast.ai",
     "gpu": "A100",
-    "price": 0.9,
-    "region": "US",
-    "notes": "Average market price (80GB)"
+    "price": 1.1,
+    "region": "US"
   },
   {
     "provider": "CoreWeave",
@@ -194,9 +189,8 @@
   {
     "provider": "Lambda",
     "gpu": "H100",
-    "price": 2.5,
-    "region": "us-west-1",
-    "notes": "Base price per GPU (80GB)"
+    "price": 2.99,
+    "region": "us-east-1"
   },
   {
     "provider": "Google Cloud",
@@ -387,9 +381,8 @@
   {
     "provider": "Vast.ai",
     "gpu": "H100",
-    "price": 1.9,
-    "region": "US",
-    "notes": "Average market price (80GB)"
+    "price": 4.2,
+    "region": "US"
   },
   {
     "provider": "\u817e\u8baf\u4e91",
@@ -460,30 +453,26 @@
   {
     "provider": "Lambda",
     "gpu": "A100",
-    "price": 1.75,
-    "region": "us-west-1",
-    "notes": "Base price per GPU (80GB)"
+    "price": 1.99,
+    "region": "us-east-1"
   },
   {
     "provider": "RunPod",
     "gpu": "RTX 4090",
-    "price": 0.6,
-    "region": "US",
-    "notes": "GPU + pod fee"
+    "price": 0.49,
+    "region": "US"
   },
   {
     "provider": "Vast.ai",
     "gpu": "RTX 4090",
-    "price": 0.3,
-    "region": "US",
-    "notes": "Average market price"
+    "price": 0.45,
+    "region": "US"
   },
   {
     "provider": "Lambda",
     "gpu": "RTX 4090",
     "price": 0.75,
-    "region": "us-west-1",
-    "notes": "Base price per GPU"
+    "region": "us-east-1"
   },
   {
     "provider": "AWS",
