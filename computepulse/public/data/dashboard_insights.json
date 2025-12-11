@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 spot averages around $3.09/hr, hyperscalers are locking in long\u2011term supply while Chinese labs contend with export constraints, accelerating a shift to domestic accelerators and reshaping capex allocation across the supply chain."
+    "text": "At $3.20/hour for H100 access, current market pricing reflects normalized supply chains post-2024 shortages, though persistent allocation constraints continue to drive capex inflation for hyperscalers seeking guaranteed compute capacity."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At an average input price near $1.25/1M tokens, the API price war is compressing margins and forcing providers to differentiate on throughput, caching, and context windows rather than headline price alone."
+    "text": "API pricing at $1.25/1M input tokens signals aggressive commoditization pressure, forcing model providers to optimize inference efficiency and potentially triggering consolidation among smaller players unable to sustain razor-thin margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "With data center load around 120 TWh/yr, the grid is feeling the strain; developers are increasingly turning to SMRs, high\u2011efficiency cooling, and on\u2011site renewables to curb carbon footprints while keeping latency targets on track."
+    "text": "Annual load of 120 TWh represents a critical inflection point where AI infrastructure demand alone could necessitate accelerated nuclear deployment and grid modernization investments to maintain reliability thresholds."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "AI sentiment remains buoyant but guarded as cost\u2011compression and power constraints pressure growth; sustainability and hardware efficiency are now central to long\u2011term viability."
+    "text": "Converging cost pressures across compute, energy, and API services suggest the AI boom is transitioning from unsustainable exponential growth to a normalization phase where operational efficiency becomes the primary competitive differentiator."
   }
 }

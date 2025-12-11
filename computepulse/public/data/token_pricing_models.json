@@ -5,15 +5,15 @@
       "output_price_per_million": 15,
       "subscription_alternative": {
         "chatgpt_plus": 20,
-        "monthly_limit": "Approximately 40 messages every 3 hours"
+        "monthly_limit": "Up to 80 messages every 3 hours with GPT-4 models"
       },
-      "efficiency_score": 85
+      "efficiency_score": 8
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10,
       "output_price_per_million": 30,
       "subscription_alternative": null,
-      "efficiency_score": 70
+      "efficiency_score": 6
     }
   },
   "anthropic": {
@@ -22,9 +22,15 @@
       "output_price_per_million": 15,
       "subscription_alternative": {
         "claude_pro": 20,
-        "monthly_limit": "About 100 messages per 8-hour period"
+        "monthly_limit": "Higher usage limits than free tier, access to Claude 3 Opus"
       },
-      "efficiency_score": 80
+      "efficiency_score": 9
+    },
+    "claude_3_haiku": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 1.25,
+      "subscription_alternative": null,
+      "efficiency_score": 10
     }
   },
   "google": {
@@ -32,30 +38,25 @@
       "input_price_per_million": 0.5,
       "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "gemini_advanced": 20,
-        "monthly_limit": "Unlimited usage in Gemini Advanced"
+        "google_one_ai_premium": 19.99,
+        "monthly_limit": "1,000 queries per month"
       },
-      "efficiency_score": 90
+      "efficiency_score": 9
     },
     "gemini_ultra": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "gemini_advanced": 20,
-        "monthly_limit": "Available through Gemini Advanced only"
-      },
-      "efficiency_score": null
+      "input_price_per_million": 3,
+      "output_price_per_million": 9,
+      "subscription_alternative": null,
+      "efficiency_score": 7
     }
   },
   "meta": {
     "llama_3": {
       "input_price_per_million": 0,
       "output_price_per_million": 0,
-      "subscription_alternative": {
-        "self_hosted": "Free model, infrastructure costs apply",
-        "monthly_limit": "Unlimited on self-hosted infrastructure"
-      },
-      "efficiency_score": 100
+      "subscription_alternative": null,
+      "efficiency_score": 8,
+      "note": "Open source version is free. Enterprise deployment requires custom pricing"
     }
   },
   "microsoft": {
@@ -64,34 +65,47 @@
       "output_price_per_million": null,
       "subscription_alternative": {
         "copilot_pro": 20,
-        "monthly_limit": "Unlimited usage for individuals"
+        "copilot_m365": 30,
+        "monthly_limit": "Varies by integration"
       },
-      "efficiency_score": null
+      "efficiency_score": 7
     }
   },
   "deepseek": {
-    "deepseek_llm": {
+    "deepseek_coder": {
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 98
+      "efficiency_score": 9
+    },
+    "deepseek_llm": {
+      "input_price_per_million": 1,
+      "output_price_per_million": 2,
+      "subscription_alternative": null,
+      "efficiency_score": 7
     }
   },
   "qwen": {
     "qwen_plus": {
-      "input_price_per_million": 0.4,
-      "output_price_per_million": 1.2,
+      "input_price_per_million": 4,
+      "output_price_per_million": 8,
       "subscription_alternative": null,
-      "efficiency_score": 92
+      "efficiency_score": 8
+    },
+    "qwen_turbo": {
+      "input_price_per_million": 2,
+      "output_price_per_million": 6,
+      "subscription_alternative": null,
+      "efficiency_score": 9
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.29,
-    "average_output_cost": 7.57,
-    "most_efficient": "Llama 3",
-    "subscription_adoption_rate": 0.67,
-    "trend": "Prices are decreasing as competition increases, with open-source alternatives providing the most cost-effective options. Subscription models are becoming the primary revenue stream for consumer access."
+    "average_input_cost": 2.889,
+    "average_output_cost": 8.803,
+    "most_efficient": "Claude 3.5 Sonnet",
+    "subscription_adoption_rate": 35,
+    "trend": "Token costs decreasing 50%+ year-over-year while capabilities increase, with growing preference for subscription models among individuals and pay-per-token for enterprises"
   },
-  "last_updated": "2024-11-01",
-  "timestamp": "2025-12-11T15:18:27.354607"
+  "last_updated": "2024-06-15",
+  "timestamp": "2025-12-11T16:23:11.314053"
 }

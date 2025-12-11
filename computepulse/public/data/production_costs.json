@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
-      "suggested_retail": 30000,
-      "gross_margin": 89,
+      "manufacturing_cost": 12000,
+      "suggested_retail": 35000,
+      "gross_margin": 65.7,
       "cost_breakdown": {
-        "silicon": 1500,
-        "packaging": 1000,
-        "testing": 320,
+        "silicon": 300,
+        "packaging": 850,
+        "testing": 75,
         "r_and_d_allocation": 500
       }
     },
     "a100": {
-      "manufacturing_cost": 2200,
+      "manufacturing_cost": 7800,
       "suggested_retail": 15000,
-      "gross_margin": 85,
+      "gross_margin": 48.0,
       "cost_breakdown": {
-        "silicon": 950,
-        "packaging": 600,
-        "testing": 250,
-        "r_and_d_allocation": 400
+        "silicon": 180,
+        "packaging": 500,
+        "testing": 50,
+        "r_and_d_allocation": 300
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 3600,
-      "suggested_retail": 28000,
-      "gross_margin": 87
+      "manufacturing_cost": 25500,
+      "suggested_retail": 40000,
+      "gross_margin": 36.25
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 85,
-    "cost_trend": "Increasing due to advanced node premiums and complex packaging",
-    "main_cost_driver": "TSMC CoWoS packaging and 4nm/5nm wafer costs"
+    "average_gross_margin": 48,
+    "cost_trend": "Increasing due to rising HBM and advanced packaging costs",
+    "main_cost_driver": "HBM memory and advanced packaging"
   },
-  "last_updated": "2024-04-10",
-  "timestamp": "2025-12-11T15:16:31.323609"
+  "last_updated": "June 2024",
+  "timestamp": "2025-12-11T16:21:44.142546"
 }
