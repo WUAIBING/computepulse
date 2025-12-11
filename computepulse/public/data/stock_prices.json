@@ -1,5 +1,5 @@
 {
-  "updated_at": "2025-12-11T03:53:46.795211",
+  "updated_at": "2025-12-11T04:28:36.319685",
   "source": "Yahoo Finance API (Direct)",
   "note": "直接 API 调用，100% 精确",
   "prices": {
@@ -12,7 +12,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.050532",
+      "timestamp": "2025-12-11T04:28:34.601560",
       "source": "Yahoo Finance API"
     },
     "AMD": {
@@ -24,7 +24,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.106861",
+      "timestamp": "2025-12-11T04:28:34.692593",
       "source": "Yahoo Finance API"
     },
     "GOOGL": {
@@ -36,7 +36,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.170107",
+      "timestamp": "2025-12-11T04:28:34.775053",
       "source": "Yahoo Finance API"
     },
     "AAPL": {
@@ -48,7 +48,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.284834",
+      "timestamp": "2025-12-11T04:28:34.899740",
       "source": "Yahoo Finance API"
     },
     "AMZN": {
@@ -60,7 +60,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.377689",
+      "timestamp": "2025-12-11T04:28:34.971428",
       "source": "Yahoo Finance API"
     },
     "MSFT": {
@@ -72,7 +72,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.469635",
+      "timestamp": "2025-12-11T04:28:35.072390",
       "source": "Yahoo Finance API"
     },
     "META": {
@@ -84,7 +84,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.526929",
+      "timestamp": "2025-12-11T04:28:35.144460",
       "source": "Yahoo Finance API"
     },
     "TSLA": {
@@ -96,7 +96,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.581402",
+      "timestamp": "2025-12-11T04:28:35.214720",
       "source": "Yahoo Finance API"
     },
     "BIDU": {
@@ -108,7 +108,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.636063",
+      "timestamp": "2025-12-11T04:28:35.289125",
       "source": "Yahoo Finance API"
     },
     "BABA": {
@@ -120,7 +120,7 @@
       "currency": "USD",
       "exchange": "NYQ",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.694854",
+      "timestamp": "2025-12-11T04:28:35.361334",
       "source": "Yahoo Finance API"
     },
     "JD": {
@@ -132,7 +132,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.807248",
+      "timestamp": "2025-12-11T04:28:35.435339",
       "source": "Yahoo Finance API"
     },
     "PDD": {
@@ -144,7 +144,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.869116",
+      "timestamp": "2025-12-11T04:28:35.504925",
       "source": "Yahoo Finance API"
     },
     "NTES": {
@@ -156,7 +156,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:45.995086",
+      "timestamp": "2025-12-11T04:28:35.591749",
       "source": "Yahoo Finance API"
     },
     "BILI": {
@@ -168,7 +168,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:46.050360",
+      "timestamp": "2025-12-11T04:28:35.664728",
       "source": "Yahoo Finance API"
     },
     "NIO": {
@@ -180,7 +180,7 @@
       "currency": "USD",
       "exchange": "NYQ",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:46.111947",
+      "timestamp": "2025-12-11T04:28:35.739203",
       "source": "Yahoo Finance API"
     },
     "XPEV": {
@@ -192,7 +192,7 @@
       "currency": "USD",
       "exchange": "NYQ",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:46.222952",
+      "timestamp": "2025-12-11T04:28:35.808793",
       "source": "Yahoo Finance API"
     },
     "LI": {
@@ -204,7 +204,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:46.313828",
+      "timestamp": "2025-12-11T04:28:35.882111",
       "source": "Yahoo Finance API"
     },
     "EDU": {
@@ -216,7 +216,7 @@
       "currency": "USD",
       "exchange": "NYQ",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:46.469070",
+      "timestamp": "2025-12-11T04:28:36.002698",
       "source": "Yahoo Finance API"
     },
     "TCEHY": {
@@ -228,19 +228,19 @@
       "currency": "USD",
       "exchange": "PNK",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:46.576839",
+      "timestamp": "2025-12-11T04:28:36.098073",
       "source": "Yahoo Finance API"
     },
     "MPNGY": {
       "symbol": "MPNGY",
-      "price": 25.82,
+      "price": 25.8,
       "previous_close": 24.989999771118164,
-      "change": 0.83,
-      "change_percent": 3.32,
+      "change": 0.81,
+      "change_percent": 3.24,
       "currency": "USD",
       "exchange": "PNK",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:46.659911",
+      "timestamp": "2025-12-11T04:28:36.172013",
       "source": "Yahoo Finance API"
     },
     "XIACY": {
@@ -252,7 +252,7 @@
       "currency": "USD",
       "exchange": "PNK",
       "market_state": "unknown",
-      "timestamp": "2025-12-11T03:53:46.735544",
+      "timestamp": "2025-12-11T04:28:36.242613",
       "source": "Yahoo Finance API"
     }
   }

@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.13/hr for H100 rentals, the hardware scarcity premium persists as major cloud providers maintain capacity allocation strategies while enterprises face 6-12 month lead times, suggesting sustained capex pressure through 2024."
+    "text": "H100 pricing at $3.19/hour reflects constrained supply chains driving capex inflation, as GPU scarcity forces hyperscalers to pay premium rates for critical AI compute capacity."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With input pricing at $1.25/1M tokens, the API market shows aggressive compression as smaller models drive price competition below $2/1M, forcing premium providers to differentiate through speed and specialized capabilities rather than cost."
+    "text": "Input token pricing at $1.25/1M signals intense API price competition, with providers racing to optimize efficiency and pass savings to customers while maintaining model quality differentiation."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh annual AI load represents a 15% grid demand increase in key markets, with training clusters contributing 40% of total consumption, highlighting the urgent need for dedicated renewable capacity and location-based optimization strategies."
+    "text": "120 TWh annual load creates severe grid strain, making nuclear baseload power increasingly essential to meet AI infrastructure's relentless energy demands while reducing carbon footprint."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment remains cautiously optimistic despite valuation compression, as enterprise adoption curves outpace hype cycles, though sustainability concerns around hardware obsolescence and energy costs may trigger a 2024 consolidation phase."
+    "text": "The industry's explosive growth trajectory faces sustainability headwinds from soaring compute costs and energy consumption, creating bubble risks as capex requirements outpace revenue growth."
   }
 }
