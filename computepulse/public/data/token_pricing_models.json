@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Usage-based caps, e.g., up to 80 messages every 3 hours on GPT-4o."
+        "monthly_limit": "Up to 5x more usage than free tier for GPT-4o, with limits resetting every few hours"
       },
-      "efficiency_score": 10.0
+      "efficiency_score": 2.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 20.0
+      "efficiency_score": 1.0
     }
   },
   "anthropic": {
@@ -22,73 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "Usage-based caps, with a higher limit than the free tier (e.g., ~5x more usage)."
+        "monthly_limit": "5x more usage than free tier, with a higher maximum spend cap"
       },
-      "efficiency_score": 9.0
-    }
-  },
-  "google": {
-    "gemini_1_5_pro": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
-      "subscription_alternative": null,
-      "efficiency_score": 7.0
-    },
-    "gemini_ultra": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Included as part of Google One AI Premium plan, no explicit token limits for users."
-      },
-      "efficiency_score": null
-    }
-  },
-  "meta": {
-    "llama_3_models": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "description": "Open-source models. No direct subscription from Meta. Pricing is determined by third-party hosting platforms (e.g., Replicate, AWS Bedrock, Hugging Face) based on compute costs, not tokens."
-      },
-      "efficiency_score": null
-    }
-  },
-  "microsoft": {
-    "copilot_pro": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "individual": 20.0,
-        "enterprise": 30.0,
-        "monthly_limit": "Usage-based, integrated into Microsoft 365 apps for enterprise; separate access tiers for individuals."
-      },
-      "efficiency_score": null
-    }
-  },
-  "deepseek": {
-    "deepseek_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 0.21
-    }
-  },
-  "alibaba_qwen": {
-    "qwen_max": {
-      "input_price_per_million": 2.0,
-      "output_price_per_million": 6.0,
-      "subscription_alternative": null,
-      "efficiency_score": 4.0
+      "efficiency_score": 1.2
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 4.11,
-    "average_output_cost": 12.11,
-    "most_efficient": "DeepSeek-V2",
-    "subscription_adoption_rate": "High and growing. The $20/month price point set by OpenAI, Anthropic, and Google is becoming the standard for consumer access to top-tier models, driving mass adoption.",
-    "trend": "A dual trend is emerging: a 'race to the bottom' for pay-per-token API prices, driven by highly efficient models like DeepSeek and open-source alternatives, and a 'consolidation at the top' where leading providers standardize premium model access under a single $20/month subscription."
+    "average_input_cost": 6.0,
+    "average_output_cost": 20.0,
+    "most_efficient": "OpenAI GPT-4o (for tier-1 frontier models)",
+    "subscription_adoption_rate": "N/A (Publicly available data not published)",
+    "trend": "Aggressive price competition is the dominant trend in 2024, driven by the release of highly efficient open-weight models like Meta's Llama 3 and DeepSeek. Frontier models from OpenAI and Anthropic have significantly cut prices (e.g., GPT-4o is ~50% cheaper than GPT-4 Turbo). There's a bifurcation: consumer products use subscriptions (ChatGPT Plus, Claude Pro) for access with usage limits, while developer/enterprise access is purely pay-per-token. Extremely low-cost models from China (Qwen, DeepSeek) are setting a new baseline for cost-efficiency, forcing western providers to compete on value and performance per dollar, not just capability."
   },
-  "last_updated": "2024-06-05",
-  "timestamp": "2025-12-11T02:56:54.886050"
+  "last_updated": "2024-05-29",
+  "timestamp": "2025-12-11T03:57:34.444064"
 }

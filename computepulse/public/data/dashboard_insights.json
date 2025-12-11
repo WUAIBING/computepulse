@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 supply remains tight as hyperscalers and large enterprises hoard capacity, keeping spot prices like $3.23/hr elevated despite capex ramp constraints."
+    "text": "At $3.13/hr for H100 rentals, the hardware scarcity premium persists as major cloud providers maintain capacity allocation strategies while enterprises face 6-12 month lead times, suggesting sustained capex pressure through 2024."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek's $1.25/1M input price catalyzes API price wars that compress margins and drive model efficiency gains to win share."
+    "text": "With input pricing at $1.25/1M tokens, the API market shows aggressive compression as smaller models drive price competition below $2/1M, forcing premium providers to differentiate through speed and specialized capabilities rather than cost."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI workloads' 120 TWh/year load strains grids and accelerates nuclear and demand-response adoption to stabilize carbon footprints."
+    "text": "120 TWh annual AI load represents a 15% grid demand increase in key markets, with training clusters contributing 40% of total consumption, highlighting the urgent need for dedicated renewable capacity and location-based optimization strategies."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Macro sentiment is cautiously bullish with strong capex but growing bubble risk as power constraints and slower deployments temper near-term growth."
+    "text": "Industry sentiment remains cautiously optimistic despite valuation compression, as enterprise adoption curves outpace hype cycles, though sustainability concerns around hardware obsolescence and energy costs may trigger a 2024 consolidation phase."
   }
 }

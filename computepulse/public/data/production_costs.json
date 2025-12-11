@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
+      "manufacturing_cost": 6500,
       "suggested_retail": 30000,
-      "gross_margin": 89,
+      "gross_margin": 0.78,
       "cost_breakdown": {
-        "silicon": 2600,
-        "packaging": 450,
-        "testing": 150,
-        "r_and_d_allocation": 120
+        "silicon": 4000,
+        "packaging": 1500,
+        "testing": 500,
+        "r_and_d_allocation": 500
       }
     },
     "a100": {
-      "manufacturing_cost": 2100,
-      "suggested_retail": 15000,
-      "gross_margin": 86,
+      "manufacturing_cost": 2500,
+      "suggested_retail": 10000,
+      "gross_margin": 0.75,
       "cost_breakdown": {
         "silicon": 1500,
-        "packaging": 350,
-        "testing": 100,
-        "r_and_d_allocation": 150
+        "packaging": 600,
+        "testing": 200,
+        "r_and_d_allocation": 200
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4100,
-      "suggested_retail": 40000,
-      "gross_margin": 90
+      "manufacturing_cost": 5500,
+      "suggested_retail": 15000,
+      "gross_margin": 0.63
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 85,
-    "cost_trend": "Increasing due to advanced packaging and TSMC CoWoS capacity constraints",
-    "main_cost_driver": "Advanced packaging (CoWoS, 3D stacking)"
+    "average_gross_margin": 0.65,
+    "cost_trend": "Increasing due to advanced node pricing (TSMC N4P/N3) and CoWoS packaging constraints",
+    "main_cost_driver": "Advanced packaging (CoWoS) and wafer prices"
   },
-  "last_updated": "2024-04-15",
-  "timestamp": "2025-12-11T02:55:14.650448"
+  "last_updated": "2024-07-15",
+  "timestamp": "2025-12-11T03:56:33.876888"
 }
