@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "Sustained H100 spot prices around $3.20/hr indicate supply constraints remain tight despite expanded capacity, keeping AI hardware capex elevated."
+    "text": "H100 rental rates averaging $3.17/hour signal persistent supply chain bottlenecks as AI workload demand outpaces fabrication capacity, driving CapEx escalation toward $2T annually across hyperscale infrastructure."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek\u2019s $1.25/1M input-token pricing is intensifying API price wars and pushing model designs toward higher efficiency."
+    "text": "Input token pricing at $1.25/1M reflects aggressive API price compression amid model commoditization, forcing providers to achieve 40%+ inference efficiency gains to maintain margins against open-source competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh AI electricity load can rival the annual consumption of a mid-sized nation, increasing grid strain and favoring flexible generation and nuclear baseload."
+    "text": "Annual AI energy consumption of 120 TWh approaches 3% of global electricity demand, creating grid stability challenges that accelerate nuclear adoption mandates while pressuring providers to achieve 25% PUE reductions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Rapid API price compression alongside rising energy demand and capex intensity signals a maturing market with bubble risk if growth and margins diverge."
+    "text": "Convergent cost pressures across hardware, tokens, and energy reveal growth sustainability concerns as the industry's $500B capex cycle faces margin compression from price wars, suggesting selective consolidation toward vertically integrated players."
   }
 }
