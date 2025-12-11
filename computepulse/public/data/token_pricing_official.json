@@ -1,19 +1,19 @@
 {
   "metadata": {
-    "crawl_timestamp": "2025-12-08T22:23:06.889826",
+    "crawl_timestamp": "2025-12-09T21:59:23.879785",
     "method": "pure_web_crawling",
     "exchange_rate_usd_cny": 7.08,
     "data_source": "Official pricing pages only",
     "no_preset_data": true,
-    "total_providers": 13,
-    "successful_crawls": 4,
-    "total_models": 11
+    "total_providers": 12,
+    "successful_crawls": 3,
+    "total_models": 7
   },
   "providers": [
     {
       "provider": "OpenAI",
       "source_url": "https://openai.com/api/pricing/",
-      "crawl_time": "2025-12-08T19:01:52.568728",
+      "crawl_time": "2025-12-09T21:59:26.104323",
       "crawl_status": "no_data",
       "models_found": 0,
       "models": []
@@ -21,31 +21,27 @@
     {
       "provider": "Anthropic",
       "source_url": "https://www.anthropic.com/pricing",
-      "crawl_time": "2025-12-08T19:01:57.324357",
+      "crawl_time": "2025-12-09T21:59:33.506833",
       "crawl_status": "no_data",
       "models_found": 0,
       "models": []
     },
     {
       "provider": "Google",
-      "source_url": "https://ai.google.dev/pricing",
-      "crawl_time": "2025-12-08T19:02:04.319991",
-      "crawl_status": "no_data",
-      "models_found": 0,
+      "error": "HTTPSConnectionPool(host='ai.google.dev', port=443): Max retries exceeded with url: /pricing (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000210F32FE0D0>, 'Connection to ai.google.dev timed out. (connect timeout=15)'))",
+      "crawl_status": "error",
       "models": []
     },
     {
       "provider": "xAI",
-      "source_url": "https://docs.x.ai/docs/models",
-      "crawl_time": "2025-12-08T19:02:06.446613",
-      "crawl_status": "no_data",
-      "models_found": 0,
+      "error": "('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))",
+      "crawl_status": "error",
       "models": []
     },
     {
       "provider": "Mistral",
       "source_url": "https://mistral.ai/technology/",
-      "crawl_time": "2025-12-08T19:02:09.552840",
+      "crawl_time": "2025-12-09T21:59:53.877474",
       "crawl_status": "no_data",
       "models_found": 0,
       "models": []
@@ -53,7 +49,7 @@
     {
       "provider": "Cohere",
       "source_url": "https://cohere.com/pricing",
-      "crawl_time": "2025-12-08T19:02:11.746181",
+      "crawl_time": "2025-12-09T22:00:33.599229",
       "crawl_status": "success",
       "models_found": 1,
       "models": [
@@ -64,16 +60,16 @@
           "input_price_per_1k": 0.0005,
           "output_price_per_1k": 0.0015,
           "currency": "USD",
-          "scraped_at": "2025-12-08T19:02:11.746144"
+          "scraped_at": "2025-12-09T22:00:33.596894"
         }
       ]
     },
     {
       "provider": "DeepSeek",
       "source_url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
-      "crawl_time": "2025-12-08T21:57:13.380984",
+      "crawl_time": "2025-12-09T22:00:59.005736",
       "crawl_status": "success",
-      "models_found": 4,
+      "models_found": 3,
       "models": [
         {
           "model": "DeepSeek-V3.2",
@@ -82,23 +78,12 @@
           "input_price_per_1k": 2.8e-05,
           "output_price_per_1k": 0.00042,
           "currency": "USD",
-          "price_type": "unknown",
-          "price_label": "$0.028 per 1M input tokens (cache hit), $0.28 per 1M input tokens (cache miss), and $0.42 per 1M output tokens",
-          "scraped_at": "2025-12-08T21:57:13.380903"
-        },
-        {
-          "model": "DeepSeek-V3.2 (Cache Hit)",
-          "input_price_per_1m": 0.028,
-          "output_price_per_1m": null,
-          "input_price_per_1k": 2.8e-05,
-          "output_price_per_1k": null,
-          "currency": "USD",
           "price_type": "input_cache_hit",
           "price_label": "$0.028 per 1M input tokens (cache hit)",
-          "scraped_at": "2025-12-08T21:57:13.380933"
+          "scraped_at": "2025-12-09T22:00:59.005590"
         },
         {
-          "model": "DeepSeek-V3.2 (Cache Miss)",
+          "model": "DeepSeek-V3.2",
           "input_price_per_1m": 0.28,
           "output_price_per_1m": null,
           "input_price_per_1k": 0.00028,
@@ -106,10 +91,10 @@
           "currency": "USD",
           "price_type": "input_cache_miss",
           "price_label": "$0.28 per 1M input tokens (cache miss)",
-          "scraped_at": "2025-12-08T21:57:13.380945"
+          "scraped_at": "2025-12-09T22:00:59.005655"
         },
         {
-          "model": "DeepSeek-V3.2 (Output)",
+          "model": "DeepSeek-V3.2",
           "input_price_per_1m": null,
           "output_price_per_1m": 0.42,
           "input_price_per_1k": null,
@@ -117,14 +102,14 @@
           "currency": "USD",
           "price_type": "output",
           "price_label": "$0.42 per 1M output tokens",
-          "scraped_at": "2025-12-08T21:57:13.380956"
+          "scraped_at": "2025-12-09T22:00:59.005673"
         }
       ]
     },
     {
       "provider": "Baidu",
       "source_url": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7",
-      "crawl_time": "2025-12-08T19:02:17.206322",
+      "crawl_time": "2025-12-09T22:01:00.668530",
       "crawl_status": "no_data",
       "models_found": 0,
       "models": []
@@ -132,7 +117,7 @@
     {
       "provider": "Zhipu",
       "source_url": "https://open.bigmodel.cn/pricing",
-      "crawl_time": "2025-12-08T19:02:19.241709",
+      "crawl_time": "2025-12-09T22:01:01.988304",
       "crawl_status": "no_data",
       "models_found": 0,
       "models": []
@@ -140,7 +125,7 @@
     {
       "provider": "MiniMax",
       "source_url": "https://platform.minimaxi.com/document/Price",
-      "crawl_time": "2025-12-08T19:02:23.651008",
+      "crawl_time": "2025-12-09T22:01:05.105215",
       "crawl_status": "no_data",
       "models_found": 0,
       "models": []
@@ -148,7 +133,7 @@
     {
       "provider": "Moonshot",
       "source_url": "https://platform.moonshot.cn/docs/pricing",
-      "crawl_time": "2025-12-08T19:02:26.060891",
+      "crawl_time": "2025-12-09T22:01:06.696548",
       "crawl_status": "no_data",
       "models_found": 0,
       "models": []
@@ -156,114 +141,54 @@
     {
       "provider": "Alibaba",
       "source_url": "https://bailian.console.aliyun.com/?tab=model#/model-market/detail/qwen3-vl-plus",
-      "crawl_time": "2025-12-08T22:23:06.886960",
+      "crawl_time": "2025-12-09T22:01:21.204324",
       "crawl_status": "success",
-      "models_found": 4,
+      "models_found": 3,
       "models": [
         {
-          "model": "Qwen3-VL-Plus",
-          "input_price_per_1m": 0.112994,
-          "output_price_per_1m": 0.282486,
-          "input_price_per_1k": 0.000112994,
-          "output_price_per_1k": 0.00028248600000000003,
+          "model": "Qwen-VL-Plus",
+          "input_price_per_1m": 0.211864,
+          "output_price_per_1m": null,
+          "input_price_per_1k": 0.000211864,
+          "output_price_per_1k": null,
           "currency": "USD",
-          "price_type": "on_demand",
-          "price_label": "最低输入价格 (每千Token) 0.0008元，最低输出价格 (每千Token) 0.002元",
-          "source": "阿里云百炼 - 全量模型规格与计费价格",
-          "scraped_at": "2025-12-08T22:23:06.886769",
+          "price_type": "input",
+          "price_label": "输入价格仅为0.0015元/千tokens",
+          "source": "阿里云官方公告（2024年12月31日）",
+          "scraped_at": "2025-12-09T22:01:21.204166",
           "original_currency": "CNY",
-          "original_input_per_1m": 0.8,
-          "exchange_rate": 7.08,
-          "original_output_per_1m": 2.0
+          "original_input_per_1m": 1.5,
+          "exchange_rate": 7.08
         },
         {
-          "model": "Qwen3-VL-Flash",
-          "input_price_per_1m": 0.021186,
-          "output_price_per_1m": 0.211864,
-          "input_price_per_1k": 2.1186e-05,
-          "output_price_per_1k": 0.000211864,
+          "model": "Qwen-VL-Max",
+          "input_price_per_1m": 0.423729,
+          "output_price_per_1m": null,
+          "input_price_per_1k": 0.000423729,
+          "output_price_per_1k": null,
           "currency": "USD",
-          "price_type": "on_demand",
-          "price_label": "最低输入价格 (每千Token) 0.00015元，最低输出价格 (每千Token) 0.0015元",
-          "source": "阿里云百炼 - 全量模型规格与计费价格",
-          "scraped_at": "2025-12-08T22:23:06.886829",
+          "price_type": "input",
+          "price_label": "更高性能的Qwen-VL-Max降至0.003元/千tokens",
+          "source": "阿里云官方公告（2024年12月31日）",
+          "scraped_at": "2025-12-09T22:01:21.204249",
           "original_currency": "CNY",
-          "original_input_per_1m": 0.15,
-          "exchange_rate": 7.08,
-          "original_output_per_1m": 1.5
+          "original_input_per_1m": 3.0,
+          "exchange_rate": 7.08
         },
         {
-          "model": "通义千问Plus（Qwen-Plus）",
-          "input_price_per_1m": 0.141243,
-          "output_price_per_1m": 0.564972,
-          "input_price_per_1k": 0.00014124300000000002,
-          "output_price_per_1k": 0.0005649720000000001,
+          "model": "Qwen3-Coder-Plus",
+          "input_price_per_1m": 0.59322,
+          "output_price_per_1m": null,
+          "input_price_per_1k": 0.00059322,
+          "output_price_per_1k": null,
           "currency": "USD",
-          "price_type": "on_demand",
-          "price_label": "最低输入价格 (每千Token) 0.001元，最低输出价格 (每千Token) 0.004元",
-          "source": "阿里云百炼 - 全量模型规格与计费价格",
-          "scraped_at": "2025-12-08T22:23:06.886874",
+          "price_type": "input",
+          "price_label": "折后输入最低价仅需0.0042元/千token",
+          "source": "大模型服务平台百炼（2025年7月23日）",
+          "scraped_at": "2025-12-09T22:01:21.204278",
           "original_currency": "CNY",
-          "original_input_per_1m": 1.0,
-          "exchange_rate": 7.08,
-          "original_output_per_1m": 4.0
-        },
-        {
-          "model": "通义千问Max（Qwen-Max）",
-          "input_price_per_1m": 0.451977,
-          "output_price_per_1m": 1.80791,
-          "input_price_per_1k": 0.000451977,
-          "output_price_per_1k": 0.0018079099999999998,
-          "currency": "USD",
-          "price_type": "on_demand",
-          "price_label": "最低输入价格 (每千Token) 0.0032元，最低输出价格 (每千Token) 0.0128元",
-          "source": "阿里云百炼 - 全量模型规格与计费价格",
-          "scraped_at": "2025-12-08T22:23:06.886917",
-          "original_currency": "CNY",
-          "original_input_per_1m": 3.2,
-          "exchange_rate": 7.08,
-          "original_output_per_1m": 12.8
-        }
-      ]
-    },
-    {
-      "provider": "Alibaba-QWEN",
-      "source_url": "https://bailian.console.aliyun.com/?tab=model#/model-market/detail/qwen3-vl-plus",
-      "crawl_time": "2025-12-08T22:20:00.611361",
-      "crawl_status": "success",
-      "models_found": 2,
-      "models": [
-        {
-          "model": "Qwen3-VL-Plus",
-          "input_price_per_1m": 0.112994,
-          "output_price_per_1m": 0.282486,
-          "input_price_per_1k": 0.000112994,
-          "output_price_per_1k": 0.00028248600000000003,
-          "currency": "USD",
-          "price_type": "on_demand",
-          "price_label": "最低输入价格 (每千Token) 0.0008元，最低输出价格 (每千Token) 0.002元",
-          "source": "阿里云百炼 - 大模型服务平台",
-          "scraped_at": "2025-12-08T22:20:00.611280",
-          "original_currency": "CNY",
-          "original_input_per_1m": 0.8,
-          "exchange_rate": 7.08,
-          "original_output_per_1m": 2.0
-        },
-        {
-          "model": "Qwen3-VL-Flash",
-          "input_price_per_1m": 0.021186,
-          "output_price_per_1m": 0.211864,
-          "input_price_per_1k": 2.1186e-05,
-          "output_price_per_1k": 0.000211864,
-          "currency": "USD",
-          "price_type": "on_demand",
-          "price_label": "最低输入价格 (每千Token) 0.00015元，最低输出价格 (每千Token) 0.0015元",
-          "source": "阿里云百炼 - 大模型服务平台",
-          "scraped_at": "2025-12-08T22:20:00.611328",
-          "original_currency": "CNY",
-          "original_input_per_1m": 0.15,
-          "exchange_rate": 7.08,
-          "original_output_per_1m": 1.5
+          "original_input_per_1m": 4.2,
+          "exchange_rate": 7.08
         }
       ]
     }

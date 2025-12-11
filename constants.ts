@@ -138,6 +138,7 @@ export const generateMockTokenData = (): TokenProvider[] => [
   { id: 'claude-3-haiku', provider: 'Anthropic', model: 'Claude 3 Haiku', inputCost: 0.25, outputCost: 1.25, benchmark: 75.2, latency: 180, isOpenSource: false, lastUpdated: new Date().toISOString() },
   { id: 'gemini-1.5-pro', provider: 'Google', model: 'Gemini 1.5 Pro', inputCost: 3.50, outputCost: 10.50, benchmark: 87.8, latency: 380, isOpenSource: false, lastUpdated: new Date().toISOString() },
   { id: 'gemini-1.5-flash', provider: 'Google', model: 'Gemini 1.5 Flash', inputCost: 0.075, outputCost: 0.30, benchmark: 78.9, latency: 150, isOpenSource: false, lastUpdated: new Date().toISOString() },
+  { id: 'gemini-3-pro-preview', provider: 'Google', model: 'Gemini 3 Pro Preview', inputCost: 3.50, outputCost: 10.50, benchmark: 90.0, latency: 350, isOpenSource: false, lastUpdated: new Date().toISOString() },
   
   // --- Open Weights (Hugging Face Ecosystem) - US/Europe ---
   { id: 'llama-3-1-405b', provider: 'Meta (Together)', model: 'Llama 3.1 405B', inputCost: 2.50, outputCost: 2.50, benchmark: 87.3, latency: 600, isOpenSource: true, lastUpdated: new Date().toISOString() },

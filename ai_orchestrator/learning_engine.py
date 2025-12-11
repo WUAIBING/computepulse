@@ -115,8 +115,15 @@ class LearningEngine:
         # Adjust for sample size (more data = more confidence in the score)
         sample_size = len(performance_history)
         min_samples = self.config.min_samples_for_confidence
+        
+        # Base adjustment
         confidence_adjustment = min(1.0, sample_size / min_samples)
         
+        # BOOST: If accuracy is exceptional (>0.9) even with few samples (but >2), trust it faster
+        # This allows "Pro Preview" models to prove themselves quickly
+        if accuracy > 0.9 and sample_size > 2 and confidence_adjustment < 1.0:
+            confidence_adjustment = min(1.0, confidence_adjustment * 1.5)
+            
         # Final score: blend between accuracy and neutral (0.5) based on sample size
         confidence = accuracy * confidence_adjustment + 0.5 * (1 - confidence_adjustment)
         

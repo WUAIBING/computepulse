@@ -9,3 +9,10 @@
 {"timestamp": "2025-12-08T03:42:36.312205", "model": "qwen-max", "task_type": "price_extraction", "was_correct": true, "response_time": 23.087403, "cost": 0.0016136000000000002, "token_count": 4034}
 {"timestamp": "2025-12-08T03:42:51.281119", "model": "qwen-max", "task_type": "price_extraction", "was_correct": true, "response_time": 14.949108, "cost": 0.00019559999999999998, "token_count": 489}
 {"timestamp": "2025-12-08T03:55:40.801111", "model": "qwen-max", "task_type": "price_extraction", "was_correct": true, "response_time": 16.507753, "cost": 0.0009228000000000001, "token_count": 2307}
+{"timestamp": "2025-12-12T02:41:25.019869", "model": "kimi-k2", "task_type": "price_extraction", "was_correct": true, "response_time": 12.498467, "cost": 0.0009386999999999999, "token_count": 3129}
+{"timestamp": "2025-12-12T02:41:30.477447", "model": "qwen-max", "task_type": "price_extraction", "was_correct": true, "response_time": 5.154128, "cost": 8.88e-05, "token_count": 222}
+{"timestamp": "2025-12-12T02:41:30.478533", "model": "kimi-k2", "task_type": "price_extraction", "was_correct": true, "response_time": 5.427244, "cost": 5.97e-05, "token_count": 199}
+{"timestamp": "2025-12-12T02:55:30.221703", "model": "kimi-k2", "task_type": "price_extraction", "was_correct": true, "response_time": 12.36668, "cost": 0.0009398999999999999, "token_count": 3133}
+{"timestamp": "2025-12-12T02:55:30.223813", "model": "qwen-max", "task_type": "price_extraction", "was_correct": true, "response_time": 28.187125, "cost": 0.0017584, "token_count": 4396}
+{"timestamp": "2025-12-12T02:55:35.760778", "model": "kimi-k2", "task_type": "price_extraction", "was_correct": true, "response_time": 5.19595, "cost": 5.97e-05, "token_count": 199}
+{"timestamp": "2025-12-12T02:55:35.761815", "model": "qwen-max", "task_type": "price_extraction", "was_correct": true, "response_time": 5.4999, "cost": 8.800000000000001e-05, "token_count": 220}

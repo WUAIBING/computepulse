@@ -17,8 +17,8 @@ class OrchestratorConfig:
     
     # Learning engine parameters
     confidence_decay_factor: float = 0.95  # For EWMA
-    min_samples_for_confidence: int = 10
-    confidence_smoothing_factor: float = 0.7
+    min_samples_for_confidence: int = 5  # Reduced from 10 for faster adaptation
+    confidence_smoothing_factor: float = 0.8  # Increased from 0.7 for more responsiveness
     
     # Routing parameters
     simple_query_model_count: int = 1
@@ -46,7 +46,7 @@ class OrchestratorConfig:
     
     # Feedback loop
     enable_feedback_loop: bool = True
-    positive_reinforcement_factor: float = 0.1
+    positive_reinforcement_factor: float = 0.15  # Increased from 0.1 for stronger reward
     negative_reinforcement_factor: float = 0.15
     
     # Logging

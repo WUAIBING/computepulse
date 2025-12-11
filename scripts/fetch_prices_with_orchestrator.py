@@ -47,6 +47,7 @@ try:
     from adapters.glm_adapter import GLMAdapter
     from adapters.minimax_adapter import MiniMaxAdapter
     from adapters.kimi_adapter import KimiAdapter
+    from adapters.gemini_adapter import GeminiAdapter
 except ImportError as e:
     logger.error(f"Failed to import adapters: {e}")
     # Fallback: try relative import
@@ -56,6 +57,7 @@ except ImportError as e:
     from ai_orchestrator.adapters.glm_adapter import GLMAdapter
     from ai_orchestrator.adapters.minimax_adapter import MiniMaxAdapter
     from ai_orchestrator.adapters.kimi_adapter import KimiAdapter
+    from ai_orchestrator.adapters.gemini_adapter import GeminiAdapter
 
 # Constants
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'public', 'data')
@@ -87,6 +89,8 @@ async def model_call_func(model: AIModel, request: Request) -> Response:
         'glm-4-flash': GLMAdapter,
         'minimax': MiniMaxAdapter,
         'kimi': KimiAdapter,
+        'gemini': GeminiAdapter,
+        'gemini-3-pro-preview': GeminiAdapter,
     }
 
     model_name_lower = model.name.lower()
@@ -118,6 +122,8 @@ async def model_call_func(model: AIModel, request: Request) -> Response:
         api_key = os.getenv('ZHIPU_API_KEY')
     elif 'minimax' in model_name_lower:
         api_key = os.getenv('MINIMAX_API_KEY')
+    elif 'gemini' in model_name_lower:
+        api_key = os.getenv('GEMINI_API_KEY')
 
     if not api_key:
         logger.error(f"API key not found for model: {model.name}")
