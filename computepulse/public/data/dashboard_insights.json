@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The H100 pricing at $3.16/hr reflects improving chip supply chain dynamics and increased manufacturing capacity, though sustained capex remains critical to prevent future scarcity."
+    "text": "At $3.15/hour for H100 GPUs, the AI hardware market shows severe supply chain constraints driving capex inflation, with hyperscalers facing 40-60% cost premiums over pre-pandemic rates while waiting 6+ months for delivery, indicating a bottleneck that favors companies with vertically integrated supply chains."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "DeepSeek's $1.25/1M token pricing signals an aggressive API price war that pressures margins while driving model efficiency improvements through competitive pressure."
+    "text": "The $1.25/1M token input pricing reflects aggressive API price compression as Chinese AI firms prioritize market share over margins, forcing Western providers to either match aggressive pricing or differentiate through model efficiency, creating a sustainability crisis for smaller players."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure's 120 TWh annual energy load represents significant grid strain that necessitates accelerated nuclear adoption and renewable integration to maintain carbon neutrality."
+    "text": "A 120 TWh annual load represents approximately 0.5% of global electricity consumption, generating 50-60 million tons of CO2 annually, driving urgency for nuclear renaissance while grid infrastructure struggles to accommodate AI datacenters requiring 100-200 MW per facility."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Rapid AI adoption shows healthy momentum but faces sustainability headwinds from energy intensity, creating bubble risks if infrastructure can't scale responsibly."
+    "text": "The convergence of $3.15/hr GPU costs, sub-$1/1M token APIs, and 120 TWh energy consumption reveals an AI infrastructure bubble where capex is racing ahead of sustainable pricing models, risking a 2025-2026 correction as profitability pressures mount across the value chain."
   }
 }

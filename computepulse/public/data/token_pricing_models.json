@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Unlimited access to GPT-4o with usage caps during peak times"
+        "monthly_limit": "Usage-based, up to 5x more usage than free users, with higher limits during peak hours."
       },
-      "efficiency_score": 38.75
+      "efficiency_score": 95
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 19.38
+      "efficiency_score": 70
     }
   },
   "anthropic": {
@@ -22,103 +22,73 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, priority access during high traffic"
+        "monthly_limit": "Usage-based with higher limits and priority access during high traffic."
       },
-      "efficiency_score": 48.75
+      "efficiency_score": 92
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 90.0
+      "efficiency_score": 98
     }
   },
   "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Part of Google One AI Premium plan, includes 1 million tokens per month"
-      },
-      "efficiency_score": 85.0
-    },
-    "gemini_ultra": {
+    "gemini_1_5_pro": {
       "input_price_per_million": 3.5,
       "output_price_per_million": 10.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Part of Google One AI Premium, includes 1TB of storage and Gemini integration across Google apps."
+      },
+      "efficiency_score": 90
+    },
+    "gemini_1_5_flash": {
+      "input_price_per_million": 0.075,
+      "output_price_per_million": 0.15,
       "subscription_alternative": null,
-      "efficiency_score": 48.57
+      "efficiency_score": 100
     }
   },
   "meta": {
-    "llama_3_8b": {
-      "input_price_per_million": 0.39,
-      "output_price_per_million": 0.39,
-      "subscription_alternative": {
-        "meta_ai": null,
-        "monthly_limit": "Free through Meta AI interface"
-      },
-      "efficiency_score": 91.25
-    },
-    "llama_3_70b": {
-      "input_price_per_million": 0.99,
-      "output_price_per_million": 0.99,
-      "subscription_alternative": null,
-      "efficiency_score": 64.56
+    "llama_3": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "model_type": "Open Source / Self-Hosted",
+      "cost_model": "Hardware costs (cloud/virtual/on-prem) + 700M+ MAU commercial license required for large-scale distribution.",
+      "efficiency_score": "N/A (Variable)"
     }
   },
   "microsoft": {
     "copilot_pro": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "monthly_limit": "Priority access to latest models, faster response times"
-      },
-      "efficiency_score": 60.0
-    },
-    "copilot_for_m365": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_business": 30.0,
-        "monthly_limit": "Enterprise-grade security, integration with Microsoft 365"
-      },
-      "efficiency_score": 50.0
+      "monthly_price": 20.0,
+      "enterprise_pricing": "Contact Sales (bundled with Microsoft 365 Copilot for $30/user/month)",
+      "model_access": "GPT-4 Turbo during non-peak times, latest models including GPT-4o, image creation with DALL-E 3."
     }
   },
   "deepseek": {
-    "deepseek_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
+    "deepseek_coder_v2": {
+      "input_price_per_million": 0.28,
+      "output_price_per_million": 2.8,
       "subscription_alternative": null,
-      "efficiency_score": 100.0
+      "efficiency_score": 97
     }
   },
   "qwen": {
-    "qwen_turbo": {
-      "input_price_per_million": 0.29,
-      "output_price_per_million": 0.6,
-      "subscription_alternative": {
-        "dashscope": null,
-        "monthly_limit": "Free tier with limited quota"
-      },
-      "efficiency_score": 89.43
-    },
     "qwen_plus": {
-      "input_price_per_million": 0.55,
-      "output_price_per_million": 1.1,
+      "input_price_per_million": 0.56,
+      "output_price_per_million": 1.67,
       "subscription_alternative": null,
-      "efficiency_score": 70.0
+      "efficiency_score": 99
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.01,
-    "average_output_cost": 5.86,
-    "most_efficient": "DeepSeek-V2",
-    "subscription_adoption_rate": 68.0,
-    "trend": "Prices decreasing significantly in 2024-2025 with new models offering better performance at lower costs. Subscription models becoming mainstream for consumer access while pay-per-token remains primary for developers."
+    "average_input_cost": 2.83,
+    "average_output_cost": 9.55,
+    "most_efficient": "Google Gemini 1.5 Flash",
+    "subscription_adoption_rate": "High; $20/month has become the standard price point for premium consumer access across major providers.",
+    "trend": "Aggressive price competition driven by new, highly efficient models. There's a clear market bifurcation: flagship models (GPT-4o, Claude 3.5 Sonnet) around $5-$15/M tokens, and ultra-efficient, fast models (Gemini 1.5 Flash, Claude 3 Haiku) priced below $1/M tokens for input. Output costs are also falling but remain significantly higher than input costs."
   },
-  "last_updated": "2025-07-15",
-  "timestamp": "2025-12-10T23:14:29.445164"
+  "last_updated": "2024-06-10",
+  "timestamp": "2025-12-11T01:02:57.725995"
 }
