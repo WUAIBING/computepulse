@@ -3,12 +3,12 @@
     "h100": {
       "manufacturing_cost": 3320,
       "suggested_retail": 30000,
-      "gross_margin": 90,
+      "gross_margin": 89,
       "cost_breakdown": {
-        "silicon": 2180,
-        "packaging": 750,
-        "testing": 200,
-        "r_and_d_allocation": 190
+        "silicon": 1900,
+        "packaging": 700,
+        "testing": 120,
+        "r_and_d_allocation": 600
       }
     },
     "a100": {
@@ -16,25 +16,25 @@
       "suggested_retail": 15000,
       "gross_margin": 83,
       "cost_breakdown": {
-        "silicon": 1650,
+        "silicon": 1300,
         "packaging": 500,
-        "testing": 150,
-        "r_and_d_allocation": 200
+        "testing": 100,
+        "r_and_d_allocation": 600
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4200,
-      "suggested_retail": 15000,
-      "gross_margin": 72
+      "manufacturing_cost": 4100,
+      "suggested_retail": 35000,
+      "gross_margin": 88
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 65,
-    "cost_trend": "Increasing due to advanced packaging (CoWoS) constraints and 3nm wafer price hikes",
-    "main_cost_driver": "TSMC CoWoS packaging capacity and 5/3nm wafer costs"
+    "average_gross_margin": 85,
+    "cost_trend": "Increasing due to advanced node pricing (TSMC N3/N5) and complex packaging (CoWoS)",
+    "main_cost_driver": "Wafer prices and advanced packaging"
   },
-  "last_updated": "2024-06-30",
-  "timestamp": "2025-12-11T12:28:03.587281"
+  "last_updated": "2024-07-01",
+  "timestamp": "2025-12-11T13:35:31.758251"
 }

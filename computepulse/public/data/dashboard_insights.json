@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At an average H100 price of $3.18/hr, cloud capacity is easing from 2023\u20132024 peaks, but persistent supply constraints and high capex still give hyperscalers leverage over smaller buyers and push firms to pre-commit to secure priority access."
+    "text": "Sustained H100 spot prices around $3.20/hr indicate supply constraints remain tight despite expanded capacity, keeping AI hardware capex elevated."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With an average input price of $1.25/1M tokens, DeepSeek is intensifying API price wars, compressing margins and forcing providers to differentiate via lower latency, higher context, or on\u2011prem/offline deployments to defend share."
+    "text": "DeepSeek\u2019s $1.25/1M input-token pricing is intensifying API price wars and pushing model designs toward higher efficiency."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "An annual load of 120 TWh indicates rising grid strain, driving demand for flexible peakers, storage, and a re\u2011examination of nuclear options to curb carbon intensity as AI workloads expand."
+    "text": "A 120 TWh AI electricity load can rival the annual consumption of a mid-sized nation, increasing grid strain and favoring flexible generation and nuclear baseload."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Commodity pricing across compute ($3.18/hr), tokens ($1.25/1M), and energy (120 TWh load) signals rapid normalization and intensified competition; if capex and data center build\u2011outs outpace efficiency gains, bubble risk rises while sustainable growth depends on unit\u2011economics discipline."
+    "text": "Rapid API price compression alongside rising energy demand and capex intensity signals a maturing market with bubble risk if growth and margins diverge."
   }
 }

@@ -1,110 +1,130 @@
 {
   "openai": {
     "gpt_4o": {
-      "input_price_per_million": 5.0,
-      "output_price_per_million": 15.0,
+      "input_price_per_million": 5,
+      "output_price_per_million": 15,
       "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Access to GPT-4o, with usage-based throttling during high demand. No fixed token limit, but includes a higher cap for GPT-4o usage compared to the free tier."
+        "chatgpt_plus": 20,
+        "monthly_limit": "Unlimited GPT-4o access with higher message limits, priority access during peak times"
       },
-      "efficiency_score": 9.0
+      "efficiency_score": 6
     },
     "gpt_4_turbo": {
-      "input_price_per_million": 10.0,
-      "output_price_per_million": 30.0,
+      "input_price_per_million": 10,
+      "output_price_per_million": 30,
       "subscription_alternative": null,
-      "efficiency_score": 7.0
+      "efficiency_score": 3
     }
   },
   "anthropic": {
     "claude_3_5_sonnet": {
-      "input_price_per_million": 3.0,
-      "output_price_per_million": 15.0,
+      "input_price_per_million": 3,
+      "output_price_per_million": 15,
       "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x higher usage limits than the free tier; estimated around 1 million tokens of input per month, with no set hourly message limits."
+        "claude_pro": 20,
+        "monthly_limit": "5x more usage than free tier, priority access to Claude 3.5 Sonnet"
       },
-      "efficiency_score": 8.5
+      "efficiency_score": 6.5
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 10.0
+      "subscription_alternative": {
+        "claude_pro": 20,
+        "monthly_limit": "Same subscription as Sonnet, includes access to all models"
+      },
+      "efficiency_score": 9
     }
   },
   "google": {
-    "gemini_1_5_pro": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
+    "gemini_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "google_one_ai_premium": 19.99,
-        "monthly_limit": "Access to Gemini Advanced (Ultra tier) and other Google One benefits like 2TB storage. Token limits are not publicly disclosed but are generous for individual use."
+        "gemini_advanced": 20,
+        "monthly_limit": "Access to Gemini 1.5 Pro with 1M token context window"
       },
-      "efficiency_score": 8.0
+      "efficiency_score": 8.5
     },
-    "gemini_1_5_flash": {
-      "input_price_per_million": 0.075,
-      "output_price_per_million": 0.15,
-      "subscription_alternative": null,
-      "efficiency_score": 9.5
+    "gemini_ultra": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "gemini_advanced": 20,
+        "monthly_limit": "Limited availability, requires waitlist approval"
+      },
+      "efficiency_score": null
     }
   },
   "meta": {
-    "llama_3_1_405b": {
-      "input_price_per_million": "Variable, ~3.00-6.00 via third parties",
-      "output_price_per_million": "Variable, ~9.00-12.00 via third parties",
-      "subscription_alternative": null,
-      "efficiency_score": "N/A, depends on hosting provider",
-      "note": "Meta's Llama models are open source and not directly sold by Meta. Pricing is determined by third-party hosting providers (e.g., AWS, Google Cloud, Replicate) or by self-hosting hardware and energy costs. Prices shown are estimates for managed API endpoints."
+    "llama_3": {
+      "input_price_per_million": 0,
+      "output_price_per_million": 0,
+      "subscription_alternative": {
+        "meta_ai": 0,
+        "monthly_limit": "Open source, requires self-hosting for API access"
+      },
+      "efficiency_score": 10
     },
-    "llama_3_1_8b": {
-      "input_price_per_million": "Variable, ~0.10-0.20 via third parties",
-      "output_price_per_million": "Variable, ~0.10-0.30 via third parties",
-      "subscription_alternative": null,
-      "efficiency_score": "N/A, depends on hosting provider",
-      "note": "Meta's Llama models are open source and not directly sold by Meta. Pricing is determined by third-party hosting providers (e.g., AWS, Google Cloud, Replicate) or by self-hosting hardware and energy costs. Prices shown are estimates for managed API endpoints."
+    "llama_3_pro": {
+      "input_price_per_million": 0,
+      "output_price_per_million": 0,
+      "subscription_alternative": {
+        "meta_ai": 0,
+        "monthly_limit": "Open source, requires self-hosting for API access"
+      },
+      "efficiency_score": 10
     }
   },
   "microsoft": {
     "copilot_pro": {
-      "price_per_month": 20.0,
-      "description": "For individuals. Offers priority access to top models during peak times, advanced AI capabilities like Copilot GPTs, and integration with Microsoft 365 apps (Word, Excel, etc.) on a subscription basis."
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_pro": 20,
+        "monthly_limit": "Unlimited access across Microsoft 365 apps"
+      },
+      "efficiency_score": null
     },
-    "microsoft_365_copilot": {
-      "price_per_user_per_month": 30.0,
-      "description": "For enterprise. Deep integration across the Microsoft 365 suite (Teams, Outlook, Office apps) with business data security and privacy controls. Pricing is seat-based, not token-based."
+    "copilot_enterprise": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_microsoft_365": 30,
+        "monthly_limit": "Enterprise-grade security, Microsoft Graph integration"
+      },
+      "efficiency_score": null
     }
   },
   "deepseek": {
-    "deepseek_chat": {
+    "deepseek_api": {
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 9.8
+      "efficiency_score": 10
     }
   },
-  "alibaba_qwen": {
-    "qwen_plus": {
-      "input_price_per_million": 0.4,
-      "output_price_per_million": 1.2,
-      "subscription_alternative": null,
-      "efficiency_score": 9.2
-    },
+  "qwen": {
     "qwen_turbo": {
       "input_price_per_million": 0.2,
       "output_price_per_million": 0.6,
       "subscription_alternative": null,
-      "efficiency_score": 9.6
+      "efficiency_score": 9.5
+    },
+    "qwen_plus": {
+      "input_price_per_million": 0.3,
+      "output_price_per_million": 0.9,
+      "subscription_alternative": null,
+      "efficiency_score": 9
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.46,
-    "average_output_cost": 6.97,
-    "most_efficient": "Claude 3 Haiku",
-    "subscription_adoption_rate": "Proprietary Data; estimated to be high and increasing rapidly, driven by consumer products from OpenAI, Microsoft, and Google.",
-    "trend": "The market is experiencing a rapid price war, driven by new 'mid-tier' models (GPT-4o, Gemini 1.5 Flash) offering performance close to previous flagships at a fraction of the cost. Simultaneously, 'mini' or 'haiku' models are achieving unprecedented cost efficiency for less complex tasks. Major providers are bundling their most powerful models into ecosystem subscriptions (ChatGPT Plus, Copilot Pro) to drive user lock-in, while API pricing for developers continues to fall."
+    "average_input_cost": 2.42,
+    "average_output_cost": 7.02,
+    "most_efficient": "DeepSeek",
+    "subscription_adoption_rate": 0.75,
+    "trend": "2024-2025 shows aggressive price competition, with new entrants like DeepSeek and Qwen offering token prices at 90%+ discounts to established players. Major providers responding with smaller, more efficient models and higher-tier subscription bundles. Token costs declining ~15% QoQ while context windows expanding 10x."
   },
-  "last_updated": "2024-08-21",
-  "timestamp": "2025-12-11T12:29:37.005431"
+  "last_updated": "2024-06-15",
+  "timestamp": "2025-12-11T13:36:57.236435"
 }
