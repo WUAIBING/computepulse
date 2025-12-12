@@ -1,7 +1,7 @@
 {
   "score": 90,
   "trend": "up",
-  "summary": "Hyperscalers (Microsoft, Google, Meta) have announced aggressive increases in AI infrastructure investments for 2024/2025. Current H100/A100 rental prices ($3.13/hr) reflect sustained demand exceeding supply. Anticipation for GPT-5 and Gemini 2 releases further fuels market optimism.",
+  "summary": "Hyperscalers (Microsoft, Google, Meta) have announced aggressive increases in AI-focused Capex for 2024/2025, with commitments totaling in the tens of billions. GPU rental prices remain high ($3.41/hr), indicating sustained demand exceeding supply. Concurrently, major model releases (GPT-4o, Claude 3.5) and strong rumors of imminent launches (Gemini 2) signal ongoing innovation and market enthusiasm.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-12T14:18:54.372129"
+  "last_updated": "2025-12-12T15:18:56.332799"
 }

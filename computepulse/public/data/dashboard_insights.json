@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The H100's premium pricing at $3.13/hr reflects persistent supply chain constraints, with chip allocation still favoring hyperscalers while creating bottlenecks for mid-tier enterprises planning their AI infrastructure investments."
+    "text": "With H100 pricing at $3.41/hour, chip supply constraints and allocation strategies are driving significant capex variance, creating a competitive landscape where hyperscalers with direct NVIDIA partnerships hold decisive advantages."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With input costs averaging $1.25/1M tokens, the token pricing war is forcing providers to optimize model efficiency and throughput, as sustained API revenue becomes challenging at these competitive rates."
+    "text": "At $1.25 per million tokens, the aggressive pricing from Chinese inference providers is compressing global margins and forcing efficiency innovations, effectively weaponizing cost as a competitive moat."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "The 120 TWh annual energy load from AI operations represents a critical grid strain point, necessitating urgent nuclear adoption strategies and carbon offset mechanisms to maintain growth sustainability."
+    "text": "The 120 TWh annual AI workload load is equivalent to powering 11 million homes, creating unprecedented grid strain that accelerates demand for nuclear and carbon-neutral energy solutions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The convergence of high hardware costs, aggressive token pricing, and massive energy consumption creates a sustainability tension that could trigger a market correction, though enterprise adoption continues to validate long-term AI demand."
+    "text": "The sector's rapid infrastructure scaling, despite ballooning capex and operational costs, suggests investors are betting on sustained AI monetization, though consolidation pressure and efficiency mandates may emerge as balancing forces."
   }
 }
