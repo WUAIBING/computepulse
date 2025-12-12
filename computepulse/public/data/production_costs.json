@@ -1,40 +1,48 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3856,
-      "suggested_retail": 35000,
-      "gross_margin": 89.0,
+      "manufacturing_cost": "Data Unavailable (Est. $4,500-$6,000 per unit based on industry teardowns and foundry costs)",
+      "suggested_retail": "$25,000-$40,000 (varies by vendor/config)",
+      "gross_margin": "Data Unavailable (Est. 70%+ based on financial reports)",
       "cost_breakdown": {
-        "silicon": 2012,
-        "packaging": 1644,
-        "testing": 200,
-        "r_and_d_allocation": 2000
+        "silicon": "Data Unavailable (Est. $3,000-$4,500 - TSMC 4N/5N wafer cost, large die size)",
+        "packaging": "Data Unavailable (Est. $1,000+ - CoWoS advanced packaging bottleneck)",
+        "testing": "Data Unavailable (Est. $100-$200)",
+        "r_and_d_allocation": "Data Unavailable (Billions amortized across units; est. $500+ per unit)"
       }
     },
     "a100": {
-      "manufacturing_cost": 2219,
-      "suggested_retail": 12000,
-      "gross_margin": 81.5,
+      "manufacturing_cost": "Data Unavailable (Est. $2,000-$3,000)",
+      "suggested_retail": "$10,000-$15,000 (current market price)",
+      "gross_margin": "Data Unavailable (Est. 60%+ during peak)",
       "cost_breakdown": {
-        "silicon": 919,
-        "packaging": 1100,
-        "testing": 200,
-        "r_and_d_allocation": 1500
+        "silicon": "Data Unavailable (Est. $1,500-$2,000 - TSMC 7N)",
+        "packaging": "Data Unavailable (Est. $400-$600 - CoWoS)",
+        "testing": "Data Unavailable (Est. $80-$150)",
+        "r_and_d_allocation": "Data Unavailable (Amortized; est. $300+ per unit)"
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 3984,
-      "suggested_retail": 30000,
-      "gross_margin": 86.7
+      "manufacturing_cost": "Data Unavailable (Est. $4,000-$5,500 - complex multi-die design, TSMC 5/6N)",
+      "suggested_retail": "$15,000-$30,000 (varies by vendor/config)",
+      "gross_margin": "Data Unavailable (Est. 50%-60% - competitive pricing strategy)"
+    }
+  },
+  "intel": {
+    "arc_gpu": {
+      "manufacturing_cost": "Data Unavailable (Est. $100-$400 - mainstream consumer GPUs)",
+      "suggested_retail": "$100-$500 (consumer retail pricing)",
+      "gross_margin": "Data Unavailable (Est. 30%-45% - challenging market position)"
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 85.0,
-    "cost_trend": "Increasing due to advanced packaging costs and HBM prices, but foundry node costs are stabilizing",
-    "main_cost_driver": "HBM and advanced packaging (CoWoS)"
+    "average_gross_margin": "High-End AI GPUs: 60%-75%+ | Consumer GPUs: 30%-50%",
+    "cost_trend": "Increasing due to advanced node (TSMC 3N/2N) and complex packaging (CoWoS-L, FOPL, etc.). Wafer prices up 10%-20% at leading nodes. CoWoS capacity expansion ongoing but still constrained.",
+    "main_cost_driver": "TSMC advanced node wafer costs + Advanced Packaging (CoWoS, etc.) - accounts for ~60%+ of COGS for high-end AI GPUs. R&D amortization significant."
   },
-  "last_updated": "2023-09-30",
-  "timestamp": "2025-12-12T17:16:11.903399"
+  "last_updated": "October 2024",
+  "data_caveats": "Manufacturers do not disclose exact production costs. Figures are estimates based on industry teardown reports (TechInsights, TrendForce), foundry pricing leaks, financial statement analysis, and market intelligence. Foundry pricing (TSMC/Samsung) is confidential and varies by customer volume. R&D allocation is a complex amortization estimate. Actual margins vary by product configuration, sales channel, and volume.",
+  "timestamp": "2025-12-12T18:21:51.348553"
 }

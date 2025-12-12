@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100s remain supply\u2011constrained and capital\u2011intensive at roughly $3.16/hr, keeping capex elevated and driving tighter availability despite incremental capacity."
+    "text": "While H100 spot prices averaging $3.13/hr reflect constrained supply and long lead times, increased allocations and a gradual shift to newer GPUs should ease allocation risk and improve hyperscaler capex efficiency over the next two quarters."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Average input tokens at ~$1.25/M signal intensifying API price wars, compressing margins and favoring efficient, higher\u2011throughput models in competitive markets."
+    "text": "At an average input price of $1.25 per million tokens, the ongoing API price war is accelerating commoditization, pushing providers toward efficiency gains through distillation and caching while model competition compresses margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI\u2019s ~120 TWh annual load stresses grids and accelerates interest in nuclear baseload and firm renewables to cut carbon intensity."
+    "text": "AI-driven demand has lifted annual grid load to 120 TWh, intensifying regional grid strain and underscoring the need for demand\u2011response and storage while accelerating nuclear adoption to stabilize carbon intensity."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "With token prices falling but compute prices high, funding must favor efficiency and moats to sustain growth and avoid a usage\u2011bubble unwind."
+    "text": "Industry sentiment remains buoyant as falling hardware and token prices sustain growth, but aggressive pricing and capacity expansions raise bubble risks that hinge on converting cost declines into durable productivity gains."
   }
 }
