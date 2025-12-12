@@ -4,15 +4,18 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20,
-        "monthly_limit": "Usage limits on GPT-4o that reset every few hours (e.g., 80 messages every 3 hours)."
+        "chatgpt_plus": 20.0,
+        "monthly_limit": "Up to 80 messages every 3 hours on GPT-4o; higher limits on GPT-4"
       },
       "efficiency_score": 10.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
-      "subscription_alternative": null,
+      "subscription_alternative": {
+        "chatgpt_plus": 20.0,
+        "monthly_limit": "Access via ChatGPT Plus, with usage limits lower than for GPT-4o"
+      },
       "efficiency_score": 20.0
     }
   },
@@ -21,19 +24,85 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20,
-        "monthly_limit": "Higher usage limits that reset every 8 hours (e.g., ~5x the free tier)."
+        "claude_pro": 20.0,
+        "monthly_limit": "5x more usage than free tier, with capacity to create more projects and chats"
       },
       "efficiency_score": 9.0
+    },
+    "claude_3_haiku": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 1.25,
+      "subscription_alternative": {
+        "claude_pro": 20.0,
+        "monthly_limit": "Same as Claude 3.5 Sonnet subscription"
+      },
+      "efficiency_score": 0.75
+    }
+  },
+  "google": {
+    "gemini_1_5_pro": {
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Access to 1.5 Pro and other models within Google One AI Premium"
+      },
+      "efficiency_score": 7.0
+    },
+    "gemini_1_5_flash": {
+      "input_price_per_million": 0.075,
+      "output_price_per_million": 0.15,
+      "subscription_alternative": null,
+      "efficiency_score": 0.1125
+    }
+  },
+  "meta": {
+    "llama_3_8b_as_a_service": {
+      "input_price_per_million": 0.05,
+      "output_price_per_million": 0.1,
+      "subscription_alternative": null,
+      "efficiency_score": 0.075
+    },
+    "llama_3_70b_as_a_service": {
+      "input_price_per_million": 0.65,
+      "output_price_per_million": 0.95,
+      "subscription_alternative": null,
+      "efficiency_score": 0.8
+    }
+  },
+  "microsoft": {
+    "copilot_pro": {
+      "subscription_price": 20.0,
+      "description": "Individual subscription for priority access to latest models, accelerated performance during peak times, and use in Microsoft 365 apps (Word, Excel, etc.)."
+    },
+    "microsoft_365_copilot": {
+      "subscription_price": 30.0,
+      "description": "Enterprise subscription integrated into the M365 suite, featuring business data security and context."
+    }
+  },
+  "deepseek": {
+    "deepseek_v2": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 0.21
+    }
+  },
+  "qwen": {
+    "qwen_max": {
+      "input_price_per_million": 0.4,
+      "output_price_per_million": 1.2,
+      "subscription_alternative": null,
+      "efficiency_score": 0.8
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 6.0,
-    "average_output_cost": 20.0,
-    "most_efficient": "claude_3_5_sonnet",
-    "subscription_adoption_rate": "Data not publicly available",
-    "trend": "Intensifying price competition leading to significantly lower token costs for newer, more powerful models. Subscription models are adopting usage caps instead of unlimited access, blending pay-per-use and subscription models. The focus is on delivering higher capability at a lower cost-per-token."
+    "average_input_cost": 1.98,
+    "average_output_cost": 6.71,
+    "most_efficient": "Llama 3 8B (as a service)",
+    "subscription_adoption_rate": "Estimated at 15-20% for power users, driven by products like ChatGPT Plus and Claude Pro.",
+    "trend": "Aggressive price compression in 2024, especially for smaller, faster models. Flagship models are becoming more cost-competitive, blurring the lines with mid-tier options. A hybrid strategy with low-cost 'flash/haiku' models for simple tasks and powerful 'sonnet/pro' models for complex tasks is emerging. Open-source models hosted on cloud platforms are a major driver of this downward pricing pressure."
   },
-  "last_updated": "2024-05-30",
-  "timestamp": "2025-12-12T10:17:58.200182"
+  "last_updated": "2024-06-03",
+  "timestamp": "2025-12-12T11:16:22.188528"
 }
