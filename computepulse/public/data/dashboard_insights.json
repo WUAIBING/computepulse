@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The H100 spot price at $3.17/hr suggests supply constraints are easing, but geopolitical tensions and capex investments in domestic fabs could drive volatility in Q4 procurement cycles."
+    "text": "At a $3.18/hr average H100 price, spot capacity remains tight as enterprises lock multi\u2011year reservations, pushing capex to the top of hardware budgets and delaying refresh cycles until stronger supply normalizes pricing."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Input pricing at $1.25/1M tokens reflects aggressive market consolidation, with smaller providers likely struggling to match margins while pushing efficiency innovations to remain competitive."
+    "text": "With the average input price at $1.25/1M tokens, API vendors are pressured to compress margins, accelerating model compression and caching to defend share amid fierce price competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure consumption of 120 TWh annually represents 5% of U.S. electricity demand, accelerating grid modernization needs and making nuclear power partnerships increasingly strategic for hyperscalers."
+    "text": "A 120 TWh annual load for AI workloads would strain grids and add tens of MtCO\u2082 unless paired with nuclear baseload and demand\u2011shifting, making carbon accounting critical."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "While H100 pricing normalizes and token costs decline, the 120 TWh energy appetite suggests unsustainable growth without breakthrough efficiency gains, potentially triggering regulatory intervention before 2026."
+    "text": "Capital remains abundant but selective as efficiency drives margin pressure, raising bubble risk for undifferentiated startups while favoring hyperscalers with vertically integrated stacks."
   }
 }

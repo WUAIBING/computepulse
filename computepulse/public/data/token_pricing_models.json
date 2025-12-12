@@ -1,19 +1,19 @@
 {
   "openai": {
     "gpt_4o": {
-      "input_price_per_million": 2.5,
-      "output_price_per_million": 10.0,
+      "input_price_per_million": 5.0,
+      "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Access to GPT-4o with usage caps during peak hours (e.g., ~80 messages every 3 hours). Higher limits than the free tier."
+        "monthly_limit": "Usage limits apply, with tiered access during high demand periods"
       },
-      "efficiency_score": 0.08
+      "efficiency_score": 7.5
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 0.025
+      "efficiency_score": 6.0
     }
   },
   "anthropic": {
@@ -22,18 +22,80 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "Access to Claude 3.5 Sonnet with a usage cap (e.g., ~5x more usage than free tier, with estimates around 100-150 messages per 8 hours, varying by length)."
+        "monthly_limit": "5x more usage than free tier, with usage caps"
       },
-      "efficiency_score": 0.056
+      "efficiency_score": 8.0
+    },
+    "claude_3_haiku": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 1.25,
+      "subscription_alternative": null,
+      "efficiency_score": 9.5
+    }
+  },
+  "google": {
+    "gemini_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Usage limits apply with tiered access"
+      },
+      "efficiency_score": 9.0
+    },
+    "gemini_ultra": {
+      "input_price_per_million": 3.0,
+      "output_price_per_million": 15.0,
+      "subscription_alternative": null,
+      "efficiency_score": 7.5
+    }
+  },
+  "meta": {
+    "llama_3_70b": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
+      "subscription_alternative": {
+        "enterprise_support": "Custom pricing based on business needs",
+        "monthly_limit": "No usage limits for self-hosted models"
+      },
+      "efficiency_score": 10.0
+    }
+  },
+  "microsoft": {
+    "copilot": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_pro": 20.0,
+        "copilot_m365": 30.0,
+        "monthly_limit": "No explicit token limits, but fair use policy applies"
+      },
+      "efficiency_score": 8.5
+    }
+  },
+  "deepseek": {
+    "deepseek_v2": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 9.5
+    }
+  },
+  "qwen": {
+    "qwen_plus": {
+      "input_price_per_million": 0.2,
+      "output_price_per_million": 0.6,
+      "subscription_alternative": null,
+      "efficiency_score": 9.2
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 3.23,
-    "average_output_cost": 11.36,
-    "most_efficient": "DeepSeek-V2 (not in primary JSON due to template, but leads market efficiency at $0.14/$0.28 per million)",
-    "subscription_adoption_rate": "High and rapidly growing. Consumer adoption is driven by ChatGPT Plus/Claude Pro for enhanced features, while enterprise adoption is strong through bundles like Microsoft Copilot for M365.",
-    "trend": "Rapid deflationary trend in token costs, driven by a price war among major providers and the rise of highly efficient, smaller open-source models (like Meta's Llama 3 and Google's Gemini Flash). Hybrid monetization is dominant: subscriptions for high-volume consumer access and pay-per-token for developers/scalar applications. Efficiency is becoming a key competitive differentiator over raw power."
+    "average_input_cost": 2.62,
+    "average_output_cost": 9.48,
+    "most_efficient": "Llama 3 70B (open source)",
+    "subscription_adoption_rate": 35,
+    "trend": "Increasing price competition with Chinese models offering significantly lower costs, while Western models focus on performance differentiation and subscription bundling"
   },
-  "last_updated": "2024-05-21",
-  "timestamp": "2025-12-12T19:15:24.942830"
+  "last_updated": "2024-05-15",
+  "timestamp": "2025-12-12T20:17:11.858354"
 }
