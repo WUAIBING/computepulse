@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At an average of $3.16/hr, H100 pricing remains elevated by HBM and substrate constraints, forcing enterprises to delay deployments or negotiate cloud arbitrage while chip availability stabilizes toward late\u20112025."
+    "text": "With H100s averaging $3.39/hr, prices have corrected from 2024 peaks but remain elevated as hyperscalers hoard supply, squeezing downstream availability and forcing smaller buyers into longer lead times and higher capex commitments."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Average input tokens at $1.25/1M compress margins and intensify API price wars, accelerating demand for small, efficient models and driving batch processing and prompt compaction to capture savings."
+    "text": "At $1.25 per 1M input tokens, API price wars are compressing margins while efficiency-focused model competition drives aggressive context window expansion and faster inference, keeping total cost of ownership trending down even as usage scales."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load adds sustained baseload demand near 13.7 GW, magnifying grid strain and accelerating nuclear revival and clean\u2011power procurement to limit carbon intensity."
+    "text": "A 120 TWh annual load for AI workloads adds sustained baseload to grids that are already tight, shifting capacity planning toward fast-response generation and transmission upgrades while raising carbon footprint concerns unless paired with clean firm power."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment is constructive but cautious, with capital efficiency replacing pure scale and providers pricing for breakeven, signaling sustainable growth if unit economics remain disciplined."
+    "text": "Industry sentiment remains buoyant on AI adoption, yet sustainability hinges on cost discipline and clean power access; the next phase will reward players who translate price compression and efficiency gains into durable margins."
   }
 }

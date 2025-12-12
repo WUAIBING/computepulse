@@ -5,18 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 80 messages every 3 hours on GPT-4o; higher limits on GPT-4"
+        "monthly_limit": "Tiered usage limits, significantly higher than free tier (e.g., up to 80 messages every 3 hours on GPT-4o)."
       },
-      "efficiency_score": 10.0
+      "efficiency_score": 98
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
-      "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Access via ChatGPT Plus, with usage limits lower than for GPT-4o"
-      },
-      "efficiency_score": 20.0
+      "subscription_alternative": null,
+      "efficiency_score": 85
     }
   },
   "anthropic": {
@@ -25,18 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, with capacity to create more projects and chats"
+        "monthly_limit": "5x more usage than the free tier, with priority access during high traffic."
       },
-      "efficiency_score": 9.0
+      "efficiency_score": 95
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "Same as Claude 3.5 Sonnet subscription"
+        "monthly_limit": "Same as Claude 3.5 Sonnet subscription; provides access to Haiku with higher limits."
       },
-      "efficiency_score": 0.75
+      "efficiency_score": 99
     }
   },
   "google": {
@@ -45,39 +42,55 @@
       "output_price_per_million": 10.5,
       "subscription_alternative": {
         "gemini_advanced": 20.0,
-        "monthly_limit": "Access to 1.5 Pro and other models within Google One AI Premium"
+        "monthly_limit": "Part of Google One AI Premium; provides access to 1.5 Pro within Gemini apps, not a raw token limit."
       },
-      "efficiency_score": 7.0
+      "efficiency_score": 92
     },
     "gemini_1_5_flash": {
       "input_price_per_million": 0.075,
       "output_price_per_million": 0.15,
       "subscription_alternative": null,
-      "efficiency_score": 0.1125
+      "efficiency_score": 97
     }
   },
   "meta": {
-    "llama_3_8b_as_a_service": {
-      "input_price_per_million": 0.05,
-      "output_price_per_million": 0.1,
-      "subscription_alternative": null,
-      "efficiency_score": 0.075
+    "llama_3_1_405b_instruct": {
+      "input_price_per_million": 2.85,
+      "output_price_per_million": 2.85,
+      "subscription_alternative": {
+        "self_hosting": "Cost of hardware/infrastructure",
+        "monthly_limit": "N/A - Open source model, user-defined."
+      },
+      "efficiency_score": 94
     },
-    "llama_3_70b_as_a_service": {
-      "input_price_per_million": 0.65,
-      "output_price_per_million": 0.95,
-      "subscription_alternative": null,
-      "efficiency_score": 0.8
+    "llama_3_1_70b_instruct": {
+      "input_price_per_million": 0.72,
+      "output_price_per_million": 0.72,
+      "subscription_alternative": {
+        "self_hosting": "Cost of hardware/infrastructure",
+        "monthly_limit": "N/A - Open source model, user-defined."
+      },
+      "efficiency_score": 96
     }
   },
   "microsoft": {
     "copilot_pro": {
-      "subscription_price": 20.0,
-      "description": "Individual subscription for priority access to latest models, accelerated performance during peak times, and use in Microsoft 365 apps (Word, Excel, etc.)."
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "individual": 20.0,
+        "monthly_limit": "Unlimited usage for non-commercial tasks, with faster AI model performance during peak times."
+      },
+      "efficiency_score": null
     },
     "microsoft_365_copilot": {
-      "subscription_price": 30.0,
-      "description": "Enterprise subscription integrated into the M365 suite, featuring business data security and context."
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "enterprise": 30.0,
+        "monthly_limit": "Per user, per month. Integrated into Microsoft 365 apps with enterprise-grade data protections."
+      },
+      "efficiency_score": null
     }
   },
   "deepseek": {
@@ -85,24 +98,30 @@
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 0.21
+      "efficiency_score": 100
     }
   },
   "qwen": {
-    "qwen_max": {
+    "qwen_turbo": {
       "input_price_per_million": 0.4,
       "output_price_per_million": 1.2,
       "subscription_alternative": null,
-      "efficiency_score": 0.8
+      "efficiency_score": 93
+    },
+    "qwen_plus": {
+      "input_price_per_million": 1.0,
+      "output_price_per_million": 2.0,
+      "subscription_alternative": null,
+      "efficiency_score": 91
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 1.98,
-    "average_output_cost": 6.71,
-    "most_efficient": "Llama 3 8B (as a service)",
-    "subscription_adoption_rate": "Estimated at 15-20% for power users, driven by products like ChatGPT Plus and Claude Pro.",
-    "trend": "Aggressive price compression in 2024, especially for smaller, faster models. Flagship models are becoming more cost-competitive, blurring the lines with mid-tier options. A hybrid strategy with low-cost 'flash/haiku' models for simple tasks and powerful 'sonnet/pro' models for complex tasks is emerging. Open-source models hosted on cloud platforms are a major driver of this downward pricing pressure."
+    "average_input_cost": 2.29,
+    "average_output_cost": 5.99,
+    "most_efficient": "DeepSeek V2",
+    "subscription_adoption_rate": "High and growing rapidly among individual and enterprise users for heavy usage.",
+    "trend": "Aggressive price competition driving down costs for high-capability models. Hybrid pricing models (subscription for consumers, pay-per-token for developers) are now standard. New entrants are competing on efficiency, offering flagship-level performance at a fraction of the previous cost."
   },
-  "last_updated": "2024-06-03",
-  "timestamp": "2025-12-12T11:16:22.188528"
+  "last_updated": "2024-08-21",
+  "timestamp": "2025-12-12T12:28:45.844790"
 }
