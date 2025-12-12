@@ -1,40 +1,47 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
-      "suggested_retail": 30000,
-      "gross_margin": 89,
+      "manufacturing_cost": 4500,
+      "suggested_retail": 35000,
+      "gross_margin": 87.14,
       "cost_breakdown": {
-        "silicon": 1700,
-        "packaging": 1200,
-        "testing": 200,
-        "r_and_d_allocation": 220
+        "silicon": 3200,
+        "packaging": 800,
+        "testing": 300,
+        "r_and_d_allocation": 1200
       }
     },
     "a100": {
       "manufacturing_cost": 2500,
-      "suggested_retail": 15000,
-      "gross_margin": 83,
+      "suggested_retail": 12000,
+      "gross_margin": 79.17,
       "cost_breakdown": {
-        "silicon": 1200,
-        "packaging": 900,
-        "testing": 180,
-        "r_and_d_allocation": 220
+        "silicon": 1600,
+        "packaging": 500,
+        "testing": 200,
+        "r_and_d_allocation": 800
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4000,
-      "suggested_retail": 21000,
-      "gross_margin": 81
+      "manufacturing_cost": 4200,
+      "suggested_retail": 18000,
+      "gross_margin": 76.67
+    }
+  },
+  "intel": {
+    "arc_battlemage_high_end": {
+      "manufacturing_cost": 250,
+      "suggested_retail": 400,
+      "gross_margin": 37.5
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 85,
-    "cost_trend": "Increasing due to advanced node premiums (TSMC N5/N4) and complex packaging (CoWoS, 3D stacking)",
-    "main_cost_driver": "Wafer prices and advanced packaging"
+    "average_gross_margin": 70.0,
+    "cost_trend": "Increasing due to rising wafer costs, advanced packaging complexity, and R&D intensity",
+    "main_cost_driver": "Wafer fabrication (TSMC/Samsung premium pricing) and CoWoS packaging"
   },
-  "last_updated": "2024-08-15",
-  "timestamp": "2025-12-12T22:14:36.791428"
+  "last_updated": "2024-06-15",
+  "timestamp": "2025-12-12T23:14:39.552635"
 }

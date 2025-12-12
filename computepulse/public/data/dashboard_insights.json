@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 pricing stabilizing at $4.27/hr, supply chain bottlenecks are easing but geopolitical tensions and export controls continue to drive capex uncertainty for enterprises seeking reliable AI compute access."
+    "text": "H100 scarcity under export controls is reshaping capex toward domestic alternatives and multi-vendor procurement strategies to stabilize supply chain risk."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The sharp drop in input token pricing to $1.25/1M reflects aggressive API price wars, pushing efficiency gains that force model providers to differentiate through specialized capabilities rather than pure cost competition."
+    "text": "At an average input price of $1.25 per 1M tokens, providers are leaning into aggressive pricing and higher context windows to win share in a model-compression race."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "With AI data centers consuming 120 TWh annually, grid infrastructure faces mounting strain, accelerating nuclear adoption discussions while carbon footprint concerns drive demand for renewable-powered compute clusters."
+    "text": "A 120 TWh annual AI load threatens grid stability and carbon budgets unless demand-side flexibility and clean baseload (e.g., nuclear) scale rapidly."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment remains cautiously optimistic despite bubble warnings, as sustained enterprise adoption and infrastructure investments suggest growth sustainability, though regulatory scrutiny and ethical concerns temper enthusiasm."
+    "text": "Adoption momentum is strong but capital efficiency is under scrutiny, elevating the risk of a bubble unless revenue models demonstrate clear, sustainable ROI."
   }
 }

@@ -4,16 +4,16 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 80 messages per 3 hours on GPT-4o, lower limits on GPT-4 during peak times."
+        "chatgpt_plus": 20,
+        "monthly_limit": "Higher usage limits on GPT-4o, GPT-4, and advanced data analysis; subject to dynamic caps."
       },
-      "efficiency_score": 84
+      "efficiency_score": 10.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 42
+      "efficiency_score": 20.0
     }
   },
   "anthropic": {
@@ -21,110 +21,19 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with a higher cap on Claude 3.5 Sonnet."
+        "claude_pro": 20,
+        "monthly_limit": "5x the usage of the free tier, with the ability to create more projects and chats. Fair use and capacity limits apply."
       },
-      "efficiency_score": 90
-    },
-    "claude_3_haiku": {
-      "input_price_per_million": 0.25,
-      "output_price_per_million": 1.25,
-      "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with a higher cap on Claude 3 Haiku."
-      },
-      "efficiency_score": 100
-    }
-  },
-  "google": {
-    "gemini_1_5_pro": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Access to Gemini 1.5 Pro and 1.0 Ultra with 1 million tokens per month context window for coding and file analysis."
-      },
-      "efficiency_score": 88
-    },
-    "gemini_1_5_flash": {
-      "input_price_per_million": 0.075,
-      "output_price_per_million": 0.15,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Access included, but usage is weighed against the overall Gemini Advanced quota."
-      },
-      "efficiency_score": 99
-    }
-  },
-  "meta": {
-    "llama_models": {
-      "pricing_model": "Open Source (Self-Hosted & Cloud)",
-      "description": "Llama 3 models are free to download and run. Costs are operational (compute, hosting). Cloud providers offer pay-as-you-go APIs.",
-      "representative_hosted_cost": {
-        "llama_3_8b_instruct": {
-          "input_price_per_million": 0.3,
-          "output_price_per_million": 0.3,
-          "efficiency_score": 98
-        },
-        "llama_3_70b_instruct": {
-          "input_price_per_million": 2.65,
-          "output_price_per_million": 2.65,
-          "efficiency_score": 91
-        }
-      },
-      "enterprise_vs_individual": "Llama 3 is free for both. However, a commercial license is required for companies with >700M monthly active users. Enterprise customers typically prefer managed cloud offerings."
-    }
-  },
-  "microsoft": {
-    "copilot_subscriptions": {
-      "pricing_model": "Subscription-based",
-      "description": "Primarily offered as flat-rate subscriptions. API access is via Azure OpenAI Service, which uses OpenAI's pay-per-token pricing.",
-      "copilot_pro": {
-        "price": 20.0,
-        "features": "Access to GPT-4 Turbo, priority access during peak times, faster AI image creation."
-      },
-      "microsoft_365_copilot": {
-        "price": 30.0,
-        "features": "Enterprise offering integrated into Microsoft 365 apps (Teams, Word, Excel, etc.) with business data security and controls."
-      }
-    }
-  },
-  "deepseek": {
-    "api_pricing_models": {
-      "deepseek_v2": {
-        "input_price_per_million": 0.14,
-        "output_price_per_million": 0.28,
-        "efficiency_score": 96
-      }
-    }
-  },
-  "qwen": {
-    "alibaba_pricing_strategy": {
-      "description": "Tiered model approach from fast/cheap to powerful/expensive, offered via Alibaba Cloud Model Studio.",
-      "qwen_turbo": {
-        "input_price_per_million": 0.2,
-        "output_price_per_million": 0.2,
-        "efficiency_score": 97
-      },
-      "qwen_plus": {
-        "input_price_per_million": 0.4,
-        "output_price_per_million": 0.6,
-        "efficiency_score": 94
-      },
-      "qwen_max": {
-        "input_price_per_million": 2.0,
-        "output_price_per_million": 6.0,
-        "efficiency_score": 75
-      }
+      "efficiency_score": 9.0
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.5,
-    "average_output_cost": 7.8,
-    "most_efficient": "Claude 3 Haiku (tie with Gemini 1.5 Flash)",
-    "subscription_adoption_rate": "High, estimated at 15-25% of active users, driving a shift from pure pay-per-token for personal use.",
-    "trend": "A clear 'race to the bottom' for token costs, coupled with the rise of smaller, highly efficient 'Flash' or 'Haiku' models. Simultaneously, powerful models are being bundled into ~$20/month flat-rate consumer subscriptions, decoupling direct usage from cost for individuals. Enterprise pricing remains complex and usage-based."
+    "average_input_cost": 6.0,
+    "average_output_cost": 20.0,
+    "most_efficient": "Claude 3.5 Sonnet",
+    "subscription_adoption_rate": "Not publicly available",
+    "trend": "Aggressive price compression among leading frontier models. New releases like GPT-4o and Claude 3.5 Sonnet are priced significantly lower than their immediate predecessors (GPT-4 Turbo, Claude 3 Opus), establishing a new, lower price-performance benchmark for high-capability models. The market is segmenting between ultra-low-cost, high-speed models (like Claude 3 Haiku at $0.25/million input) and highly capable, moderately priced models."
   },
-  "last_updated": "2024-06-10",
-  "timestamp": "2025-12-12T22:15:27.996959"
+  "last_updated": "2024-05-30",
+  "timestamp": "2025-12-12T23:15:56.233609"
 }
