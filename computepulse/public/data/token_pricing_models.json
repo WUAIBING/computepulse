@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Limited usage caps on GPT-4o during peak times"
+        "monthly_limit": "Up to 80 messages per 3 hours on GPT-4o; unlimited on GPT-4o mini"
       },
-      "efficiency_score": 9.2
+      "efficiency_score": 91.38
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 7.5
+      "efficiency_score": 45.69
     }
   },
   "anthropic": {
@@ -22,49 +22,44 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, with priority access during high traffic"
+        "monthly_limit": "5x more usage than free tier, with a higher cap before rate limiting"
       },
-      "efficiency_score": 9.5
+      "efficiency_score": 74.36
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 9.8
+      "subscription_alternative": {
+        "claude_pro": 20.0,
+        "monthly_limit": "Same as Sonnet, allows access to Haiku model"
+      },
+      "efficiency_score": 100.0
     }
   },
   "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
+    "gemini_1_5_pro": {
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
       "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Access to Gemini 1.5 Pro with 1M token context window"
+        "google_one_ai_premium": 20.0,
+        "monthly_limit": "Access to Gemini Advanced (based on Pro 1.5) within Google products"
       },
-      "efficiency_score": 8.7
+      "efficiency_score": 78.74
     },
-    "gemini_ultra": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Limited access through Gemini Advanced subscription"
-      },
-      "efficiency_score": 8.0
+    "gemini_1_5_flash": {
+      "input_price_per_million": 0.075,
+      "output_price_per_million": 0.15,
+      "subscription_alternative": null,
+      "efficiency_score": 98.76
     }
   },
   "meta": {
-    "llama_3_8b": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
+    "llama_3_1_405b_instruct": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
       "subscription_alternative": null,
-      "efficiency_score": 8.5
-    },
-    "llama_3_70b": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": null,
-      "efficiency_score": 9.0
+      "efficiency_score": "N/A (Self-hosted)",
+      "note": "Open-source model. Cost is self-hosting infrastructure. Cloud provider pricing varies, e.g., on AWS Bedrock it can be ~$3.00 input / $9.00 output per million."
     }
   },
   "microsoft": {
@@ -73,61 +68,43 @@
       "output_price_per_million": null,
       "subscription_alternative": {
         "copilot_pro": 20.0,
-        "monthly_limit": "Access to latest models including GPT-4 Turbo during peak times"
+        "monthly_limit": "Unlimited usage across web, mobile, and Office apps with priority access to latest models"
       },
-      "efficiency_score": 7.8
+      "efficiency_score": "N/A (Subscription)"
     },
-    "microsoft_365_copilot": {
+    "copilot_for_microsoft_365": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
-        "microsoft_365_copilot": 30.0,
-        "monthly_limit": "Full integration with Microsoft 365 apps with enterprise capabilities"
+        "enterprise_plan": 30.0,
+        "monthly_limit": "Per user, with full integration into Microsoft 365 apps and enterprise data protection"
       },
-      "efficiency_score": 8.2
+      "efficiency_score": "N/A (Subscription)"
     }
   },
   "deepseek": {
-    "deepseek_coder": {
+    "deepseek_chat": {
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 8.9
-    },
-    "deepseek_llm": {
-      "input_price_per_million": 0.1,
-      "output_price_per_million": 0.2,
-      "subscription_alternative": null,
-      "efficiency_score": 8.3
+      "efficiency_score": 95.41
     }
   },
   "qwen": {
-    "qwen_turbo": {
-      "input_price_per_million": 3.2,
-      "output_price_per_million": 6.4,
-      "subscription_alternative": null,
-      "efficiency_score": 8.6
-    },
     "qwen_plus": {
-      "input_price_per_million": 6.0,
-      "output_price_per_million": 12.0,
+      "input_price_per_million": 0.4,
+      "output_price_per_million": 1.2,
       "subscription_alternative": null,
-      "efficiency_score": 8.8
-    },
-    "qwen_max": {
-      "input_price_per_million": 20.0,
-      "output_price_per_million": 60.0,
-      "subscription_alternative": null,
-      "efficiency_score": 7.9
+      "efficiency_score": 87.72
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 3.95,
-    "average_output_cost": 11.49,
+    "average_input_cost": 2.53,
+    "average_output_cost": 8.78,
     "most_efficient": "Claude 3 Haiku",
-    "subscription_adoption_rate": 0.64,
-    "trend": "Prices continue to decrease as competition increases, with token costs dropping approximately 30% year-over-year while performance improves. Subscriptions are becoming standard for regular users, while pay-per-token remains preferred for enterprise usage."
+    "subscription_adoption_rate": "High, driven by ChatGPT Plus and Claude Pro with a $20/month standard price point",
+    "trend": "Aggressive price compression and a shift to tiered model portfolios. Flagship models are becoming cheaper while highly efficient 'mini' or 'flash' models offer extreme cost savings for less complex tasks. The $20/month subscription has become the standard for individual power users."
   },
-  "last_updated": "2024-06-15",
-  "timestamp": "2025-12-12T01:01:43.029858"
+  "last_updated": "2024-08-20",
+  "timestamp": "2025-12-12T02:54:36.287071"
 }
