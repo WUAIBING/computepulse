@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.16 per hour for H100 instances, compute providers are facing margin compression while customers delay GPU capex purchases, creating a supply-demand imbalance that may force memory suppliers to cut prices 15-20% to restore procurement momentum."
+    "text": "With the H100 spot price holding near $3.21/hr, constrained supply and expanding capex plans point to sustained chip availability challenges through 2025."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With input pricing at $1.25 per million tokens, the API market is entering a consolidation phase where smaller providers must either differentiate through specialized models or exit, as this price point represents the threshold where profit margins become sustainable only at scale."
+    "text": "The drop of input token pricing to ~$1.25/1M underscores a rapid API price war and model efficiency race that continues to compress margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "The 120 TWh annual AI workload translates to approximately 36 million tons of CO2 equivalent annually, making grid decarbonization critical as data centers approach 3-4% of total electricity consumption in major markets."
+    "text": "Kimi\u2019s 120 TWh annual load highlights a growing grid strain that is accelerating baseload buildouts like nuclear while pressuring AI\u2019s carbon footprint."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "While infrastructure costs remain elevated and power consumption escalates, the sector's trajectory suggests sustainable growth through efficiency gains rather than pure scaling, with enterprise adoption accelerating despite capital intensity concerns."
+    "text": "Industry sentiment remains buoyant but cautious, with token price deflation and rising hardware costs indicating bubble risk around unsustainable growth."
   }
 }
