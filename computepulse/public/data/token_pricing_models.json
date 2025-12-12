@@ -1,97 +1,109 @@
 {
   "openai": {
     "gpt_4o": {
-      "input_price_per_million": 5,
-      "output_price_per_million": 15,
+      "input_price_per_million": 5.0,
+      "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20,
-        "monthly_limit": "Unlimited usage with rate limits during peak times"
+        "chatgpt_plus": 20.0,
+        "monthly_limit": "Higher limits during peak times, GPT-4o access included"
       },
-      "efficiency_score": 0.85
+      "efficiency_score": 85
     },
     "gpt_4_turbo": {
-      "input_price_per_million": 10,
-      "output_price_per_million": 30,
+      "input_price_per_million": 10.0,
+      "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 0.8
+      "efficiency_score": 75
     }
   },
   "anthropic": {
     "claude_3_5_sonnet": {
-      "input_price_per_million": 3,
-      "output_price_per_million": 15,
+      "input_price_per_million": 3.0,
+      "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20,
-        "monthly_limit": "5x more usage than free tier, priority access during high traffic"
+        "claude_pro": 20.0,
+        "monthly_limit": "5x more usage than free tier, priority access"
       },
-      "efficiency_score": 0.9
+      "efficiency_score": 90
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 0.75
+      "efficiency_score": 95
     }
   },
   "google": {
     "gemini_pro": {
       "input_price_per_million": 0.5,
       "output_price_per_million": 1.5,
-      "subscription_alternative": null,
-      "efficiency_score": 0.7
+      "subscription_alternative": {
+        "google_one_ai": 19.99,
+        "monthly_limit": "Included in Google One AI Premium"
+      },
+      "efficiency_score": 92
     },
     "gemini_ultra": {
-      "input_price_per_million": 3,
-      "output_price_per_million": 6,
+      "input_price_per_million": null,
+      "output_price_per_million": null,
       "subscription_alternative": {
-        "gemini_advanced": 20,
-        "monthly_limit": "Unlimited access to Gemini Ultra"
+        "google_one_ai": 19.99,
+        "monthly_limit": "Gemini Advanced included"
       },
-      "efficiency_score": 0.95
+      "efficiency_score": 88
     }
   },
   "meta": {
-    "llama": {
-      "input_price_per_million": 0,
-      "output_price_per_million": 0,
+    "llama_3_70b": {
+      "input_price_per_million": 0.9,
+      "output_price_per_million": 0.9,
       "subscription_alternative": null,
-      "efficiency_score": 0.6,
-      "note": "Open source with commercial restrictions"
+      "efficiency_score": 93
+    },
+    "llama_3_8b": {
+      "input_price_per_million": 0.2,
+      "output_price_per_million": 0.2,
+      "subscription_alternative": null,
+      "efficiency_score": 96
     }
   },
   "microsoft": {
-    "copilot": {
-      "subscription_alternative": {
-        "personal": 20,
-        "business": 30,
-        "enterprise": "Custom pricing"
-      },
-      "efficiency_score": 0.75
+    "copilot_pro": {
+      "monthly_price": 20.0,
+      "annual_price": 240.0,
+      "enterprise_price": 30.0,
+      "efficiency_score": 80
     }
   },
   "deepseek": {
-    "api_pricing": {
-      "input_price_per_million": 1,
-      "output_price_per_million": 2,
+    "deepseek_coder": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 0.7
+      "efficiency_score": 94
     }
   },
   "qwen": {
-    "api_pricing": {
-      "input_price_per_million": 0.8,
-      "output_price_per_million": 1.6,
+    "qwen_turbo": {
+      "input_price_per_million": 0.3,
+      "output_price_per_million": 0.6,
       "subscription_alternative": null,
-      "efficiency_score": 0.72
+      "efficiency_score": 91
+    },
+    "qwen_plus": {
+      "input_price_per_million": 0.8,
+      "output_price_per_million": 2.0,
+      "subscription_alternative": null,
+      "efficiency_score": 87
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.38,
-    "average_output_cost": 8.14,
-    "most_efficient": "Claude 3.5 Sonnet",
-    "subscription_adoption_rate": 0.45,
-    "trend": "Decreasing token costs with increasing model capabilities, shift toward hybrid token+subscription models"
+    "average_input_cost": 2.06,
+    "average_output_cost": 5.95,
+    "most_efficient": "Llama 3 8B",
+    "subscription_adoption_rate": 0.65,
+    "trend": "Prices decreasing 40% YoY, focus on efficiency metrics and multimodal capabilities"
   },
-  "last_updated": "2024-06-23",
-  "timestamp": "2025-12-12T04:30:09.218222"
+  "last_updated": "2024-06-01",
+  "timestamp": "2025-12-12T05:17:40.017911"
 }

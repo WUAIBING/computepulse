@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 spot prices averaging $3.16/hour\u2014far below typical list pricing\u2014cloud hardware is now in a clear supply\u2011chain glut, extending capex payback beyond a year and pressuring providers to accelerate migrations to H200/GB200 to preserve margins."
+    "text": "With H100 prices stabilizing at $3.21/hour amid easing supply constraints, strategic capex allocation is shifting from immediate hardware procurement to longer-term supply chain resilience investments."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At an average $1.25 per 1M input tokens, DeepSeek\u2019s API pricing is aggressively reshaping token economics, triggering price wars that compress margins and force competitors to optimize throughput and distillation to stay viable."
+    "text": "The aggressive API pricing at $1.25/1M tokens is accelerating model commoditization, forcing providers to differentiate through efficiency gains and specialized capabilities rather than pure cost competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI\u2019s annual 120 TWh load adds material grid strain and a sizable carbon footprint, accelerating the case for new nuclear and long\u2011duration storage to meet reliability and decarbonization targets."
+    "text": "AI infrastructure's 120 TWh annual energy load is approaching grid capacity limits in key markets, making nuclear power partnerships and carbon-neutral data centers critical for sustainable scaling."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Hardware and token price compression is fueling rapid AI growth, but persistent margin pressure, energy intensity, and speculative funding raise bubble risks and heighten scrutiny on sustainable economics."
+    "text": "Market sentiment remains cautiously optimistic as capital flows favor companies with clear ROI pathways over pure AI experimentation, indicating healthy maturation but elevated bubble risk in overhyped segments."
   }
 }
