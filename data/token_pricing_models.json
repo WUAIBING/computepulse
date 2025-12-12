@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 5x more messages than free users, access to GPT-4o, GPT-4, and GPT-3.5"
+        "monthly_limit": "Limited usage caps on GPT-4o during peak times"
       },
-      "efficiency_score": 85
+      "efficiency_score": 9.2
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 75
+      "efficiency_score": 7.5
     }
   },
   "anthropic": {
@@ -22,15 +22,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, priority access during high traffic"
+        "monthly_limit": "5x more usage than free tier, with priority access during high traffic"
       },
-      "efficiency_score": 90
+      "efficiency_score": 9.5
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 95
+      "efficiency_score": 9.8
     }
   },
   "google": {
@@ -38,63 +38,96 @@
       "input_price_per_million": 0.5,
       "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "ai_premium": 19.99,
-        "monthly_limit": "Access to Gemini Advanced in Google One"
+        "gemini_advanced": 19.99,
+        "monthly_limit": "Access to Gemini 1.5 Pro with 1M token context window"
       },
-      "efficiency_score": 92
+      "efficiency_score": 8.7
     },
     "gemini_ultra": {
-      "input_price_per_million": 3.0,
-      "output_price_per_million": 9.0,
-      "subscription_alternative": null,
-      "efficiency_score": 88
-    }
-  },
-  "meta": {
-    "llama_3": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
-        "hosting_cost": "Variable based on deployment platform",
-        "monthly_limit": "No limits for open-source model"
+        "gemini_advanced": 19.99,
+        "monthly_limit": "Limited access through Gemini Advanced subscription"
       },
-      "efficiency_score": 93
+      "efficiency_score": 8.0
+    }
+  },
+  "meta": {
+    "llama_3_8b": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": null,
+      "efficiency_score": 8.5
+    },
+    "llama_3_70b": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": null,
+      "efficiency_score": 9.0
     }
   },
   "microsoft": {
-    "copilot": {
+    "copilot_pro": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
         "copilot_pro": 20.0,
-        "monthly_limit": "Priority access to latest models, during peak times"
+        "monthly_limit": "Access to latest models including GPT-4 Turbo during peak times"
       },
-      "efficiency_score": 80
+      "efficiency_score": 7.8
+    },
+    "microsoft_365_copilot": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "microsoft_365_copilot": 30.0,
+        "monthly_limit": "Full integration with Microsoft 365 apps with enterprise capabilities"
+      },
+      "efficiency_score": 8.2
     }
   },
   "deepseek": {
-    "deepseek_api": {
+    "deepseek_coder": {
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 98
+      "efficiency_score": 8.9
+    },
+    "deepseek_llm": {
+      "input_price_per_million": 0.1,
+      "output_price_per_million": 0.2,
+      "subscription_alternative": null,
+      "efficiency_score": 8.3
     }
   },
   "qwen": {
-    "qwen_plus": {
-      "input_price_per_million": 0.8,
-      "output_price_per_million": 2.0,
+    "qwen_turbo": {
+      "input_price_per_million": 3.2,
+      "output_price_per_million": 6.4,
       "subscription_alternative": null,
-      "efficiency_score": 90
+      "efficiency_score": 8.6
+    },
+    "qwen_plus": {
+      "input_price_per_million": 6.0,
+      "output_price_per_million": 12.0,
+      "subscription_alternative": null,
+      "efficiency_score": 8.8
+    },
+    "qwen_max": {
+      "input_price_per_million": 20.0,
+      "output_price_per_million": 60.0,
+      "subscription_alternative": null,
+      "efficiency_score": 7.9
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.5,
-    "average_output_cost": 7.5,
-    "most_efficient": "DeepSeek API",
-    "subscription_adoption_rate": 0.35,
-    "trend": "Prices decreasing steadily as competition increases, with Chinese models offering significantly lower costs while maintaining competitive performance"
+    "average_input_cost": 3.95,
+    "average_output_cost": 11.49,
+    "most_efficient": "Claude 3 Haiku",
+    "subscription_adoption_rate": 0.64,
+    "trend": "Prices continue to decrease as competition increases, with token costs dropping approximately 30% year-over-year while performance improves. Subscriptions are becoming standard for regular users, while pay-per-token remains preferred for enterprise usage."
   },
   "last_updated": "2024-06-15",
-  "timestamp": "2025-12-11T18:22:54.513101"
+  "timestamp": "2025-12-12T01:01:43.029858"
 }

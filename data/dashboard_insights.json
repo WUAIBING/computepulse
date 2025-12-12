@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.18/hr for H100s, supply has normalized enough to ease capex pressure and shift focus to power, memory bandwidth, and lead-time risk."
+    "text": "With H100s quoted at a low $3.17/hr, spot oversupply and OEM competition are tightening margins while long-term contracts and HBM scarcity keep capex concentrated among hyperscalers, making secondary-market liquidity and diversified supply chains the new moats."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At $1.25 per million tokens for inputs, aggressive API pricing is compressing margins and rewarding small, efficient models that drive higher tokens/dollar."
+    "text": "At an average input price of $1.25/1M tokens, API providers are locked in a price war, compressing margins and forcing rapid gains in efficiency via pruning, quantization, and KV caching to defend throughput and market share."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI's ~120 TWh annual load is stressing grids, accelerating interest in nuclear and dispatchable builds, while tightening corporate carbon accounting."
+    "text": "A 120 TWh AI load risks grid strain and significant carbon emissions without faster interconnection and low-carbon capacity, making nuclear and firm renewables pivotal to decarbonization without constraining compute growth."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment is buoyant but pivoting toward capital discipline and sustainable unit economics as capex and energy intensity rise."
+    "text": "Macro sentiment is cautiously bullish as hardware normalization and API price compression are offset by sustained demand and efficiency gains, but persistent energy bottlenecks keep growth sustainability and bubble risk in the foreground."
   }
 }
