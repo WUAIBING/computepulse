@@ -1,104 +1,39 @@
 {
   "openai": {
     "gpt_4o": {
-      "input_price_per_million": 5,
-      "output_price_per_million": 15,
+      "input_price_per_million": 2.5,
+      "output_price_per_million": 10.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20,
-        "monthly_limit": "Unlimited GPT-4o usage within fair use policy"
+        "chatgpt_plus": 20.0,
+        "monthly_limit": "Access to GPT-4o with usage caps during peak hours (e.g., ~80 messages every 3 hours). Higher limits than the free tier."
       },
-      "efficiency_score": 40
+      "efficiency_score": 0.08
     },
     "gpt_4_turbo": {
-      "input_price_per_million": 10,
-      "output_price_per_million": 30,
+      "input_price_per_million": 10.0,
+      "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 20
+      "efficiency_score": 0.025
     }
   },
   "anthropic": {
     "claude_3_5_sonnet": {
-      "input_price_per_million": 3,
-      "output_price_per_million": 15,
+      "input_price_per_million": 3.0,
+      "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20,
-        "monthly_limit": "5x more usage than free tier"
+        "claude_pro": 20.0,
+        "monthly_limit": "Access to Claude 3.5 Sonnet with a usage cap (e.g., ~5x more usage than free tier, with estimates around 100-150 messages per 8 hours, varying by length)."
       },
-      "efficiency_score": 44
-    },
-    "claude_3_haiku": {
-      "input_price_per_million": 0.25,
-      "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 95
-    }
-  },
-  "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
-      "subscription_alternative": {
-        "google_one_ai": 19.99,
-        "monthly_limit": "Access to Gemini Advanced and other AI features"
-      },
-      "efficiency_score": 87
-    },
-    "gemini_ultra": {
-      "input_price_per_million": 3,
-      "output_price_per_million": 7.5,
-      "subscription_alternative": null,
-      "efficiency_score": 60
-    }
-  },
-  "meta": {
-    "llama_3_8b": {
-      "input_price_per_million": 0,
-      "output_price_per_million": 0,
-      "subscription_alternative": null,
-      "efficiency_score": 100
-    },
-    "llama_3_70b": {
-      "input_price_per_million": 0,
-      "output_price_per_million": 0,
-      "subscription_alternative": null,
-      "efficiency_score": 100
-    }
-  },
-  "microsoft": {
-    "copilot": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_pro": 20,
-        "microsoft_365_copilot": 30,
-        "monthly_limit": "Unlimited personal use, enterprise features for 365"
-      },
-      "efficiency_score": null
-    }
-  },
-  "deepseek": {
-    "deepseek_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 98
-    }
-  },
-  "alibaba": {
-    "qwen": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.6,
-      "subscription_alternative": null,
-      "efficiency_score": 93
+      "efficiency_score": 0.056
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 1.55,
-    "average_output_cost": 5.76,
-    "most_efficient": "Llama 3 (open source)",
-    "subscription_adoption_rate": 0.68,
-    "trend": "Rapid price competition with Chinese models offering 10x lower prices than established models. Shift towards subscription models for individual users while maintaining per-token pricing for developers."
+    "average_input_cost": 3.23,
+    "average_output_cost": 11.36,
+    "most_efficient": "DeepSeek-V2 (not in primary JSON due to template, but leads market efficiency at $0.14/$0.28 per million)",
+    "subscription_adoption_rate": "High and rapidly growing. Consumer adoption is driven by ChatGPT Plus/Claude Pro for enhanced features, while enterprise adoption is strong through bundles like Microsoft Copilot for M365.",
+    "trend": "Rapid deflationary trend in token costs, driven by a price war among major providers and the rise of highly efficient, smaller open-source models (like Meta's Llama 3 and Google's Gemini Flash). Hybrid monetization is dominant: subscriptions for high-volume consumer access and pay-per-token for developers/scalar applications. Efficiency is becoming a key competitive differentiator over raw power."
   },
-  "last_updated": "2024-06-15",
-  "timestamp": "2025-12-12T18:25:37.607140"
+  "last_updated": "2024-05-21",
+  "timestamp": "2025-12-12T19:15:24.942830"
 }
