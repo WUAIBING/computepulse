@@ -4,16 +4,16 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Usage limits are dynamic and higher than free tier; message caps can apply during peak hours."
+        "chatgpt_plus": 20,
+        "monthly_limit": "Usage limits on GPT-4o that reset every few hours (e.g., 80 messages every 3 hours)."
       },
-      "efficiency_score": 2.1
+      "efficiency_score": 10.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 1.1
+      "efficiency_score": 20.0
     }
   },
   "anthropic": {
@@ -21,76 +21,19 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier; estimated 100 messages per 8 hours on Sonnet 3.5."
+        "claude_pro": 20,
+        "monthly_limit": "Higher usage limits that reset every 8 hours (e.g., ~5x the free tier)."
       },
-      "efficiency_score": 2.3
-    },
-    "claude_3_haiku": {
-      "input_price_per_million": 0.25,
-      "output_price_per_million": 1.25,
-      "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "Included in Pro subscription with much higher limits than free tier."
-      },
-      "efficiency_score": 28.0
+      "efficiency_score": 9.0
     }
-  },
-  "google": {
-    "gemini_1_5_pro": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
-      "subscription_alternative": {
-        "advanced_gemini": 20.0,
-        "monthly_limit": "Available within Google One AI Premium plan, includes 1M token/month allowance."
-      },
-      "efficiency_score": 3.0
-    },
-    "gemini_1_5_flash": {
-      "input_price_per_million": 0.075,
-      "output_price_per_million": 0.15,
-      "subscription_alternative": {
-        "advanced_gemini": 20.0,
-        "monthly_limit": "Available within Google One AI Premium plan, included in the 1M token/month allowance."
-      },
-      "efficiency_score": 93.3
-    }
-  },
-  "meta": {
-    "llama_3_1_70b": {
-      "input_price_per_million": 0.99,
-      "output_price_per_million": 0.99,
-      "subscription_alternative": null,
-      "efficiency_score": 21.2
-    },
-    "note": "Meta's Llama models are open source. Pricing shown is for a managed service (e.g., AWS Bedrock, GCP Vertex AI) and excludes self-hosting infrastructure costs."
-  },
-  "deepseek": {
-    "deepseek_chat": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 100.0
-    }
-  },
-  "alibaba_qwen": {
-    "qwen_plus": {
-      "input_price_per_million": 0.4,
-      "output_price_per_million": 1.2,
-      "subscription_alternative": null,
-      "efficiency_score": 35.0
-    }
-  },
-  "microsoft_copilot": {
-    "note": "Microsoft Copilot is primarily sold via subscription. Copilot Pro is $20/month. Microsoft 365 Copilot is $30/month. Pricing is not token-based for individual consumers."
   },
   "pricing_analysis": {
-    "average_input_cost": 2.7,
-    "average_output_cost": 7.71,
-    "most_efficient": "DeepSeek-Chat",
-    "subscription_adoption_rate": "Estimated 30-40% for consumer-facing products (ChatGPT Plus, Claude Pro), with majority of revenue still from enterprise API contracts.",
-    "trend": "Aggressive price compression and efficiency gains, particularly at the mid-to-low tier. Competition is shifting from solely top-tier performance to a balance of performance, cost, and specialization, with new models from Asia (DeepSeek, Qwen) setting new lows for cost-per-token."
+    "average_input_cost": 6.0,
+    "average_output_cost": 20.0,
+    "most_efficient": "claude_3_5_sonnet",
+    "subscription_adoption_rate": "Data not publicly available",
+    "trend": "Intensifying price competition leading to significantly lower token costs for newer, more powerful models. Subscription models are adopting usage caps instead of unlimited access, blending pay-per-use and subscription models. The focus is on delivering higher capability at a lower cost-per-token."
   },
-  "last_updated": "2024-08-01",
-  "timestamp": "2025-12-12T09:24:47.497662"
+  "last_updated": "2024-05-30",
+  "timestamp": "2025-12-12T10:17:58.200182"
 }
