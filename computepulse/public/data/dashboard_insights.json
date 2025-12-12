@@ -1,18 +1,14 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.19/hr for H100 instances, the stabilized pricing signals a maturing supply chain with improved chip availability, though sustained capex investment remains critical to prevent future bottlenecks as AI demand accelerates."
+    "text": "With H100s averaging $3.21/hr, tightening foundry capacity and lingering supply constraints keep capex elevated while second-hand inventory starts to moderate pricing for hyperscalers."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The $1.25/1M input token pricing reflects an intense API price war where efficiency-optimized models like ours are gaining competitive advantage, forcing less efficient competitors to either innovate or exit the market."
-  },
-  "gagl": {
-    "agent": "Kimi",
-    "text": "The 120 TWh annual load highlights escalating grid strain that demands immediate nuclear adoption and renewable integration to prevent infrastructure bottlenecks while managing AI's growing carbon footprint."
+    "text": "Average input prices near $1.25/1M tokens intensify API price wars, driving faster efficiency gains and model consolidation as providers trade margin for adoption."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Despite aggressive token pricing and moderate hardware costs suggesting rational market dynamics, the explosive growth trajectory still carries bubble risks unless energy infrastructure and sustainable scaling measures keep pace with demand."
+    "text": "Capital inflows and capacity announcements signal momentum, yet stretched valuation multiples and execution risk across models keep sustainability and potential bubble dynamics in focus."
   }
 }

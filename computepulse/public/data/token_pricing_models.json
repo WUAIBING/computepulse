@@ -1,110 +1,97 @@
 {
   "openai": {
     "gpt_4o": {
-      "input_price_per_million": 5.0,
-      "output_price_per_million": 15.0,
+      "input_price_per_million": 5,
+      "output_price_per_million": 15,
       "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 80 messages per 3 hours on GPT-4o; unlimited on GPT-4o mini"
+        "chatgpt_plus": 20,
+        "monthly_limit": "Up to 80 messages per 3 hours with GPT-4o"
       },
-      "efficiency_score": 91.38
+      "efficiency_score": 8.5
     },
     "gpt_4_turbo": {
-      "input_price_per_million": 10.0,
-      "output_price_per_million": 30.0,
+      "input_price_per_million": 10,
+      "output_price_per_million": 30,
       "subscription_alternative": null,
-      "efficiency_score": 45.69
+      "efficiency_score": 7.0
     }
   },
   "anthropic": {
     "claude_3_5_sonnet": {
-      "input_price_per_million": 3.0,
-      "output_price_per_million": 15.0,
+      "input_price_per_million": 3,
+      "output_price_per_million": 15,
       "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, with a higher cap before rate limiting"
+        "claude_pro": 20,
+        "monthly_limit": "5x higher usage limits than free tier"
       },
-      "efficiency_score": 74.36
+      "efficiency_score": 9.0
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "Same as Sonnet, allows access to Haiku model"
-      },
-      "efficiency_score": 100.0
+      "subscription_alternative": null,
+      "efficiency_score": 9.5
     }
   },
   "google": {
-    "gemini_1_5_pro": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
+    "gemini_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "google_one_ai_premium": 20.0,
-        "monthly_limit": "Access to Gemini Advanced (based on Pro 1.5) within Google products"
+        "ai_premium": 20,
+        "monthly_limit": "Part of Google One AI Premium"
       },
-      "efficiency_score": 78.74
+      "efficiency_score": 9.2
     },
-    "gemini_1_5_flash": {
-      "input_price_per_million": 0.075,
-      "output_price_per_million": 0.15,
+    "gemini_ultra": {
+      "input_price_per_million": 2.5,
+      "output_price_per_million": 7.5,
       "subscription_alternative": null,
-      "efficiency_score": 98.76
+      "efficiency_score": 8.0
     }
   },
   "meta": {
-    "llama_3_1_405b_instruct": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
+    "llama_3": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
       "subscription_alternative": null,
-      "efficiency_score": "N/A (Self-hosted)",
-      "note": "Open-source model. Cost is self-hosting infrastructure. Cloud provider pricing varies, e.g., on AWS Bedrock it can be ~$3.00 input / $9.00 output per million."
+      "efficiency_score": 8.5
     }
   },
   "microsoft": {
-    "copilot_pro": {
+    "copilot": {
       "input_price_per_million": null,
       "output_price_per_million": null,
       "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "monthly_limit": "Unlimited usage across web, mobile, and Office apps with priority access to latest models"
+        "copilot_pro": 20,
+        "microsoft_365_copilot": 30
       },
-      "efficiency_score": "N/A (Subscription)"
-    },
-    "copilot_for_microsoft_365": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "enterprise_plan": 30.0,
-        "monthly_limit": "Per user, with full integration into Microsoft 365 apps and enterprise data protection"
-      },
-      "efficiency_score": "N/A (Subscription)"
+      "efficiency_score": 7.5
     }
   },
   "deepseek": {
-    "deepseek_chat": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
+    "deepseek_api": {
+      "input_price_per_million": 1,
+      "output_price_per_million": 2,
       "subscription_alternative": null,
-      "efficiency_score": 95.41
+      "efficiency_score": 8.8
     }
   },
   "qwen": {
-    "qwen_plus": {
-      "input_price_per_million": 0.4,
-      "output_price_per_million": 1.2,
+    "qwen_max": {
+      "input_price_per_million": 2,
+      "output_price_per_million": 6,
       "subscription_alternative": null,
-      "efficiency_score": 87.72
+      "efficiency_score": 8.2
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.53,
-    "average_output_cost": 8.78,
+    "average_input_cost": 2.79,
+    "average_output_cost": 10.16,
     "most_efficient": "Claude 3 Haiku",
-    "subscription_adoption_rate": "High, driven by ChatGPT Plus and Claude Pro with a $20/month standard price point",
-    "trend": "Aggressive price compression and a shift to tiered model portfolios. Flagship models are becoming cheaper while highly efficient 'mini' or 'flash' models offer extreme cost savings for less complex tasks. The $20/month subscription has become the standard for individual power users."
+    "subscription_adoption_rate": 0.45,
+    "trend": "Rapid price deflation with increased competition and model optimization"
   },
-  "last_updated": "2024-08-20",
-  "timestamp": "2025-12-12T02:54:36.287071"
+  "last_updated": "2024-06-17",
+  "timestamp": "2025-12-12T04:00:29.137091"
 }

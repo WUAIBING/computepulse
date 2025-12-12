@@ -1,40 +1,47 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 10000,
-      "suggested_retail": 35000,
-      "gross_margin": 75,
+      "manufacturing_cost": null,
+      "suggested_retail": null,
+      "gross_margin": null,
       "cost_breakdown": {
-        "silicon": 6000,
-        "packaging": 2500,
-        "testing": 1000,
-        "r_and_d_allocation": 500
+        "silicon": null,
+        "packaging": null,
+        "testing": null,
+        "r_and_d_allocation": null
       }
     },
     "a100": {
-      "manufacturing_cost": 6000,
-      "suggested_retail": 15000,
-      "gross_margin": 70,
+      "manufacturing_cost": null,
+      "suggested_retail": null,
+      "gross_margin": null,
       "cost_breakdown": {
-        "silicon": 3500,
-        "packaging": 1500,
-        "testing": 800,
-        "r_and_d_allocation": 200
+        "silicon": null,
+        "packaging": null,
+        "testing": null,
+        "r_and_d_allocation": null
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 8500,
-      "suggested_retail": 35000,
-      "gross_margin": 70
+      "manufacturing_cost": null,
+      "suggested_retail": null,
+      "gross_margin": null
+    }
+  },
+  "intel": {
+    "arc_gpu": {
+      "manufacturing_cost": null,
+      "suggested_retail": null,
+      "gross_margin": null
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 65,
-    "cost_trend": "Increasing due to advanced packaging and rising foundry prices",
-    "main_cost_driver": "TSMC CoWoS packaging and wafer prices"
+    "average_gross_margin": null,
+    "cost_trend": "Specific detailed cost trends for 2024-2025 are not publicly available.",
+    "main_cost_driver": "Advanced packaging (e.g., CoWoS), wafer prices, and R&D remain primary cost drivers."
   },
-  "last_updated": "2024-10-01",
-  "timestamp": "2025-12-12T02:53:22.648867"
+  "last_updated": "2024-07-20",
+  "timestamp": "2025-12-12T03:57:13.686676"
 }
