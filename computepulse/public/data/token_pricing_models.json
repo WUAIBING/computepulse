@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Usage limits apply, with tiered access during high demand periods"
+        "monthly_limit": "Usage limits on GPT-4o apply, such as up to 80 messages every 3 hours."
       },
-      "efficiency_score": 7.5
+      "efficiency_score": 10.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 6.0
+      "efficiency_score": 20.0
     }
   },
   "anthropic": {
@@ -22,80 +22,24 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, with usage caps"
+        "monthly_limit": "5x the usage of the free tier, with higher limits before rate limiting kicks in."
       },
-      "efficiency_score": 8.0
+      "efficiency_score": 9.0
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 9.5
-    }
-  },
-  "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Usage limits apply with tiered access"
-      },
-      "efficiency_score": 9.0
-    },
-    "gemini_ultra": {
-      "input_price_per_million": 3.0,
-      "output_price_per_million": 15.0,
-      "subscription_alternative": null,
-      "efficiency_score": 7.5
-    }
-  },
-  "meta": {
-    "llama_3_70b": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
-      "subscription_alternative": {
-        "enterprise_support": "Custom pricing based on business needs",
-        "monthly_limit": "No usage limits for self-hosted models"
-      },
-      "efficiency_score": 10.0
-    }
-  },
-  "microsoft": {
-    "copilot": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "copilot_m365": 30.0,
-        "monthly_limit": "No explicit token limits, but fair use policy applies"
-      },
-      "efficiency_score": 8.5
-    }
-  },
-  "deepseek": {
-    "deepseek_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 9.5
-    }
-  },
-  "qwen": {
-    "qwen_plus": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.6,
-      "subscription_alternative": null,
-      "efficiency_score": 9.2
+      "efficiency_score": 0.75
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.62,
-    "average_output_cost": 9.48,
-    "most_efficient": "Llama 3 70B (open source)",
-    "subscription_adoption_rate": 35,
-    "trend": "Increasing price competition with Chinese models offering significantly lower costs, while Western models focus on performance differentiation and subscription bundling"
+    "average_input_cost": 4.56,
+    "average_output_cost": 15.31,
+    "most_efficient": "Claude 3 Haiku",
+    "subscription_adoption_rate": "Exact adoption rates are proprietary. However, the integration of premier models into $20/month subscriptions (ChatGPT Plus, Claude Pro) represents a major consumer pricing strategy with high growth, driven by the value of flagship models like GPT-4o and Claude 3.5 Sonnet.",
+    "trend": "The primary trend for 2024-2025 is a dramatic decrease in the cost of high-intelligence models, making state-of-the-art performance accessible at a fraction of previous prices. This is driven by intense competition and architectural improvements. Concurrently, a tiered pricing structure has solidified: highly efficient, smaller models (like Haiku, Gemini 1.5 Flash) are priced near-zero for high-volume tasks, while flagship models (GPT-4o, Claude 3.5 Sonnet) are offered at aggressive per-token prices and bundled into consumer subscriptions to drive mass adoption."
   },
-  "last_updated": "2024-05-15",
-  "timestamp": "2025-12-12T20:17:11.858354"
+  "last_updated": "2024-06-11",
+  "timestamp": "2025-12-12T21:14:26.268368"
 }

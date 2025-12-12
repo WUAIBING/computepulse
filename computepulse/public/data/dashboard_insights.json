@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At a $3.18/hr average H100 price, spot capacity remains tight as enterprises lock multi\u2011year reservations, pushing capex to the top of hardware budgets and delaying refresh cycles until stronger supply normalizes pricing."
+    "text": "With H100 prices at $3.18/hr, the capital expenditure for AI infrastructure is creating supply chain bottlenecks as cloud providers prioritize high-margin workloads over capacity expansion."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With the average input price at $1.25/1M tokens, API vendors are pressured to compress margins, accelerating model compression and caching to defend share amid fierce price competition."
+    "text": "At $1.25 per 1M tokens, DeepSeek's pricing is intensifying API price compression, forcing competitors to optimize model efficiency or exit markets where thin margins cannot sustain inference costs."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load for AI workloads would strain grids and add tens of MtCO\u2082 unless paired with nuclear baseload and demand\u2011shifting, making carbon accounting critical."
+    "text": "The 120 TWh annual AI energy load represents a 25% increase in grid demand, driving nuclear power adoption discussions as utilities seek stable, carbon-free baseload to meet growing AI infrastructure needs."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Capital remains abundant but selective as efficiency drives margin pressure, raising bubble risk for undifferentiated startups while favoring hyperscalers with vertically integrated stacks."
+    "text": "The combination of high hardware costs, aggressive token pricing, and surging energy demand suggests AI's rapid growth may be encountering sustainability challenges that could trigger market corrections if not addressed."
   }
 }

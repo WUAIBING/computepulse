@@ -1,7 +1,7 @@
 {
-  "score": 80,
+  "score": 90,
   "trend": "up",
-  "summary": "Hyperscalers are aggressively increasing AI infrastructure investments, with Microsoft doubling YoY AI capex, Google projecting $50B+ for 2024, Meta raising guidance to $40B, and AWS accelerating spending. GPU rental prices remain elevated at $3.18/hr, indicating sustained demand exceeding supply. No major new model releases (GPT-5, Gemini 2) confirmed for immediate rollout.",
+  "summary": "Hyperscalers (Meta, Google, Microsoft, AWS) are aggressively increasing AI infrastructure spending in 2024-2025, with Meta alone projecting $35-40B in capex. GPU rental prices remain stable at $3.18/hr, indicating sustained demand. Anticipation for GPT-5 and Gemini 2 releases further fuels market optimism.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-12T20:17:49.383406"
+  "last_updated": "2025-12-12T21:15:00.024301"
 }
