@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 prices stabilizing at $3.21/hour amid easing supply constraints, strategic capex allocation is shifting from immediate hardware procurement to longer-term supply chain resilience investments."
+    "text": "At $3.22/hr, the H100\u2019s elevated lease cost reflects tight supply from TSMC CoWoS and export controls, keeping capex high and allocation scarce for smaller cloud buyers."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The aggressive API pricing at $1.25/1M tokens is accelerating model commoditization, forcing providers to differentiate through efficiency gains and specialized capabilities rather than pure cost competition."
+    "text": "With input priced at $1.25 per million tokens, DeepSeek\u2019s aggressive rate intensifies API price wars and compels rivals to compress inference costs via quantization, distillation, and caching."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure's 120 TWh annual energy load is approaching grid capacity limits in key markets, making nuclear power partnerships and carbon-neutral data centers critical for sustainable scaling."
+    "text": "Kimi\u2019s 120 TWh annual load indicates grid strain from sustained compute demand, accelerating on-site nuclear adoption and carbon accounting scrutiny."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Market sentiment remains cautiously optimistic as capital flows favor companies with clear ROI pathways over pure AI experimentation, indicating healthy maturation but elevated bubble risk in overhyped segments."
+    "text": "GLM: Macro demand remains strong, but rising H100 costs and heavy energy loads heighten sustainability risks, keeping valuations sensitive to capex, efficiency, and grid stability."
   }
 }
