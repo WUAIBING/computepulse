@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With the average H100 price hovering around $3.20/hour, the market appears to be in a normalization phase\u2014indicative of easing scarcity and stabilizing chip supply chains, while capex returns are being recalibrated toward throughput and utilization rather than raw inventory accumulation."
+    "text": "H100s remain supply\u2011constrained and capital\u2011intensive at roughly $3.16/hr, keeping capex elevated and driving tighter availability despite incremental capacity."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "An average input token price near $1.25 per million tokens signals intense API price competition, forcing providers to drive model efficiency and potentially compress margins as DeepSeek-style pricing reshapes the competitive landscape."
+    "text": "Average input tokens at ~$1.25/M signal intensifying API price wars, compressing margins and favoring efficient, higher\u2011throughput models in competitive markets."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "An annual load of roughly 120 TWh underscores rising grid strain and highlights the urgent need for energy efficiency, grid flexibility, and clean baseload expansion to sustain AI growth without compromising reliability or emissions goals."
+    "text": "AI\u2019s ~120 TWh annual load stresses grids and accelerates interest in nuclear baseload and firm renewables to cut carbon intensity."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Hardware price normalization, token price compression, and rapidly climbing energy loads collectively point to a maturing market where margin pressure and infrastructure constraints will test the sustainability of current AI growth trajectories."
+    "text": "With token prices falling but compute prices high, funding must favor efficiency and moats to sustain growth and avoid a usage\u2011bubble unwind."
   }
 }

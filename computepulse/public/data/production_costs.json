@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
+      "manufacturing_cost": 3856,
       "suggested_retail": 35000,
-      "gross_margin": 85,
+      "gross_margin": 89.0,
       "cost_breakdown": {
-        "silicon": 1500,
-        "packaging": 1000,
+        "silicon": 2012,
+        "packaging": 1644,
         "testing": 200,
-        "r_and_d_allocation": 620
+        "r_and_d_allocation": 2000
       }
     },
     "a100": {
-      "manufacturing_cost": 2500,
-      "suggested_retail": 15000,
-      "gross_margin": 80,
+      "manufacturing_cost": 2219,
+      "suggested_retail": 12000,
+      "gross_margin": 81.5,
       "cost_breakdown": {
-        "silicon": 1200,
-        "packaging": 800,
-        "testing": 150,
-        "r_and_d_allocation": 350
+        "silicon": 919,
+        "packaging": 1100,
+        "testing": 200,
+        "r_and_d_allocation": 1500
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4000,
-      "suggested_retail": 15000,
-      "gross_margin": 73
+      "manufacturing_cost": 3984,
+      "suggested_retail": 30000,
+      "gross_margin": 86.7
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 76,
-    "cost_trend": "Increasing due to advanced packaging (CoWoS) and HBM3e adoption",
-    "main_cost_driver": "Advanced packaging and memory (HBM)"
+    "average_gross_margin": 85.0,
+    "cost_trend": "Increasing due to advanced packaging costs and HBM prices, but foundry node costs are stabilizing",
+    "main_cost_driver": "HBM and advanced packaging (CoWoS)"
   },
-  "last_updated": "2024-06-15",
-  "timestamp": "2025-12-12T16:16:56.160520"
+  "last_updated": "2023-09-30",
+  "timestamp": "2025-12-12T17:16:11.903399"
 }
