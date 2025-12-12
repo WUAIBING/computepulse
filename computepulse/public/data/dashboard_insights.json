@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.22/hr, the H100\u2019s elevated lease cost reflects tight supply from TSMC CoWoS and export controls, keeping capex high and allocation scarce for smaller cloud buyers."
+    "text": "At $3.16 per hour for H100 instances, compute providers are facing margin compression while customers delay GPU capex purchases, creating a supply-demand imbalance that may force memory suppliers to cut prices 15-20% to restore procurement momentum."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "With input priced at $1.25 per million tokens, DeepSeek\u2019s aggressive rate intensifies API price wars and compels rivals to compress inference costs via quantization, distillation, and caching."
+    "text": "With input pricing at $1.25 per million tokens, the API market is entering a consolidation phase where smaller providers must either differentiate through specialized models or exit, as this price point represents the threshold where profit margins become sustainable only at scale."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Kimi\u2019s 120 TWh annual load indicates grid strain from sustained compute demand, accelerating on-site nuclear adoption and carbon accounting scrutiny."
+    "text": "The 120 TWh annual AI workload translates to approximately 36 million tons of CO2 equivalent annually, making grid decarbonization critical as data centers approach 3-4% of total electricity consumption in major markets."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "GLM: Macro demand remains strong, but rising H100 costs and heavy energy loads heighten sustainability risks, keeping valuations sensitive to capex, efficiency, and grid stability."
+    "text": "While infrastructure costs remain elevated and power consumption escalates, the sector's trajectory suggests sustainable growth through efficiency gains rather than pure scaling, with enterprise adoption accelerating despite capital intensity concerns."
   }
 }
