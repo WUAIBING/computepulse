@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 6500,
-      "suggested_retail": 35000,
-      "gross_margin": 77,
+      "manufacturing_cost": 4820,
+      "suggested_retail": 33000,
+      "gross_margin": 72.7,
       "cost_breakdown": {
-        "silicon": 2052,
-        "packaging": 500,
-        "testing": 50,
-        "r_and_d_allocation": 1500
+        "silicon": 3320,
+        "packaging": 700,
+        "testing": 300,
+        "r_and_d_allocation": 500
       }
     },
     "a100": {
-      "manufacturing_cost": 2500,
-      "suggested_retail": 12000,
-      "gross_margin": 69,
+      "manufacturing_cost": 2800,
+      "suggested_retail": 15000,
+      "gross_margin": 61.3,
       "cost_breakdown": {
-        "silicon": 1000,
-        "packaging": 400,
-        "testing": 50,
-        "r_and_d_allocation": 1000
+        "silicon": 1500,
+        "packaging": 500,
+        "testing": 200,
+        "r_and_d_allocation": 300
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4500,
-      "suggested_retail": 18000,
-      "gross_margin": 63
+      "manufacturing_cost": 5000,
+      "suggested_retail": 15000,
+      "gross_margin": 33.3
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 70,
-    "cost_trend": "Increasing due to advanced node and packaging costs, partially offset by yield improvements and economies of scale",
-    "main_cost_driver": "High-Bandwidth Memory (HBM) and advanced packaging (CoWoS)"
+    "average_gross_margin": 65,
+    "cost_trend": "Increasing due to rising HBM3 prices and advanced packaging costs (CoWoS), partially offset by yield improvements and economies of scale",
+    "main_cost_driver": "High-bandwidth memory (HBM) and advanced packaging"
   },
-  "last_updated": "2024-03-30",
-  "timestamp": "2025-12-12T13:33:25.824745"
+  "last_updated": "2024-05-15",
+  "timestamp": "2025-12-12T14:17:27.040735"
 }
