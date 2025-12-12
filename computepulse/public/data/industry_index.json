@@ -1,7 +1,7 @@
 {
-  "score": 90,
+  "score": 70,
   "trend": "up",
-  "summary": "Hyperscalers (Microsoft, Google, Meta) have announced aggressive increases in AI-focused Capex for 2024/2025, with commitments totaling in the tens of billions. GPU rental prices remain high ($3.41/hr), indicating sustained demand exceeding supply. Concurrently, major model releases (GPT-4o, Claude 3.5) and strong rumors of imminent launches (Gemini 2) signal ongoing innovation and market enthusiasm.",
   "capex_sentiment": "bullish",
-  "last_updated": "2025-12-12T15:18:56.332799"
+  "summary": "Hyperscalers (Microsoft, Google, Meta) announced aggressive 2024/2025 AI capex increases ($40-50B ranges), while GPU rental prices softened to $3.20/hr (from ~$4.50/hr earlier in 2024) indicating increased supply. GPT-5 and Gemini 2 model releases further fuel industry momentum.",
+  "last_updated": "2025-12-12T16:18:48.264411"
 }

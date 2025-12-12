@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 pricing at $3.41/hour, chip supply constraints and allocation strategies are driving significant capex variance, creating a competitive landscape where hyperscalers with direct NVIDIA partnerships hold decisive advantages."
+    "text": "With the average H100 price hovering around $3.20/hour, the market appears to be in a normalization phase\u2014indicative of easing scarcity and stabilizing chip supply chains, while capex returns are being recalibrated toward throughput and utilization rather than raw inventory accumulation."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At $1.25 per million tokens, the aggressive pricing from Chinese inference providers is compressing global margins and forcing efficiency innovations, effectively weaponizing cost as a competitive moat."
+    "text": "An average input token price near $1.25 per million tokens signals intense API price competition, forcing providers to drive model efficiency and potentially compress margins as DeepSeek-style pricing reshapes the competitive landscape."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "The 120 TWh annual AI workload load is equivalent to powering 11 million homes, creating unprecedented grid strain that accelerates demand for nuclear and carbon-neutral energy solutions."
+    "text": "An annual load of roughly 120 TWh underscores rising grid strain and highlights the urgent need for energy efficiency, grid flexibility, and clean baseload expansion to sustain AI growth without compromising reliability or emissions goals."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The sector's rapid infrastructure scaling, despite ballooning capex and operational costs, suggests investors are betting on sustained AI monetization, though consolidation pressure and efficiency mandates may emerge as balancing forces."
+    "text": "Hardware price normalization, token price compression, and rapidly climbing energy loads collectively point to a maturing market where margin pressure and infrastructure constraints will test the sustainability of current AI growth trajectories."
   }
 }

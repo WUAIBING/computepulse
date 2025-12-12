@@ -2,39 +2,39 @@
   "nvidia": {
     "h100": {
       "manufacturing_cost": 3320,
-      "suggested_retail": 30000,
-      "gross_margin": 0.89,
+      "suggested_retail": 35000,
+      "gross_margin": 85,
       "cost_breakdown": {
         "silicon": 1500,
-        "packaging": 1200,
-        "testing": 300,
-        "r_and_d_allocation": 320
+        "packaging": 1000,
+        "testing": 200,
+        "r_and_d_allocation": 620
       }
     },
     "a100": {
-      "manufacturing_cost": 2000,
-      "suggested_retail": 10000,
-      "gross_margin": 0.8,
+      "manufacturing_cost": 2500,
+      "suggested_retail": 15000,
+      "gross_margin": 80,
       "cost_breakdown": {
-        "silicon": 900,
-        "packaging": 700,
-        "testing": 200,
-        "r_and_d_allocation": 200
+        "silicon": 1200,
+        "packaging": 800,
+        "testing": 150,
+        "r_and_d_allocation": 350
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 5000,
+      "manufacturing_cost": 4000,
       "suggested_retail": 15000,
-      "gross_margin": 0.67
+      "gross_margin": 73
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 0.65,
-    "cost_trend": "Increasing due to advanced packaging (CoWoS) constraints and rising foundry costs",
-    "main_cost_driver": "Packaging (especially for HBM-enabled AI GPUs) and wafer prices"
+    "average_gross_margin": 76,
+    "cost_trend": "Increasing due to advanced packaging (CoWoS) and HBM3e adoption",
+    "main_cost_driver": "Advanced packaging and memory (HBM)"
   },
-  "last_updated": "2024-04-15",
-  "timestamp": "2025-12-12T15:17:40.399115"
+  "last_updated": "2024-06-15",
+  "timestamp": "2025-12-12T16:16:56.160520"
 }

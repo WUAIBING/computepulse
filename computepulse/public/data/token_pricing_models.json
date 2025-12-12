@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 5x more usage for GPT-4o compared to the free tier, with usage caps that reset periodically (e.g., every 3-5 hours)."
+        "monthly_limit": "Limited usage with GPT-4o access"
       },
-      "efficiency_score": 100
+      "efficiency_score": 9.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
-      "subscription_alternative": "Included in ChatGPT Plus usage limit",
-      "efficiency_score": 50
+      "subscription_alternative": null,
+      "efficiency_score": 7.0
     }
   },
   "anthropic": {
@@ -22,64 +22,45 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x the usage limit of the free tier, with higher capacity for conversations and file uploads."
+        "monthly_limit": "5x more usage than free tier"
       },
-      "efficiency_score": 111.11
+      "efficiency_score": 8.5
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": "Included in Claude Pro usage pool",
-      "efficiency_score": 1333.33
+      "subscription_alternative": null,
+      "efficiency_score": 9.5
     }
   },
   "google": {
-    "gemini_1_5_pro": {
-      "input_price_per_million": 1.25,
-      "output_price_per_million": 3.75,
-      "subscription_alternative": "Included in Google One AI Premium ($19.99/mo) and Gemini Advanced subscription",
-      "efficiency_score": 400
-    },
-    "gemini_1_5_flash": {
-      "input_price_per_million": 0.075,
-      "output_price_per_million": 0.15,
-      "subscription_alternative": "Included in Google One AI Premium usage pool",
-      "efficiency_score": 8888.89
-    },
-    "gemini_ultra": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": "Available via Gemini Advanced subscription (~$19.99/mo), which is part of Google One AI Premium. Direct API pricing is not yet public.",
-      "efficiency_score": null
+    "gemini_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Limited usage with Gemini Ultra"
+      },
+      "efficiency_score": 8.0
     }
   },
   "meta": {
-    "llama_3_models": {
-      "open_source": {
-        "input_price_per_million": 0.0,
-        "output_price_per_million": 0.0,
-        "description": "Models are free to download and use. Costs are associated with self-hosting on hardware or cloud instances."
-      },
-      "managed_pro_70b": {
-        "input_price_per_million": 2.65,
-        "output_price_per_million": 3.5,
-        "description": "Average price on managed platforms like AWS Bedrock, Google Cloud Vertex AI, or Azure AI Studio.",
-        "efficiency_score": 322.58
-      }
+    "llama_3_70b": {
+      "input_price_per_million": 0.7,
+      "output_price_per_million": 2.1,
+      "subscription_alternative": null,
+      "efficiency_score": 8.5
     }
   },
   "microsoft": {
-    "copilot_subscriptions": {
-      "copilot_pro": {
-        "price": 20.0,
-        "audience": "Individuals",
-        "limit": "Access to latest models like GPT-4 Turbo during peak times, priority access to new features, and faster performance."
+    "copilot_pro": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_pro": 20.0,
+        "monthly_limit": "Unlimited usage within normal limits"
       },
-      "copilot_for_microsoft_365": {
-        "price": 30.0,
-        "audience": "Enterprise/Business",
-        "limit": "Integrates with Microsoft 365 apps (Teams, Word, Excel, etc.) with enterprise-grade data protection."
-      }
+      "efficiency_score": 8.0
     }
   },
   "deepseek": {
@@ -87,31 +68,24 @@
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 4761.9
+      "efficiency_score": 8.0
     }
   },
   "qwen": {
-    "qwen_plus": {
-      "input_price_per_million": 0.4,
-      "output_price_per_million": 1.2,
-      "subscription_alternative": null,
-      "efficiency_score": 1250.0
-    },
     "qwen_max": {
       "input_price_per_million": 2.0,
       "output_price_per_million": 6.0,
       "subscription_alternative": null,
-      "efficiency_score": 250.0
+      "efficiency_score": 7.5
     }
   },
   "pricing_analysis": {
-    "average_input_cost_top_tier": 3.08,
-    "average_output_cost_top_tier": 11.25,
-    "most_efficient_frontier_model": "DeepSeek V2",
-    "most_efficient_small_model": "Google Gemini 1.5 Flash",
-    "subscription_adoption_rate": "High, with major providers reporting hundreds of millions of weekly active users and a growing percentage converting to paid tiers for higher limits and advanced features.",
-    "trend": "Aggressive price competition and a 'race to the bottom' for token costs, driven by new entrants (DeepSeek) and more efficient architectures (Mixture-of-Experts). The gap between small/fast models and large/powerful models is narrowing in terms of cost-effectiveness."
+    "average_input_cost": 2.08,
+    "average_output_cost": 8.45,
+    "most_efficient": "Claude 3 Haiku",
+    "subscription_adoption_rate": 0.38,
+    "trend": "Decreasing token costs with subscription growth and increasing competition among AI providers"
   },
-  "last_updated": "2024-08-21",
-  "timestamp": "2025-12-12T15:18:27.572162"
+  "last_updated": "2024-08-16",
+  "timestamp": "2025-12-12T16:18:06.988546"
 }
