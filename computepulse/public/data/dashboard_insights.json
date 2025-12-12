@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100s averaging $3.39/hr, prices have corrected from 2024 peaks but remain elevated as hyperscalers hoard supply, squeezing downstream availability and forcing smaller buyers into longer lead times and higher capex commitments."
+    "text": "With H100 average prices still around $3.17/hr, hyperscalers are pushing diversified sourcing to de-risk supply, while capex remains elevated but front-loaded into co-location and vertically integrated chips to secure availability."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At $1.25 per 1M input tokens, API price wars are compressing margins while efficiency-focused model competition drives aggressive context window expansion and faster inference, keeping total cost of ownership trending down even as usage scales."
+    "text": "DeepSeek's aggressive pricing at ~$1.25 per 1M input tokens is accelerating API price wars and shifting value to efficiency; inference-optimized models and prompt compression are becoming key competitive levers."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load for AI workloads adds sustained baseload to grids that are already tight, shifting capacity planning toward fast-response generation and transmission upgrades while raising carbon footprint concerns unless paired with clean firm power."
+    "text": "Kimi projects a 120 TWh annual AI load heightening grid strain; siting near baseload/nuclear and deploying demand-response and storage will be essential to keep power cheap and carbon intensity low."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment remains buoyant on AI adoption, yet sustainability hinges on cost discipline and clean power access; the next phase will reward players who translate price compression and efficiency gains into durable margins."
+    "text": "GLM notes the AI buildout is structurally strong, but fast capex cycles and compressing margins point to bubble risk unless new revenue models and hardware/utilities synergies sustain growth."
   }
 }
