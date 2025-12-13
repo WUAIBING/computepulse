@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The $3.17/hr H100 price reflects constrained supply and strong utilization, but as hyperscalers diversify into lower-cost accelerators and supply normalizes, capex risk moderates and utilization-based pricing will face downward pressure."
+    "text": "Given the average H100 price of $3.17/hr, the current supply chain is keeping availability high and moderating capex pressures, yet upcoming next\u2011gen chip ramps could tighten supply and lift cost ceilings."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At $1.25 per 1M input tokens, DeepSeek is pricing at the aggressive end of the market, intensifying API price wars and accelerating efficiency gains as providers compete on cost per token and throughput."
+    "text": "The $1.25 per million token input price signals intense API price wars among LLM providers, driving rapid efficiency gains and intensifying model competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "Kimi\u2019s 120 TWh annual load underscores growing grid strain from AI workloads, amplifying the case for nuclear baseload and renewables to stabilize demand while cutting carbon intensity."
+    "text": "A 120\u202fTWh annual load underscores rising grid strain, necessitating accelerated nuclear adoption to curb carbon emissions while meeting demand spikes."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment is buoyant with strong GPU demand and token price compression, but growth sustainability faces bubble risk as capex and grid constraints outpace monetization, making disciplined pricing and utilization critical."
+    "text": "The combined low token pricing and stable H100 rental rates suggest a cautiously optimistic industry sentiment, but rapid AI scaling could strain capital reserves, raising bubble risks."
   }
 }

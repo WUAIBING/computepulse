@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Usage caps on GPT-4o (e.g., up to 80 messages every 3 hours), unlimited access on GPT-4o mini"
+        "monthly_limit": "Access to GPT-4o with higher usage limits than free tier; message caps apply during peak hours."
       },
-      "efficiency_score": 100.0
+      "efficiency_score": 6.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 50.0
+      "efficiency_score": 3.0
     }
   },
   "anthropic": {
@@ -22,18 +22,100 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x the usage limits of the free tier; approximate limit for Claude 3.5 Sonnet is ~1,000 messages per 8 hours"
+        "monthly_limit": "5x more usage than the free tier, with a higher cap on messages for Claude 3.5 Sonnet."
       },
-      "efficiency_score": 111.11
+      "efficiency_score": 5.6
+    },
+    "claude_3_haiku": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 1.25,
+      "subscription_alternative": {
+        "claude_pro": 20.0,
+        "monthly_limit": "Pro subscription allows for higher usage across all models, including Haiku, but specific limits are not token-based."
+      },
+      "efficiency_score": 100.0
+    }
+  },
+  "google": {
+    "gemini_1_0_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Part of Google One AI Premium; provides access to Gemini 1.0 Ultra and 1.5 Pro, with usage caps."
+      },
+      "efficiency_score": 62.5
+    },
+    "gemini_1_5_pro": {
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Access via Google One AI Premium, with usage thresholds that may trigger slower speeds after limits are met."
+      },
+      "efficiency_score": 7.1
+    }
+  },
+  "meta": {
+    "llama_3_70b_instruct": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
+      "subscription_alternative": null,
+      "note": "Llama models are open-source and free to use. Costs are associated with hosting on cloud platforms (e.g., AWS, GCP, Azure) rather than token licensing. Managed API services (e.g., via AWS Bedrock) have per-token pricing, e.g., ~$0.97/input, $1.95/output.",
+      "efficiency_score": null
+    }
+  },
+  "microsoft": {
+    "copilot_pro": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_pro": 20.0,
+        "monthly_limit": "Provides priority access to latest models (like GPT-4 Turbo) during peak times, faster performance, and creative tools. No token limits."
+      },
+      "efficiency_score": null
+    },
+    "microsoft_365_copilot": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "enterprise": 30.0,
+        "monthly_limit": "Enterprise subscription per user, integrated into Microsoft 365 apps. Usage is governed by fair-use policies, not token counts."
+      },
+      "efficiency_score": null
+    }
+  },
+  "deepseek": {
+    "deepseek_chat": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 91.8
+    }
+  },
+  "qwen": {
+    "qwen_turbo": {
+      "input_price_per_million": 0.2,
+      "output_price_per_million": 0.6,
+      "subscription_alternative": null,
+      "note": "Pricing is via Alibaba Cloud's Model-as-a-Service (PAI). Enterprise options are available.",
+      "efficiency_score": 78.6
+    },
+    "qwen_plus": {
+      "input_price_per_million": 0.4,
+      "output_price_per_million": 1.2,
+      "subscription_alternative": null,
+      "note": "Pricing is via Alibaba Cloud's Model-as-a-Service (PAI). Enterprise options are available.",
+      "efficiency_score": 39.3
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 6.0,
-    "average_output_cost": 20.0,
-    "most_efficient": "Claude 3.5 Sonnet",
-    "subscription_adoption_rate": null,
-    "trend": "The market is experiencing a rapid 'race to the bottom' on token prices, driven by new, highly efficient models. Flagship models from OpenAI and Anthropic are becoming more cost-effective (e.g., GPT-4o vs. GPT-4 Turbo), while a new category of powerful, low-cost challengers like DeepSeek (V3 at ~$0.27/$1.10 per million) and Alibaba's Qwen are setting aggressive new price floors. This is forcing a bifurcation: premium models for complex tasks versus ultra-low-cost models for high-volume, simpler applications. Subscription models (ChatGPT Plus, Claude Pro) remain crucial for consumer access, providing usage-based access to top-tier models at a fixed monthly cost. Meanwhile, the open-source strategy championed by Meta's Llama 3 continues to pressure commercial offerings, as self-hosting eliminates token costs but introduces infrastructure expenses."
+    "average_input_cost": 2.49,
+    "average_output_cost": 8.24,
+    "most_efficient": "Claude 3 Haiku (for pure cost efficiency), with DeepSeek Chat and Google Gemini 1.0 Pro as close alternatives. GPT-4o leads in capability for its price tier.",
+    "subscription_adoption_rate": "Proprietary data, not publicly available. However, adoption is high for consumer-facing products (ChatGPT Plus) and growing rapidly in the enterprise sector (Microsoft 365 Copilot).",
+    "trend": "The market is trending towards both lower costs and higher capability simultaneously. Frontier models like GPT-4o are significantly cheaper than their predecessors (GPT-4 Turbo), while new, highly efficient smaller models (Claude 3 Haiku, Gemini Flash) are being introduced for high-volume, low-complexity tasks. Subscription models remain dominant for individual and bundled enterprise access."
   },
-  "last_updated": "2024-08-21",
-  "timestamp": "2025-12-13T07:14:36.965371"
+  "last_updated": "2024-05-30",
+  "timestamp": "2025-12-13T08:20:10.280427"
 }
