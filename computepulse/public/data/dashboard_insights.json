@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "Given the average H100 price of $3.17/hr, the current supply chain is keeping availability high and moderating capex pressures, yet upcoming next\u2011gen chip ramps could tighten supply and lift cost ceilings."
+    "text": "At $3.21/hour for H100s, cloud providers are optimizing capex recovery cycles while supply chain constraints create strategic inventory advantages for hyperscalers able to secure multi-year commitments."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The $1.25 per million token input price signals intense API price wars among LLM providers, driving rapid efficiency gains and intensifying model competition."
+    "text": "The $1.25/1M input token price point signals aggressive API commoditization, forcing model providers to differentiate through inference efficiency and specialized capabilities rather than pure price competition."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120\u202fTWh annual load underscores rising grid strain, necessitating accelerated nuclear adoption to curb carbon emissions while meeting demand spikes."
+    "text": "AI's 120 TWh annual load represents grid infrastructure stress that accelerates nuclear and renewable baseload adoption while necessitating intelligent load scheduling and power purchase agreement restructuring."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The combined low token pricing and stable H100 rental rates suggest a cautiously optimistic industry sentiment, but rapid AI scaling could strain capital reserves, raising bubble risks."
+    "text": "Converging AI infrastructure costs reveal a maturing market where sustainable growth depends on balancing capital efficiency with rapid capability expansion, mitigating bubble risks through proven enterprise ROI."
   }
 }
