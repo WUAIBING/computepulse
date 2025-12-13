@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "The H100 rental price at $3.17/hour reflects a maturing GPU supply chain where overcapacity from delayed hyperscaler deployments is driving rental rates below initial premium levels, creating headroom for expanded inference workloads."
+    "text": "At an average H100 price of $3.15/hr, supply is easing but high-bandwidth memory and advanced packaging remain chokepoints, keeping capex elevated and delivery timelines tight."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Input token pricing at $1.25/1M signals aggressive API commoditization as providers leverage MoE architectures to compress inference costs, forcing smaller players to either specialize or exit the pricing war."
+    "text": "An average input token price of $1.25/1M signals a race to the bottom in API pricing, favoring efficient models and compressing margins for providers that cannot deliver superior throughput or accuracy."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure's 120 TWh annual consumption represents 8-10% of total US data center load, indicating grid operators must accelerate nuclear and renewable integration to prevent regional capacity constraints by 2026."
+    "text": "AI\u2019s 120 TWh annual load is materially raising data center electricity demand, intensifying grid strain and accelerating interest in firm, low\u2011carbon power sources like nuclear to stabilize operations."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "The AI sector exhibits classic bubble characteristics with revenue multiples expanding faster than fundamental adoption metrics, suggesting institutional investors are pricing in irreversible structural shifts rather than near-term profitability."
+    "text": "Hardware normalization, aggressive token price competition, and rising energy loads together point to rapid scale with mixed sustainability, implying a maturing market with bubble risks if firm power and capital discipline lag."
   }
 }
