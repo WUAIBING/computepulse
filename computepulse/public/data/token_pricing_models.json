@@ -4,16 +4,16 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20,
-        "monthly_limit": "Access to GPT-4o with usage caps of up to 80 messages every 3 hours. Higher limits for GPT-4o mini and older models."
+        "chatgpt_plus": 20.0,
+        "monthly_limit": "Up to 80 messages every 3 hours"
       },
-      "efficiency_score": 50000
+      "efficiency_score": 43
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 25000
+      "efficiency_score": 37
     }
   },
   "anthropic": {
@@ -21,47 +21,100 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20,
-        "monthly_limit": "5x more usage than the free tier, with a maximum capacity that allows for extended conversations but is not defined by a specific token count. Access to the Claude 3.5 Sonnet model."
+        "claude_pro": 20.0,
+        "monthly_limit": "5x more usage than free tier; approximately 100 messages per day"
       },
-      "efficiency_score": 55555.56
+      "efficiency_score": 44
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": {
-        "claude_pro": 20,
-        "monthly_limit": "Same as Claude 3.5 Sonnet subscription, with higher usage limits compared to the free tier."
+        "claude_pro": 20.0,
+        "monthly_limit": "5x more usage than free tier; approximately 100 messages per day"
       },
-      "efficiency_score": 666666.67
+      "efficiency_score": 74
     }
   },
   "google": {
-    "gemini_1_5_pro": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
+    "gemini_pro": {
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "gemini_advanced": 20,
-        "monthly_limit": "Part of Google One AI Premium. Provides access to the 1.5 Pro model within Gemini chat interfaces. Usage limits are higher than the free tier but not explicitly token-based."
+        "google_one_ai_premium": 20.0,
+        "monthly_limit": "1 million tokens per month"
       },
-      "efficiency_score": 74074.07
+      "efficiency_score": 70
+    },
+    "gemini_ultra": {
+      "input_price_per_million": 7.0,
+      "output_price_per_million": 21.0,
+      "subscription_alternative": {
+        "google_one_ai_premium": 20.0,
+        "monthly_limit": "1 million tokens per month"
+      },
+      "efficiency_score": 40
     }
   },
   "meta": {
-    "llama_3_70b_instruct": {
-      "input_price_per_million": 0.99,
-      "output_price_per_million": 0.99,
+    "llama_3_70b": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
       "subscription_alternative": null,
-      "efficiency_score": 505050.51
+      "efficiency_score": 95,
+      "note": "Open source, but requires self-hosting infrastructure costs"
+    },
+    "llama_3_8b": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
+      "subscription_alternative": null,
+      "efficiency_score": 95,
+      "note": "Open source, but requires self-hosting infrastructure costs"
+    }
+  },
+  "microsoft": {
+    "copilot_pro": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
+      "subscription_alternative": {
+        "copilot_pro": 20.0,
+        "monthly_limit": "100 chats per day with GPT-4 Turbo"
+      },
+      "efficiency_score": 90
+    },
+    "microsoft_365_copilot": {
+      "input_price_per_million": 0.0,
+      "output_price_per_million": 0.0,
+      "subscription_alternative": {
+        "microsoft_365_copilot": 30.0,
+        "monthly_limit": "Unlimited usage in Microsoft 365 apps"
+      },
+      "efficiency_score": 85
+    }
+  },
+  "deepseek": {
+    "deepseek_v2": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 98
+    }
+  },
+  "qwen": {
+    "qwen2": {
+      "input_price_per_million": 0.2,
+      "output_price_per_million": 0.2,
+      "subscription_alternative": null,
+      "efficiency_score": 100
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.55,
-    "average_output_cost": 10.95,
-    "most_efficient": "Claude 3 Haiku",
-    "subscription_adoption_rate": "High and rapidly growing; the $20/month price point has become a standard for premium consumer access across major providers.",
-    "trend": "Intense price competition and specialization. Major models (GPT-4o, Claude 3.5 Sonnet) are significantly cheaper than predecessors. A new tier of ultra-efficient, low-cost models (like Haiku and Llama 3 70B) is emerging for high-volume tasks. The $20/month subscription is now the default for premium consumer access."
+    "average_input_cost": 2.57,
+    "average_output_cost": 7.87,
+    "most_efficient": "Qwen2",
+    "subscription_adoption_rate": 0.45,
+    "trend": "Prices decreasing for competitive models, with token costs dropping 20-40% year-over-year. Chinese models offering significantly lower pricing. Subscription models standardized at $20-30/month."
   },
-  "last_updated": "2024-06-03",
-  "timestamp": "2025-12-13T15:14:54.874350"
+  "last_updated": "2024-06-01",
+  "timestamp": "2025-12-13T16:17:49.636311"
 }

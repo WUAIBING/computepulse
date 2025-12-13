@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "As H100 rental rates settle near $3.16/hr, the shift to H200 is concentrating H100 into larger, lower-cost clusters while supply tightens on advanced nodes, compressing margins and extending capex payback for hyperscalers."
+    "text": "The $3.18/hr H100 pricing reflects severe supply chain bottlenecks and limited chip availability, with capex requirements exceeding $100K per training cluster, forcing smaller players out of the market."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At an average input price around $1.25 per million tokens, the token market remains fiercely competitive; providers are racing to compress costs through smaller MoE models and longer context windows, pushing efficiency to the fore."
+    "text": "At $1.25/1M input tokens, DeepSeek's aggressive pricing strategy is triggering an API price war while delivering 15-20% efficiency gains through architectural optimizations, pressuring competitors to match or exit."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI\u2019s estimated 120 TWh annual load is magnifying grid strain and accelerating nuclear and long-duration storage interest to mitigate emissions and stabilize baseload in data-heavy regions."
+    "text": "The 120 TWh annual energy load represents a 400% surge in AI data center consumption, straining power grids and demanding immediate nuclear capacity expansion to maintain carbon reduction targets."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "While sentiment remains bullish, the AI wave now confronts structural friction from energy constraints and chip availability, making growth sustainability the key watchpoint for capex-heavy players."
+    "text": "Industry sentiment shows cautious optimism amid bubble concerns, with sustainable growth hingering on balancing infrastructure investment, operational efficiency, and responsible AI deployment practices."
   }
 }
