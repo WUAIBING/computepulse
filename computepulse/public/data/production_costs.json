@@ -1,40 +1,41 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
-      "suggested_retail": 35000,
-      "gross_margin": 80.5,
+      "manufacturing_cost": 6500,
+      "suggested_retail": 30000,
+      "gross_margin": 78,
       "cost_breakdown": {
-        "silicon": 2500,
-        "packaging": 500,
-        "testing": 100,
-        "r_and_d_allocation": 220
+        "silicon": 3800,
+        "packaging": 1500,
+        "testing": 200,
+        "r_and_d_allocation": 1000
       }
     },
     "a100": {
       "manufacturing_cost": 2500,
-      "suggested_retail": 12500,
-      "gross_margin": 75.0,
+      "suggested_retail": 10000,
+      "gross_margin": 75,
       "cost_breakdown": {
-        "silicon": 1800,
-        "packaging": 400,
-        "testing": 80,
-        "r_and_d_allocation": 220
+        "silicon": 1200,
+        "packaging": 800,
+        "testing": 150,
+        "r_and_d_allocation": 350
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4000,
+      "manufacturing_cost": 5500,
       "suggested_retail": 15000,
-      "gross_margin": 73.3
+      "gross_margin": 63
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 69.0,
-    "cost_trend": "Increasing due to advanced packaging (CoWoS) and TSMC price hikes; partially offset by yield improvements",
-    "main_cost_driver": "Advanced packaging (CoWoS) and wafer pricing"
+    "average_gross_margin": 65,
+    "cost_trend": "Increasing due to advanced node (3nm/5nm) wafer costs, complex packaging (CoWoS, 3D), and higher R&D. Foundry price hikes contribute significantly.",
+    "main_cost_driver": "Advanced node wafer cost (TSMC N5/N4/N3) and advanced packaging (CoWoS-L, CoWoS-R, Foveros)."
   },
-  "last_updated": "2024-10-15",
-  "timestamp": "2025-12-13T19:11:23.237773"
+  "last_updated": "2024-07-15",
+  "data_caveats": "All cost figures are ESTIMATES based on teardown analysis (e.g., TechInsights), financial reports, and industry consensus. R&D allocation is a per-unit ESTIMATE based on total R&D spend and projected unit sales. Actual costs are proprietary. Margins calculated based on estimated cost vs. known wholesale/retail pricing. Intel Arc Battlemage cost data is premature/unavailable.",
+  "timestamp": "2025-12-13T20:15:23.483286"
 }
