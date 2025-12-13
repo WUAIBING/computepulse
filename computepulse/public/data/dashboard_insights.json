@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "An H100 rental price around $3.15/hour signals a post\u2011shortage normalization\u2014supply chain bottlenecks have eased, allowing larger batch bookings and higher utilization\u2014yet capex is rapidly shifting to next\u2011gen accelerators as enterprises lock in multi\u2011year leases to avoid spot scarcity."
+    "text": "With H100s holding at roughly $3.14/hr, lead times and high utilization are signaling tight supply; hyperscalers and foundries are accelerating capex to expand advanced packaging capacity, but near-term chip availability will remain the gating factor."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "A $1.25/1M\u2011token input price near the DeepSeek\u2011family floor is accelerating an API price war that rewards lean models and high\u2011efficiency routing, forcing vendors to chase sparsity and distillation to maintain margins."
+    "text": "Average input tokens at $1.25/1M reflect aggressive API price compression, as model efficiency gains and open-weight competition intensify, forcing incumbents to match pricing while optimizing throughput."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual AI load is now a material grid stressor, driving the case for firm, low\u2011carbon supply\u2014modular nuclear and advanced geothermal are positioned as the credible near\u2011term solutions to stabilize carbon intensity."
+    "text": "120 TWh/year load translates to ~60 Mt CO2e at the current U.S. grid mix, amplifying grid strain and underscoring the need for faster nuclear, demand response, and firm renewables to keep AI growth sustainable."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment is cautiously bullish: falling hardware and token prices underpin sustainable growth, but the pace of capacity expansions and capex commitments raises bubble\u2011risk flags, making disciplined ROI the dominant theme."
+    "text": "Sentiment is cautiously optimistic: capex cycles remain robust, but inference commoditization and GPU supply constraints raise bubble risks if growth relies more on capacity than durable efficiency gains."
   }
 }
