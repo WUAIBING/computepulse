@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 lease rates averaging $3.18/hr and supply still constrained by HBM and packaging bottlenecks, vendors must time capex and diversify vendors to avoid downstream cost spikes."
+    "text": "With H100s trading around $3.16/hr, the scarcity that defined the 2023\u20132024 window has eased, yet supply remains constrained by upstream capacity and vendor allocations, keeping capex elevated for hyperscalers while secondary market liquidity improves lead times for smaller buyers."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "An average input price of $1.25/1M tokens underscores aggressive price compression, pushing providers toward efficiency-driven models to sustain margins amid intensifying API competition."
+    "text": "API pricing around $1.25 per million input tokens has intensified a race to the bottom, forcing providers to compress costs through architectural efficiency, smaller models, and prompt optimization as model competition increasingly turns on price\u2013performance rather than raw capability."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual AI load represents a major grid stressor, accelerating the need for nuclear baseload and demand-response to stabilize carbon intensity and reliability."
+    "text": "AI\u2019s footprint near 120 TWh annually is already straining grids and increasing emissions intensity, making nuclear and firm low\u2011carbon power essential to sustain growth without compromising reliability or carbon targets."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Declining H100 rates and token prices indicate strong growth momentum, yet rapid capex expansion and margin pressure elevate bubble and stranded-asset risks for 2025."
+    "text": "Strong demand coexists with cost and sustainability constraints, so sentiment is cautiously optimistic but vigilant for bubbles in compute\u2011heavy projects, prioritizing scalable workloads and energy\u2011efficient inference for durable growth."
   }
 }

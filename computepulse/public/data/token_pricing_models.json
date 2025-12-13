@@ -4,16 +4,16 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Message limits vary by demand (approximately 40 messages every 3 hours for GPT-4o)"
+        "chatgpt_plus": 20,
+        "monthly_limit": "Higher usage limits than free tier, priority access to GPT-4o and GPT-4 during peak times."
       },
-      "efficiency_score": 70
+      "efficiency_score": 1.88
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 60
+      "efficiency_score": 0.94
     }
   },
   "anthropic": {
@@ -21,77 +21,69 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, priority access during high traffic"
+        "claude_pro": 20,
+        "monthly_limit": "5x the usage limit of the free tier (e.g., approx. 5x more messages)."
       },
-      "efficiency_score": 75
+      "efficiency_score": 2.08
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 95
+      "efficiency_score": 15.0
     }
   },
   "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
+    "gemini_1_5_pro": {
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
       "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Part of Google One AI Premium"
+        "gemini_advanced": 20,
+        "monthly_limit": "Included in Google One AI Premium plan with 1-month free trial."
       },
-      "efficiency_score": 85
+      "efficiency_score": 2.68
     },
-    "gemini_ultra": {
-      "input_price_per_million": 3.0,
-      "output_price_per_million": 15.0,
+    "gemini_1_5_flash": {
+      "input_price_per_million": 0.075,
+      "output_price_per_million": 0.3,
       "subscription_alternative": null,
-      "efficiency_score": 65
+      "efficiency_score": 100.0
     }
   },
   "meta": {
-    "llama_3": {
-      "input_price_per_million": 0.18,
-      "output_price_per_million": 0.18,
+    "llama_3_70b_instruct": {
+      "input_price_per_million": 0.99,
+      "output_price_per_million": 0.99,
       "subscription_alternative": null,
-      "efficiency_score": 88
-    }
-  },
-  "microsoft": {
-    "copilot": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "monthly_limit": "Access across Microsoft 365 apps with priority access to latest models"
-      },
-      "efficiency_score": 72
+      "note": "Pricing is for managed services (e.g., AWS Bedrock). The model itself is open-source.",
+      "efficiency_score": 9.47
     }
   },
   "deepseek": {
     "deepseek_v2": {
-      "input_price_per_million": 0.1,
-      "output_price_per_million": 0.2,
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 90
+      "efficiency_score": 35.71
     }
   },
-  "qwen": {
+  "alibaba_qwen": {
     "qwen_max": {
-      "input_price_per_million": 0.8,
-      "output_price_per_million": 2.0,
+      "input_price_per_million": 2.0,
+      "output_price_per_million": 6.0,
       "subscription_alternative": null,
-      "efficiency_score": 75
+      "note": "Pricing varies by region; rates shown are approximate for API calls.",
+      "efficiency_score": 2.81
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 1.85,
-    "average_output_cost": 6.77,
-    "most_efficient": "Claude 3 Haiku",
-    "subscription_adoption_rate": 0.38,
-    "trend": "Token costs decreasing overall while model capabilities increase, leading to better efficiency. Subscription models becoming standard for consumer access while API token pricing remains dominant for developer and enterprise use."
+    "average_input_cost_flagship": 4.83,
+    "average_output_cost_flagship": 15.17,
+    "most_efficient_overall": "Google Gemini 1.5 Flash",
+    "most_efficient_flagship_tier": "Anthropic Claude 3.5 Sonnet",
+    "subscription_standard_price": 20,
+    "trend": "Aggressive price competition focused on cost efficiency, with new models like Gemini 1.5 Flash and DeepSeek V2 drastically lowering the cost floor. A clear trend towards tiered model families (e.g., 'Pro' vs. 'Flash/Mini') and a standardized $20/month subscription tier for consumer access, coexisting with pay-per-token API models for developers and enterprises. Open-source models are driving down prices in the managed services market."
   },
-  "last_updated": "2025-03-25",
-  "timestamp": "2025-12-13T13:24:25.552984"
+  "last_updated": "2024-06-10",
+  "timestamp": "2025-12-13T14:14:09.570680"
 }
