@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Higher usage limits on GPT-4o compared to free tier; rate limits apply but are not publicly specified as a hard token cap."
+        "monthly_limit": "Usage caps on GPT-4o (e.g., up to 80 messages every 3 hours), unlimited access on GPT-4o mini"
       },
-      "efficiency_score": 10.0
+      "efficiency_score": 100.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 20.0
+      "efficiency_score": 50.0
     }
   },
   "anthropic": {
@@ -22,68 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with a minimum spend of ~$5/month included, equivalent to higher usage caps."
+        "monthly_limit": "5x the usage limits of the free tier; approximate limit for Claude 3.5 Sonnet is ~1,000 messages per 8 hours"
       },
-      "efficiency_score": 9.0
-    }
-  },
-  "other_models_summary": {
-    "google_gemini": {
-      "gemini_1_5_pro": {
-        "input_price_per_million": 3.5,
-        "output_price_per_million": 10.5,
-        "subscription_alternative": {
-          "google_ai_premium": 19.99,
-          "monthly_limit": "Includes access to Gemini 1.5 Pro (renamed Gemini Advanced) within the Google One subscription with usage caps."
-        },
-        "efficiency_score": 7.0
-      }
-    },
-    "meta_llama": {
-      "llama_3_1_70b_instruct": {
-        "input_price_per_million": 0.94,
-        "output_price_per_million": 0.94,
-        "subscription_alternative": null,
-        "note": "Pricing is for managed services (e.g., AWS Bedrock, Google Vertex AI). The model itself is open-source and free to self-host, with only infrastructure costs.",
-        "efficiency_score": 0.94
-      }
-    },
-    "deepseek": {
-      "deepseek_v2": {
-        "input_price_per_million": 0.14,
-        "output_price_per_million": 0.28,
-        "subscription_alternative": null,
-        "efficiency_score": 0.21
-      }
-    },
-    "alibaba_qwen": {
-      "qwen_plus": {
-        "input_price_per_million": 0.5,
-        "output_price_per_million": 1.25,
-        "subscription_alternative": null,
-        "efficiency_score": 0.875
-      }
-    },
-    "microsoft_copilot": {
-      "copilot_subscriptions": {
-        "copilot_pro": {
-          "price": 20.0,
-          "target": "Individual"
-        },
-        "microsoft_365_copilot": {
-          "price": 30.0,
-          "target": "Enterprise"
-        }
-      }
+      "efficiency_score": 111.11
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 1.87,
-    "average_output_cost": 9.84,
-    "most_efficient": "DeepSeek V2",
-    "subscription_adoption_rate": 0.1,
-    "trend": "The market is undergoing a significant price war, driven by highly efficient, low-cost models from Chinese providers (DeepSeek, Qwen) and the accessibility of powerful open-source models (Llama). This pressure is forcing major Western labs like OpenAI and Anthropic to release more cost-effective flagship models (e.g., GPT-4o) and compete on value. The $20/month subscription tier has emerged as the standard for premium individual access, while enterprise pricing remains high, integrating models into broader productivity suites like Microsoft 365."
+    "average_input_cost": 6.0,
+    "average_output_cost": 20.0,
+    "most_efficient": "Claude 3.5 Sonnet",
+    "subscription_adoption_rate": null,
+    "trend": "The market is experiencing a rapid 'race to the bottom' on token prices, driven by new, highly efficient models. Flagship models from OpenAI and Anthropic are becoming more cost-effective (e.g., GPT-4o vs. GPT-4 Turbo), while a new category of powerful, low-cost challengers like DeepSeek (V3 at ~$0.27/$1.10 per million) and Alibaba's Qwen are setting aggressive new price floors. This is forcing a bifurcation: premium models for complex tasks versus ultra-low-cost models for high-volume, simpler applications. Subscription models (ChatGPT Plus, Claude Pro) remain crucial for consumer access, providing usage-based access to top-tier models at a fixed monthly cost. Meanwhile, the open-source strategy championed by Meta's Llama 3 continues to pressure commercial offerings, as self-hosting eliminates token costs but introduces infrastructure expenses."
   },
-  "last_updated": "2024-07-10",
-  "timestamp": "2025-12-13T06:21:28.239041"
+  "last_updated": "2024-08-21",
+  "timestamp": "2025-12-13T07:14:36.965371"
 }

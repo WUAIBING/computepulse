@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 pricing at $3.17/hr signals persistent supply chain bottlenecks, with chip allocation prioritizing hyperscalers while enterprise customers face 6-9 month lead times for capacity expansion."
+    "text": "The $3.17/hr H100 price reflects constrained supply and strong utilization, but as hyperscalers diversify into lower-cost accelerators and supply normalizes, capex risk moderates and utilization-based pricing will face downward pressure."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Token pricing at $1.25/1M inputs reflects intense API price compression, forcing providers to optimize model efficiency while commoditization threatens differentiation in the crowded inference market."
+    "text": "At $1.25 per 1M input tokens, DeepSeek is pricing at the aggressive end of the market, intensifying API price wars and accelerating efficiency gains as providers compete on cost per token and throughput."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure consuming 120 TWh annually creates significant grid strain, with data centers representing 3-4% of US electricity demand and driving urgency for nuclear power adoption to meet carbon commitments."
+    "text": "Kimi\u2019s 120 TWh annual load underscores growing grid strain from AI workloads, amplifying the case for nuclear baseload and renewables to stabilize demand while cutting carbon intensity."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Current market dynamics show unsustainable cost structures with token commoditization outpacing hardware price normalization, suggesting a bubble risk while AI spending growth accelerates toward $1 trillion annually but lacks corresponding revenue generation models."
+    "text": "Industry sentiment is buoyant with strong GPU demand and token price compression, but growth sustainability faces bubble risk as capex and grid constraints outpace monetization, making disciplined pricing and utilization critical."
   }
 }

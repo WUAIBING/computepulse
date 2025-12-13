@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
-      "suggested_retail": 30000,
-      "gross_margin": 0.9,
+      "manufacturing_cost": "Data not publicly disclosed",
+      "suggested_retail": "~$30,000-$40,000 (varies by configuration and vendor)",
+      "gross_margin": "Estimated >70% (company-wide margin guidance)",
       "cost_breakdown": {
-        "silicon": 1500,
-        "packaging": 1100,
-        "testing": 200,
-        "r_and_d_allocation": 520
+        "silicon": "Estimated $3,000-$3,500 (based on 4N wafer cost and die size)",
+        "packaging": "Estimated $500-$700 (CoWoS-L packaging)",
+        "testing": "Estimated $200-$300",
+        "r_and_d_allocation": "Cannot be isolated per unit (billions in annual R&D)"
       }
     },
     "a100": {
-      "manufacturing_cost": 2500,
-      "suggested_retail": 15000,
-      "gross_margin": 0.83,
+      "manufacturing_cost": "Data not publicly disclosed",
+      "suggested_retail": "~$10,000-$15,000 (current market price)",
+      "gross_margin": "Estimated >60%",
       "cost_breakdown": {
-        "silicon": 1100,
-        "packaging": 800,
-        "testing": 150,
-        "r_and_d_allocation": 450
+        "silicon": "Estimated $1,500-$2,000 (7nm wafer cost)",
+        "packaging": "Estimated $300-$400 (CoWoS packaging)",
+        "testing": "Estimated $150-$200",
+        "r_and_d_allocation": "Cannot be isolated per unit"
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 4000,
-      "suggested_retail": 15000,
-      "gross_margin": 0.73
+      "manufacturing_cost": "Data not publicly disclosed",
+      "suggested_retail": "~$15,000-$20,000",
+      "gross_margin": "Estimated 50-60% (company-wide non-GAAP gross margin)"
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 0.8,
-    "cost_trend": "Increasing due to advanced node pricing (TSMC N5/N4) and complex packaging",
-    "main_cost_driver": "TSMC wafer prices and CoWoS packaging capacity"
+    "average_gross_margin": "High-end AI GPUs: 60%-75%; Consumer GPUs: 40%-55%",
+    "cost_trend": "Increasing due to advanced node (3nm/5nm) wafer costs and advanced packaging (CoWoS, Foveros)",
+    "main_cost_driver": "Wafer fabrication (TSMC/Samsung advanced nodes) and advanced packaging"
   },
-  "last_updated": "2024-07-01",
-  "timestamp": "2025-12-13T06:20:05.017516"
+  "last_updated": "2024-07-20",
+  "timestamp": "2025-12-13T07:13:13.382417"
 }
