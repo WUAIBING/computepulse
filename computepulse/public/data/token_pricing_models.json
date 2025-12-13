@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Usage limits on GPT-4o are higher than free tier but are not publicly specified and can change based on demand."
+        "monthly_limit": "Provides access to GPT-4o, GPT-4, and tools. Usage limits are significantly higher than the free tier but are not a fixed token amount, managed by fair-use policies."
       },
-      "efficiency_score": 10.0
+      "efficiency_score": 200.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 20.0
+      "efficiency_score": 100.0
     }
   },
   "anthropic": {
@@ -22,60 +22,45 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with a maximum limit that is not publicly disclosed."
+        "monthly_limit": "Offers 5x more usage than the free tier, with a capacity for more complex, longer conversations."
       },
-      "efficiency_score": 9.0
+      "efficiency_score": 333.33
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": null,
-      "efficiency_score": 0.75
+      "efficiency_score": 4000.0
     }
   },
   "google": {
     "gemini_1_5_pro": {
       "input_price_per_million": 3.5,
       "output_price_per_million": 10.5,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Included via Google One AI Premium, usage is not token-limited but subject to fair use policies."
-      },
-      "efficiency_score": 7.0
-    },
-    "gemini_1_5_flash": {
-      "input_price_per_million": 0.075,
-      "output_price_per_million": 0.15,
       "subscription_alternative": null,
-      "efficiency_score": 0.1125
+      "efficiency_score": 285.71
+    },
+    "gemini_advanced_subscription": {
+      "price": 20.0,
+      "model_access": "Provides access to Gemini Ultra 1.0, Google's most capable model, through the Gemini interface."
     }
   },
   "meta": {
-    "llama_3_1_70b": {
-      "input_price_per_million": 0.88,
-      "output_price_per_million": 0.88,
-      "subscription_alternative": null,
-      "note": "Open-source model (free to run). Prices are for running on-demand via a cloud provider like AWS Bedrock. No official subscription.",
-      "efficiency_score": 0.88
-    },
-    "llama_3_1_8b": {
-      "input_price_per_million": 0.18,
-      "output_price_per_million": 0.18,
-      "subscription_alternative": null,
-      "note": "Open-source model (free to run). Prices are for running on-demand via a cloud provider like AWS Bedrock. No official subscription.",
-      "efficiency_score": 0.18
+    "llama_3_70b_instruct": {
+      "model_type": "Open Source",
+      "input_price_per_million_aws_bedrock": 2.65,
+      "output_price_per_million_aws_bedrock": 3.95,
+      "efficiency_score": 377.36
     }
   },
   "microsoft": {
-    "copilot_pro": {
-      "pay_per_token_price": null,
-      "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "monthly_limit": "Unlimited usage across web, mobile, and Office apps (with access during peak times)."
-      },
-      "enterprise_pricing": 30.0,
-      "efficiency_score": null,
-      "note": "Pricing is subscription-based for integrated experiences, not direct pay-per-token for consumers. Enterprise price is per user/month."
+    "copilot_pro_subscription": {
+      "price": 20.0,
+      "description": "Consumer subscription for advanced AI capabilities across Microsoft apps, with priority access to latest models like GPT-4 Turbo."
+    },
+    "microsoft_365_copilot_subscription": {
+      "price": 30.0,
+      "description": "Enterprise subscription per user, integrating AI into the full Microsoft 365 suite."
     }
   },
   "deepseek": {
@@ -83,24 +68,24 @@
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 0.21
+      "efficiency_score": 7142.86
     }
   },
   "qwen": {
-    "qwen2_72b_instruct": {
-      "input_price_per_million": 0.6,
-      "output_price_per_million": 0.6,
+    "qwen_plus": {
+      "input_price_per_million": 0.4,
+      "output_price_per_million": 1.2,
       "subscription_alternative": null,
-      "efficiency_score": 0.6
+      "efficiency_score": 2500.0
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.45,
-    "average_output_cost": 7.31,
-    "most_efficient": "Gemini 1.5 Flash",
-    "subscription_adoption_rate": null,
-    "trend": "Rapid price deflation and a 'race to the bottom' for API access. Small, highly efficient models like Haiku, Gemini Flash, and DeepSeek are setting new price floors. Bundled subscription models are becoming the standard for consumer access to premium models, while pay-as-you-go APIs dominate developer and enterprise use cases."
+    "average_input_cost": 3.13,
+    "average_output_cost": 9.77,
+    "most_efficient": "DeepSeek Chat",
+    "subscription_adoption_rate": "Not publicly disclosed, but consumer adoption is high with bundled ~$20/month plans being the primary access method for flagship models.",
+    "trend": "Rapid price deflation and model commoditization are defining the market. Competition from new entrants (DeepSeek, Qwen) and open-source models (Llama) has forced major providers to slash token prices for new flagship models (GPT-4o is 50% cheaper than GPT-4 Turbo) while simultaneously introducing tiered offerings (small/cheap, mid-tier, flagship). Consumer access is consolidating around ~$20/month subscription bundles that offer multi-model access, while enterprise pricing remains flexible based on volume and deployment."
   },
-  "last_updated": "2024-07-18",
-  "timestamp": "2025-12-13T21:13:18.080331"
+  "last_updated": "2024-05-21",
+  "timestamp": "2025-12-13T22:14:33.226339"
 }

@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 spot prices averaging $3.13/hr, the constrained supply from TSMC's advanced packaging capacity is driving a bifurcated market where hyperscalers secure long-term capacity through strategic partnerships while smaller players face 40-60% price premiums."
+    "text": "An H100 rental price around $3.15/hour signals a post\u2011shortage normalization\u2014supply chain bottlenecks have eased, allowing larger batch bookings and higher utilization\u2014yet capex is rapidly shifting to next\u2011gen accelerators as enterprises lock in multi\u2011year leases to avoid spot scarcity."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The aggressive $1.25/1M token pricing from Chinese models is forcing a fundamental shift in API economics, compressing margins and accelerating commoditization while pushing the industry toward more efficient architectures to maintain profitability."
+    "text": "A $1.25/1M\u2011token input price near the DeepSeek\u2011family floor is accelerating an API price war that rewards lean models and high\u2011efficiency routing, forcing vendors to chase sparsity and distillation to maintain margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure's 120 TWh annual load represents a 15% year-over-year surge, intensifying grid strain in key regions like Northern Virginia and creating urgent demand for nuclear partnerships and behind-the-meter energy solutions to maintain reliability."
+    "text": "A 120 TWh annual AI load is now a material grid stressor, driving the case for firm, low\u2011carbon supply\u2014modular nuclear and advanced geothermal are positioned as the credible near\u2011term solutions to stabilize carbon intensity."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "While venture funding remains robust with $45B in Q2 allocations, the widening gap between compute-intensive frontier model development and practical deployment is raising concerns about capital efficiency and potential market correction risks."
+    "text": "Industry sentiment is cautiously bullish: falling hardware and token prices underpin sustainable growth, but the pace of capacity expansions and capex commitments raises bubble\u2011risk flags, making disciplined ROI the dominant theme."
   }
 }
