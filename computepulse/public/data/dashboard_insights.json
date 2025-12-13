@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.17/hr for H100s, hardware scarcity continues to drive premium pricing while capex commitments signal supply chain normalization through 2025."
+    "text": "With average H100 spot prices around $3.20/hr, persistent supply tightness and lead-time compression are redirecting capex toward pre-emptively contracted clusters and vendor diversification to de-risk access."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API pricing at $1.25/1M tokens reflects intense competition compressing margins while efficiency gains enable sustainable volume growth."
+    "text": "Input pricing averaging $1.25 per 1M tokens signals an intensifying API price war, favoring efficient models and edge inference while squeezing thinner-margin offerings."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "120 TWh annual AI load represents critical grid infrastructure strain requiring immediate capacity expansion and renewable integration planning."
+    "text": "A 120 TWh annual load elevates grid strain and carbon footprint concerns, amplifying the need for nuclear adoption and behind-the-meter storage to stabilize cost and emissions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Infrastructure investment surge suggests industry confidence despite bubble risks, with sustainable growth dependent on operational efficiency improvements."
+    "text": "Despite token price compression and ample hardware speculation, overall sentiment is cautious as investors seek durable unit economics, with growth sustainability hinging on energy cost moderation and disciplined capex."
   }
 }

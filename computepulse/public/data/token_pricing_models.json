@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Usage limits on GPT-4o, currently up to 80 messages every 3 hours. Higher limits on GPT-4o mini."
+        "monthly_limit": "Usage limits apply; up to 80 messages every 3 hours on GPT-4o, with higher limits during off-peak hours."
       },
-      "efficiency_score": 50.0
+      "efficiency_score": 2.1
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 25.0
+      "efficiency_score": 1.1
     }
   },
   "anthropic": {
@@ -22,18 +22,82 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with a limit of approximately 100 messages every 8 hours for Claude 3.5 Sonnet."
+        "monthly_limit": "5x the usage of the free tier, with a higher cap for creating projects and artifacts."
       },
-      "efficiency_score": 55.55
+      "efficiency_score": 2.3
+    },
+    "claude_3_haiku": {
+      "input_price_per_million": 0.25,
+      "output_price_per_million": 1.25,
+      "subscription_alternative": {
+        "claude_pro": "Included in Claude Pro subscription"
+      },
+      "efficiency_score": 28.0
+    }
+  },
+  "google": {
+    "gemini_1_5_pro": {
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
+      "subscription_alternative": {
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Includes access to Gemini 1.5 Pro, 1.5 Flash, and 1.0 Ultra with 1 TB of Google One storage."
+      },
+      "efficiency_score": 3.0
+    }
+  },
+  "meta": {
+    "llama_3": {
+      "open_source": {
+        "description": "Models are free to download and run on your own infrastructure.",
+        "cost": 0
+      },
+      "managed_service_example": {
+        "provider": "AWS (Amazon Bedrock)",
+        "model": "Llama 3 70B Instruct",
+        "input_price_per_million": 2.65,
+        "output_price_per_million": 3.5,
+        "efficiency_score": 6.8
+      }
+    }
+  },
+  "microsoft": {
+    "copilot_subscriptions": {
+      "copilot_pro": {
+        "price": 20.0,
+        "billing": "monthly",
+        "pay_per_token": false
+      },
+      "copilot_for_microsoft_365": {
+        "price": 30.0,
+        "billing": "per user/month (annual commitment)",
+        "pay_per_token": false
+      }
+    }
+  },
+  "deepseek": {
+    "deepseek_chat": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 100.0
+    }
+  },
+  "alibaba": {
+    "qwen_turbo": {
+      "input_price_per_million": 0.33,
+      "output_price_per_million": 1.0,
+      "subscription_alternative": null,
+      "efficiency_score": 31.6
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 6.0,
-    "average_output_cost": 20.0,
-    "most_efficient": "Claude 3.5 Sonnet",
-    "subscription_adoption_rate": "High (estimated >70% of power users opt for subscriptions like ChatGPT Plus or Claude Pro for better access and reduced downtime).",
-    "trend": "The market is seeing a rapid decrease in price-per-token while model capabilities increase. Top-tier models from OpenAI and Anthropic are now directly competitive on price. A significant trend is the emergence of highly efficient, smaller models (e.g., GPT-4o mini, Claude 3 Haiku) at extremely low costs. Subscription models are solidifying as the primary consumer access method, while pay-per-token remains the standard for developers and enterprises, with increasing differentiation between self-hosted (like Meta's Llama) and API-based models."
+    "average_input_cost": 2.78,
+    "average_output_cost": 8.55,
+    "most_efficient": "deepseek_chat",
+    "subscription_adoption_rate": "Not publicly disclosed",
+    "trend": "Aggressive price compression across the industry, with new entrants like DeepSeek and models like Claude 3 Haiku setting new lows for token cost. A $20/month subscription tier has become the standard for premium access to flagship models, while the viability of running open-source models via managed cloud services is increasing, providing a strong middle-ground option."
   },
-  "last_updated": "2024-05-23",
-  "timestamp": "2025-12-13T00:58:02.020034"
+  "last_updated": "2024-06-04",
+  "timestamp": "2025-12-13T02:31:25.538455"
 }
