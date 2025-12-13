@@ -4,16 +4,16 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 5x more messages on GPT-4o compared to the free tier, plus unlimited access to GPT-4o for lower-tier models."
+        "chatgpt_plus": 20,
+        "monthly_limit": "Higher usage limits during peak times, up to 5x messages on GPT-4o"
       },
-      "efficiency_score": 9
+      "efficiency_score": 95
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 6
+      "efficiency_score": 70
     }
   },
   "anthropic": {
@@ -21,78 +21,28 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with priority access during high-traffic periods."
+        "claude_pro": 20,
+        "monthly_limit": "5x more usage than free tier, priority access during high demand"
       },
-      "efficiency_score": 8.5
+      "efficiency_score": 100
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 10
-    }
-  },
-  "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "ai_premium": 20.0,
-        "monthly_limit": "Access to Gemini 1.5 Pro, 1TB of Google One storage, and other Google One premium features."
+        "claude_pro": 20,
+        "monthly_limit": "5x more usage than free tier, priority access during high demand"
       },
-      "efficiency_score": 8
-    }
-  },
-  "meta": {
-    "llama_3_8b_instruct": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.2,
-      "subscription_alternative": null,
-      "efficiency_score": 10
-    },
-    "llama_3_70b_instruct": {
-      "input_price_per_million": 0.85,
-      "output_price_per_million": 0.85,
-      "subscription_alternative": null,
-      "efficiency_score": 9.5
-    }
-  },
-  "microsoft": {
-    "copilot_pro": {
-      "subscription_price": 20.0,
-      "description": "Premium AI access for individuals, includes priority access to latest models (GPT-4 Turbo), creative tools, and integration in Microsoft 365 apps (web, mobile).",
-      "efficiency_score": 7.5
-    },
-    "copilot_for_microsoft_365": {
-      "subscription_price": 30.0,
-      "description": "Enterprise-tier subscription with deep integration into the full Microsoft 365 app suite (Word, Excel, Teams, etc.) and business-specific data protection.",
-      "efficiency_score": 7
-    }
-  },
-  "deepseek": {
-    "deepseek_coder_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 10
-    }
-  },
-  "qwen": {
-    "qwen_max": {
-      "input_price_per_million": 0.019,
-      "output_price_per_million": 0.057,
-      "subscription_alternative": null,
-      "efficiency_score": 9.5
+      "efficiency_score": 100
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.29,
-    "average_output_cost": 8.15,
-    "most_efficient": "llama_3_8b_instruct",
-    "subscription_adoption_rate": "High, with the $20/month tier becoming the standard for consumers seeking premium model access (ChatGPT Plus, Claude Pro, Copilot Pro).",
-    "trend": "Aggressive price war is driving token costs down significantly. A clear $20/month standard has emerged for consumer subscriptions. Open-source models (Llama, DeepSeek, Qwen) are providing extreme cost-efficiency, forcing proprietary model providers to innovate on both price and performance-per-cost."
+    "average_input_cost": 4.56,
+    "average_output_cost": 15.31,
+    "most_efficient": "Claude 3 Haiku",
+    "subscription_adoption_rate": 0.65,
+    "trend": "Decreasing token costs with improved efficiency, subscription models becoming dominant for individual users, Chinese models entering with highly competitive pricing"
   },
-  "last_updated": "2024-06-10",
-  "timestamp": "2025-12-13T10:15:48.386622"
+  "last_updated": "2024-06-05",
+  "timestamp": "2025-12-13T11:16:09.222150"
 }
