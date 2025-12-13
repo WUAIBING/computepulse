@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Limited usage caps on GPT-4o during peak times"
+        "monthly_limit": "Usage limits on GPT-4o, currently up to 80 messages every 3 hours. Higher limits on GPT-4o mini."
       },
-      "efficiency_score": 9.2
+      "efficiency_score": 50.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 7.5
+      "efficiency_score": 25.0
     }
   },
   "anthropic": {
@@ -22,112 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier, with priority access during high traffic"
+        "monthly_limit": "5x more usage than the free tier, with a limit of approximately 100 messages every 8 hours for Claude 3.5 Sonnet."
       },
-      "efficiency_score": 9.5
-    },
-    "claude_3_haiku": {
-      "input_price_per_million": 0.25,
-      "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 9.8
-    }
-  },
-  "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
-      "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Access to Gemini 1.5 Pro with 1M token context window"
-      },
-      "efficiency_score": 8.7
-    },
-    "gemini_ultra": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "gemini_advanced": 19.99,
-        "monthly_limit": "Limited access through Gemini Advanced subscription"
-      },
-      "efficiency_score": 8.0
-    }
-  },
-  "meta": {
-    "llama_3_8b": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": null,
-      "efficiency_score": 8.5
-    },
-    "llama_3_70b": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": null,
-      "efficiency_score": 9.0
-    }
-  },
-  "microsoft": {
-    "copilot_pro": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "monthly_limit": "Access to latest models including GPT-4 Turbo during peak times"
-      },
-      "efficiency_score": 7.8
-    },
-    "microsoft_365_copilot": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "microsoft_365_copilot": 30.0,
-        "monthly_limit": "Full integration with Microsoft 365 apps with enterprise capabilities"
-      },
-      "efficiency_score": 8.2
-    }
-  },
-  "deepseek": {
-    "deepseek_coder": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 8.9
-    },
-    "deepseek_llm": {
-      "input_price_per_million": 0.1,
-      "output_price_per_million": 0.2,
-      "subscription_alternative": null,
-      "efficiency_score": 8.3
-    }
-  },
-  "qwen": {
-    "qwen_turbo": {
-      "input_price_per_million": 3.2,
-      "output_price_per_million": 6.4,
-      "subscription_alternative": null,
-      "efficiency_score": 8.6
-    },
-    "qwen_plus": {
-      "input_price_per_million": 6.0,
-      "output_price_per_million": 12.0,
-      "subscription_alternative": null,
-      "efficiency_score": 8.8
-    },
-    "qwen_max": {
-      "input_price_per_million": 20.0,
-      "output_price_per_million": 60.0,
-      "subscription_alternative": null,
-      "efficiency_score": 7.9
+      "efficiency_score": 55.55
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 3.95,
-    "average_output_cost": 11.49,
-    "most_efficient": "Claude 3 Haiku",
-    "subscription_adoption_rate": 0.64,
-    "trend": "Prices continue to decrease as competition increases, with token costs dropping approximately 30% year-over-year while performance improves. Subscriptions are becoming standard for regular users, while pay-per-token remains preferred for enterprise usage."
+    "average_input_cost": 6.0,
+    "average_output_cost": 20.0,
+    "most_efficient": "Claude 3.5 Sonnet",
+    "subscription_adoption_rate": "High (estimated >70% of power users opt for subscriptions like ChatGPT Plus or Claude Pro for better access and reduced downtime).",
+    "trend": "The market is seeing a rapid decrease in price-per-token while model capabilities increase. Top-tier models from OpenAI and Anthropic are now directly competitive on price. A significant trend is the emergence of highly efficient, smaller models (e.g., GPT-4o mini, Claude 3 Haiku) at extremely low costs. Subscription models are solidifying as the primary consumer access method, while pay-per-token remains the standard for developers and enterprises, with increasing differentiation between self-hosted (like Meta's Llama) and API-based models."
   },
-  "last_updated": "2024-06-15",
-  "timestamp": "2025-12-12T01:01:43.029858"
+  "last_updated": "2024-05-23",
+  "timestamp": "2025-12-13T00:58:02.020034"
 }
