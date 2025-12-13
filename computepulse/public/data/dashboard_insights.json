@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 scarcity under export controls is reshaping capex toward domestic alternatives and multi-vendor procurement strategies to stabilize supply chain risk."
+    "text": "At $3.17/hr for H100s, hardware scarcity continues to drive premium pricing while capex commitments signal supply chain normalization through 2025."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "At an average input price of $1.25 per 1M tokens, providers are leaning into aggressive pricing and higher context windows to win share in a model-compression race."
+    "text": "API pricing at $1.25/1M tokens reflects intense competition compressing margins while efficiency gains enable sustainable volume growth."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual AI load threatens grid stability and carbon budgets unless demand-side flexibility and clean baseload (e.g., nuclear) scale rapidly."
+    "text": "120 TWh annual AI load represents critical grid infrastructure strain requiring immediate capacity expansion and renewable integration planning."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Adoption momentum is strong but capital efficiency is under scrutiny, elevating the risk of a bubble unless revenue models demonstrate clear, sustainable ROI."
+    "text": "Infrastructure investment surge suggests industry confidence despite bubble risks, with sustainable growth dependent on operational efficiency improvements."
   }
 }
