@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3320,
+      "manufacturing_cost": 3500,
       "suggested_retail": 35000,
-      "gross_margin": 90.5,
+      "gross_margin": 0.9,
       "cost_breakdown": {
-        "silicon": 1300,
-        "packaging": 1500,
+        "silicon": 1200,
+        "packaging": 900,
         "testing": 400,
-        "r_and_d_allocation": 120
+        "r_and_d_allocation": 1000
       }
     },
     "a100": {
       "manufacturing_cost": 2500,
       "suggested_retail": 15000,
-      "gross_margin": 83.3,
+      "gross_margin": 0.85,
       "cost_breakdown": {
-        "silicon": 1000,
-        "packaging": 1100,
+        "silicon": 800,
+        "packaging": 700,
         "testing": 300,
-        "r_and_d_allocation": 100
+        "r_and_d_allocation": 700
       }
     }
   },
   "amd": {
     "mi300x": {
       "manufacturing_cost": 4000,
-      "suggested_retail": 40000,
-      "gross_margin": 90.0
+      "suggested_retail": 15000,
+      "gross_margin": 0.73
     }
   },
   "industry_analysis": {
-    "average_gross_margin": "60-80% (High-End AI GPUs)",
-    "cost_trend": "Increasing due to advanced node (TSMC N3/N4, Samsung 4LPP+) and complex packaging (CoWoS, 3D stacking) costs. Foundry price hikes contribute.",
-    "main_cost_driver": "Advanced Packaging (CoWoS, Chip-on-Wafer) and Silicon (Large Die Sizes on Leading Nodes)"
+    "average_gross_margin": 0.8,
+    "cost_trend": "Increasing due to advanced packaging (CoWoS) and HBM3e memory shortages",
+    "main_cost_driver": "High-Bandwidth Memory (HBM) and advanced packaging"
   },
-  "last_updated": "2024-05-15",
-  "timestamp": "2025-12-13T11:13:04.154736"
+  "last_updated": "2024-05-01",
+  "timestamp": "2025-12-13T12:23:00.203032"
 }

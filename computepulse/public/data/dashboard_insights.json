@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "H100 pricing at $3.19/hr suggests constrained supply chain dynamics as NVIDIA's manufacturing capacity remains bottlenecked by TSMC's 4nm node, forcing enterprises to prioritize inference workloads over training while capex budgets face increased scrutiny."
+    "text": "With H100 leasing at $3.18/hr, capex for large fleets remains high as supply constraints keep GPU availability tight, forcing buyers to lock in long-term leases."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The $1.25/1M input token pricing reflects aggressive API price wars initiated by Chinese model providers, creating intense margin pressure while forcing efficiency gains through model compression and specialized hardware acceleration."
+    "text": "At $1.25/1M input tokens, aggressive API pricing is compressing margins while models vie on efficiency, with inference cost becoming a primary battleground."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI infrastructure's 120 TWh annual load represents 5.2% of global data center electricity consumption, indicating potential grid strain in hyperscale regions while carbon intensity concerns drive nuclear adoption as baseload power becomes critical."
+    "text": "Annual load at 120 TWh raises grid strain concerns, with data center demand pushing energy sourcing toward low-carbon options and potential nuclear adoption."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Industry sentiment remains cautiously optimistic as AI capex cycles align with productivity gains, but bubble risks emerge from frothy private valuations while growth sustainability depends on monetizing inference workloads beyond pilots."
+    "text": "Industry sentiment remains buoyant but bubble risks persist as capex and energy intensity grow faster than sustainable demand, questioning long-term growth viability."
   }
 }
