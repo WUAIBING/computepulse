@@ -4,16 +4,16 @@
       "input_price_per_million": 5.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "chatgpt_plus": 20,
-        "monthly_limit": "40 messages every 3 hours with GPT-4o"
+        "chatgpt_plus": 20.0,
+        "monthly_limit": "Higher usage limits on GPT-4o compared to free tier; rate limits apply but are not publicly specified as a hard token cap."
       },
-      "efficiency_score": 8.5
+      "efficiency_score": 10.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 6.5
+      "efficiency_score": 20.0
     }
   },
   "anthropic": {
@@ -21,110 +21,69 @@
       "input_price_per_million": 3.0,
       "output_price_per_million": 15.0,
       "subscription_alternative": {
-        "claude_pro": 20,
-        "monthly_limit": "5x more usage than free tier"
+        "claude_pro": 20.0,
+        "monthly_limit": "5x more usage than the free tier, with a minimum spend of ~$5/month included, equivalent to higher usage caps."
       },
-      "efficiency_score": 8.0
-    },
-    "claude_3_haiku": {
-      "input_price_per_million": 0.25,
-      "output_price_per_million": 1.25,
-      "subscription_alternative": null,
       "efficiency_score": 9.0
     }
   },
-  "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
-      "subscription_alternative": {
-        "google_one_ai_premium": 20,
-        "monthly_limit": "Included in subscription"
-      },
-      "efficiency_score": 8.5
+  "other_models_summary": {
+    "google_gemini": {
+      "gemini_1_5_pro": {
+        "input_price_per_million": 3.5,
+        "output_price_per_million": 10.5,
+        "subscription_alternative": {
+          "google_ai_premium": 19.99,
+          "monthly_limit": "Includes access to Gemini 1.5 Pro (renamed Gemini Advanced) within the Google One subscription with usage caps."
+        },
+        "efficiency_score": 7.0
+      }
     },
-    "gemini_ultra": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
-      "subscription_alternative": null,
-      "efficiency_score": 7.0
-    }
-  },
-  "meta": {
-    "llama_3_8b": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.6,
-      "subscription_alternative": null,
-      "efficiency_score": 9.5
+    "meta_llama": {
+      "llama_3_1_70b_instruct": {
+        "input_price_per_million": 0.94,
+        "output_price_per_million": 0.94,
+        "subscription_alternative": null,
+        "note": "Pricing is for managed services (e.g., AWS Bedrock, Google Vertex AI). The model itself is open-source and free to self-host, with only infrastructure costs.",
+        "efficiency_score": 0.94
+      }
     },
-    "llama_3_70b": {
-      "input_price_per_million": 1.0,
-      "output_price_per_million": 2.0,
-      "subscription_alternative": null,
-      "efficiency_score": 8.0
-    }
-  },
-  "microsoft": {
-    "copilot_pro": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_pro": 20,
-        "monthly_limit": "Unlimited usage"
-      },
-      "efficiency_score": 7.5
+    "deepseek": {
+      "deepseek_v2": {
+        "input_price_per_million": 0.14,
+        "output_price_per_million": 0.28,
+        "subscription_alternative": null,
+        "efficiency_score": 0.21
+      }
     },
-    "copilot_365": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_365": 30,
-        "monthly_limit": "Enterprise-grade usage"
-      },
-      "efficiency_score": 8.0
-    }
-  },
-  "deepseek": {
-    "deepseek_coder": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 9.5
+    "alibaba_qwen": {
+      "qwen_plus": {
+        "input_price_per_million": 0.5,
+        "output_price_per_million": 1.25,
+        "subscription_alternative": null,
+        "efficiency_score": 0.875
+      }
     },
-    "deepseek_llm": {
-      "input_price_per_million": 1.0,
-      "output_price_per_million": 2.0,
-      "subscription_alternative": null,
-      "efficiency_score": 7.5
-    }
-  },
-  "qwen": {
-    "qwen_turbo": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.6,
-      "subscription_alternative": null,
-      "efficiency_score": 9.0
-    },
-    "qwen_plus": {
-      "input_price_per_million": 0.4,
-      "output_price_per_million": 1.2,
-      "subscription_alternative": null,
-      "efficiency_score": 8.5
-    },
-    "qwen_max": {
-      "input_price_per_million": 0.8,
-      "output_price_per_million": 2.4,
-      "subscription_alternative": null,
-      "efficiency_score": 7.5
+    "microsoft_copilot": {
+      "copilot_subscriptions": {
+        "copilot_pro": {
+          "price": 20.0,
+          "target": "Individual"
+        },
+        "microsoft_365_copilot": {
+          "price": 30.0,
+          "target": "Enterprise"
+        }
+      }
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 1.63,
-    "average_output_cost": 5.68,
-    "most_efficient": "Claude 3 Haiku (small tasks), GPT-4o (premium tasks)",
-    "subscription_adoption_rate": 0.37,
-    "trend": "Prices decreasing 15-30% YoY with new releases. Subscription models stabilizing at $20-30/mo. Token efficiency improving with larger context windows. Open-source models gaining enterprise adoption with self-hosting options."
+    "average_input_cost": 1.87,
+    "average_output_cost": 9.84,
+    "most_efficient": "DeepSeek V2",
+    "subscription_adoption_rate": 0.1,
+    "trend": "The market is undergoing a significant price war, driven by highly efficient, low-cost models from Chinese providers (DeepSeek, Qwen) and the accessibility of powerful open-source models (Llama). This pressure is forcing major Western labs like OpenAI and Anthropic to release more cost-effective flagship models (e.g., GPT-4o) and compete on value. The $20/month subscription tier has emerged as the standard for premium individual access, while enterprise pricing remains high, integrating models into broader productivity suites like Microsoft 365."
   },
-  "last_updated": "2024-06-15",
-  "timestamp": "2025-12-13T05:18:54.569632"
+  "last_updated": "2024-07-10",
+  "timestamp": "2025-12-13T06:21:28.239041"
 }

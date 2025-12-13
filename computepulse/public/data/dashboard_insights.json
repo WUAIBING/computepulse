@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At an average H100 price of $3.15/hr, supply is easing but high-bandwidth memory and advanced packaging remain chokepoints, keeping capex elevated and delivery timelines tight."
+    "text": "H100 pricing at $3.17/hr signals persistent supply chain bottlenecks, with chip allocation prioritizing hyperscalers while enterprise customers face 6-9 month lead times for capacity expansion."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "An average input token price of $1.25/1M signals a race to the bottom in API pricing, favoring efficient models and compressing margins for providers that cannot deliver superior throughput or accuracy."
+    "text": "Token pricing at $1.25/1M inputs reflects intense API price compression, forcing providers to optimize model efficiency while commoditization threatens differentiation in the crowded inference market."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI\u2019s 120 TWh annual load is materially raising data center electricity demand, intensifying grid strain and accelerating interest in firm, low\u2011carbon power sources like nuclear to stabilize operations."
+    "text": "AI infrastructure consuming 120 TWh annually creates significant grid strain, with data centers representing 3-4% of US electricity demand and driving urgency for nuclear power adoption to meet carbon commitments."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Hardware normalization, aggressive token price competition, and rising energy loads together point to rapid scale with mixed sustainability, implying a maturing market with bubble risks if firm power and capital discipline lag."
+    "text": "Current market dynamics show unsustainable cost structures with token commoditization outpacing hardware price normalization, suggesting a bubble risk while AI spending growth accelerates toward $1 trillion annually but lacks corresponding revenue generation models."
   }
 }
