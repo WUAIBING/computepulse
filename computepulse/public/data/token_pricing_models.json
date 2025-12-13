@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Up to 80 messages every 3 hours"
+        "monthly_limit": "Higher limits during off-peak times, reduced during high demand"
       },
-      "efficiency_score": 43
+      "efficiency_score": 3.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 37
+      "efficiency_score": 1.5
     }
   },
   "anthropic": {
@@ -22,18 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier; approximately 100 messages per day"
+        "monthly_limit": "5x more usage than free tier"
       },
-      "efficiency_score": 44
+      "efficiency_score": 3.3
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier; approximately 100 messages per day"
+        "monthly_limit": "5x more usage than free tier"
       },
-      "efficiency_score": 74
+      "efficiency_score": 10.0
     }
   },
   "google": {
@@ -41,80 +41,61 @@
       "input_price_per_million": 0.5,
       "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "google_one_ai_premium": 20.0,
-        "monthly_limit": "1 million tokens per month"
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Access to Ultra model with higher limits"
       },
-      "efficiency_score": 70
-    },
-    "gemini_ultra": {
-      "input_price_per_million": 7.0,
-      "output_price_per_million": 21.0,
-      "subscription_alternative": {
-        "google_one_ai_premium": 20.0,
-        "monthly_limit": "1 million tokens per month"
-      },
-      "efficiency_score": 40
+      "efficiency_score": 7.5
     }
   },
   "meta": {
-    "llama_3_70b": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
+    "llama_3": {
+      "input_price_per_million": "Variable by provider",
+      "output_price_per_million": "Variable by provider",
       "subscription_alternative": null,
-      "efficiency_score": 95,
-      "note": "Open source, but requires self-hosting infrastructure costs"
-    },
-    "llama_3_8b": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
-      "subscription_alternative": null,
-      "efficiency_score": 95,
-      "note": "Open source, but requires self-hosting infrastructure costs"
+      "efficiency_score": "N/A - Open source"
     }
   },
   "microsoft": {
-    "copilot_pro": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
+    "copilot": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
       "subscription_alternative": {
         "copilot_pro": 20.0,
-        "monthly_limit": "100 chats per day with GPT-4 Turbo"
-      },
-      "efficiency_score": 90
-    },
-    "microsoft_365_copilot": {
-      "input_price_per_million": 0.0,
-      "output_price_per_million": 0.0,
-      "subscription_alternative": {
         "microsoft_365_copilot": 30.0,
-        "monthly_limit": "Unlimited usage in Microsoft 365 apps"
+        "monthly_limit": "Standard usage limits"
       },
-      "efficiency_score": 85
+      "efficiency_score": "N/A - Subscription only"
     }
   },
   "deepseek": {
-    "deepseek_v2": {
+    "deepseek_coder_v2": {
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 98
+      "efficiency_score": 9.8
     }
   },
   "qwen": {
-    "qwen2": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.2,
+    "qwen_turbo": {
+      "input_price_per_million": 1.5,
+      "output_price_per_million": 2.0,
       "subscription_alternative": null,
-      "efficiency_score": 100
+      "efficiency_score": 8.9
+    },
+    "qwen_plus": {
+      "input_price_per_million": 4.0,
+      "output_price_per_million": 8.0,
+      "subscription_alternative": null,
+      "efficiency_score": 4.5
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.57,
-    "average_output_cost": 7.87,
-    "most_efficient": "Qwen2",
-    "subscription_adoption_rate": 0.45,
-    "trend": "Prices decreasing for competitive models, with token costs dropping 20-40% year-over-year. Chinese models offering significantly lower pricing. Subscription models standardized at $20-30/month."
+    "average_input_cost": 3.05,
+    "average_output_cost": 9.13,
+    "most_efficient": "Claude 3 Haiku",
+    "subscription_adoption_rate": 35,
+    "trend": "Decreasing token costs for entry-level models while premium models maintain higher pricing. Subscription models becoming standard for regular users."
   },
-  "last_updated": "2024-06-01",
-  "timestamp": "2025-12-13T16:17:49.636311"
+  "last_updated": "2024-06-23",
+  "timestamp": "2025-12-13T17:13:26.449664"
 }

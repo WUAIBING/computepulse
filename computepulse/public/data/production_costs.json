@@ -1,40 +1,40 @@
 {
   "nvidia": {
     "h100": {
-      "manufacturing_cost": 3325,
+      "manufacturing_cost": 3320,
       "suggested_retail": 30000,
-      "gross_margin": 85,
+      "gross_margin": 89,
       "cost_breakdown": {
-        "silicon": 2000,
-        "packaging": 900,
-        "testing": 300,
-        "r_and_d_allocation": 125
+        "silicon": 1200,
+        "packaging": 1500,
+        "testing": 120,
+        "r_and_d_allocation": 500
       }
     },
     "a100": {
       "manufacturing_cost": 1800,
-      "suggested_retail": 10000,
-      "gross_margin": 82,
+      "suggested_retail": 15000,
+      "gross_margin": 88,
       "cost_breakdown": {
-        "silicon": 900,
-        "packaging": 600,
-        "testing": 200,
-        "r_and_d_allocation": 100
+        "silicon": 800,
+        "packaging": 700,
+        "testing": 100,
+        "r_and_d_allocation": 200
       }
     }
   },
   "amd": {
     "mi300x": {
-      "manufacturing_cost": 2800,
-      "suggested_retail": 15000,
-      "gross_margin": 80
+      "manufacturing_cost": 4000,
+      "suggested_retail": 30000,
+      "gross_margin": 87
     }
   },
   "industry_analysis": {
-    "average_gross_margin": 75,
-    "cost_trend": "Increasing due to advanced packaging (CoWoS) and rising foundry costs",
-    "main_cost_driver": "Packaging (CoWoS) and wafer prices"
+    "average_gross_margin": 87,
+    "cost_trend": "Increasing due to advanced packaging (CoWoS) constraints and rising wafer prices",
+    "main_cost_driver": "Advanced packaging (TSMC CoWoS capacity)"
   },
   "last_updated": "2024-03-15",
-  "timestamp": "2025-12-13T16:16:28.430201"
+  "timestamp": "2025-12-13T17:12:40.369613"
 }
