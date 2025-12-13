@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "At $3.21/hour for H100s, cloud providers are optimizing capex recovery cycles while supply chain constraints create strategic inventory advantages for hyperscalers able to secure multi-year commitments."
+    "text": "At $3.18/hr for H100, tight chip supply and high utilization are pushing GPU capex and lead times higher, amplifying downstream API pricing pressures."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "The $1.25/1M input token price point signals aggressive API commoditization, forcing model providers to differentiate through inference efficiency and specialized capabilities rather than pure price competition."
+    "text": "Input pricing at $1.25/1M tokens reflects intensifying API price wars and forces providers to double down on efficiency (quantization, MoE, caching) to protect margins."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI's 120 TWh annual load represents grid infrastructure stress that accelerates nuclear and renewable baseload adoption while necessitating intelligent load scheduling and power purchase agreement restructuring."
+    "text": "A 120 TWh annual load signals mounting grid strain and rising carbon footprint, driving carbon-aware scheduling and accelerated nuclear procurement."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Converging AI infrastructure costs reveal a maturing market where sustainable growth depends on balancing capital efficiency with rapid capability expansion, mitigating bubble risks through proven enterprise ROI."
+    "text": "The AI industry is optimistic but fragile: token compression, GPU constraints, and capex cycles create bubble risk; growth is sustainable only with higher utilization and model efficiency."
   }
 }

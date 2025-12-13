@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Higher usage limits on GPT-4o, with caps on messages (e.g., up to 80 every 3 hours for heavy usage). Access to advanced features."
+        "monthly_limit": "Up to 5x more messages on GPT-4o compared to the free tier, plus unlimited access to GPT-4o for lower-tier models."
       },
-      "efficiency_score": 0.08
+      "efficiency_score": 9
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 0.04
+      "efficiency_score": 6
     }
   },
   "anthropic": {
@@ -22,86 +22,77 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, higher capacity on Claude 3.5 Sonnet, and ability to create more projects/chats."
+        "monthly_limit": "5x more usage than the free tier, with priority access during high-traffic periods."
       },
-      "efficiency_score": 0.083
+      "efficiency_score": 8.5
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "Access included in Claude Pro subscription, which provides higher usage limits across all models."
-      },
-      "efficiency_score": 0.667
+      "subscription_alternative": null,
+      "efficiency_score": 10
     }
   },
   "google": {
     "gemini_pro": {
-      "input_price_per_million": 3.5,
-      "output_price_per_million": 10.5,
+      "input_price_per_million": 0.5,
+      "output_price_per_million": 1.5,
       "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Access to Gemini 1.5 Pro (Ultra tier) within Google One AI Premium, with 1 million tokens per month context window."
+        "ai_premium": 20.0,
+        "monthly_limit": "Access to Gemini 1.5 Pro, 1TB of Google One storage, and other Google One premium features."
       },
-      "efficiency_score": 0.114
-    },
-    "gemini_ultra": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "gemini_advanced": 20.0,
-        "monthly_limit": "Primary access method via Gemini Advanced subscription. No direct public pay-per-token pricing as of late 2024."
-      },
-      "efficiency_score": null
+      "efficiency_score": 8
     }
   },
   "meta": {
-    "llama_3_70b": {
-      "input_price_per_million": 1.0,
-      "output_price_per_million": 1.0,
-      "subscription_alternative": {
-        "self_hosted": 0.0,
-        "hosted_on_cloud": "Pricing varies by provider (e.g., AWS Bedrock, GCP Vertex AI), typically ~$1-$3 per million tokens."
-      },
-      "efficiency_score": 0.5
+    "llama_3_8b_instruct": {
+      "input_price_per_million": 0.2,
+      "output_price_per_million": 0.2,
+      "subscription_alternative": null,
+      "efficiency_score": 10
+    },
+    "llama_3_70b_instruct": {
+      "input_price_per_million": 0.85,
+      "output_price_per_million": 0.85,
+      "subscription_alternative": null,
+      "efficiency_score": 9.5
     }
   },
   "microsoft": {
-    "copilot": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
-      "subscription_alternative": {
-        "copilot_pro": 20.0,
-        "copilot_for_m365": 30.0,
-        "monthly_limit": "Copilot Pro offers priority access to latest models. Copilot for M365 integrates into the Microsoft 365 suite with enterprise management and data controls."
-      },
-      "efficiency_score": null
+    "copilot_pro": {
+      "subscription_price": 20.0,
+      "description": "Premium AI access for individuals, includes priority access to latest models (GPT-4 Turbo), creative tools, and integration in Microsoft 365 apps (web, mobile).",
+      "efficiency_score": 7.5
+    },
+    "copilot_for_microsoft_365": {
+      "subscription_price": 30.0,
+      "description": "Enterprise-tier subscription with deep integration into the full Microsoft 365 app suite (Word, Excel, Teams, etc.) and business-specific data protection.",
+      "efficiency_score": 7
     }
   },
   "deepseek": {
-    "deepseek_chat": {
+    "deepseek_coder_v2": {
       "input_price_per_million": 0.14,
       "output_price_per_million": 0.28,
       "subscription_alternative": null,
-      "efficiency_score": 4.082
+      "efficiency_score": 10
     }
   },
   "qwen": {
-    "qwen_turbo": {
-      "input_price_per_million": 0.2,
-      "output_price_per_million": 0.6,
+    "qwen_max": {
+      "input_price_per_million": 0.019,
+      "output_price_per_million": 0.057,
       "subscription_alternative": null,
-      "efficiency_score": 2.0
+      "efficiency_score": 9.5
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 2.33,
-    "average_output_cost": 7.84,
-    "most_efficient": "deepseek_chat",
-    "subscription_adoption_rate": "High for consumer products (ChatGPT Plus, Claude Pro, Gemini Advanced). Rapidly growing in the enterprise sector (Copilot for M365).",
-    "trend": "The market is seeing an aggressive price war among frontier models (OpenAI, Anthropic, Google), driving down costs per token. Simultaneously, highly efficient and low-cost open-source and regional models (DeepSeek, Qwen) are gaining significant market share, putting further pressure on pricing. Subscription models are solidifying as the default for consumer access to top-tier AI."
+    "average_input_cost": 2.29,
+    "average_output_cost": 8.15,
+    "most_efficient": "llama_3_8b_instruct",
+    "subscription_adoption_rate": "High, with the $20/month tier becoming the standard for consumers seeking premium model access (ChatGPT Plus, Claude Pro, Copilot Pro).",
+    "trend": "Aggressive price war is driving token costs down significantly. A clear $20/month standard has emerged for consumer subscriptions. Open-source models (Llama, DeepSeek, Qwen) are providing extreme cost-efficiency, forcing proprietary model providers to innovate on both price and performance-per-cost."
   },
   "last_updated": "2024-06-10",
-  "timestamp": "2025-12-13T09:15:21.538244"
+  "timestamp": "2025-12-13T10:15:48.386622"
 }
