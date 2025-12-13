@@ -5,15 +5,18 @@
       "output_price_per_million": 10.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Limited to GPT-4o usage with message caps (approximately 40 messages every 3 hours for GPT-4o)"
+        "monthly_limit": "Up to 5x more usage for GPT-4o compared to free users, plus higher limits for GPT-4o with advanced data analysis and file uploads."
       },
-      "efficiency_score": 8.5
+      "efficiency_score": 6.25
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
-      "subscription_alternative": null,
-      "efficiency_score": 7.0
+      "subscription_alternative": {
+        "chatgpt_plus": 20.0,
+        "monthly_limit": "Included with usage caps under the ChatGPT Plus subscription."
+      },
+      "efficiency_score": 20.0
     }
   },
   "anthropic": {
@@ -22,121 +25,101 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than free tier with higher rate limits"
+        "monthly_limit": "5x more usage than the free tier, with a higher cap for using Claude 3.5 Sonnet and access to Projects feature."
       },
-      "efficiency_score": 8.2
+      "efficiency_score": 9.0
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 9.5
+      "subscription_alternative": {
+        "claude_pro": 20.0,
+        "monthly_limit": "Included with higher usage limits under the Claude Pro subscription."
+      },
+      "efficiency_score": 0.75
     }
   },
   "google": {
-    "gemini_pro": {
-      "input_price_per_million": 0.5,
-      "output_price_per_million": 1.5,
+    "gemini_1_5_pro": {
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
       "subscription_alternative": {
         "gemini_advanced": 20.0,
-        "monthly_limit": "1 month of Gemini Advanced included"
+        "monthly_limit": "Access via Google One AI Premium; no explicit token limit, but usage is subject to fair use policies."
       },
-      "efficiency_score": 9.0
+      "efficiency_score": 7.0
     },
-    "gemini_ultra": {
-      "input_price_per_million": null,
-      "output_price_per_million": null,
+    "gemini_1_5_flash": {
+      "input_price_per_million": 0.075,
+      "output_price_per_million": 0.15,
       "subscription_alternative": {
         "gemini_advanced": 20.0,
-        "monthly_limit": "Available through Gemini Advanced subscription"
+        "monthly_limit": "Available in AI Studio and via API; subscription gives access to the more capable Pro/Ultra model."
       },
-      "efficiency_score": 7.5
+      "efficiency_score": 0.1125
     }
   },
   "meta": {
-    "llama_models": {
-      "open_source": {
-        "input_price_per_million": 0.0,
-        "output_price_per_million": 0.0,
-        "subscription_alternative": null,
-        "efficiency_score": 10.0
-      },
-      "llama_pro": {
-        "input_price_per_million": null,
-        "output_price_per_million": null,
-        "subscription_alternative": {
-          "enterprise_support": "Custom pricing",
-          "monthly_limit": "Enterprise agreements vary"
-        },
-        "efficiency_score": 8.8
-      }
+    "llama_3_8b_instruct": {
+      "input_price_per_million": 0.3,
+      "output_price_per_million": 0.6,
+      "subscription_alternative": null,
+      "efficiency_score": 0.45,
+      "note": "Model is open-source. Pricing is for managed API via a third-party cloud provider (e.g., AWS Bedrock, Google Cloud Vertex AI). Costs are for hosting/inference, not the model itself."
+    },
+    "llama_3_70b_instruct": {
+      "input_price_per_million": 2.65,
+      "output_price_per_million": 2.65,
+      "subscription_alternative": null,
+      "efficiency_score": 2.65,
+      "note": "Model is open-source. Pricing is for managed API via a third-party cloud provider."
     }
   },
   "microsoft": {
-    "copilot": {
-      "copilot_pro": {
-        "input_price_per_million": null,
-        "output_price_per_million": null,
-        "subscription_alternative": {
-          "price": 20.0,
-          "monthly_limit": "Unlimited usage during subscription period"
-        },
-        "efficiency_score": 7.8
+    "copilot_pro": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_pro": 20.0,
+        "monthly_limit": "For individuals; full access to Copilot in Office apps, priority access to latest models, and faster performance."
       },
-      "microsoft_365_copilot": {
-        "input_price_per_million": null,
-        "output_price_per_million": null,
-        "subscription_alternative": {
-          "price": 30.0,
-          "monthly_limit": "Integrated with Microsoft 365 subscription"
-        },
-        "efficiency_score": 8.0
-      }
+      "efficiency_score": null
+    },
+    "copilot_for_microsoft_365": {
+      "input_price_per_million": null,
+      "output_price_per_million": null,
+      "subscription_alternative": {
+        "copilot_m365": 30.0,
+        "monthly_limit": "For enterprise; per-user, per-month fee. Integrated with enterprise data and Microsoft Graph."
+      },
+      "efficiency_score": null
     }
   },
   "deepseek": {
-    "deepseek_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
+    "deepseek_chat": {
+      "input_price_per_million": 0.28,
+      "output_price_per_million": 1.1,
       "subscription_alternative": null,
-      "efficiency_score": 9.8
-    },
-    "deepseek_coder": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 9.7
+      "efficiency_score": 0.69,
+      "note": "Offers a 50% discount on input tokens that are part of a long context cache."
     }
   },
-  "alibaba": {
-    "qwen_models": {
-      "qwen_plus": {
-        "input_price_per_million": 0.4,
-        "output_price_per_million": 1.2,
-        "subscription_alternative": {
-          "enterprise_tier": "Custom pricing",
-          "monthly_limit": "Volume discounts available"
-        },
-        "efficiency_score": 9.2
-      },
-      "qwen_turbo": {
-        "input_price_per_million": 0.2,
-        "output_price_per_million": 0.6,
-        "subscription_alternative": {
-          "enterprise_tier": "Custom pricing",
-          "monthly_limit": "Volume discounts available"
-        },
-        "efficiency_score": 9.4
-      }
+  "qwen": {
+    "qwen_max": {
+      "input_price_per_million": 2.9,
+      "output_price_per_million": 8.6,
+      "subscription_alternative": null,
+      "efficiency_score": 5.75
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 1.74,
-    "average_output_cost": 5.84,
-    "most_efficient": "Llama Open Source",
-    "subscription_adoption_rate": 68,
-    "trend": "Token prices decreasing 15-25% YoY while model capabilities increasing; Chinese providers (DeepSeek, Qwen) leading price competition; subscription models becoming dominant for consumer access"
+    "average_input_cost_million": 2.27,
+    "average_output_cost_million": 8.23,
+    "most_efficient": "Gemini 1.5 Flash (efficiency score 0.1125)",
+    "most_efficient_large_model": "DeepSeek Chat (efficiency score 0.69)",
+    "subscription_adoption_rate": "High and growing rapidly. The $20/month tier has become the market standard for premium consumer access.",
+    "trend": "Aggressive price compression in 2024, with new models like GPT-4o, DeepSeek, and Qwen-Max setting new low-cost benchmarks for high capability. The introduction of context caching (Anthropic, DeepSeek) is a new major lever for reducing costs on long-context tasks."
   },
-  "last_updated": "2024-06-20",
-  "timestamp": "2025-12-13T18:19:48.158108"
+  "last_updated": "2024-08-21",
+  "timestamp": "2025-12-13T19:14:06.288130"
 }

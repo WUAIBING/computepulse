@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100 prices averaging $3.16/hr, supply tightness is easing but capex remains elevated as buyers secure longer-term contracts to hedge against intermittent chip availability and rising downstream integration costs."
+    "text": "With H100 spot rates near $3.20/hr and US export controls limiting China\u2019s access, Chinese hyperscalers face constrained chip availability and higher capex as they secure local alternatives and slower next-gen GPUs."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Average input tokens at $1.25/1M signal aggressive API price competition; efficiency-focused models and smaller context windows are winning workloads while premium providers rely on multi-turn differentiation to sustain margins."
+    "text": "At $1.25/1M input tokens, DeepSeek\u2019s pricing reflects aggressive API competition that pressures margins while forcing efficiency gains across the model ecosystem."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load places sustained pressure on grids, increasing the business case for nuclear and advanced metering to balance load while moderating the carbon footprint of AI-driven demand."
+    "text": "A 120 TWh annual AI load risks significant grid strain unless nuclear baseload adoption and demand-shifting scale rapidly to curb carbon intensity."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Sentiment is buoyant as inference costs fall and workloads expand, but overcapacity in compute and model layers raises bubble risk; sustainability depends on disciplined capex and visible, monetizable product use cases."
+    "text": "Surging compute capex and token price compression are pushing margins thin, elevating bubble risk unless workloads and model commercialization scale sustainably."
   }
 }
