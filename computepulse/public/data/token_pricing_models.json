@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20.0,
-        "monthly_limit": "Approx. 80 messages every 3 hours on GPT-4o, higher limits on GPT-4o mini."
+        "monthly_limit": "Usage limits on GPT-4o are higher than free tier but are not publicly specified and can change based on demand."
       },
-      "efficiency_score": 85.7
+      "efficiency_score": 10.0
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 42.8
+      "efficiency_score": 20.0
     }
   },
   "anthropic": {
@@ -22,27 +22,85 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with a higher spend cap."
+        "monthly_limit": "5x more usage than the free tier, with a maximum limit that is not publicly disclosed."
       },
-      "efficiency_score": 89.2
+      "efficiency_score": 9.0
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
+      "subscription_alternative": null,
+      "efficiency_score": 0.75
+    }
+  },
+  "google": {
+    "gemini_1_5_pro": {
+      "input_price_per_million": 3.5,
+      "output_price_per_million": 10.5,
       "subscription_alternative": {
-        "claude_pro": 20.0,
-        "monthly_limit": "5x more usage than the free tier, with a higher spend cap."
+        "gemini_advanced": 20.0,
+        "monthly_limit": "Included via Google One AI Premium, usage is not token-limited but subject to fair use policies."
       },
-      "efficiency_score": 100.0
+      "efficiency_score": 7.0
+    },
+    "gemini_1_5_flash": {
+      "input_price_per_million": 0.075,
+      "output_price_per_million": 0.15,
+      "subscription_alternative": null,
+      "efficiency_score": 0.1125
+    }
+  },
+  "meta": {
+    "llama_3_1_70b": {
+      "input_price_per_million": 0.88,
+      "output_price_per_million": 0.88,
+      "subscription_alternative": null,
+      "note": "Open-source model (free to run). Prices are for running on-demand via a cloud provider like AWS Bedrock. No official subscription.",
+      "efficiency_score": 0.88
+    },
+    "llama_3_1_8b": {
+      "input_price_per_million": 0.18,
+      "output_price_per_million": 0.18,
+      "subscription_alternative": null,
+      "note": "Open-source model (free to run). Prices are for running on-demand via a cloud provider like AWS Bedrock. No official subscription.",
+      "efficiency_score": 0.18
+    }
+  },
+  "microsoft": {
+    "copilot_pro": {
+      "pay_per_token_price": null,
+      "subscription_alternative": {
+        "copilot_pro": 20.0,
+        "monthly_limit": "Unlimited usage across web, mobile, and Office apps (with access during peak times)."
+      },
+      "enterprise_pricing": 30.0,
+      "efficiency_score": null,
+      "note": "Pricing is subscription-based for integrated experiences, not direct pay-per-token for consumers. Enterprise price is per user/month."
+    }
+  },
+  "deepseek": {
+    "deepseek_chat": {
+      "input_price_per_million": 0.14,
+      "output_price_per_million": 0.28,
+      "subscription_alternative": null,
+      "efficiency_score": 0.21
+    }
+  },
+  "qwen": {
+    "qwen2_72b_instruct": {
+      "input_price_per_million": 0.6,
+      "output_price_per_million": 0.6,
+      "subscription_alternative": null,
+      "efficiency_score": 0.6
     }
   },
   "pricing_analysis": {
-    "average_input_cost": 4.56,
-    "average_output_cost": 15.31,
-    "most_efficient": "Claude 3 Haiku",
-    "subscription_adoption_rate": "Publicly disclosed data is not available. However, market analysis indicates high adoption for individual tiers (ChatGPT Plus, Claude Pro) and rapid enterprise uptake for bundled services like Microsoft Copilot.",
-    "trend": "The market is experiencing aggressive price competition, leading to rapid cost reductions for top-tier models. There is a clear divergence between input and output token pricing, with outputs becoming significantly more expensive. Subscription models are bundling access with broader productivity suites, while highly efficient, smaller models (e.g., Haiku, DeepSeek) are gaining traction for high-volume, lower-complexity tasks."
+    "average_input_cost": 2.45,
+    "average_output_cost": 7.31,
+    "most_efficient": "Gemini 1.5 Flash",
+    "subscription_adoption_rate": null,
+    "trend": "Rapid price deflation and a 'race to the bottom' for API access. Small, highly efficient models like Haiku, Gemini Flash, and DeepSeek are setting new price floors. Bundled subscription models are becoming the standard for consumer access to premium models, while pay-as-you-go APIs dominate developer and enterprise use cases."
   },
-  "last_updated": "2024-06-04",
-  "timestamp": "2025-12-13T20:16:35.570680"
+  "last_updated": "2024-07-18",
+  "timestamp": "2025-12-13T21:13:18.080331"
 }
