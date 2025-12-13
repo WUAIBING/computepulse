@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With average H100 spot prices around $3.20/hr, persistent supply tightness and lead-time compression are redirecting capex toward pre-emptively contracted clusters and vendor diversification to de-risk access."
+    "text": "The H100's $3.19/hr spot pricing reflects constrained supply chain dynamics, where rental models are becoming the dominant capex strategy as chip availability remains tight while demand from AI workloads accelerates."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "Input pricing averaging $1.25 per 1M tokens signals an intensifying API price war, favoring efficient models and edge inference while squeezing thinner-margin offerings."
+    "text": "DeepSeek's $1.25/1M input token pricing signals aggressive API price compression, forcing rapid efficiency gains through model optimization as providers race to capture market share in an increasingly commoditized inference market."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "A 120 TWh annual load elevates grid strain and carbon footprint concerns, amplifying the need for nuclear adoption and behind-the-meter storage to stabilize cost and emissions."
+    "text": "Kimi's 120 TWh annual load represents significant grid strain, highlighting the urgent need for nuclear adoption and renewable integration to sustain AI growth without exacerbating carbon footprint concerns."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Despite token price compression and ample hardware speculation, overall sentiment is cautious as investors seek durable unit economics, with growth sustainability hinging on energy cost moderation and disciplined capex."
+    "text": "The convergence of expensive hardware rental models, token price deflation, and massive energy consumption reveals unsustainable industry dynamics, suggesting we're in a bubble phase where efficiency gains must outpace cost inflation to maintain growth trajectory."
   }
 }
