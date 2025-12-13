@@ -5,15 +5,15 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "chatgpt_plus": 20,
-        "monthly_limit": "Higher usage limits than free tier, priority access to GPT-4o and GPT-4 during peak times."
+        "monthly_limit": "Access to GPT-4o with usage caps of up to 80 messages every 3 hours. Higher limits for GPT-4o mini and older models."
       },
-      "efficiency_score": 1.88
+      "efficiency_score": 50000
     },
     "gpt_4_turbo": {
       "input_price_per_million": 10.0,
       "output_price_per_million": 30.0,
       "subscription_alternative": null,
-      "efficiency_score": 0.94
+      "efficiency_score": 25000
     }
   },
   "anthropic": {
@@ -22,15 +22,18 @@
       "output_price_per_million": 15.0,
       "subscription_alternative": {
         "claude_pro": 20,
-        "monthly_limit": "5x the usage limit of the free tier (e.g., approx. 5x more messages)."
+        "monthly_limit": "5x more usage than the free tier, with a maximum capacity that allows for extended conversations but is not defined by a specific token count. Access to the Claude 3.5 Sonnet model."
       },
-      "efficiency_score": 2.08
+      "efficiency_score": 55555.56
     },
     "claude_3_haiku": {
       "input_price_per_million": 0.25,
       "output_price_per_million": 1.25,
-      "subscription_alternative": null,
-      "efficiency_score": 15.0
+      "subscription_alternative": {
+        "claude_pro": 20,
+        "monthly_limit": "Same as Claude 3.5 Sonnet subscription, with higher usage limits compared to the free tier."
+      },
+      "efficiency_score": 666666.67
     }
   },
   "google": {
@@ -39,15 +42,9 @@
       "output_price_per_million": 10.5,
       "subscription_alternative": {
         "gemini_advanced": 20,
-        "monthly_limit": "Included in Google One AI Premium plan with 1-month free trial."
+        "monthly_limit": "Part of Google One AI Premium. Provides access to the 1.5 Pro model within Gemini chat interfaces. Usage limits are higher than the free tier but not explicitly token-based."
       },
-      "efficiency_score": 2.68
-    },
-    "gemini_1_5_flash": {
-      "input_price_per_million": 0.075,
-      "output_price_per_million": 0.3,
-      "subscription_alternative": null,
-      "efficiency_score": 100.0
+      "efficiency_score": 74074.07
     }
   },
   "meta": {
@@ -55,35 +52,16 @@
       "input_price_per_million": 0.99,
       "output_price_per_million": 0.99,
       "subscription_alternative": null,
-      "note": "Pricing is for managed services (e.g., AWS Bedrock). The model itself is open-source.",
-      "efficiency_score": 9.47
-    }
-  },
-  "deepseek": {
-    "deepseek_v2": {
-      "input_price_per_million": 0.14,
-      "output_price_per_million": 0.28,
-      "subscription_alternative": null,
-      "efficiency_score": 35.71
-    }
-  },
-  "alibaba_qwen": {
-    "qwen_max": {
-      "input_price_per_million": 2.0,
-      "output_price_per_million": 6.0,
-      "subscription_alternative": null,
-      "note": "Pricing varies by region; rates shown are approximate for API calls.",
-      "efficiency_score": 2.81
+      "efficiency_score": 505050.51
     }
   },
   "pricing_analysis": {
-    "average_input_cost_flagship": 4.83,
-    "average_output_cost_flagship": 15.17,
-    "most_efficient_overall": "Google Gemini 1.5 Flash",
-    "most_efficient_flagship_tier": "Anthropic Claude 3.5 Sonnet",
-    "subscription_standard_price": 20,
-    "trend": "Aggressive price competition focused on cost efficiency, with new models like Gemini 1.5 Flash and DeepSeek V2 drastically lowering the cost floor. A clear trend towards tiered model families (e.g., 'Pro' vs. 'Flash/Mini') and a standardized $20/month subscription tier for consumer access, coexisting with pay-per-token API models for developers and enterprises. Open-source models are driving down prices in the managed services market."
+    "average_input_cost": 2.55,
+    "average_output_cost": 10.95,
+    "most_efficient": "Claude 3 Haiku",
+    "subscription_adoption_rate": "High and rapidly growing; the $20/month price point has become a standard for premium consumer access across major providers.",
+    "trend": "Intense price competition and specialization. Major models (GPT-4o, Claude 3.5 Sonnet) are significantly cheaper than predecessors. A new tier of ultra-efficient, low-cost models (like Haiku and Llama 3 70B) is emerging for high-volume tasks. The $20/month subscription is now the default for premium consumer access."
   },
-  "last_updated": "2024-06-10",
-  "timestamp": "2025-12-13T14:14:09.570680"
+  "last_updated": "2024-06-03",
+  "timestamp": "2025-12-13T15:14:54.874350"
 }

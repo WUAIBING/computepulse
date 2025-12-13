@@ -1,18 +1,18 @@
 {
   "gcci": {
     "agent": "Qwen",
-    "text": "With H100s trading around $3.16/hr, the scarcity that defined the 2023\u20132024 window has eased, yet supply remains constrained by upstream capacity and vendor allocations, keeping capex elevated for hyperscalers while secondary market liquidity improves lead times for smaller buyers."
+    "text": "As H100 rental rates settle near $3.16/hr, the shift to H200 is concentrating H100 into larger, lower-cost clusters while supply tightens on advanced nodes, compressing margins and extending capex payback for hyperscalers."
   },
   "gtpi": {
     "agent": "DeepSeek",
-    "text": "API pricing around $1.25 per million input tokens has intensified a race to the bottom, forcing providers to compress costs through architectural efficiency, smaller models, and prompt optimization as model competition increasingly turns on price\u2013performance rather than raw capability."
+    "text": "At an average input price around $1.25 per million tokens, the token market remains fiercely competitive; providers are racing to compress costs through smaller MoE models and longer context windows, pushing efficiency to the fore."
   },
   "gagl": {
     "agent": "Kimi",
-    "text": "AI\u2019s footprint near 120 TWh annually is already straining grids and increasing emissions intensity, making nuclear and firm low\u2011carbon power essential to sustain growth without compromising reliability or carbon targets."
+    "text": "AI\u2019s estimated 120 TWh annual load is magnifying grid strain and accelerating nuclear and long-duration storage interest to mitigate emissions and stabilize baseload in data-heavy regions."
   },
   "aipi": {
     "agent": "GLM",
-    "text": "Strong demand coexists with cost and sustainability constraints, so sentiment is cautiously optimistic but vigilant for bubbles in compute\u2011heavy projects, prioritizing scalable workloads and energy\u2011efficient inference for durable growth."
+    "text": "While sentiment remains bullish, the AI wave now confronts structural friction from energy constraints and chip availability, making growth sustainability the key watchpoint for capex-heavy players."
   }
 }
